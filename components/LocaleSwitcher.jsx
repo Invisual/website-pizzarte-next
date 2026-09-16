@@ -1,55 +1,45 @@
 "use client";
 
-import { useEffect } from "react";
 import { usePathname, useRouter } from "@/i18n/navigation";
-import { useMenuConfig } from "../utils/menuProvider";
 
-function stripLocalePrefix(pathname = "") {
-  const result = pathname.replace(/^\/(pt|en)(?=\/|$)/, "") || "/";
-  return result;
-}
+const LANGUAGES = [
+  { id: "pt", label: "PT" },
+  { id: "en", label: "EN" },
+  { id: "fr", label: "FR" },
+  { id: "es", label: "ES" },
+];
 
-export default function LocaleSwitcher({ locale }) {
+// `alternatePaths`: só necessário em páginas de categoria de menu
+// (/menu/[slug]), cujo slug traduzido não é um padrão estático — vem de
+// MENU_CATEGORY_SLUGS (i18n/routing.jsx) e é passado pela própria página.
+// Nas restantes rotas, o `pathname` interno do next-intl já é suficiente:
+// o mapa `pathnames` em i18n/routing.jsx trata da tradução sozinho.
+export default function LocaleSwitcher({ locale, alternatePaths }) {
   const router = useRouter();
-  const pathname = usePathname(); // ✅ importante
-  const { menuConfig } = useMenuConfig();
-
-  const languages = [
-    { id: "pt", label: "PT" },
-    { id: "en", label: "EN" },
-  ];
-
-  useEffect(() => { }, [locale, pathname]);
+  const pathname = usePathname();
 
   function handleChange(nextLocale) {
-    // caso especial: slugs traduzidos
-    if (menuConfig?.uris?.[nextLocale]) {
-      router.replace(menuConfig.uris[nextLocale], { locale: nextLocale });
+    if (nextLocale === locale) return;
+    if (alternatePaths?.[nextLocale]) {
+      router.replace(alternatePaths[nextLocale], { locale: nextLocale });
       return;
     }
-
-    // caso normal: rotas automáticas do next-intl
-    const pathnameForRouter = stripLocalePrefix(pathname);
-    router.replace(pathnameForRouter, { locale: nextLocale });
+    router.replace(pathname, { locale: nextLocale });
   }
 
   return (
     <>
-      {languages.map((lngOption, i) => (
-        <div key={i} className={`container-option-${i}`}>
-          <button
-            type="button"
-            onClick={() => handleChange(lngOption.id)}
-            disabled={locale === lngOption.id}
-            className={
-              locale === lngOption.id
-                ? "selected black fs-4 text-uppercase KLight"
-                : "black option fs-4 text-uppercase KLight"
-            }
-          >
-            <p className="fs-4 text-uppercase KLight">{lngOption.label}</p>
-          </button>
-        </div>
+      {LANGUAGES.map((lng) => (
+        <button
+          key={lng.id}
+          type="button"
+          onClick={() => handleChange(lng.id)}
+          disabled={locale === lng.id}
+          aria-current={locale === lng.id ? "true" : undefined}
+          className={locale === lng.id ? "selected black fs-4 text-uppercase KLight" : "black option fs-4 text-uppercase KLight"}
+        >
+          <p className="fs-4 text-uppercase KLight">{lng.label}</p>
+        </button>
       ))}
     </>
   );

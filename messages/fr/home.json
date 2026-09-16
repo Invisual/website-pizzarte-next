@@ -2,7 +2,7 @@
     "home": {
         "seo": {
             "title": "Pizzarte",
-            "description": "Pizzarte invests in its customers’ smiles by offering a wide variety of pizzas, salads, pastas, and delicious desserts in Aveiro.",
+            "description": "La Pizzarte investit dans le sourire de ses clients en proposant une grande variété de pizzas, salades, pâtes et délicieux desserts à Aveiro.",
             "image": "seo/pizzarte.png",
             "imageAlt": "pizzarte"
         },
@@ -13,18 +13,18 @@
             },
             {
                 "link": "/menu",
-                "name": " Our Menu",
+                "name": "notre menu",
                 "submenu": [
                     {
-                        "title": "Starters",
+                        "title": "Entrées",
                         "slug": "entradas"
                     },
                     {
-                        "title": "salads",
+                        "title": "salades",
                         "slug": "saladas"
                     },
                     {
-                        "title": "pasta",
+                        "title": "pâtes",
                         "slug": "massas"
                     },
                     {
@@ -48,35 +48,31 @@
                         "slug": "sobremesas"
                     },
                     {
-                        "title": "drinks",
+                        "title": "boissons",
                         "slug": "bebidas"
                     }
                 ]
             },
             {
                 "link": "/galeria",
-                "name": "Gallery"
+                "name": "galerie"
             },
             {
                 "link": "/contactos",
-                "name": "Contacts"
+                "name": "contact"
             }
         ],
-        "loader": {
-            "firstText": "Leaves your mouth watering, doesn’t it?",
-            "secondText": "Almost there…"
-        },
-        "callButton":{
-            "text": "Call",
+        "callButton": {
+            "text": "Commander",
             "link": "tel:+351234427103"
         },
         "popupOrderNow": {
-            "title": "FEELING HUNGRY?",
-            "subtitle": "CHOOSE AN OPTION:",
+            "title": "UNE PETITE FAIM?",
+            "subtitle": "CHOISISSEZ UNE OPTION:",
             "buttons": [
                 {
                     "id": "call",
-                    "text": "CALL",
+                    "text": "APPELER",
                     "icon": "Homepage/call.svg",
                     "iconHover": "Homepage/call-white.svg",
                     "link": "tel:+351234427103"
@@ -90,7 +86,7 @@
                 }
             ],
             "appSection": {
-                "text": "OR ORDER THROUGH</br> OUR <span>APP</span>",
+                "text": "OU COMMANDEZ VIA</br> NOTRE <span>APPLICATION</span>",
                 "stores": [
                     {
                         "id": "google-play",
@@ -105,25 +101,29 @@
                 ]
             }
         },
+        "loader": {
+            "firstText": "De quoi vous mettre l'eau à la bouche, non?",
+            "secondText": "Presque prêt..."
+        },
         "footer": {
             "info": [
                 {
-                    "title": "Consumer information",
+                    "title": "INFORMATION AU CONSOMMATEUR",
                     "items": [
                         {
                             "icon": "logos/law.svg",
-                            "text": "Law No. 144/2015 of 8th September",
-                            "link": "/pdf/informacao-ao-consumidor-en.pdf"
+                            "text": "Loi nº 144/2015 du 8 septembre",
+                            "link": "/pdf/informacao-ao-consumidor.pdf"
                         },
                         {
                             "icon": "logos/law.svg",
-                            "text": "Terms and Conditions",
-                            "link": "/pdf/termos-e-condicoes-en.pdf"
+                            "text": "Termes et Conditions",
+                            "link": "/pdf/termos-e-condicoes.pdf"
                         },
                         {
                             "icon": "logos/law.svg",
-                            "text": "Privacy Policy",
-                            "link": "/pdf/politica-de-privacidade-en.pdf"
+                            "text": "Politique de Confidentialité",
+                            "link": "/pdf/politica-de-privacidade.pdf"
                         }
                     ]
                 },
@@ -131,40 +131,40 @@
                     "title": "AVEIRO",
                     "items": [
                         {
-                            "icon": "logos/law.svg",
+                            "icon": "logos/local.svg",
                             "text": "R. Engº Von Haff, 27 3800-177 Aveiro",
                             "link": "https://maps.app.goo.gl/CiaamA9ZuQMYSd1d7"
                         },
                         {
-                            "icon": "logos/law.svg",
+                            "icon": "logos/call.svg",
                             "text": "+351 234 427 103",
-                            "note": "«Call to a national landline»"
+                            "note": "«appel vers le réseau fixe national»"
                         }
                     ]
                 },
                 {
-                    "title": "HORÁRIO",
+                    "title": "HORAIRE",
                     "items": [
                         {
                             "icon": "logos/law.svg",
-                            "text": "Sun to Thu 12:00 to 01:00"
+                            "text": "Dim à Jeu 12h00 à 01h00"
                         },
                         {
                             "icon": "logos/law.svg",
-                            "text": "Fri and Sat 12pm to 1:30am"
+                            "text": "Ven et Sam 12h00 à 01h30"
                         }
                     ]
                 }
             ],
-            "livroReclamacoes":{
+            "livroReclamacoes": {
                 "icon": "logos/livro-reclamacoes.png",
-                    "link": "https://www.livroreclamacoes.pt/inicio/"
+                "link": "https://www.livroreclamacoes.pt/inicio/"
             },
             "coFinanced": {
-                "title": "COFINANCIADO POR:",
+                "title": "COFINANCÉ PAR:",
                 "image": "Homepage/logos-cert.svg",
                 "imageMobile": "Homepage/logos-cert-mobile.svg",
-                "link": "pdf/Ficha-de-projeto-PIZZARTE-PDF.pdf"
+                "link": "/pdf/Ficha-de-projeto-PIZZARTE-PDF.pdf"
             },
             "social": [
                 {
@@ -183,35 +183,40 @@
                     "link": "https://www.youtube.com/channel/UCbf4bYkwKOq0TswicJm5_CQ"
                 }
             ],
-            "allrights": "Pizzarte All rights reserved.",
-            "createdBy": "Created:"
+            "allrights": "Pizzarte Tous droits réservés.",
+            "createdBy": "Créé par:"
         },
         "pizzaEffect": {
-            "titleTop": "Let’s go to Pizzarte?",
-            "text": "<h1 class='first-text'>The perfect <div class='middle-text'>combination of</div> flavour and art</h1>"
+            "titleTop": "On va à la pizzarte?",
+            "text": "<h1 class='first-text'>la combinaison <div class='middle-text'>parfaite entre</div> saveur et art</h1>"
         },
         "aboutIntro": {
-            "title": "About us",
-            "text": "At number 27, Rua Eng. Von Haf, there is a place which combines the art of great cuisine with the tradition and values of the city of Aveiro. Pizzarte, a pizzeria that has been in operation for three decades, is a symbol of the region's identity. A place visited by several generations, who see Pizzarte as having the best pizzas in the city.<br/><br/>From Monday to Sunday, Pizzarte invests in its customers' smiles by offering a wide variety of pizzas, salads, pastas and delicious desserts, with quality service provided by a young and enthusiastic team.",
-            "button": "Find out more",
+            "title": "À propos de nous",
+            "text": "Au numéro 27 de la Rua Eng. Von Haff se trouve un lieu qui unit l'art de la bonne cuisine à la tradition et aux valeurs de la ville d'Aveiro. La Pizzarte, une pizzeria vieille de trois décennies, est un symbole de l'identité de la région. Un lieu fréquenté par plusieurs générations, qui considèrent la Pizzarte comme la meilleure pizzeria de la ville.<br/><br/>Du lundi au dimanche, la Pizzarte investit dans le sourire de ses clients en proposant une grande variété de pizzas, salades, pâtes et délicieux desserts, avec un service de qualité porté par une équipe jeune et enthousiaste.",
+            "button": "En savoir plus",
             "link": "/pizzarte",
             "image": "Pizzarte/about-intro.webp"
         },
         "foodSlider": {
-            "title": "Not sure what to order?",
-            "subtitle": "Here are some of our suggestions",
-            "btn":{
-                "text": "Discover some more of our dishes"
+            "title": "VOUS NE SAVEZ PAS QUOI COMMANDER?",
+            "subtitle": "VOICI NOS SUGGESTIONS",
+            "btn": {
+                "text": "Découvrir plus de plats"
             }
         },
-        "waiting":{
-            "title": "We look forward to seeing you."
+        "waiting": {
+            "title": "NOUS VOUS ATTENDONS!"
         },
         "menu": [
             {
+                "img": "Menu/pao_alho_queijo.webp",
+                "description": "Pain à l'ail au fromage",
+                "slug": "entradas"
+            },
+            {
                 "img": "Menu/salada.webp",
-                "description": "Salada pizzarte",
-                "slug": "salada"
+                "description": "Salade pizzarte",
+                "slug": "saladas"
             },
             {
                 "img": "Menu/spaghetti.webp",
@@ -221,7 +226,7 @@
             {
                 "img": "Menu/lasagne.webp",
                 "description": "LASAGNE",
-                "slug": "lasagne"
+                "slug": "massas"
             },
             {
                 "img": "Menu/pizza-pizzarte.webp",
@@ -242,12 +247,22 @@
                 "img": "Menu/nero.webp",
                 "description": "Nero",
                 "slug": "massas"
+            },
+            {
+                "img": "Menu/wrap-atum.webp",
+                "description": "Wrap au thon",
+                "slug": "les-crepes-wrap"
+            },
+            {
+                "img": "Menu/prosciutto-e-spinaci.webp",
+                "description": "PROSCIUTTO E SPINACI",
+                "slug": "pizzas"
             }
         ],
         "drinks": {
-            "title": "Our bar",
-            "text": "With its cosmopolitan, irreverent and comfortable atmosphere, our Pizzeria’s bar offers the perfect way to end the day. When it opened in 1989, it revolutionised Aveiro's nightlife scene.<br/><br/>For many, the evening begins at the Pizzarte bar. We serve much-loved cocktails and signature gins. The walls are covered with phrases from books and films by national and international authors, giving the space a creative and artistic touch.",
-            "button": "Beverage Menu",
+            "title": "NOTRE BAR",
+            "text": "Avec une ambiance cosmopolite, irrévérencieuse et confortable, le bar de notre Pizzeria offre le cadre parfait pour terminer la journée. Depuis son ouverture en 1989, il a fini par révolutionner la vie nocturne d'Aveiro.<br/><br/> Pour beaucoup, la soirée commence au bar de la Pizzarte. Nous servons des cocktails et des gins d'auteur très appréciés. Dans cet espace, les murs sont couverts de phrases tirées de livres et de films d'auteurs nationaux et internationaux, apportant ainsi une touche créative et artistique au lieu.",
+            "button": "Menu Boissons",
             "drinksImage": [
                 {
                     "img": "Homepage/bebidas/cocktails_1.webp"

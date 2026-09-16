@@ -1,0 +1,706 @@
+{
+    "menu": {
+        "pageTitle": "Our menu",
+        "menus": [
+            {
+                "slug": "/entradas",
+                "title": "Starters",
+                "description": "Discover our entries. The Pizzarte Restaurant has garlic bread, garlic bread with mozzarella, roasted chorizo ​​and much more.",
+                "image": "Menu/entradas/entradas-page.webp",
+                "imageSection": "Menu/entradas/entradas-section.webp",
+                "meals": [
+                    {
+                        "image": "Menu/entradas/1.webp",
+                        "dishes": [
+                            {
+                                "name": "Soup",
+                                "price": "€ 2,50"
+                            },
+                            {
+                                "name": "Olives",
+                                "price": "€ 2,20"
+                            },
+                            {
+                                "name": "Garlic bread",
+                                "price": "€ 3,90"
+                            },
+                            {
+                                "name": "Roasted chorizo",
+                                "price": "€ 9,50"
+                            },
+                            {
+                                "name": "Garlic bread w/ mozzarella",
+                                "price": "€ 5,50"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "slug": "/saladas",
+                "title": "Salads",
+                "description": "Discover our salads. The pizzarte has a wide range of salads. Mixed, Tuna, Pizzarte, Iceberg and much more.",
+                "image": "Menu/saladas/saladas-page.webp",
+                "imageSection": "Menu/saladas/saladas-section.webp",
+                "meals": [
+                    {
+                        "image": "Menu/saladas/1.webp",
+                        "dishes": [
+                            {
+                                "name": "simple",
+                                "ingredients": "LETTUCE OR TOMATO OR CARROT",
+                                "price": "€ 3,50"
+                            },
+                            {
+                                "name": "Mixed",
+                                "ingredients": " LETTUCE, TOMATO, CARROT AND ONION",
+                                "price": "€ 4,50"
+                            },
+                            {
+                                "name": "Caprese",
+                                "ingredients": "TOMATO, FRESH MOZZARELLA AND BASIL",
+                                "price": "€ 8,50"
+                            },
+                            {
+                                "name": "Tuna",
+                                "ingredients": "EGG, TUNA, TOMATO, OLIVES, PEPPERS AND ONION, VINAIGRETTE DRESSING",
+                                "price": "€ 9,50"
+                            }
+                        ]
+                    },
+                    {
+                        "image": "Menu/saladas/2.webp",
+                        "dishes": [
+                            {
+                                "name": "Salmon",
+                                "ingredients": "SMOKED SALMON, MIXED LETTUCE, APPLE, FRESH MOZZARELLA, SESAME SEEDS AND BALSAMIC VINEGAR",
+                                "price": "€ 12,50"
+                            },
+                            {
+                                "name": "Burrata",
+                                "ingredients": "BURRATA, ROCKET, CHERRY TOMATOES, SUNDRIED TOMATOES AND BASIL OLIVE OIL",
+                                "price": "€ 11,80"
+                            },
+                            {
+                                "name": "royal",
+                                "ingredients": "- LETTUCE, TOMATO, TUNA, BOILED EGG, BANANA, PROSCIUTTO, PEACH, PINEAPPLE",
+                                "price": "€ 10,50"
+                            },
+                            {
+                                "name": "mediterrânea",
+                                "ingredients": "PASTA, BROCCOLI, TOMATO, FETA CHEESE, EGG AND BLACK OLIVES WITH BASIL OLIVE OIL",
+                                "price": "€ 10,50"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "slug": "/massas",
+                "title": "Pasta",
+                "description": "Get to know our pasta. Pizzarte has a wide range of pasta. Spaghetti al Pommodoro, Spaghetti Nero, Lasagne and much more.",
+                "image": "Menu/massas/massas-page.webp",
+                "imageSection": "Menu/massas/massas-section.webp",
+                "meals": [
+                    {
+                        "image": "Menu/massas/1.webp",
+                        "dishes": [
+                            {
+                                "name": "spaghetti al pesto",
+                                "ingredients": "with pistachio",
+                                "price": "€ 10,50"
+                            },
+                            {
+                                "name": "spaghetti al pommodoro",
+                                "ingredients": "TOMATO SAUCE, CHERRY TOMATOES AND BASIL",
+                                "price": "€ 9,80"
+                            },
+                            {
+                                "name": "4-Cheese Pasta",
+                                "ingredients": "GORGONZOLA, LARGEA PADANO, ILHA CHEESE AND MOZZARELLA",
+                                "price": "€ 13,50"
+                            },
+                            {
+                                "name": "spaghetti alla carbonara",
+                                "ingredients": "MUSHROOMS, HAM, EGG YOLK AND CREAM",
+                                "price": "€ 11,80"
+                            },
+                            {
+                                "name": "spaghetti alla bolognese",
+                                "ingredients": "BOLOGNESE SAUCE",
+                                "price": "€ 11,80"
+                            },
+                            {
+                                "name": "SPAGHETTI L’ORIGINALE",
+                                "ingredients": "SMOKED BACON, GARLIC, EGG YOLK, OLIVE OIL AND PARMIGIANO CHEESE",
+                                "price": "€ 12,50"
+                            }
+                        ]
+                    },
+                    {
+                        "image": "Menu/massas/2.webp",
+                        "dishes": [
+                            {
+                                "name": "cannelloni",
+                                "price": "€ 12,30"
+                            },
+                            {
+                                "name": "tagliatelle",
+                                "ingredients": "WITH CURRY AND VEGETABLES",
+                                "price": "€ 10,50"
+                            },
+                            {
+                                "name": "lasagne",
+                                "price": "€ 12,30"
+                            },
+                            {
+                                "name": "Vegetarian Lasagne",
+                                "price": "€ 11,80"
+                            },
+                            {
+                                "name": "SPAGHETTI GAMBERI",
+                                "ingredients": "Shrimp, spicy olive oil, and chives",
+                                "price": "€ 13,80"
+                            },
+                            {
+                                "name": "Il Giardino Spaghetti",
+                                "ingredients": "VEGETABLES",
+                                "price": "€ 9,80"
+                            },
+                            {
+                                "name": "spaguetti nero",
+                                "ingredients": "SQUID INK SPAGHETTI, CUTTLEFISH, GARLIC, CORIANDER AND LARGEA PADANO CHEESE",
+                                "price": "€ 12,80"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "slug": "/les-crepes-salees",
+                "title": "Les Crêpes Salées (Savoury Crêpes)",
+                "description": "Discover our Les Crêpes Salées. La Pizzarte Fiambre, Le Fantastique Fiambre, Le Coco Rico, Le Veau and more.",
+                "image": "Menu/les-crepes-salees/les-crepes-salees-page.webp",
+                "imageSection": "Menu/les-crepes-salees/les-crepes-salees-section.webp",
+                "meals": [
+                    {
+                        "image": "Menu/les-crepes-salees/1.webp",
+                        "dishes": [
+                            {
+                                "name": "la pizzarte",
+                                "ingredients": "HAM, MUSHROOMS, CHEESE AND CREAM",
+                                "price": "€ 10,75"
+                            },
+                            {
+                                "name": "le fantastique",
+                                "ingredients": " HAM, EGG, CHEESE AND CREAM",
+                                "price": "€ 10,75"
+                            },
+                            {
+                                "name": "la verdure",
+                                "ingredients": "SPINACH, EGG YOLK, CHEESE AND CREAM",
+                                "price": "€ 10,75"
+                            },
+                            {
+                                "name": "le popeye",
+                                "ingredients": "SPINACH, EGG YOLK, CHEESE AND CREAM",
+                                "price": "€ 10,75"
+                            }
+                        ]
+                    },
+                    {
+                        "image": "Menu/les-crepes-salees/2.webp",
+                        "dishes": [
+                            {
+                                "name": "le veau",
+                                "ingredients": " VEAL, SPINACH, CHEESE AND CREAM",
+                                "price": "€ 12,50"
+                            },
+                            {
+                                "name": "la crevette",
+                                "ingredients": "SHRIMP, HAM, CHEESE AND CREAM",
+                                "price": "€ 13,50"
+                            },
+                            {
+                                "name": "le chasseur",
+                                "ingredients": " ALHEIRA GAME SAUSAGE (Traditional Portuguese meat and bread sausage), EGG YOLK, CHEESE, SPINACH AND CREAM",
+                                "price": "€ 12,50"
+                            },
+                            {
+                                "name": "le coco rico",
+                                "ingredients": "MUSHROOMS, PROSCIUTTO, CHEESE AND CREAM",
+                                "price": "€ 10,75"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "slug": "/les-crepes-wrap",
+                "title": "Les Crêpes Wraps",
+                "description": "Discover our Les Crêpes Wrap. Chicken, Tuna, Ham and Salmon.",
+                "image": "Menu/les-crepes-wrap/les-crepes-wraps-page.webp",
+                "imageSection": "Menu/les-crepes-wrap/les-crepes-wrap-section.webp",
+                "meals": [
+                    {
+                        "image": "Menu/les-crepes-wrap/1.webp",
+                        "dishes": [
+                            {
+                                "name": "Chicken",
+                                "ingredients": "LETTUCE, CHICKEN, PINEAPPLE AND TARTAR SAUCE",
+                                "price": "€ 9,50"
+                            },
+                            {
+                                "name": "Tuna",
+                                "ingredients": "LETTUCE, TUNA, ONION, TOMATO, PEPPERS, BOILED EGG AND VINAIGRETTE DRESSING",
+                                "price": "€ 9,50"
+                            },
+                            {
+                                "name": "Salmon",
+                                "ingredients": "Lettuce, smoked salmon, apple, and yogurt dressing",
+                                "price": "€ 11,50"
+                            },
+                            {
+                                "name": "Prosciutto",
+                                "ingredients": "LETTUCE, PROSCIUTTO, FRESH MOZZARELLA AND HONEY",
+                                "price": "€ 10,50"
+                            },
+                            {
+                                "name": "Shrimp",
+                                "ingredients": "LETTUCE, SHRIMP, PINEAPPLE, CARAMELISED ONION AND YOGHURT SAUCE",
+                                "price": "€ 11,50"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "slug": "/pizzas",
+                "title": "Pizzas",
+                "description": "Discover our pizzas. The pizzarte has a wide range of pizzas. Margherita, Capricciosa, Occhio Di Bue, Calzone and more.",
+                "image": "Menu/pizzas/pizzas-page.webp",
+                "imageSection": "Menu/pizzas/pizzas-section.webp",
+                "meals": [
+                    {
+                        "image": "Menu/pizzas/1.webp",
+                        "dishes": [
+                            {
+                                "name": "Margherita",
+                                "ingredients": "TOMATO, MOZZARELLA AND OREGANO",
+                                "price": "SMALL - € 8,00 | LARGE - € 10,00"
+                            },
+                            {
+                                "name": "Capricciosa",
+                                "ingredients": "TOMATO, MOZZARELLA, HAM, MUSHROOMS AND OREGANO",
+                                "price": "SMALL - € 10,50 | LARGE - € 12,50"
+                            },
+                            {
+                                "name": "OCCHIO DI BUE",
+                                "ingredients": "TOMATO, MOZZARELLA, HAM, EGG YOLK AND OREGANO",
+                                "price": "SMALL - € 10,50 | LARGE - € 12,50"
+                            },
+                            {
+                                "name": "Calzone",
+                                "ingredients": "TOMATO, MOZZARELLA, HAM, PEPPERS, MUSHROOMS AND OREGANO",
+                                "price": "SMALL - € 10,80 | LARGE - € 12,80"
+                            },
+                            {
+                                "name": "Prosciutto e Spinaci",
+                                "ingredients": "TOMATO, MOZZARELLA, PROSCIUTTO, SPINACH AND BALSAMIC VINEGAR",
+                                "price": "SMALL - € 11,80 | LARGE - € 13,80"
+                            }
+                        ]
+                    },
+                    {
+                        "image": "Menu/pizzas/2.webp",
+                        "dishes": [
+                            {
+                                "name": "Dolce Vita",
+                                "ingredients": "TOMATO, MOZZARELLA, BACON, BANANA AND OREGANO",
+                                "price": "SMALL - € 10,80 | LARGE - € 12,80"
+                            },
+                            {
+                                "name": "Vegetarian",
+                                "ingredients": "FRESH TOMATO, MOZZARELLA, MUSHROOMS, SPINACH, ONION, PEPPERS, ASPARAGUS AND OREGANO",
+                                "price": "SMALL - € 10,80 | LARGE - € 12,80"
+                            },
+                            {
+                                "name": "Hawaiian",
+                                "ingredients": "TOMATO, MOZZARELLA, HAM, PINEAPPLE, PEPPERS AND OREGANO",
+                                "price": "SMALL - € 10,80 | LARGE - € 12,80"
+                            },
+                            {
+                                "name": "Inglese",
+                                "ingredients": "TOMATO, MOZZARELLA, BACON, ONION AND OREGANO",
+                                "price": "SMALL - € 10,50 | LARGE - € 12,50"
+                            },
+                            {
+                                "name": "Quattro Stagioni",
+                                "ingredients": "TOMATO, MOZZARELLA, SHRIMP, HAM, MUSHROOMS, SALPICÃO (Traditional Portuguese smoked sausage) AND OREGANO",
+                                "price": "SMALL - € 11,80 | LARGE - € 13,80"
+                            },
+                            {
+                                "name": "Salmone e Rucula",
+                                "ingredients": "TOMATO, MOZZARELLA, SMOKED SALMON AND ARUGULA",
+                                "price": "SMALL - € 13,80 | LARGE - € 15,80"
+                            }
+                        ]
+                    },
+                    {
+                        "image": "Menu/pizzas/3.webp",
+                        "dishes": [
+                            {
+                                "name": "Sorpresa",
+                                "ingredients": "TOMATO, MOZZARELLA, SALPICÃO (Traditional Portuguese smoked sausage), ONION, ASPARAGUS AND OREGANO",
+                                "price": "SMALL - € 11,30 | LARGE - € 13,30"
+                            },
+                            {
+                                "name": "Pizzarte",
+                                "ingredients": "TOMATO, MOZZARELLA, SALPICÃO (Traditional Portuguese smoked sausage), SPINACH, MUSHROOMS, BOILED EGG AND OREGANO",
+                                "price": "SMALL - € 11,80 | LARGE - € 13,80"
+                            },
+                            {
+                                "name": "Marinara",
+                                "ingredients": "TOMATO, MOZZARELLA, SHRIMP AND OREGANO",
+                                "price": "SMALL - € 12,50 | LARGE - € 14,50"
+                            },
+                            {
+                                "name": "4 Formaggi",
+                                "ingredients": "TOMATO, MOZZARELLA, ILHA CHEESE, GORGONZOLA AND LARGEAPADANO",
+                                "price": "SMALL - € 12,50 | LARGE - € 14,50"
+                            },
+                            {
+                                "name": "Brava",
+                                "ingredients": "TOMATO, MOZZARELLA, SPICY SALAMI, OLIVES AND OREGANO",
+                                "price": "SMALL - € 11,80 | LARGE - € 13,80"
+                            },
+                            {
+                                "name": "Caprese",
+                                "ingredients": "MOZZARELLA, FRESH MOZZARELLA, TOMATO, CHERRY TOMATOES, BASIL AND OREGANO",
+                                "price": "SMALL - € 11,80 | LARGE - € 13,80"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "slug": "/panne-di-pizza",
+                "title": "Panne di pizza",
+                "description": "Discover our Panne di Pizza. Cheese, Ham, Ham, Sausage, Special Piccolo, etc.",
+                "image": "Menu/panne-di-pizza/panne-di-pizza-page.webp",
+                "imageSection": "Menu/panne-di-pizza/panne-di-pizza-section.webp",
+                "meals": [
+                    {
+                        "image": "Menu/panne-di-pizza/1.webp",
+                        "dishes": [
+                            {
+                                "name": "Cheese",
+                                "price": "1/2 - € 5,00 | 1 - € 8,50"
+                            },
+                            {
+                                "name": "Ham",
+                                "price": "1/2 - € 5,00 | 1 - € 8,50"
+                            },
+                            {
+                                "name": "Prosciutto",
+                                "price": "1/2 - € 6,00 | 1 - € 9,50"
+                            },
+                            {
+                                "name": "Salpicão (Traditional Portuguese smoked sausage)",
+                                "price": "1/2 - € 6,00 | 1 - € 9,50"
+                            },
+                            {
+                                "name": "Ham and Cheese",
+                                "price": "1/2 - € 6,00 | 1 - € 9,50"
+                            },
+                            {
+                                "name": "Prosciutto and Cheese",
+                                "price": "1/2 - € 6,00 | 1 - € 9,50"
+                            },
+                            {
+                                "name": "Special Piccolo",
+                                "ingredients": "LETTUCE, TOMATO, ONION, TUNA, BOILED EGG, PROSCIUTTO AND MAYONNAISE",
+                                "price": "1 - € 7,50"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "slug": "/sobremesas",
+                "title": "Desserts",
+                "description": "Discover our desserts. Mousse, Profiteroles with Chocolate, Panna Cotta, Seasonal Fruit and much more.",
+                "image": "Menu/sobremesas/sobremesas-page.webp",
+                "imageSection": "Menu/sobremesas/sobremesas-section.webp",
+                "meals": [
+                    {
+                        "image": "Menu/sobremesas/4.webp",
+                        "dishes": [
+                            {
+                                "name": "Mousse",
+                                "price": "€ 3,75"
+                            },
+                            {
+                                "name": "Panna Cotta",
+                                "price": "€ 3,75"
+                            },
+                            {
+                                "name": "Profiteroles with Chocolate",
+                                "price": "€ 3,75"
+                            }
+                        ]
+                    },
+                    {
+                        "image": "Menu/sobremesas/2.webp",
+                        "dishes": [
+                            {
+                                "name": "La Confiture",
+                                "ingredients": "Jam",
+                                "price": "€ 2,50"
+                            },
+                            {
+                                "name": "La Canelle",
+                                "ingredients": "Egg custard and cinnamon",
+                                "price": "€ 4,70"
+                            },
+                            {
+                                "name": "La Melba",
+                                "ingredients": "VANILLA ICE CREAM, PEACHES, STRAWBERRY JAM AND WHIPPED CREAM",
+                                "price": "€ 4,70"
+                            },
+                            {
+                                "name": "La Folie",
+                                "ingredients": "BANANA AND HOT CHOCOLATE SAUCE",
+                                "price": "€ 4,70"
+                            },
+                            {
+                                "name": "la nutella",
+                                "ingredients": "nutella",
+                                "price": "€ 4,00"
+                            },
+                            {
+                                "name": "le crepeatelle",
+                                "ingredients": "vanilla ice cream, hot chocolate and chickpeas",
+                                "price": "€ 4,00"
+                            },
+                            {
+                                "name": "le blanc et noir",
+                                "ingredients": "HOT CHOCOLATE SAUCE AND WHIPPED CREAM",
+                                "price": "€ 4,70"
+                            },
+                            {
+                                "name": "l' automme",
+                                "ingredients": "HONEY, TOASTED ALMONDS OR WALNUTS",
+                                "price": "€ 4,70"
+                            }
+                        ]
+                    },
+                    {
+                        "image": "Menu/sobremesas/3.webp",
+                        "dishes": [
+                            {
+                                "name": "la surprise",
+                                "ingredients": "HOT CHOCOLATE SAUCE, TOASTED ALMONDS OR WALNUTS AND WHIPPED CREAM",
+                                "price": "€ 4,90"
+                            },
+                            {
+                                "name": "la biarritz",
+                                "ingredients": "STRAWBERRY ICE CREAM, BANANA, WHIPPED CREAM AND INFERNAL SAUCE",
+                                "price": "€ 4,90"
+                            },
+                            {
+                                "name": "la delice",
+                                "ingredients": "VANILLA ICE CREAM, WALNUTS, WHIPPED CREAM, FIOS DE OVOS (“Egg threads”-Traditional Portuguese sweet) AND EGG CUSTARD",
+                                "price": "€ 5,20"
+                            },
+                            {
+                                "name": "la belle helène",
+                                "ingredients": "VANILLA ICE CREAM, PEAR, HOT CHOCOLATE SAUCE AND WHIPPED CREAM",
+                                "price": "€ 4,70"
+                            },
+                            {
+                                "name": "l' aveirense",
+                                "ingredients": "EGG CUSTARD, FIOS DE OVOS (“Egg threads”-Traditional Portuguese sweet)",
+                                "price": "€ 4,90"
+                            },
+                            {
+                                "name": "l' imalaya",
+                                "ingredients": "VANILLA ICE CREAM, HOT CHOCOLATE SAUCE AND WHIPPED CREAM",
+                                "price": "€ 4,90"
+                            }
+                        ]
+                    },
+                    {
+                        "image": "Menu/sobremesas/5.webp",
+                        "dishes": [
+                            {
+                                "name": "piccolino",
+                                "ingredients": "TWO FLAVOURS AND CARAMEL",
+                                "price": "€ 4,00"
+                            },
+                            {
+                                "name": "charlot",
+                                "ingredients": "TWO FLAVOURS AND WHIPPED CREAM",
+                                "price": "€ 4,50"
+                            },
+                            {
+                                "name": "banana split",
+                                "ingredients": "TWO FLAVOURS, BANANA AND WHIPPED CREAM",
+                                "price": "€ 4,90"
+                            },
+                            {
+                                "name": "mangia e bevi",
+                                "ingredients": "TWO FLAVOURS, HOT CHOCOLATE SAUCE, WHIPPED CREAM AND CINNAMON",
+                                "price": "€ 4,90"
+                            },
+                            {
+                                "name": "GELADOS DE PORTUGAL",
+                                "ingredients": "SABORES: BAUNILHA, CHOCOLATE, MORANGO, TANGERINA, E LIMÃO",
+                                "price": "€ 3,50"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "slug": "/bebidas",
+                "title": "Beverages",
+                "description": "Discover our drinks. Pizzarte has a wide range of wines, beers, sangrias and much more.",
+                "image": "Menu/bebidas/bebidas-page.webp",
+                "imageSection": "Menu/bebidas/bebidas-section.webp",
+                "meals": [
+                    {
+                        "image": "Menu/bebidas/3.webp",
+                        "dishes": [
+                            {
+                                "name": "Filtered Water",
+                                "ingredients": "75CL",
+                                "price": "€ 1,75"
+                            },
+                            {
+                                "name": "WATER",
+                                "ingredients": "25CL",
+                                "price": "€ 1,25"
+                            },
+                            {
+                                "name": "FLAVOURED WATER",
+                                "ingredients": "",
+                                "price": "€ 2,00"
+                            },
+                            {
+                                "name": "SPARKLING WATER (Pedras/ Castelo)",
+                                "ingredients": "",
+                                "price": "€ 1,75"
+                            },
+                            {
+                                "name": "SOFT DRINKS",
+                                "ingredients": "",
+                                "price": "€ 2,25"
+                            },
+                            {
+                                "name": "FRESH ORANGE JUICE",
+                                "ingredients": "30cl",
+                                "price": "€ 3,00"
+                            },
+                            {
+                                "name": "NECTARES",
+                                "ingredients": "",
+                                "price": "€ 2,25"
+                            },
+                            {
+                                "name": "SOMERSBY",
+                                "ingredients": "",
+                                "price": "€ 3,25"
+                            }
+                        ]
+                    },
+                    {
+                        "image": "Menu/bebidas/2.webp",
+                        "dishes": [
+                            {
+                                "name": "BEER (GLASS)",
+                                "ingredients": "20cl",
+                                "price": "€ 1,80"
+                            },
+                            {
+                                "name": "BEER (GLASS)",
+                                "ingredients": "30cl",
+                                "price": "€ 2,25"
+                            },
+                            {
+                                "name": "BEER (MUG)",
+                                "ingredients": "50cl",
+                                "price": "€ 3,75"
+                            },
+                            {
+                                "name": "BEER BOTTLE 33CL",
+                                "ingredients": "(ESTRELLA/SAGRES)",
+                                "price": "2,25€"
+                            },
+                            {
+                                "name": "BEER BOTTLE 33CL",
+                                "ingredients": "(HEINEKEN/BOHEMIA)",
+                                "price": "2,50€"
+                            },
+                            {
+                                "name": "BEER BOTTLE 50CL",
+                                "ingredients": "FRANZISKANER",
+                                "price": "€ 5,00"
+                            },
+                            {
+                                "name": "estrella bock",
+                                "ingredients": "BOTTLE",
+                                "price": "€ 2,25"
+                            },
+                            {
+                                "name": "estrella free",
+                                "ingredients": "BOTTLE",
+                                "price": "€ 2,25"
+                            },
+                            {
+                                "name": "“CHAMPANHADA”",
+                                "ingredients": "SPARKLING WINE SANGRIA (Apple, Passion Fruit, Grapefruit, Red Berries)",
+                                "price": "€ 9,50 - € 15,00"
+                            }
+                        ]
+                    },
+                    {
+                        "image": "Menu/bebidas/1.webp",
+                        "dishes": [
+                            {
+                                "name": "GLASS OF WINE",
+                                "ingredients": "20cl",
+                                "price": "€ 3,50"
+                            },
+                            {
+                                "name": "SANGRIA (GLASS)",
+                                "ingredients": "",
+                                "price": "€ 4,00"
+                            },
+                            {
+                                "name": "SANGRIA (PITCHER)",
+                                "ingredients": "",
+                                "price": "€ 15,00"
+                            },
+                            {
+                                "name": "COFFEE",
+                                "ingredients": "",
+                                "price": "€ 1,20"
+                            },
+                            {
+                                "name": "DECAFFEINATED",
+                                "ingredients": "",
+                                "price": "€ 1,20"
+                            },
+                            {
+                                "name": "TEA/infusions",
+                                "ingredients": "",
+                                "price": "€ 1,75"
+                            }                            
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

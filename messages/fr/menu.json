@@ -1,0 +1,712 @@
+{
+    "menu": {
+        "pageTitle": "Notre menu",
+        "menus": [
+            {
+                "slug": "/entradas",
+                "slugsubmenu": "entradas",
+                "title": "Entrées",
+                "description": "Découvrez nos entrées. Le Restaurant Pizzarte propose du pain à l'ail, du pain à l'ail à la mozzarella, du chorizo grillé et bien plus encore.",
+                "image": "Menu/entradas/entradas-page.webp",
+                "imageSection": "Menu/entradas/entradas-section.webp",
+                "meals": [
+                    {
+                        "image": "Menu/entradas/1.webp",
+                        "dishes": [
+                            {
+                                "name": "soupe",
+                                "price": "€ 2,50"
+                            },
+                            {
+                                "name": "olives",
+                                "price": "€ 2,20"
+                            },
+                            {
+                                "name": "pain à l'ail",
+                                "price": "€ 3,90"
+                            },
+                            {
+                                "name": "chorizo grillé",
+                                "price": "€ 9,50"
+                            },
+                            {
+                                "name": "pain à l'ail à la mozzarella",
+                                "price": "€ 5,50"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "slug": "/saladas",
+                "title": "Salades",
+                "description": "Découvrez nos salades. La pizzarte propose un vaste choix de salades. Mélangée, Thon, Pizzarte, Iceberg et bien plus encore.",
+                "image": "Menu/saladas/saladas-page.webp",
+                "imageSection": "Menu/saladas/saladas-section.webp",
+                "meals": [
+                    {
+                        "image": "Menu/saladas/1.webp",
+                        "dishes": [
+                            {
+                                "name": "simple",
+                                "ingredients": "LAITUE OU TOMATE OU CAROTTE",
+                                "price": "€ 3,50"
+                            },
+                            {
+                                "name": "mélangée",
+                                "ingredients": "LAITUE, TOMATE, CAROTTE ET OIGNON",
+                                "price": "€ 4,50"
+                            },
+                            {
+                                "name": "caprese",
+                                "ingredients": "tomate, mozzarella fraîche et basilic",
+                                "price": "€ 8,50"
+                            },
+                            {
+                                "name": "thon",
+                                "ingredients": "œuf, thon, tomate, olives, poivrons et oignon, vinaigrette",
+                                "price": "€ 9,50"
+                            }
+                        ]
+                    },
+                    {
+                        "image": "Menu/saladas/2.webp",
+                        "dishes": [
+                            {
+                                "name": "saumon",
+                                "ingredients": "saumon fumé, laitue mélangée, pomme, mozzarella fraîche, graines de sésame et vinaigrette balsamique",
+                                "price": "€ 12,50"
+                            },
+                            {
+                                "name": "burrata",
+                                "ingredients": "burrata, roquette, tomates cerises, tomates séchées et huile d'olive au basilic",
+                                "price": "€ 11,80"
+                            },
+                            {
+                                "name": "royal",
+                                "ingredients": "laitue, tomate, thon, œuf dur, banane, jambon cru, pêche, ananas",
+                                "price": "€ 10,50"
+                            },
+                            {
+                                "name": "méditerranéenne",
+                                "ingredients": "pâtes, brocolis, tomate, feta, œuf et olives noires à l'huile d'olive au basilic",
+                                "price": "€ 10,50"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "slug": "/massas",
+                "title": "Pâtes",
+                "description": "Découvrez nos pâtes. La Pizzarte propose un vaste choix de pâtes. Spaghetti al Pommodoro, Spaghetti Nero, Lasagne et bien plus encore.",
+                "image": "Menu/massas/massas-page.webp",
+                "imageSection": "Menu/massas/massas-section.webp",
+                "meals": [
+                    {
+                        "image": "Menu/massas/1.webp",
+                        "dishes": [
+                            {
+                                "name": "spaghetti al pesto",
+                                "ingredients": "avec pistache",
+                                "price": "€ 10,50"
+                            },
+                            {
+                                "name": "spaghetti al pommodoro",
+                                "ingredients": "sauce tomate, tomates cerises et basilic",
+                                "price": "€ 9,80"
+                            },
+                            {
+                                "name": "pâtes 4 fromages",
+                                "ingredients": "gorgonzola, grana padano, fromage de l'île, pâtes coudées et mozzarella",
+                                "price": "€ 13,50"
+                            },
+                            {
+                                "name": "spaghetti alla carbonara",
+                                "ingredients": "champignons, jambon, jaune d'œuf et crème",
+                                "price": "€ 11,80"
+                            },
+                            {
+                                "name": "spaghetti alla bolognese",
+                                "ingredients": "sauce bolognaise",
+                                "price": "€ 11,80"
+                            },
+                            {
+                                "name": "spaghetti l'originale",
+                                "ingredients": "bacon fumé, ail, jaune d'œuf, huile d'olive et parmesan",
+                                "price": "€ 12,50"
+                            }
+                        ]
+                    },
+                    {
+                        "image": "Menu/massas/2.webp",
+                        "dishes": [
+                            {
+                                "name": "cannelloni",
+                                "price": "€ 12,30"
+                            },
+                            {
+                                "name": "tagliatelle",
+                                "ingredients": "au curry et légumes",
+                                "price": "€ 10,50"
+                            },
+                            {
+                                "name": "lasagne",
+                                "price": "€ 12,30"
+                            },
+                            {
+                                "name": "lasagne végétarienne",
+                                "price": "€ 11,80"
+                            },
+                            {
+                                "name": "SPAGHETTI GAMBERI",
+                                "ingredients": "GAMBAS, HUILE D'OLIVE PIMENTÉE ET CIBOULETTE",
+                                "price": "€ 13,80"
+                            },
+                            {
+                                "name": "spaghetti il giardino",
+                                "ingredients": "légumes",
+                                "price": "€ 9,80"
+                            },
+                            {
+                                "name": "spaghetti nero",
+                                "ingredients": "spaghetti à l'encre de seiche, seiches, ail, coriandre et grana padano",
+                                "price": "€ 12,80"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "slug": "/les-crepes-salees",
+                "title": "Les crêpes salées",
+                "description": "Découvrez nos Les Crêpes Salées. La Pizzarte Fiambre, Le Fantastique Fiambre, Le Coco Rico, Le Veau et bien plus encore.",
+                "image": "Menu/les-crepes-salees/les-crepes-salees-page.webp",
+                "imageSection": "Menu/les-crepes-salees/les-crepes-salees-section.webp",
+                "meals": [
+                    {
+                        "image": "Menu/les-crepes-salees/1.webp",
+                        "dishes": [
+                            {
+                                "name": "la pizzarte",
+                                "ingredients": "jambon, champignons, fromage et crème",
+                                "price": "€ 10,75"
+                            },
+                            {
+                                "name": "le fantastique",
+                                "ingredients": "jambon, œuf, fromage et crème",
+                                "price": "€ 10,75"
+                            },
+                            {
+                                "name": "la verdure",
+                                "ingredients": "champignons, épinards, asperges, fromage et crème",
+                                "price": "€ 10,75"
+                            },
+                            {
+                                "name": "le popeye",
+                                "ingredients": "épinards, jaune d'œuf, fromage et crème",
+                                "price": "€ 10,75"
+                            }
+                        ]
+                    },
+                    {
+                        "image": "Menu/les-crepes-salees/2.webp",
+                        "dishes": [
+                            {
+                                "name": "le veau",
+                                "ingredients": "veau, épinards, fromage et crème",
+                                "price": "€ 12,50"
+                            },
+                            {
+                                "name": "la crevette",
+                                "ingredients": "crevettes, jambon, fromage et crème",
+                                "price": "€ 13,50"
+                            },
+                            {
+                                "name": "le chasseur",
+                                "ingredients": "alheira de gibier (saucisse traditionnelle portugaise), jaune d'œuf, épinards, fromage et crème",
+                                "price": "€ 12,50"
+                            },
+                            {
+                                "name": "le coco rico",
+                                "ingredients": "champignons, jambon cru, fromage et crème",
+                                "price": "€ 10,75"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "slug": "/les-crepes-wrap",
+                "title": "Les crêpes wrap",
+                "description": "Découvrez nos Les Crêpes Wrap. Poulet, Thon, Jambon cru et Saumon.",
+                "image": "Menu/les-crepes-wrap/les-crepes-wraps-page.webp",
+                "imageSection": "Menu/les-crepes-wrap/les-crepes-wrap-section.webp",
+                "meals": [
+                    {
+                        "image": "Menu/les-crepes-wrap/1.webp",
+                        "dishes": [
+                            {
+                                "name": "Crêpe au poulet",
+                                "ingredients": "Poulet, ananas, laitue et sauce tartare",
+                                "price": "€ 9,50"
+                            },
+                            {
+                                "name": "Crêpe au thon",
+                                "ingredients": "laitue, tomate, poivrons, oignon, thon, œuf dur et vinaigrette",
+                                "price": "€ 9,50"
+                            },
+                            {
+                                "name": "Crêpe au saumon",
+                                "ingredients": "Laitue, saumon fumé, pomme et sauce au yaourt",
+                                "price": "€ 11,50"
+                            },
+                            {
+                                "name": "Crêpe au jambon cru",
+                                "ingredients": "Laitue, jambon cru, mozzarella fraîche et miel",
+                                "price": "€ 10,50"
+                            },
+                            {
+                                "name": "Crêpe aux crevettes",
+                                "ingredients": "laitue, crevettes, ananas, oignon frit et sauce au yaourt",
+                                "price": "€ 11,50"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "slug": "/pizzas",
+                "title": "Pizzas",
+                "description": "Découvrez nos pizzas. La pizzarte propose un vaste choix de pizzas. Margherita, Capricciosa, Occhio Di Bue, Calzone et bien plus encore.",
+                "image": "Menu/pizzas/pizzas-page.webp",
+                "imageSection": "Menu/pizzas/pizzas-section.webp",
+                "meals": [
+                    {
+                        "image": "Menu/pizzas/1.webp",
+                        "dishes": [
+                            {
+                                "name": "margherita",
+                                "ingredients": "tomate, mozzarella et origan",
+                                "price": "PETITE € 8,00 | GRANDE - € 10,00"
+                            },
+                            {
+                                "name": "CAPRICCIOSA",
+                                "ingredients": "TOMATE, MOZZARELLA, JAMBON, CHAMPIGNONS ET ORIGAN",
+                                "price": "PETITE - € 10,50 | GRANDE - € 12,50"
+                            },
+                            {
+                                "name": "OCCHIO DI BUE",
+                                "ingredients": "TOMATE, MOZZARELLA, JAMBON, JAUNE D'ŒUF ET ORIGAN",
+                                "price": "PETITE - € 10,50 | GRANDE - € 12,50"
+                            },
+                            {
+                                "name": "CALZONE (PIZZA FERMÉE)",
+                                "ingredients": "TOMATE, MOZZARELLA, JAMBON, POIVRONS, CHAMPIGNONS ET ORIGAN",
+                                "price": "PETITE - € 10,80 | GRANDE - € 12,80"
+                            },
+                            {
+                                "name": "PROSCIUTTO E SPINACI",
+                                "ingredients": "TOMATE, MOZZARELLA, JAMBON CRU, ÉPINARDS ET VINAIGRE BALSAMIQUE",
+                                "price": "PETITE - € 11,80 | GRANDE - € 13,80"
+                            }
+                        ]
+                    },
+                    {
+                        "image": "Menu/pizzas/2.webp",
+                        "dishes": [
+                            {
+                                "name": "DOLCE VITA",
+                                "ingredients": "TOMATE, MOZZARELLA, BACON, BANANE ET ORIGAN",
+                                "price": "PETITE - € 10,80 | GRANDE - € 12,80"
+                            },
+                            {
+                                "name": "VÉGÉTARIENNE",
+                                "ingredients": "TOMATE FRAIS, MOZZARELLA, CHAMPIGNONS, ÉPINARDS, OIGNON, POIVRONS, ASPERGES ET ORIGAN",
+                                "price": "PETITE - € 10,80 | GRANDE - € 12,80"
+                            },
+                            {
+                                "name": "HAWAÏENNE",
+                                "ingredients": "TOMATE, MOZZARELLA, JAMBON, ANANAS, POIVRONS ET ORIGAN",
+                                "price": "PETITE - € 10,80 | GRANDE - € 12,80"
+                            },
+                            {
+                                "name": "INGLESE",
+                                "ingredients": "TOMATE, MOZZARELLA, BACON, OIGNON ET ORIGAN",
+                                "price": "PETITE - € 10,50 | GRANDE - € 12,50"
+                            },
+                            {
+                                "name": "QUATTRO STAGIONI",
+                                "ingredients": "TOMATE, MOZZARELLA, CREVETTES, JAMBON, CHAMPIGNONS, SALPICÃO (saucisse fumée portugaise) ET ORIGAN",
+                                "price": "PETITE - € 11,80 | GRANDE - € 13,80"
+                            },
+                            {
+                                "name": "Salmone e Rucula",
+                                "ingredients": "TOMATE, MOZZARELLA, SAUMON FUMÉ ET ROQUETTE",
+                                "price": "PETITE - € 13,80 | GRANDE - € 15,80"
+                            }
+                        ]
+                    },
+                    {
+                        "image": "Menu/pizzas/3.webp",
+                        "dishes": [
+                            {
+                                "name": "SORPRESA",
+                                "ingredients": "TOMATE, MOZZARELLA, SALPICÃO (saucisse fumée portugaise), OIGNON, ASPERGES ET ORIGAN",
+                                "price": "PETITE - € 11,30 | GRANDE - € 13,30"
+                            },
+                            {
+                                "name": "PIZZARTE",
+                                "ingredients": "TOMATE, MOZZARELLA, SALPICÃO (saucisse fumée portugaise), ÉPINARDS, CHAMPIGNONS, ŒUF DUR ET ORIGAN",
+                                "price": "PETITE - € 11,80 | GRANDE - € 13,80"
+                            },
+                            {
+                                "name": "MARINARA",
+                                "ingredients": "TOMATE, MOZZARELLA, CREVETTES ET ORIGAN",
+                                "price": "PETITE - € 12,50 | GRANDE - € 14,50"
+                            },
+                            {
+                                "name": "4 FORMAGGI",
+                                "ingredients": "TOMATE, MOZZARELLA, FROMAGE DE L'ÎLE, GORGONZOLA ET GRANA PADANO",
+                                "price": "PETITE - € 12,50 | GRANDE - € 14,50"
+                            },
+                            {
+                                "name": "BRAVA",
+                                "ingredients": "TOMATE, MOZZARELLA, SALAMI PIMENTÉ, OLIVES ET ORIGAN",
+                                "price": "PETITE - € 11,80 | GRANDE - € 13,80"
+                            },
+                            {
+                                "name": "CAPRESE",
+                                "ingredients": "TOMATE, MOZZARELLA, MOZZARELLA FRAÎCHE, TOMATES CERISES, BASILIC ET ORIGAN",
+                                "price": "PETITE - € 11,80 | GRANDE - € 13,80"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "slug": "/panne-di-pizza",
+                "title": "Panne di pizza",
+                "description": "Découvrez nos Panne di Pizza. Fromage, Jambon, Jambon cru, Salpicão, Piccolo Spécial, etc.",
+                "image": "Menu/panne-di-pizza/panne-di-pizza-page.webp",
+                "imageSection": "Menu/panne-di-pizza/panne-di-pizza-section.webp",
+                "meals": [
+                    {
+                        "image": "Menu/panne-di-pizza/1.webp",
+                        "dishes": [
+                            {
+                                "name": "fromage",
+                                "price": "1/2 - € 5,00 | 1 - € 8,50"
+                            },
+                            {
+                                "name": "jambon",
+                                "price": "1/2 - € 5,00 | 1 - € 8,50"
+                            },
+                            {
+                                "name": "jambon cru",
+                                "price": "1/2 - € 6,00 | 1 - € 9,50"
+                            },
+                            {
+                                "name": "salpicão",
+                                "price": "1/2 - € 6,00 | 1 - € 9,50"
+                            },
+                            {
+                                "name": "mixte",
+                                "price": "1/2 - € 6,00 | 1 - € 9,50"
+                            },
+                            {
+                                "name": "jambon cru et fromage",
+                                "price": "1/2 - € 6,00 | 1 - € 9,50"
+                            },
+                            {
+                                "name": "piccolo spécial",
+                                "ingredients": "laitue, tomate, oignon, thon, œuf dur, jambon cru et mayonnaise",
+                                "price": "1 - € 7,50"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "slug": "/sobremesas",
+                "title": "Desserts",
+                "description": "Découvrez nos desserts. Mousse, Profiteroles au Chocolat, Panna Cotta, Fruits de saison et bien plus encore.",
+                "image": "Menu/sobremesas/sobremesas-page.webp",
+                "imageSection": "Menu/sobremesas/sobremesas-section.webp",
+                "meals": [
+                    {
+                        "image": "Menu/sobremesas/4.webp",
+                        "dishes": [
+                            {
+                                "name": "mousse",
+                                "price": "€ 3,75"
+                            },
+                            {
+                                "name": "panna cotta",
+                                "price": "€ 3,75"
+                            },
+                            {
+                                "name": "profiteroles au chocolat",
+                                "price": "€ 3,75"
+                            }
+                        ]
+                    },
+                    {
+                        "image": "Menu/sobremesas/2.webp",
+                        "dishes": [
+                            {
+                                "name": "la confiture",
+                                "ingredients": "confiture",
+                                "price": "€ 2,50"
+                            },
+                            {
+                                "name": "la canelle",
+                                "ingredients": "crème pâtissière et cannelle",
+                                "price": "€ 4,70"
+                            },
+                            {
+                                "name": "la melba",
+                                "ingredients": "glace vanille, pêche, confiture de fraise et chantilly",
+                                "price": "€ 4,70"
+                            },
+                            {
+                                "name": "la folie",
+                                "ingredients": "banane et chocolat chaud",
+                                "price": "€ 4,70"
+                            },
+                            {
+                                "name": "la nutella",
+                                "ingredients": "nutella",
+                                "price": "€ 4,00"
+                            },
+                            {
+                                "name": "le crepeatelle",
+                                "ingredients": "crêpe, glace vanille, chocolat chaud et vermicelles au chocolat",
+                                "price": "€ 4,00"
+                            },
+                            {
+                                "name": "le blanc et noir",
+                                "ingredients": "chocolat chaud et chantilly",
+                                "price": "€ 4,70"
+                            },
+                            {
+                                "name": "l' automme",
+                                "ingredients": "miel, amande grillée ou noix",
+                                "price": "€ 4,70"
+                            }
+                        ]
+                    },
+                    {
+                        "image": "Menu/sobremesas/3.webp",
+                        "dishes": [
+                            {
+                                "name": "la surprise",
+                                "ingredients": "chocolat chaud, amande grillée ou noix et chantilly",
+                                "price": "€ 4,90"
+                            },
+                            {
+                                "name": "la biarritz",
+                                "ingredients": "glace fraise, banane, chantilly et sauce infernale",
+                                "price": "€ 4,90"
+                            },
+                            {
+                                "name": "la delice",
+                                "ingredients": "glace vanille, noix, chantilly, fios de ovos (fils d'œufs, douceur traditionnelle portugaise) et crème pâtissière",
+                                "price": "€ 5,20"
+                            },
+                            {
+                                "name": "la belle helène",
+                                "ingredients": "glace vanille, poire, chocolat chaud et chantilly",
+                                "price": "€ 4,70"
+                            },
+                            {
+                                "name": "l' aveirense",
+                                "ingredients": "crème pâtissière, fios de ovos (fils d'œufs, douceur traditionnelle portugaise)",
+                                "price": "€ 4,90"
+                            },
+                            {
+                                "name": "l' imalaya",
+                                "ingredients": "glace vanille, chocolat chaud et chantilly",
+                                "price": "€ 4,90"
+                            }
+                        ]
+                    },
+                    {
+                        "image": "Menu/sobremesas/5.webp",
+                        "dishes": [
+                            {
+                                "name": "piccolino",
+                                "ingredients": "deux parfums et caramel",
+                                "price": "€ 4,00"
+                            },
+                            {
+                                "name": "charlot",
+                                "ingredients": "deux parfums et chantilly",
+                                "price": "€ 4,50"
+                            },
+                            {
+                                "name": "banana split",
+                                "ingredients": "deux parfums, banane et chantilly",
+                                "price": "€ 4,90"
+                            },
+                            {
+                                "name": "mangia e bevi",
+                                "ingredients": "deux parfums, chocolat chaud, chantilly et cannelle",
+                                "price": "€ 4,90"
+                            },
+                            {
+                                "name": "GLACES DU PORTUGAL",
+                                "ingredients": "PARFUMS: VANILLE, CHOCOLAT, FRAISE, MANDARINE ET CITRON",
+                                "price": "€ 3,50"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "slug": "/bebidas",
+                "title": "Boissons",
+                "description": "Découvrez nos boissons. La Pizzarte propose un vaste choix de vins, bières, sangrias et bien plus encore.",
+                "image": "Menu/bebidas/bebidas-page.webp",
+                "imageSection": "Menu/bebidas/bebidas-section.webp",
+                "meals": [
+                    {
+                        "image": "Menu/bebidas/3.webp",
+                        "dishes": [
+                            {
+                                "name": "EAU FILTRÉE",
+                                "ingredients": "70CL",
+                                "price": "€ 1,75"
+                            },
+                            {
+                                "name": "EAU",
+                                "ingredients": "25CL",
+                                "price": "€ 1,25"
+                            },
+                            {
+                                "name": "EAU AROMATISÉE",
+                                "ingredients": "",
+                                "price": "€ 2,00"
+                            },
+                            {
+                                "name": "EAU GAZEUSE (Pedras/ Castelo)",
+                                "ingredients": "",
+                                "price": "€ 1,75"
+                            },
+                            {
+                                "name": "Sodas",
+                                "ingredients": "",
+                                "price": "€ 2,25"
+                            },
+                            {
+                                "name": "LIMONADE",
+                                "ingredients": "30CL",
+                                "price": "€ 2,25"
+                            },
+                            {
+                                "name": "jus d'orange naturel",
+                                "ingredients": "30cl",
+                                "price": "€ 3,00"
+                            },
+                            {
+                                "name": "NECTARS",
+                                "ingredients": "",
+                                "price": "€ 2,25"
+                            },
+                            {
+                                "name": "SOMERSBY",
+                                "ingredients": "",
+                                "price": "€ 3,25"
+                            }
+                        ]
+                    },
+                    {
+                        "image": "Menu/bebidas/2.webp",
+                        "dishes": [
+                            {
+                                "name": "bière (verre)",
+                                "ingredients": "20cl",
+                                "price": "€ 1,80"
+                            },
+                            {
+                                "name": "bière (verre)",
+                                "ingredients": "30cl",
+                                "price": "€ 2,25"
+                            },
+                            {
+                                "name": "BIÈRE (CHOPE)",
+                                "ingredients": "50cl",
+                                "price": "€ 3,75"
+                            },
+                            {
+                                "name": "BIÈRE BOUTEILLE 33CL",
+                                "ingredients": "(ESTRELLA/SAGRES)",
+                                "price": "€ 2,25"
+                            },
+                            {
+                                "name": "BIÈRE BOUTEILLE 33CL",
+                                "ingredients": "(HEINEKEN/BOHEMIA)",
+                                "price": "€ 2,50"
+                            },
+                            {
+                                "name": "BIÈRE BOUTEILLE 50CL",
+                                "ingredients": "(FRANZISKANER)",
+                                "price": "€ 5,00"
+                            },
+                            {
+                                "name": "estrella bock",
+                                "ingredients": "bouteille",
+                                "price": "€ 2,25"
+                            },
+                            {
+                                "name": "estrella free",
+                                "ingredients": "bouteille",
+                                "price": "€ 2,25"
+                            },
+                            {
+                                "name": "champanhada",
+                                "ingredients": "sangria pétillante (Pomme, Fruit de la passion, Pamplemousse, Fruits rouges)",
+                                "price": "€ 9,50 - € 15,00"
+                            }
+                        ]
+                    },
+                    {
+                        "image": "Menu/bebidas/1.webp",
+                        "dishes": [
+                            {
+                                "name": "verre de vin",
+                                "ingredients": "20cl",
+                                "price": "€ 3,50"
+                            },
+                            {
+                                "name": "sangria (verre)",
+                                "ingredients": "",
+                                "price": "€ 4,00"
+                            },
+                            {
+                                "name": "sangria (pichet)",
+                                "ingredients": "",
+                                "price": "€ 15,00"
+                            },
+                            {
+                                "name": "café",
+                                "ingredients": "",
+                                "price": "€ 1,20"
+                            },
+                            {
+                                "name": "décaféiné",
+                                "ingredients": "",
+                                "price": "€ 1,20"
+                            },
+                            {
+                                "name": "thé/INFUSIONS",
+                                "ingredients": "",
+                                "price": "€ 1,75"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

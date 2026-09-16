@@ -12,9 +12,9 @@ export default getRequestConfig(async ({ requestLocale }) => {
         locale,
         messages: {
             home: (await import(`../messages/${locale}/home.json`)).default,
-            projects: (await import(`../messages/${locale}/projetos.json`)).default,
-            global: (await import(`../messages/${locale}/global.json`)).default,
-
+            menu: (await import(`../messages/${locale}/menu.json`)).default,
+            pizzarte: (await import(`../messages/${locale}/pizzarte.json`)).default,
+            contact: (await import(`../messages/${locale}/contact.json`)).default,
         }
     };
 });
