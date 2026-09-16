@@ -1,28 +1,26 @@
 "use client";
 
-import { useEffect } from "react";
 import styled from "styled-components";
-import gsap from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Mousewheel } from "swiper/modules";
-import anime from "animejs/lib/anime.es.js";
 import { useLocale } from "next-intl";
 import Title from "../layout/Title";
 import { Image } from "../layout/Image";
 import Button from "../layout/Button";
 import Reveal from "../layout/Reveal";
+import ClientOnly from "../layout/ClientOnly";
 import { color, media } from "../style/style";
 import { prefersReducedMotion } from "../../utils/prefersReducedMotion";
 import { translateNavLink } from "../../i18n/navLinks";
-
-gsap.registerPlugin(ScrollTrigger);
+import { useAnimeEffect } from "../../hooks/useAnimeEffect";
 
 // Fusão de about/desktop/barDrinks.js + about/mobile/barDrinksMobile.js.
+// (o gsap importado no original nunca era usado aqui — só o registerPlugin
+// morto; ficou de fora.)
 export default function BarDrinks({ data }) {
   const locale = useLocale();
 
-  useEffect(() => {
+  useAnimeEffect((anime) => {
     if (prefersReducedMotion()) return;
 
     const textWrappers = document.querySelectorAll(".ml2");
@@ -50,33 +48,35 @@ export default function BarDrinks({ data }) {
               <p dangerouslySetInnerHTML={{ __html: data.drinks.text }} />
               <Button to={translateNavLink("/menu/bebidas", locale)} button={data.drinks.button} />
             </div>
-            <Swiper
-              modules={[Pagination, Mousewheel]}
-              direction="vertical"
-              loop={true}
-              pagination={{ clickable: true }}
-              grabCursor={false}
-              speed={1000}
-              mousewheel={{ forceToAxis: true, sensitivity: 1, releaseOnEdges: true }}
-              parallax={true}
-              autoplay={true}
-              effect="slide"
-            >
-              {data.drinks.drinksImage.map((drinksItem, l) => (
-                <SwiperSlide key={l}>
-                  <Image src={drinksItem.img} alt="" extraClass="drink-image" />
-                </SwiperSlide>
-              ))}
-              <div className="background-red-bar">
-                {/* Efeito puramente decorativo (letra a letra, anime.js) — mesmo
-                    texto em todos os idiomas no original, não é conteúdo real. */}
-                {Array.from({ length: 5 }).map((_, i) => (
-                  <h1 className="ml2" key={i}>
-                    BAAAAAAAAAAAR
-                  </h1>
+            <ClientOnly>
+              <Swiper
+                modules={[Pagination, Mousewheel]}
+                direction="vertical"
+                loop={true}
+                pagination={{ clickable: true }}
+                grabCursor={false}
+                speed={1000}
+                mousewheel={{ forceToAxis: true, sensitivity: 1, releaseOnEdges: true }}
+                parallax={true}
+                autoplay={true}
+                effect="slide"
+              >
+                {data.drinks.drinksImage.map((drinksItem, l) => (
+                  <SwiperSlide key={l}>
+                    <Image src={drinksItem.img} alt="" extraClass="drink-image" />
+                  </SwiperSlide>
                 ))}
-              </div>
-            </Swiper>
+                <div className="background-red-bar">
+                  {/* Efeito puramente decorativo (letra a letra, anime.js) — mesmo
+                      texto em todos os idiomas no original, não é conteúdo real. */}
+                  {Array.from({ length: 5 }).map((_, i) => (
+                    <h1 className="ml2" key={i}>
+                      BAAAAAAAAAAAR
+                    </h1>
+                  ))}
+                </div>
+              </Swiper>
+            </ClientOnly>
           </div>
         </Reveal>
       </div>

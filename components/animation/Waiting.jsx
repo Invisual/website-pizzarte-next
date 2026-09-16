@@ -1,60 +1,52 @@
 "use client";
 
-import { useLayoutEffect } from "react";
 import styled from "styled-components";
-import gsap from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
 import { Image } from "../layout/Image";
 import { color, breakpoint } from "../style/style";
 import { prefersReducedMotion } from "../../utils/prefersReducedMotion";
-
-gsap.registerPlugin(ScrollTrigger);
+import { useGsapEffect } from "../../hooks/useGsapEffect";
 
 // Fusão de animation/waiting.js + animation/mobile/waitingMobile.js. Vídeo e
 // poster recomprimidos (12,5MB -> 7,1MB o vídeo, 720p, mesmo áudio; 8,1MB ->
 // 52KB o poster, webp) — eram os dois maiores ficheiros do site.
 export default function Waiting({ home, NoAnimation, data }) {
-  useLayoutEffect(() => {
-    const ctx = gsap.context(() => {
-      if (prefersReducedMotion()) return;
+  useGsapEffect((gsap) => {
+    if (prefersReducedMotion()) return;
 
-      const isMobile = window.matchMedia(`(max-width: ${breakpoint.l})`).matches;
+    const isMobile = window.matchMedia(`(max-width: ${breakpoint.l})`).matches;
 
-      gsap.utils.toArray(".waiting-first, .waiting-first1").forEach((box) => {
-        gsap.set(box, { translateX: 0 });
-        gsap.to(box, { scrollTrigger: { trigger: box, scrub: true }, translateX: isMobile ? -100 : -500 });
-      });
+    gsap.utils.toArray(".waiting-first, .waiting-first1").forEach((box) => {
+      gsap.set(box, { translateX: 0 });
+      gsap.to(box, { scrollTrigger: { trigger: box, scrub: true }, translateX: isMobile ? -100 : -500 });
+    });
 
-      gsap.utils.toArray(".waiting-second, .waiting-second1").forEach((box) => {
-        gsap.set(box, { translateX: 0 });
-        gsap.to(box, { scrollTrigger: { trigger: box, scrub: true }, translateX: isMobile ? 100 : 500 });
-      });
+    gsap.utils.toArray(".waiting-second, .waiting-second1").forEach((box) => {
+      gsap.set(box, { translateX: 0 });
+      gsap.to(box, { scrollTrigger: { trigger: box, scrub: true }, translateX: isMobile ? 100 : 500 });
+    });
 
-      const pizzaMoves = isMobile
-        ? [
-            { translateX: 20, translateY: 20, rotate: 50, width: 200 },
-            { translateX: 100, translateY: 200, rotate: 50, width: 150 },
-            { translateX: 150, translateY: 350, rotate: 50, width: 140 },
-          ]
-        : [
-            { translateX: 80, translateY: 80, rotate: 0, width: undefined },
-            { translateX: 280, translateY: 250, rotate: 20, width: 200 },
-            { translateX: 450, translateY: 400, rotate: 30, width: 180 },
-          ];
+    const pizzaMoves = isMobile
+      ? [
+          { translateX: 20, translateY: 20, rotate: 50, width: 200 },
+          { translateX: 100, translateY: 200, rotate: 50, width: 150 },
+          { translateX: 150, translateY: 350, rotate: 50, width: 140 },
+        ]
+      : [
+          { translateX: 80, translateY: 80, rotate: 0, width: undefined },
+          { translateX: 280, translateY: 250, rotate: 20, width: 200 },
+          { translateX: 450, translateY: 400, rotate: 30, width: 180 },
+        ];
 
-      [".pizza-1", ".pizza-2", ".pizza-3"].forEach((selector, i) => {
-        gsap.utils.toArray(selector).forEach((box) => {
-          gsap.set(box, { translateX: 0, opacity: 0, rotate: 0 });
-          gsap.to(box, {
-            scrollTrigger: { trigger: box, scrub: true },
-            opacity: 1,
-            ...pizzaMoves[i],
-          });
+    [".pizza-1", ".pizza-2", ".pizza-3"].forEach((selector, i) => {
+      gsap.utils.toArray(selector).forEach((box) => {
+        gsap.set(box, { translateX: 0, opacity: 0, rotate: 0 });
+        gsap.to(box, {
+          scrollTrigger: { trigger: box, scrub: true },
+          opacity: 1,
+          ...pizzaMoves[i],
         });
       });
     });
-
-    return () => ctx.revert();
   }, []);
 
   return (

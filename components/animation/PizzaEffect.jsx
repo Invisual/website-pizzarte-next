@@ -1,15 +1,12 @@
 "use client";
 
-import { useState, useEffect, useRef, useLayoutEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import styled from "styled-components";
-import gsap from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
 import { Image } from "../layout/Image";
 import { color, media, breakpoint } from "../style/style";
 import Triangle from "../layout/Triangle";
 import { prefersReducedMotion } from "../../utils/prefersReducedMotion";
-
-gsap.registerPlugin(ScrollTrigger);
+import { useGsapEffect } from "../../hooks/useGsapEffect";
 
 // Fusão de animation/pizzaEffect.js + animation/mobile/pizzaEffectMobile.js.
 // Bug corrigido: a versão mobile pedia "Homepage/pizza_top.png" — esse
@@ -30,21 +27,17 @@ export default function PizzaEffect({ data }) {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  useLayoutEffect(() => {
-    const ctx = gsap.context(() => {
-      if (prefersReducedMotion()) return;
+  useGsapEffect((gsap) => {
+    if (prefersReducedMotion()) return;
 
-      const isMobile = window.matchMedia(`(max-width: ${breakpoint.l})`).matches;
-      const from = isMobile ? -800 : 0;
-      const to = isMobile ? 100 : 600;
+    const isMobile = window.matchMedia(`(max-width: ${breakpoint.l})`).matches;
+    const from = isMobile ? -800 : 0;
+    const to = isMobile ? 100 : 600;
 
-      gsap.utils.toArray(".phrase-title").forEach((box) => {
-        gsap.set(box, { translateX: from });
-        gsap.to(box, { scrollTrigger: { trigger: box, scrub: true }, translateX: to });
-      });
+    gsap.utils.toArray(".phrase-title").forEach((box) => {
+      gsap.set(box, { translateX: from });
+      gsap.to(box, { scrollTrigger: { trigger: box, scrub: true }, translateX: to });
     });
-
-    return () => ctx.revert();
   }, []);
 
   return (

@@ -1,9 +1,15 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import styled from "styled-components";
 import { Image } from "../layout/Image";
 import { color, media } from "../style/style";
 import { HandlePhone } from "../../utils/handlePhone";
+
+// Ano de referência para o build estático (Next 16/PPR rejeita `new Date()`
+// lido diretamente durante o prerender de um Client Component — "unstable
+// value"). Corrigido no cliente após montar, via useEffect abaixo.
+const BUILD_YEAR = new Date().getFullYear();
 
 // Fusão de src/components/footer/desktop/footer.js e
 // .../mobile/footerMobile.js — mesmas diferenças resolvidas em CSS
@@ -15,7 +21,9 @@ import { HandlePhone } from "../../utils/handlePhone";
 // os seus próprios links sociais no drawer, mas o rodapé em si ficava
 // morto). Aqui têm sempre <a>, como já acontecia na versão desktop.
 export default function Footer({ data }) {
-  const currentYear = new Date().getFullYear();
+  const [currentYear, setCurrentYear] = useState(BUILD_YEAR);
+  useEffect(() => setCurrentYear(new Date().getFullYear()), []);
+
   const footer = data?.footer;
   if (!footer) return null;
 

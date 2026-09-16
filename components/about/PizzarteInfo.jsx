@@ -1,19 +1,16 @@
 "use client";
 
-import { useLayoutEffect } from "react";
 import styled from "styled-components";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
-import gsap from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
 import { Image } from "../layout/Image";
 import Title from "../layout/Title";
 import Reveal from "../layout/Reveal";
+import ClientOnly from "../layout/ClientOnly";
 import Stars from "./Stars";
 import { media } from "../style/style";
 import { prefersReducedMotion } from "../../utils/prefersReducedMotion";
-
-gsap.registerPlugin(ScrollTrigger);
+import { useGsapEffect } from "../../hooks/useGsapEffect";
 
 // Fusão de about/desktop/pizzarteInfo.js + about/mobile/pizzarteInfoMobile.js.
 // O bloco de testemunhos ("feedback") tem tratamento visual genuinamente
@@ -22,22 +19,18 @@ gsap.registerPlugin(ScrollTrigger);
 // responsivo, por isso ficam os dois blocos de marcação, cada um mostrado
 // só no seu breakpoint via CSS.
 export default function PizzarteInfo({ data }) {
-  useLayoutEffect(() => {
-    const ctx = gsap.context(() => {
-      if (prefersReducedMotion()) return;
+  useGsapEffect((gsap) => {
+    if (prefersReducedMotion()) return;
 
-      const isMobile = window.matchMedia(`(max-width: 1024px)`).matches;
+    const isMobile = window.matchMedia(`(max-width: 1024px)`).matches;
 
-      gsap.utils.toArray(".woman").forEach((box) => {
-        gsap.to(box, { scrollTrigger: { trigger: box, scrub: true }, y: -200 });
-      });
-
-      gsap.utils.toArray(".man").forEach((box) => {
-        gsap.to(box, { scrollTrigger: { trigger: box, scrub: true }, y: isMobile ? 100 : 200 });
-      });
+    gsap.utils.toArray(".woman").forEach((box) => {
+      gsap.to(box, { scrollTrigger: { trigger: box, scrub: true }, y: -200 });
     });
 
-    return () => ctx.revert();
+    gsap.utils.toArray(".man").forEach((box) => {
+      gsap.to(box, { scrollTrigger: { trigger: box, scrub: true }, y: isMobile ? 100 : 200 });
+    });
   }, []);
 
   const slides = data?.feedback?.map((feedback, index) => ({ ...feedback, index })) || [];
@@ -65,32 +58,36 @@ export default function PizzarteInfo({ data }) {
         <div className="red-background">
           <Image src="Homepage/red-background.png" alt="" />
         </div>
-        <Swiper spaceBetween={50} slidesPerView={1} autoplay={{ delay: 3000 }} loop navigation modules={[Navigation]} className="inside-slide">
-          {slides.map((feedback) => (
-            <SwiperSlide key={feedback.index}>
-              <div className="feedback-person">
-                <h1>{feedback.quote}</h1>
-                <p>{feedback.author}</p>
-                <Stars count={feedback.rating} />
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
+        <ClientOnly>
+          <Swiper spaceBetween={50} slidesPerView={1} autoplay={{ delay: 3000 }} loop navigation modules={[Navigation]} className="inside-slide">
+            {slides.map((feedback) => (
+              <SwiperSlide key={feedback.index}>
+                <div className="feedback-person">
+                  <h1>{feedback.quote}</h1>
+                  <p>{feedback.author}</p>
+                  <Stars count={feedback.rating} />
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </ClientOnly>
       </div>
 
       <div className="feedback feedback-mobile">
         <Image src="Homepage/red-top.png" extraClass="red-top" alt="" />
-        <Swiper spaceBetween={50} slidesPerView={1} autoplay={{ delay: 3000 }} loop navigation modules={[Navigation]}>
-          {slides.map((feedback) => (
-            <SwiperSlide key={feedback.index}>
-              <div className="feedback-person">
-                <h1>{feedback.quote}</h1>
-                <p className="author">{feedback.author}</p>
-                <Stars count={feedback.rating} />
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
+        <ClientOnly>
+          <Swiper spaceBetween={50} slidesPerView={1} autoplay={{ delay: 3000 }} loop navigation modules={[Navigation]}>
+            {slides.map((feedback) => (
+              <SwiperSlide key={feedback.index}>
+                <div className="feedback-person">
+                  <h1>{feedback.quote}</h1>
+                  <p className="author">{feedback.author}</p>
+                  <Stars count={feedback.rating} />
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </ClientOnly>
         <Image src="Homepage/red-bottom.png" extraClass="red-bottom" alt="" />
       </div>
 

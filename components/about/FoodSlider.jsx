@@ -1,42 +1,35 @@
 "use client";
 
-import { useLayoutEffect } from "react";
 import styled from "styled-components";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
-import gsap from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
 import { useLocale } from "next-intl";
 import { Image } from "../layout/Image";
 import Button from "../layout/Button";
+import ClientOnly from "../layout/ClientOnly";
 import { color, media, breakpoint } from "../style/style";
 import { prefersReducedMotion } from "../../utils/prefersReducedMotion";
 import { translateNavLink } from "../../i18n/navLinks";
-
-gsap.registerPlugin(ScrollTrigger);
+import { useGsapEffect } from "../../hooks/useGsapEffect";
 
 // Fusão de about/desktop/foodSlider.js + about/mobile/foodSliderMobile.js.
 export default function FoodSlider({ data }) {
   const locale = useLocale();
 
-  useLayoutEffect(() => {
-    const ctx = gsap.context(() => {
-      if (prefersReducedMotion()) return;
+  useGsapEffect((gsap) => {
+    if (prefersReducedMotion()) return;
 
-      const isMobile = window.matchMedia(`(max-width: ${breakpoint.l})`).matches;
-      const radius = isMobile ? 200 : 700;
+    const isMobile = window.matchMedia(`(max-width: ${breakpoint.l})`).matches;
+    const radius = isMobile ? 200 : 700;
 
-      gsap.utils.toArray(".background-radius").forEach((box) => {
-        gsap.set(box, { borderTopLeftRadius: radius, borderTopRightRadius: radius });
-        gsap.to(box, {
-          scrollTrigger: { trigger: box, scrub: true },
-          borderTopLeftRadius: 0,
-          borderTopRightRadius: 0,
-        });
+    gsap.utils.toArray(".background-radius").forEach((box) => {
+      gsap.set(box, { borderTopLeftRadius: radius, borderTopRightRadius: radius });
+      gsap.to(box, {
+        scrollTrigger: { trigger: box, scrub: true },
+        borderTopLeftRadius: 0,
+        borderTopRightRadius: 0,
       });
     });
-
-    return () => ctx.revert();
   }, []);
 
   return (
@@ -52,24 +45,26 @@ export default function FoodSlider({ data }) {
           </div>
         </div>
         <div className="swiper-container">
-          <Swiper
-            spaceBetween={0}
-            slidesPerView="auto"
-            autoplay={{ delay: 3000 }}
-            navigation={{ nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" }}
-            modules={[Navigation]}
-          >
-            {data.menu.map((menuItem, index) => (
-              <SwiperSlide key={index}>
-                <div className="swiper-slide">
-                  <a href={translateNavLink("/menu/" + menuItem.slug, locale)}>
-                    <Image src={menuItem.img} alt="" extraClass="dish-thumb" />
-                    <span>{menuItem.description}</span>
-                  </a>
-                </div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
+          <ClientOnly>
+            <Swiper
+              spaceBetween={0}
+              slidesPerView="auto"
+              autoplay={{ delay: 3000 }}
+              navigation={{ nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" }}
+              modules={[Navigation]}
+            >
+              {data.menu.map((menuItem, index) => (
+                <SwiperSlide key={index}>
+                  <div className="swiper-slide">
+                    <a href={translateNavLink("/menu/" + menuItem.slug, locale)}>
+                      <Image src={menuItem.img} alt="" extraClass="dish-thumb" />
+                      <span>{menuItem.description}</span>
+                    </a>
+                  </div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </ClientOnly>
         </div>
         <div style={{ display: "flex", justifyContent: "center", width: "100%", paddingTop: "70px" }}>
           <Button button={data.foodSlider.btn.text} to={translateNavLink("/menu", locale)} />

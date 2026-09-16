@@ -1,15 +1,21 @@
 import styled from "styled-components";
+import { useLocale } from "next-intl";
 import { Image } from "../layout/Image";
 import { color, media } from "../style/style";
 import Title from "../layout/Title";
 import Button from "../layout/Button";
 import Reveal from "../layout/Reveal";
+import { translateNavLink } from "../../i18n/navLinks";
 
 // Fusão de about/desktop/aboutIntro.js + about/mobile/aboutIntroMobile.js.
 // O empilhamento desktop→mobile já vem de graça do CSS global
 // (.grid-default passa de grid 12 colunas a flex-column em ≤1199px — ver
 // app/globals.css); aqui só ficam os ajustes finos de espaçamento/posição.
+// Bug #5 (repetido): data.link ("/pizzarte" na home, "/contactos" na
+// página /pizzarte) ia direto para o Button, sem tradução de locale.
 export default function AboutIntro({ data, home }) {
+  const locale = useLocale();
+
   return (
     <AboutIntroStyled>
       <Reveal>
@@ -20,10 +26,10 @@ export default function AboutIntro({ data, home }) {
               <div className="text">
                 <p dangerouslySetInnerHTML={{ __html: data?.text }} />
               </div>
-              <Button to={data?.link} button={data?.button} />
+              <Button to={data?.link ? translateNavLink(data.link, locale) : undefined} button={data?.button} />
             </div>
             <ImageContainer>
-              <Image src={data?.image} alt="" className="fill-image" />
+              <Image src={data?.image} alt="" extraClass="fill-image" />
               {home && <DecorativeCircle />}
             </ImageContainer>
           </div>

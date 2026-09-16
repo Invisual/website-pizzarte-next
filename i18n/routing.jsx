@@ -78,3 +78,12 @@ export const MENU_CATEGORY_SLUGS = {
     bebidas: "bebidas",
   },
 };
+
+// Sentido inverso de MENU_CATEGORY_SLUGS: dado o slug traduzido que chega
+// no URL (ex: "starters"), devolve o slug canónico (ex: "entradas") usado
+// como chave em messages/*/menu.json. Usado por app/[locale]/menu/[slug]/page.jsx.
+export function resolveCanonicalMenuSlug(locale, translatedSlug) {
+  const dict = MENU_CATEGORY_SLUGS[locale] || MENU_CATEGORY_SLUGS.pt;
+  const entry = Object.entries(dict).find(([, value]) => value === translatedSlug);
+  return entry?.[0] ?? null;
+}

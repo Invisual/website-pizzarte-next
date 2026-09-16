@@ -143,7 +143,7 @@
                     ]
                 },
                 {
-                    "title": "HORÁRIO",
+                    "title": "OPENING HOURS",
                     "items": [
                         {
                             "icon": "logos/law.svg",
@@ -161,10 +161,10 @@
                     "link": "https://www.livroreclamacoes.pt/inicio/"
             },
             "coFinanced": {
-                "title": "COFINANCIADO POR:",
+                "title": "CO-FINANCED BY:",
                 "image": "Homepage/logos-cert.svg",
                 "imageMobile": "Homepage/logos-cert-mobile.svg",
-                "link": "pdf/Ficha-de-projeto-PIZZARTE-PDF.pdf"
+                "link": "/pdf/Ficha-de-projeto-PIZZARTE-PDF.pdf"
             },
             "social": [
                 {

@@ -2,10 +2,10 @@
 
 import { useEffect, useState } from "react";
 import styled from "styled-components";
-import anime from "animejs/lib/anime.es.js";
 import { Image } from "../layout/Image";
 import Reveal from "../layout/Reveal";
 import { color, media } from "../style/style";
+import { useAnimeEffect } from "../../hooks/useAnimeEffect";
 
 // Fusão de about/desktop/ourSpace.js + about/mobile/ourSpaceMobile.js.
 // Número de títulos repetidos unificado numa só fórmula (era duas lógicas
@@ -27,7 +27,7 @@ export default function OurSpace() {
     return () => window.removeEventListener("resize", updateNumHeadings);
   }, []);
 
-  useEffect(() => {
+  useAnimeEffect((anime) => {
     const textWrappers = document.querySelectorAll(".ourspace-ml2");
     textWrappers.forEach((textWrapper, index) => {
       textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");

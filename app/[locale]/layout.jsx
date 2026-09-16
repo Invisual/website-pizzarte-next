@@ -19,6 +19,13 @@ const GA_MEASUREMENT_ID = "G-EJNDSQMG4C";
 const COOKIEYES_SRC =
   "https://cdn-cookieyes.com/client_data/31310dca5b10a15079bcadff/script.js";
 
+// Enumera os 4 locales para o segmento [locale] — sem isto nenhuma rota
+// desta árvore pode ser pré-renderizada estaticamente (o Gatsby original
+// era 100% estático; o starter não tinha generateStaticParams nenhum).
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }));
+}
+
 export default async function RootLayout({ children, params }) {
   const { locale } = await params;
 
