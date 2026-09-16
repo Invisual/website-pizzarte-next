@@ -197,6 +197,7 @@ const LivroReclamacoesSection = styled.div`
 
   .livro_image {
     width: 7vw;
+    height: auto;
   }
 
   ${media.l`
@@ -251,7 +252,10 @@ const Copyright = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: relative;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
   z-index: 10;
 
   a {
@@ -269,6 +273,7 @@ const Copyright = styled.div`
   }
 
   ${media.l`
+    position: static;
     flex-direction: column;
     gap: 12px;
 
