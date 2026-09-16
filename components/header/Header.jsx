@@ -9,7 +9,6 @@ import Button from "../layout/Button";
 import LocaleSwitcher from "../LocaleSwitcher";
 import { usePopup } from "../../utils/PopupContext";
 import { translateNavLink } from "../../i18n/navLinks";
-import { routing } from "../../i18n/routing";
 import { color, media } from "../style/style";
 
 // Fusão de src/components/header/desktop/header.js e
@@ -71,9 +70,10 @@ export default function Header({ data }) {
   }, []);
 
   function isActive(link) {
+    // translateNavLink já devolve o pathname com o prefixo de locale
+    // aplicado (getPathname trata disso) — não voltar a prefixar aqui.
     const translated = translateNavLink(link, locale);
-    const prefixed = locale === routing.defaultLocale ? translated : `/${locale}${translated}`;
-    return pathname === prefixed || pathname === prefixed + "/";
+    return pathname === translated || pathname === translated + "/";
   }
 
   const homeHref = translateNavLink("/", locale);
