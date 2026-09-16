@@ -1,0 +1,19 @@
+"use client";
+
+import Header from "../header/Header";
+import Footer from "../footer/Footer";
+import PageChrome from "./PageChrome";
+
+// Cada página do Gatsby repetia Header+Footer+Layout na própria mão; aqui
+// isso fica num único wrapper client, reduzindo repetição sem mudar o
+// comportamento (cada Server Component de página continua a decidir os
+// dados, isto só monta a árvore comum).
+export default function PageShell({ children, homeData, home, menuBg }) {
+  return (
+    <PageChrome home={home} dataLoader={homeData?.loader} dataPopup={homeData?.popupOrderNow}>
+      <Header data={homeData} />
+      <main className={menuBg ? "menu-page" : undefined}>{children}</main>
+      <Footer data={homeData} />
+    </PageChrome>
+  );
+}

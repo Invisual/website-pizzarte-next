@@ -8,13 +8,18 @@ export default getRequestConfig(async ({ requestLocale }) => {
         ? requested
         : routing.defaultLocale;
 
+    // Cada JSON tem uma chave de topo com o próprio nome (ex: home.json ->
+    // { "home": {...} }, herdado tal e qual dos locales/ do Gatsby). Sem o
+    // ".home"/".menu"/... aqui, o namespace ficaria com dupla imbricação
+    // (t("home.seo.title") em vez de t("seo.title")) — o mesmo bug que já
+    // existia no starter com "global.global.menu".
     return {
         locale,
         messages: {
-            home: (await import(`../messages/${locale}/home.json`)).default,
-            projects: (await import(`../messages/${locale}/projetos.json`)).default,
-            global: (await import(`../messages/${locale}/global.json`)).default,
-
+            home: (await import(`../messages/${locale}/home.json`)).default.home,
+            menu: (await import(`../messages/${locale}/menu.json`)).default.menu,
+            pizzarte: (await import(`../messages/${locale}/pizzarte.json`)).default.pizzarte,
+            contact: (await import(`../messages/${locale}/contact.json`)).default.contact,
         }
     };
 });

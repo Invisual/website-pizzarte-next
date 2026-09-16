@@ -1,0 +1,282 @@
+{
+    "home": {
+        "seo": {
+            "title": "Pizzarte",
+            "description": "La Pizzarte investit dans le sourire de ses clients en proposant une grande variété de pizzas, salades, pâtes et délicieux desserts à Aveiro.",
+            "image": "seo/pizzarte.png",
+            "imageAlt": "pizzarte"
+        },
+        "nav": [
+            {
+                "link": "/pizzarte",
+                "name": "pizzarte"
+            },
+            {
+                "link": "/menu",
+                "name": "notre menu",
+                "submenu": [
+                    {
+                        "title": "Entrées",
+                        "slug": "entradas"
+                    },
+                    {
+                        "title": "salades",
+                        "slug": "saladas"
+                    },
+                    {
+                        "title": "pâtes",
+                        "slug": "massas"
+                    },
+                    {
+                        "title": "les crêpes salées",
+                        "slug": "les-crepes-salees"
+                    },
+                    {
+                        "title": "les crêpes wrap",
+                        "slug": "les-crepes-wrap"
+                    },
+                    {
+                        "title": "pizzas",
+                        "slug": "pizzas"
+                    },
+                    {
+                        "title": "panne di pizza",
+                        "slug": "panne-di-pizza"
+                    },
+                    {
+                        "title": "desserts",
+                        "slug": "sobremesas"
+                    },
+                    {
+                        "title": "boissons",
+                        "slug": "bebidas"
+                    }
+                ]
+            },
+            {
+                "link": "/galeria",
+                "name": "galerie"
+            },
+            {
+                "link": "/contactos",
+                "name": "contact"
+            }
+        ],
+        "callButton": {
+            "text": "Commander",
+            "link": "tel:+351234427103"
+        },
+        "popupOrderNow": {
+            "title": "UNE PETITE FAIM?",
+            "subtitle": "CHOISISSEZ UNE OPTION:",
+            "buttons": [
+                {
+                    "id": "call",
+                    "text": "APPELER",
+                    "icon": "Homepage/call.svg",
+                    "iconHover": "Homepage/call-white.svg",
+                    "link": "tel:+351234427103"
+                },
+                {
+                    "id": "shop",
+                    "text": "SHOP ONLINE",
+                    "icon": "Homepage/shop-online.svg",
+                    "iconHover": "Homepage/shop-online-white.svg",
+                    "link": "https://shop.pizzarte.pt"
+                }
+            ],
+            "appSection": {
+                "text": "OU COMMANDEZ VIA</br> NOTRE <span>APPLICATION</span>",
+                "stores": [
+                    {
+                        "id": "google-play",
+                        "image": "Homepage/popup/google.png",
+                        "link": "https://play.google.com/store/apps/details?id=com.inova.pizzartetakeaway&hl=pt_PT"
+                    },
+                    {
+                        "id": "app-store",
+                        "image": "Homepage/popup/apple.png",
+                        "link": "https://apps.apple.com/pt/app/pizzarte-takeaway/id1635585800"
+                    }
+                ]
+            }
+        },
+        "loader": {
+            "firstText": "De quoi vous mettre l'eau à la bouche, non?",
+            "secondText": "Presque prêt..."
+        },
+        "footer": {
+            "info": [
+                {
+                    "title": "INFORMATION AU CONSOMMATEUR",
+                    "items": [
+                        {
+                            "icon": "logos/law.svg",
+                            "text": "Loi nº 144/2015 du 8 septembre",
+                            "link": "/pdf/informacao-ao-consumidor.pdf"
+                        },
+                        {
+                            "icon": "logos/law.svg",
+                            "text": "Termes et Conditions",
+                            "link": "/pdf/termos-e-condicoes.pdf"
+                        },
+                        {
+                            "icon": "logos/law.svg",
+                            "text": "Politique de Confidentialité",
+                            "link": "/pdf/politica-de-privacidade.pdf"
+                        }
+                    ]
+                },
+                {
+                    "title": "AVEIRO",
+                    "items": [
+                        {
+                            "icon": "logos/local.svg",
+                            "text": "R. Engº Von Haff, 27 3800-177 Aveiro",
+                            "link": "https://maps.app.goo.gl/CiaamA9ZuQMYSd1d7"
+                        },
+                        {
+                            "icon": "logos/call.svg",
+                            "text": "+351 234 427 103",
+                            "note": "«appel vers le réseau fixe national»"
+                        }
+                    ]
+                },
+                {
+                    "title": "HORAIRE",
+                    "items": [
+                        {
+                            "icon": "logos/law.svg",
+                            "text": "Dim à Jeu 12h00 à 01h00"
+                        },
+                        {
+                            "icon": "logos/law.svg",
+                            "text": "Ven et Sam 12h00 à 01h30"
+                        }
+                    ]
+                }
+            ],
+            "livroReclamacoes": {
+                "icon": "logos/livro-reclamacoes.png",
+                "link": "https://www.livroreclamacoes.pt/inicio/"
+            },
+            "coFinanced": {
+                "title": "COFINANCÉ PAR:",
+                "image": "Homepage/logos-cert.svg",
+                "imageMobile": "Homepage/logos-cert-mobile.svg",
+                "link": "/pdf/Ficha-de-projeto-PIZZARTE-PDF.pdf"
+            },
+            "social": [
+                {
+                    "src": "logos/face-icon.svg",
+                    "alt": "facebook",
+                    "link": "https://www.facebook.com/pizzarte/?locale=pt_PT"
+                },
+                {
+                    "src": "logos/insta-icon.svg",
+                    "alt": "instagram",
+                    "link": "https://www.instagram.com/pizzarte_restaurante/"
+                },
+                {
+                    "src": "logos/yt-icon.svg",
+                    "alt": "youtube",
+                    "link": "https://www.youtube.com/channel/UCbf4bYkwKOq0TswicJm5_CQ"
+                }
+            ],
+            "allrights": "Pizzarte Tous droits réservés.",
+            "createdBy": "Créé par:"
+        },
+        "pizzaEffect": {
+            "titleTop": "On va à la pizzarte?",
+            "text": "<h1 class='first-text'>la combinaison <div class='middle-text'>parfaite entre</div> saveur et art</h1>"
+        },
+        "aboutIntro": {
+            "title": "À propos de nous",
+            "text": "Au numéro 27 de la Rua Eng. Von Haff se trouve un lieu qui unit l'art de la bonne cuisine à la tradition et aux valeurs de la ville d'Aveiro. La Pizzarte, une pizzeria vieille de trois décennies, est un symbole de l'identité de la région. Un lieu fréquenté par plusieurs générations, qui considèrent la Pizzarte comme la meilleure pizzeria de la ville.<br/><br/>Du lundi au dimanche, la Pizzarte investit dans le sourire de ses clients en proposant une grande variété de pizzas, salades, pâtes et délicieux desserts, avec un service de qualité porté par une équipe jeune et enthousiaste.",
+            "button": "En savoir plus",
+            "link": "/pizzarte",
+            "image": "Pizzarte/about-intro.webp"
+        },
+        "foodSlider": {
+            "title": "VOUS NE SAVEZ PAS QUOI COMMANDER?",
+            "subtitle": "VOICI NOS SUGGESTIONS",
+            "btn": {
+                "text": "Découvrir plus de plats"
+            }
+        },
+        "waiting": {
+            "title": "NOUS VOUS ATTENDONS!"
+        },
+        "menu": [
+            {
+                "img": "Menu/pao_alho_queijo.webp",
+                "description": "Pain à l'ail au fromage",
+                "slug": "entradas"
+            },
+            {
+                "img": "Menu/salada.webp",
+                "description": "Salade pizzarte",
+                "slug": "saladas"
+            },
+            {
+                "img": "Menu/spaghetti.webp",
+                "description": "SPAGHETTI ALLA CARBONARA",
+                "slug": "massas"
+            },
+            {
+                "img": "Menu/lasagne.webp",
+                "description": "LASAGNE",
+                "slug": "massas"
+            },
+            {
+                "img": "Menu/pizza-pizzarte.webp",
+                "description": "PIZZA PIZZARTE",
+                "slug": "pizzas"
+            },
+            {
+                "img": "Menu/calzone.webp",
+                "description": "CALZONE",
+                "slug": "pizzas"
+            },
+            {
+                "img": "Menu/le-coco-rico.webp",
+                "description": "LE COCO RICO",
+                "slug": "les-crepes-salees"
+            },
+            {
+                "img": "Menu/nero.webp",
+                "description": "Nero",
+                "slug": "massas"
+            },
+            {
+                "img": "Menu/wrap-atum.webp",
+                "description": "Wrap au thon",
+                "slug": "les-crepes-wrap"
+            },
+            {
+                "img": "Menu/prosciutto-e-spinaci.webp",
+                "description": "PROSCIUTTO E SPINACI",
+                "slug": "pizzas"
+            }
+        ],
+        "drinks": {
+            "title": "NOTRE BAR",
+            "text": "Avec une ambiance cosmopolite, irrévérencieuse et confortable, le bar de notre Pizzeria offre le cadre parfait pour terminer la journée. Depuis son ouverture en 1989, il a fini par révolutionner la vie nocturne d'Aveiro.<br/><br/> Pour beaucoup, la soirée commence au bar de la Pizzarte. Nous servons des cocktails et des gins d'auteur très appréciés. Dans cet espace, les murs sont couverts de phrases tirées de livres et de films d'auteurs nationaux et internationaux, apportant ainsi une touche créative et artistique au lieu.",
+            "button": "Menu Boissons",
+            "drinksImage": [
+                {
+                    "img": "Homepage/bebidas/cocktails_1.webp"
+                },
+                {
+                    "img": "Homepage/bebidas/cocktails_2.webp"
+                },
+                {
+                    "img": "Homepage/bebidas/cocktails_3.webp"
+                },
+                {
+                    "img": "Homepage/bebidas/DP_abril.webp"
+                }
+            ]
+        }
+    }
+}

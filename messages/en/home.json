@@ -1,112 +1,267 @@
 {
-    "homepage": {
+    "home": {
         "seo": {
-            "title": "Property developers - Ponto Urbano",
-            "description": "Property developers based in Aveiro. We are committed to quality, rigour and excellent locations. ",
-            "image": "/images/homepage_pu.png",
-            "imageAlt": "Property developers - Ponto Urbano"
+            "title": "Pizzarte",
+            "description": "Pizzarte invests in its customers’ smiles by offering a wide variety of pizzas, salads, pastas, and delicious desserts in Aveiro.",
+            "image": "seo/pizzarte.png",
+            "imageAlt": "pizzarte"
         },
-        "top": {
-            "video": "/homepage/intro.mp4",
-            "videoMobile": "/homepage/intro-mobile.mp4",
-            "title": "Quality Projects,<br/>Buildings for life",
-            "pt2020": "/pt2020.png",
-            "pt2020Alt": "PT 2020"
-        },
-        "about": {
-            "title": "Building with responsibility",
-            "subtitle": "At Ponto Urbano, we build sustainable houses and work committed to the precision and quality of our projects. ",
-            "button": {
-                "text": "About us",
-                "link": "/about"
-            }
-        },
-        "highlights": [
+        "nav": [
             {
-                "src": "/homepage/destaques/destaque_1.webp",
-                "alt": "Destaque 1",
-                "logo": "/homepage/destaques/destaque_1_logo.png",
-                "logoAlt": "Logo Destaque 1",
-                "location": "Aveiro",
-                "button": {
-                    "text": "View project",
-                    "link": "projetos/legato-nobrega"
-                }
+                "link": "/pizzarte",
+                "name": "pizzarte"
             },
             {
-                "src": "/homepage/destaques/destaque_2.webp",
-                "alt": "Destaque 2",
-                "logo": "/homepage/destaques/destaque_2_logo.png",
-                "logoAlt": "Logo Destaque 2",
-                "location": "Coimbra",
-                "button": {
-                    "text": "View project",
-                    "link": "projetos/voluta"
-                }
+                "link": "/menu",
+                "name": " Our Menu",
+                "submenu": [
+                    {
+                        "title": "Starters",
+                        "slug": "entradas"
+                    },
+                    {
+                        "title": "salads",
+                        "slug": "saladas"
+                    },
+                    {
+                        "title": "pasta",
+                        "slug": "massas"
+                    },
+                    {
+                        "title": "les crêpes salées",
+                        "slug": "les-crepes-salees"
+                    },
+                    {
+                        "title": "les crêpes wrap",
+                        "slug": "les-crepes-wrap"
+                    },
+                    {
+                        "title": "pizzas",
+                        "slug": "pizzas"
+                    },
+                    {
+                        "title": "panne di pizza",
+                        "slug": "panne-di-pizza"
+                    },
+                    {
+                        "title": "desserts",
+                        "slug": "sobremesas"
+                    },
+                    {
+                        "title": "drinks",
+                        "slug": "bebidas"
+                    }
+                ]
             },
             {
-                "src": "/homepage/destaques/destaque_3.webp",
-                "alt": "Destaque 3",
-                "logo": "/homepage/destaques/destaque_3_logo.png",
-                "logoAlt": "Logo Destaque 3",
-                "location": "Espinho",
-                "button": {
-                    "text": "View project",
-                    "link": "projetos/terrae"
-                }
+                "link": "/galeria",
+                "name": "Gallery"
             },
             {
-                "src": "/homepage/destaques/destaque_4.webp",
-                "alt": "Destaque 4",
-                "logo": "/homepage/destaques/destaque_4_logo.png",
-                "logoAlt": "Logo Destaque 4",
-                "location": "São João da Madeira",
-                "button": {
-                    "text": "View project",
-                    "link": "projetos/pateo1896"
-                }
-            },
-            {
-                "src": "/homepage/destaques/destaque_5.webp",
-                "alt": "Destaque 5",
-                "logo": "/homepage/destaques/destaque_5_logo.png",
-                "logoAlt": "Logo Destaque 5",
-                "location": "Aveiro",
-                "button": {
-                   "text": "View project",
-                    "link": "https://ethula.pontourbano.pt",
-                    "external": true
-                }
+                "link": "/contactos",
+                "name": "Contacts"
             }
         ],
-        "news": {
-            "title": "Latest news",
-            "subtitle": "Follow our news and keep up to date with the latest developments",
-            "path": "news",
-            "button": {
-                "text": "Read more"
+        "loader": {
+            "firstText": "Leaves your mouth watering, doesn’t it?",
+            "secondText": "Almost there…"
+        },
+        "callButton":{
+            "text": "Call",
+            "link": "tel:+351234427103"
+        },
+        "popupOrderNow": {
+            "title": "FEELING HUNGRY?",
+            "subtitle": "CHOOSE AN OPTION:",
+            "buttons": [
+                {
+                    "id": "call",
+                    "text": "CALL",
+                    "icon": "Homepage/call.svg",
+                    "iconHover": "Homepage/call-white.svg",
+                    "link": "tel:+351234427103"
+                },
+                {
+                    "id": "shop",
+                    "text": "SHOP ONLINE",
+                    "icon": "Homepage/shop-online.svg",
+                    "iconHover": "Homepage/shop-online-white.svg",
+                    "link": "https://shop.pizzarte.pt"
+                }
+            ],
+            "appSection": {
+                "text": "OR ORDER THROUGH</br> OUR <span>APP</span>",
+                "stores": [
+                    {
+                        "id": "google-play",
+                        "image": "Homepage/popup/google.png",
+                        "link": "https://play.google.com/store/apps/details?id=com.inova.pizzartetakeaway&hl=pt_PT"
+                    },
+                    {
+                        "id": "app-store",
+                        "image": "Homepage/popup/apple.png",
+                        "link": "https://apps.apple.com/pt/app/pizzarte-takeaway/id1635585800"
+                    }
+                ]
             }
-        }
-    },
-    "noticias": {
-        "seo": {
-            "title": "News - Ponto Urbano",
-            "description": "Follow our news and keep up to date with the latest developments from Ponto Urbano.",
-            "image": "/images/homepage_pu.png"
-        }
-    },
-    "sobre": {
-        "seo": {
-            "title": "About Us - Ponto Urbano",
-            "description": "Learn about Ponto Urbano, property developers based in Aveiro, committed to quality and rigour.",
-            "image": "/images/homepage_pu.png"
-        }
-    },
-    "contacto": {
-        "seo": {
-            "title": "Contact - Ponto Urbano",
-            "description": "Get in touch with Ponto Urbano. We are available to answer all your questions.",
-            "image": "/images/homepage_pu.png"
+        },
+        "footer": {
+            "info": [
+                {
+                    "title": "Consumer information",
+                    "items": [
+                        {
+                            "icon": "logos/law.svg",
+                            "text": "Law No. 144/2015 of 8th September",
+                            "link": "/pdf/informacao-ao-consumidor-en.pdf"
+                        },
+                        {
+                            "icon": "logos/law.svg",
+                            "text": "Terms and Conditions",
+                            "link": "/pdf/termos-e-condicoes-en.pdf"
+                        },
+                        {
+                            "icon": "logos/law.svg",
+                            "text": "Privacy Policy",
+                            "link": "/pdf/politica-de-privacidade-en.pdf"
+                        }
+                    ]
+                },
+                {
+                    "title": "AVEIRO",
+                    "items": [
+                        {
+                            "icon": "logos/law.svg",
+                            "text": "R. Engº Von Haff, 27 3800-177 Aveiro",
+                            "link": "https://maps.app.goo.gl/CiaamA9ZuQMYSd1d7"
+                        },
+                        {
+                            "icon": "logos/law.svg",
+                            "text": "+351 234 427 103",
+                            "note": "«Call to a national landline»"
+                        }
+                    ]
+                },
+                {
+                    "title": "OPENING HOURS",
+                    "items": [
+                        {
+                            "icon": "logos/law.svg",
+                            "text": "Sun to Thu 12:00 to 01:00"
+                        },
+                        {
+                            "icon": "logos/law.svg",
+                            "text": "Fri and Sat 12pm to 1:30am"
+                        }
+                    ]
+                }
+            ],
+            "livroReclamacoes":{
+                "icon": "logos/livro-reclamacoes.png",
+                    "link": "https://www.livroreclamacoes.pt/inicio/"
+            },
+            "coFinanced": {
+                "title": "CO-FINANCED BY:",
+                "image": "Homepage/logos-cert.svg",
+                "imageMobile": "Homepage/logos-cert-mobile.svg",
+                "link": "/pdf/Ficha-de-projeto-PIZZARTE-PDF.pdf"
+            },
+            "social": [
+                {
+                    "src": "logos/face-icon.svg",
+                    "alt": "facebook",
+                    "link": "https://www.facebook.com/pizzarte/?locale=pt_PT"
+                },
+                {
+                    "src": "logos/insta-icon.svg",
+                    "alt": "instagram",
+                    "link": "https://www.instagram.com/pizzarte_restaurante/"
+                },
+                {
+                    "src": "logos/yt-icon.svg",
+                    "alt": "youtube",
+                    "link": "https://www.youtube.com/channel/UCbf4bYkwKOq0TswicJm5_CQ"
+                }
+            ],
+            "allrights": "Pizzarte All rights reserved.",
+            "createdBy": "Created:"
+        },
+        "pizzaEffect": {
+            "titleTop": "Let’s go to Pizzarte?",
+            "text": "<h1 class='first-text'>The perfect <div class='middle-text'>combination of</div> flavour and art</h1>"
+        },
+        "aboutIntro": {
+            "title": "About us",
+            "text": "At number 27, Rua Eng. Von Haf, there is a place which combines the art of great cuisine with the tradition and values of the city of Aveiro. Pizzarte, a pizzeria that has been in operation for three decades, is a symbol of the region's identity. A place visited by several generations, who see Pizzarte as having the best pizzas in the city.<br/><br/>From Monday to Sunday, Pizzarte invests in its customers' smiles by offering a wide variety of pizzas, salads, pastas and delicious desserts, with quality service provided by a young and enthusiastic team.",
+            "button": "Find out more",
+            "link": "/pizzarte",
+            "image": "Pizzarte/about-intro.webp"
+        },
+        "foodSlider": {
+            "title": "Not sure what to order?",
+            "subtitle": "Here are some of our suggestions",
+            "btn":{
+                "text": "Discover some more of our dishes"
+            }
+        },
+        "waiting":{
+            "title": "We look forward to seeing you."
+        },
+        "menu": [
+            {
+                "img": "Menu/salada.webp",
+                "description": "Salada pizzarte",
+                "slug": "salada"
+            },
+            {
+                "img": "Menu/spaghetti.webp",
+                "description": "SPAGHETTI ALLA CARBONARA",
+                "slug": "massas"
+            },
+            {
+                "img": "Menu/lasagne.webp",
+                "description": "LASAGNE",
+                "slug": "lasagne"
+            },
+            {
+                "img": "Menu/pizza-pizzarte.webp",
+                "description": "PIZZA PIZZARTE",
+                "slug": "pizzas"
+            },
+            {
+                "img": "Menu/calzone.webp",
+                "description": "CALZONE",
+                "slug": "pizzas"
+            },
+            {
+                "img": "Menu/le-coco-rico.webp",
+                "description": "LE COCO RICO",
+                "slug": "les-crepes-salees"
+            },
+            {
+                "img": "Menu/nero.webp",
+                "description": "Nero",
+                "slug": "massas"
+            }
+        ],
+        "drinks": {
+            "title": "Our bar",
+            "text": "With its cosmopolitan, irreverent and comfortable atmosphere, our Pizzeria’s bar offers the perfect way to end the day. When it opened in 1989, it revolutionised Aveiro's nightlife scene.<br/><br/>For many, the evening begins at the Pizzarte bar. We serve much-loved cocktails and signature gins. The walls are covered with phrases from books and films by national and international authors, giving the space a creative and artistic touch.",
+            "button": "Beverage Menu",
+            "drinksImage": [
+                {
+                    "img": "Homepage/bebidas/cocktails_1.webp"
+                },
+                {
+                    "img": "Homepage/bebidas/cocktails_2.webp"
+                },
+                {
+                    "img": "Homepage/bebidas/cocktails_3.webp"
+                },
+                {
+                    "img": "Homepage/bebidas/DP_abril.webp"
+                }
+            ]
         }
     }
 }

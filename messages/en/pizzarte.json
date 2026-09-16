@@ -1,0 +1,78 @@
+{
+    "pizzarte": {
+        "seo": {
+            "title": "Pizzarte",
+            "description": "On Rua Eng. Von Haffe, no. 27, there is a pizzeria everyone knows. It has long been part of Aveiro’s identity and, for many, it is one of the best restaurants.",
+            "image": "seo/pizzarte.png",
+            "imageAlt": "pizzarte"
+        },
+        "seoGallery": {
+            "title": "Gallery",
+            "description": "Browse the full gallery of the space, food, cocktails and drinks, as well as the events Pizzarte has been part of.",
+            "image": "seo/pizzarte.png",
+            "imageAlt": "pizzarte"
+        },
+        "seoMenu": {
+            "title": "Menu",
+            "description": "Discover all our flavors. Pizzarte Restaurant offers a wide selection of pizzas, salads, pastas, crêpes, and much more.",
+            "image": "seo/pizzarte.png",
+            "imageAlt": "pizzarte"
+        },
+        "info": {
+            "title": "PIZZARTE",
+            "text": "Number 27 Rua Eng. Von Haff is a place that combines the art of great cuisine with the tradition and values of the city of Aveiro. Pizzarte, a pizzeria that has been in operation for three decades, is a symbol of the region's identity.<br/><br/>A place frequented by several generations, who see Pizzarte as having the best pizzas in town.<br/><br/>From Monday to Sunday, Pizzarte invests in its customers' smiles by offering a wide variety of pizzas, salads, pastas and delicious desserts, with quality service provided by a young and enthusiastic team.",
+            "feedback": [
+                {
+                    "quote": "“A landmark in Italian food in Aveiro, with efficient and youthful service, fantastic pizzas and crêpes, as well as pasta, a local favourite for over 20 years.”",
+                    "author": "Edu Gi",
+                    "rating": 5
+                },
+                {
+                    "quote": "“A favourite restaurant in Aveiro. Super pleasant space with special and personalised service. Quality food for all tastes.”",
+                    "author": "André Santos",
+                    "rating": 4
+                },
+                {
+                    "quote": "Fantastic 👏👏 Well-trained youthful staff, friendly and happy to work, and the pizzas were very good.”",
+                    "author": "José Martins",
+                    "rating": 5
+                },
+                {
+                    "quote": "“Relaxed, cosy and tasty food... Great for children: Large space with board games.”",
+                    "author": "José Alberto Costa",
+                    "rating": 4
+                }
+            ]
+        },
+        "ourSpace": {
+            "title": "Our Space",
+            "text": "With an area of 800 m2, Pizzarte can seat 200 people and there is usually a full house. At the weekend, it is common to have to wait for a table.<br/><br/>The capacity and versatility of the restaurant's space means that various events can be organised without compromising the pizzeria's activity. Mini concerts, theatre performances, show cooking, children's plays, chess tournaments and many other fun activities have been held here.<br/><br/>Pizzarte is a must for anyone who visits Aveiro and is a pizza lover.",
+            "button": "Book a table",
+            "link": "/en/contacts",
+            "image": "Homepage/imagem_2.webp"
+        },
+        "chessIntro": {
+            "title": "CHESS TOURNAMENTS",
+            "text": "Chess has been a part of Pizzarte since 1988, with its famous chessboard created by the artist Pedro Andrade, which is still present today.<br/><br/>In addition to the chessboard, various tournaments take place in the restaurant on a regular basis.",
+            "button": "Book a table"
+        },
+        "filters": [
+            {
+                "slug": "all",
+                "displayName": "Show all"
+            },
+            {
+                "slug": "bar",
+                "displayName": "Bar"
+            },
+            {
+                "slug": "space",
+                "displayName": "Space"
+            },
+            {
+                "slug": "events",
+                "displayName": "Events"
+            }
+        ]
+    }
+}

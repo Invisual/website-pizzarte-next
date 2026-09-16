@@ -1,0 +1,76 @@
+{
+    "contact": {
+        "seo": {
+            "title": "Contacts",
+            "description": "Contacts of our restaurants: +351 234 427 103 | +351 239 810 443. We are in Aveiro. Book your table now or order to enjoy at home!",
+            "image": "seo/pizzarte.png",
+            "imageAlt": "pizzarte"
+        },
+        "contactInfo": {
+            "title": "Aveiro",
+            "address": "R. Engº Von Haff, 27",
+            "postalCode": "3800-177 Aveiro",
+            "phoneButton": "Call",
+            "adressButton": "Directions",
+            "phone": "+351 234 427 103",
+            "reservationTitle": "Please call this number to make a RESERVATION.",
+            "infoPhone": [
+                "«Call to a national landline»"
+            ],
+            "email": "pizzarte@pizzarte.com",
+            "addressLink": "https://www.google.com/maps/search/?api=1&query=R.+Engº+Von+Haff,+27,+3800-177+Aveiro",
+            "phoneLink": "tel:+351234427103",
+            "emailLink": "mailto:pizzarte@pizzarte.com"
+        },
+        "form": {
+            "bookTable": "Book a table!",
+            "note": "NOTE: Only reservations for groups of 10 or more people are accepted.",
+            "fields": {
+                "name": {
+                    "placeholder": "Name",
+                    "type": "text",
+                    "id": "name"
+                },
+                "tel": {
+                    "placeholder": "Telephone",
+                    "type": "number",
+                    "id": "tel"
+                },
+                "people": {
+                    "placeholder": "Number of people",
+                    "type": "number",
+                    "id": "people"
+                },
+                "email": {
+                    "placeholder": "Email",
+                    "type": "email",
+                    "id": "email"
+                },
+                "message": {
+                    "placeholder": "Message",
+                    "type": "textarea",
+                    "id": "message"
+                }
+            },
+            "submitButton": {
+                "text": "Send"
+            },
+            "successDialog": {
+                "title": "Thanks for contacting ✓",
+                "content": [
+                    "We received your email. Please note that the reservation is only confirmed after our response/contact.",
+                    "For faster confirmation, please contact 234 427 103"
+                ],
+                "closeButton": "Close"
+            },
+            "errorDialog": {
+                "title": "Something went wrong X",
+                "content": [
+                    "Something went wrong X",
+                    "Review your form!"
+                ],
+                "closeButton": "Close"
+            }
+        }
+    }
+}

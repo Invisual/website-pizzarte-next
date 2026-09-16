@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16.875" height="12.342" viewBox="0 0 16.875 12.342">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Retângulo_70" data-name="Retângulo 70" width="16.875" height="12.342" fill="red"/>
+    </clipPath>
+  </defs>
+  <g id="email" clip-path="url(#clip-path)">
+    <path id="Caminho_92" data-name="Caminho 92" d="M6.557,7.919.49,3.021A1.786,1.786,0,0,0,0,4.252V13a1.784,1.784,0,0,0,.3.992Z" transform="translate(0 -2.455)" fill="red"/>
+    <path id="Caminho_93" data-name="Caminho 93" d="M12.65,30.6l-.988.84a.928.928,0,0,1-1.185.014l-1.183-.956L2.979,36.622a1.793,1.793,0,0,0,1.24.5H17.5a1.794,1.794,0,0,0,1.24-.5Z" transform="translate(-2.42 -24.776)" fill="red"/>
+    <path id="Caminho_94" data-name="Caminho 94" d="M56.207,8.1l6.037,5.978a1.788,1.788,0,0,0,.3-.992V4.339a1.792,1.792,0,0,0-.472-1.211Z" transform="translate(-45.668 -2.542)" fill="red"/>
+    <path id="Caminho_95" data-name="Caminho 95" d="M18.55,0H5.271a1.787,1.787,0,0,0-1,.3L11.782,6.36a.525.525,0,0,0,.671-.006L19.571.317A1.791,1.791,0,0,0,18.55,0" transform="translate(-3.473)" fill="red"/>
+  </g>
+</svg>

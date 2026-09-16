@@ -1,0 +1,10 @@
+<svg id="call-white" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="11.785" height="12.758" viewBox="0 0 11.785 12.758">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Retângulo_55" data-name="Retângulo 55" width="11.785" height="12.758" transform="translate(0 0)" fill="#fff"/>
+    </clipPath>
+  </defs>
+  <g id="Grupo_90" data-name="Grupo 90" transform="translate(0 0)" clip-path="url(#clip-path)">
+    <path id="Caminho_54" data-name="Caminho 54" d="M11.528,9.938,11.457,9.8c-.2-.468-2.639-1.178-2.837-1.192l-.156.014c-.3.057-.624.326-1.263.88a.385.385,0,0,1-.454.057A11.141,11.141,0,0,1,4.377,7.583,8.91,8.91,0,0,1,2.845,5.157a.425.425,0,0,1,.113-.44c.724-.653,1.036-.965,1.064-1.305.014-.2-.411-2.71-.851-2.951L3.044.376A1.608,1.608,0,0,0,1.866.021,1.3,1.3,0,0,0,1.54.149,4.261,4.261,0,0,0,.093,1.582C-.12,2.021-.219,6.008,2.76,9.37A9.22,9.22,0,0,0,9.9,12.732H9.91l.043-.014a4.2,4.2,0,0,0,1.6-1.263,1.362,1.362,0,0,0-.028-1.518" transform="translate(0 0)" fill="#fff"/>
+  </g>
+</svg>

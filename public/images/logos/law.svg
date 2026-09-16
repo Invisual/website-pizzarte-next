@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="8.625" height="11.5" viewBox="0 0 8.625 11.5">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Retângulo_60" data-name="Retângulo 60" width="8.625" height="11.5" transform="translate(0 0)" fill="red"/>
+    </clipPath>
+  </defs>
+  <g id="law" transform="translate(0 0)" clip-path="url(#clip-path)">
+    <path id="Caminho_57" data-name="Caminho 57" d="M8.608,2.384a.478.478,0,0,0-.049-.07L6.094.054A.23.23,0,0,0,5.955,0H.205A.205.205,0,0,0,0,.206V11.3a.205.205,0,0,0,.205.205H8.42a.205.205,0,0,0,.205-.205V2.465a.2.2,0,0,0-.017-.081ZM6.16.673,7.891,2.26H6.16ZM.41,11.09V.411H5.749V2.465a.205.205,0,0,0,.205.205H8.214v8.42Z" transform="translate(0 0)" fill="red"/>
+    <path id="Caminho_58" data-name="Caminho 58" d="M11.159,14.475h3.08a.205.205,0,1,0,0-.411h-3.08a.205.205,0,0,0,0,.411" transform="translate(-9.516 -12.216)" fill="red"/>
+    <path id="Caminho_59" data-name="Caminho 59" d="M11.159,28.537h3.08a.205.205,0,1,0,0-.411h-3.08a.205.205,0,0,0,0,.411" transform="translate(-9.516 -24.43)" fill="red"/>
+    <path id="Caminho_60" data-name="Caminho 60" d="M16.5,42.189H11.158a.205.205,0,0,0,0,.411H16.5a.205.205,0,0,0,0-.411" transform="translate(-9.516 -36.644)" fill="red"/>
+    <path id="Caminho_61" data-name="Caminho 61" d="M16.5,56.251H11.158a.205.205,0,0,0,0,.411H16.5a.205.205,0,0,0,0-.411" transform="translate(-9.516 -48.858)" fill="red"/>
+    <path id="Caminho_62" data-name="Caminho 62" d="M16.5,70.313H11.158a.205.205,0,0,0,0,.411H16.5a.205.205,0,0,0,0-.411" transform="translate(-9.516 -61.072)" fill="red"/>
+  </g>
+</svg>

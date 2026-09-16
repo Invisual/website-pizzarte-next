@@ -42,3 +42,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# gerado por scripts/build-image-manifest.mjs (predev/prebuild) a partir
+# de public/images/ — não é fonte de verdade, não commitar
+/lib/imageManifest.json

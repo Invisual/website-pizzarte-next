@@ -1,0 +1,78 @@
+{
+    "pizzarte": {
+        "seo": {
+            "title": "Pizzarte",
+            "description": "Au numéro 27 de la Rua Eng. Von Haffe se trouve une pizzeria que tout le monde connaît. Elle fait depuis longtemps partie de l'identité d'Aveiro et est, pour beaucoup, l'un des meilleurs restaurants",
+            "image": "seo/pizzarte.png",
+            "imageAlt": "pizzarte"
+        },
+        "seoGallery": {
+            "title": "Galerie",
+            "description": "Découvrez toute la galerie de l'espace, de la nourriture, des cocktails et des boissons, ainsi que des événements auxquels le restaurant Pizzarte a été associé.",
+            "image": "seo/pizzarte.png",
+            "imageAlt": "pizzarte"
+        },
+        "seoMenu": {
+            "title": "Menu",
+            "description": "Découvrez toutes nos saveurs. Le Restaurant Pizzarte propose un vaste choix de pizzas, salades, pâtes, crêpes et bien plus encore.",
+            "image": "seo/pizzarte.png",
+            "imageAlt": "pizzarte"
+        },
+        "info": {
+            "title": "LA PIZZARTE",
+            "text": "Au numéro 27 de la Rua Eng. Von Haff se trouve un lieu qui unit l'art de la bonne cuisine à la tradition et aux valeurs de la ville d'Aveiro. La Pizzarte, une pizzeria vieille de trois décennies, est un symbole de l'identité de la région.<br/><br/> Un lieu fréquenté par plusieurs générations, qui considèrent la Pizzarte comme la meilleure pizzeria de la ville.<br/><br/> Du lundi au dimanche, la Pizzarte investit dans le sourire de ses clients en proposant une grande variété de pizzas, salades, pâtes et délicieux desserts, avec un service de qualité porté par une équipe jeune et enthousiaste.",
+            "feedback": [
+                {
+                    "quote": "“Un lieu qui marque l'histoire de la cuisine italienne à Aveiro, service jeune et efficace, pizzas et crêpes fantastiques ainsi que les pâtes, un endroit que je fréquente depuis plus de 20 ans.”",
+                    "author": "Edu Gi",
+                    "rating": 5
+                },
+                {
+                    "quote": "“Restaurant de choix à Aveiro. Espace très agréable et accueil particulier, différent. Une cuisine de qualité pour tous les goûts.”",
+                    "author": "André Santos",
+                    "rating": 4
+                },
+                {
+                    "quote": "“Fantastique 👏👏 équipe jeune et bien formée, sympathique et heureuse de travailler, les pizzas étaient délicieuses.”",
+                    "author": "José Martins",
+                    "rating": 5
+                },
+                {
+                    "quote": "“Détendu, accueillant et une cuisine savoureuse... Adapté aux enfants: espace spacieux, avec des jeux de société.”",
+                    "author": "José Alberto Costa",
+                    "rating": 4
+                }
+            ]
+        },
+        "ourSpace": {
+            "title": "Notre espace",
+            "text": "S'étendant sur 800m2, la Pizzarte peut accueillir 200 personnes assises et affiche généralement complet. Le week-end, il est fréquent de devoir attendre une table.<br/><br/> La capacité et la polyvalence de cet espace permettent d'organiser divers événements sans compromettre l'activité de la Pizzeria. Dans ce cadre, mini-concerts, performances théâtrales, show cookings, pièces de théâtre pour enfants, tournois d'échecs et bien d'autres activités ludiques ont déjà eu lieu.<br/><br/> La Pizzarte est un lieu incontournable pour tous ceux qui visitent Aveiro et qui aiment la pizza.",
+            "button": "Réserver une table",
+            "link": "/fr/contact",
+            "image": "Homepage/imagem_2.webp"
+        },
+        "chessIntro": {
+            "title": "TOURNOIS D'ÉCHECS",
+            "text": "Les échecs sont présents à la Pizzarte depuis 1988, avec le célèbre échiquier créé par l'artiste Pedro Andrade, toujours visible aujourd'hui.<br/><br/> Outre l'échiquier, plusieurs tournois se déroulent régulièrement dans le restaurant.",
+            "button": "Réserver une table"
+        },
+        "filters": [
+            {
+                "slug": "all",
+                "displayName": "Tout afficher"
+            },
+            {
+                "slug": "bar",
+                "displayName": "Bar"
+            },
+            {
+                "slug": "space",
+                "displayName": "Espace"
+            },
+            {
+                "slug": "events",
+                "displayName": "Événements"
+            }
+        ]
+    }
+}

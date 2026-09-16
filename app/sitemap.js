@@ -1,96 +1,58 @@
-import { getAllPosts } from "../lib/mdx";
-import ptProjetos from "../messages/pt/projetos.json";
-import enProjetos from "../messages/en/projetos.json";
+import { getPathname } from "../i18n/navigation";
+import { routing, MENU_CATEGORY_SLUGS } from "../i18n/routing";
 
 const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://example.pt";
 
-const STATIC_ROUTES = [
-  {
-    pt: { path: "/", priority: 1.0, changeFrequency: "monthly" },
-    en: { path: "/" },
-  },
-  {
-    pt: { path: "/noticias", priority: 0.8, changeFrequency: "daily" },
-    en: { path: "/news" },
-  },
-  {
-    pt: { path: "/servicos", priority: 0.8, changeFrequency: "monthly" },
-    en: { path: "/services" },
-  },
-];
+function urlFor(pathnameKey, locale) {
+  return `${BASE_URL}${getPathname({ href: pathnameKey, locale })}`;
+}
 
-function makeEntry({ ptPath, enPath, priority = 0.6, changeFrequency = "monthly", date }) {
+function languagesFor(pathnameKey) {
+  return Object.fromEntries(routing.locales.map((locale) => [locale, urlFor(pathnameKey, locale)]));
+}
+
+function makeEntry(pathnameKey, { priority, changeFrequency }) {
   return {
-    url: `${BASE_URL}${ptPath}`,
-    lastModified: date ? new Date(date) : new Date(),
+    url: urlFor(pathnameKey, routing.defaultLocale),
+    lastModified: new Date(),
     changeFrequency,
     priority,
-    alternates: {
-      languages: {
-        pt: `${BASE_URL}${ptPath}`,
-        en: `${BASE_URL}/en${enPath}`,
-      },
-    },
+    alternates: { languages: languagesFor(pathnameKey) },
   };
 }
 
-export default async function sitemap() {
-  const ptPosts = await getAllPosts("pt");
-  const enPosts = await getAllPosts("en");
+const STATIC_ROUTES = [
+  { pathname: "/", priority: 1.0, changeFrequency: "monthly" },
+  { pathname: "/menu", priority: 0.8, changeFrequency: "monthly" },
+  { pathname: "/pizzarte", priority: 0.7, changeFrequency: "yearly" },
+  { pathname: "/galeria", priority: 0.6, changeFrequency: "monthly" },
+  { pathname: "/contactos", priority: 0.6, changeFrequency: "yearly" },
+];
 
-  const staticEntries = STATIC_ROUTES.map(({ pt, en }) =>
-    makeEntry({
-      ptPath: pt.path,
-      enPath: en.path,
-      priority: pt.priority,
-      changeFrequency: pt.changeFrequency,
-    })
-  );
+export default function sitemap() {
+  const staticEntries = STATIC_ROUTES.map(({ pathname, priority, changeFrequency }) => makeEntry(pathname, { priority, changeFrequency }));
 
-  const postEntries = ptPosts.map((post) => {
-    const enPost = enPosts.find(
-      (p) => p.frontmatter.id === post.frontmatter.id
+  // Categorias de menu — cada slug traduzido por locale (ver
+  // i18n/routing.jsx MENU_CATEGORY_SLUGS), sem depender do mapa `pathnames`
+  // do next-intl (não cobre segmentos dinâmicos data-driven).
+  const canonicalSlugs = Object.keys(MENU_CATEGORY_SLUGS.pt);
+  const menuEntries = canonicalSlugs.map((canonicalSlug) => {
+    const languages = Object.fromEntries(
+      routing.locales.map((locale) => {
+        const translatedSlug = MENU_CATEGORY_SLUGS[locale][canonicalSlug];
+        const prefix = locale === routing.defaultLocale ? "" : `/${locale}`;
+        return [locale, `${BASE_URL}${prefix}/menu/${translatedSlug}`];
+      })
     );
-    return makeEntry({
-      ptPath: `/noticias/${post.slug}`,
-      enPath: enPost ? `/news/${enPost.slug}` : `/news/${post.slug}`,
-      priority: 0.6,
-      changeFrequency: "yearly",
-      date: post.frontmatter.date,
-    });
+
+    return {
+      url: languages[routing.defaultLocale],
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.7,
+      alternates: { languages },
+    };
   });
 
-  const ptServices = ptProjetos.projetos.all;
-  const enServices = enProjetos.projetos.all;
-
-  const serviceEntries = ptServices.flatMap((service) => {
-    const enService = enServices.find((s) => s.id === service.id);
-    const enSlug = enService?.slug ?? service.slug;
-
-    const entries = [
-      makeEntry({
-        ptPath: `/servicos/${service.slug}`,
-        enPath: `/services/${enSlug}`,
-        priority: 0.7,
-        changeFrequency: "monthly",
-      }),
-    ];
-
-    service.subpages?.forEach((sub) => {
-      const enSub = enService?.subpages?.find((s) => s.id === sub.id);
-      const enSubSlug = enSub?.slug ?? sub.slug;
-      entries.push(
-        makeEntry({
-          ptPath: `/servicos/${service.slug}/${sub.slug}`,
-          enPath: `/services/${enSlug}/${enSubSlug}`,
-          priority: 0.6,
-          changeFrequency: "monthly",
-        })
-      );
-    });
-
-    return entries;
-  });
-
-  return [...staticEntries, ...postEntries, ...serviceEntries];
+  return [...staticEntries, ...menuEntries];
 }
