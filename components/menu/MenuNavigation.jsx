@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 import { useLocale } from "next-intl";
 import Title from "../layout/Title";
 import { translateNavLink } from "../../i18n/navLinks";
-import { media } from "../style/style";
+import { media, breakpoint } from "../style/style";
 
 // Fusão de menu/desktop/menuNavegation.js + .../mobile/menuNavegationMobile.js.
 // AniLink (gatsby-plugin-transition-link) saiu — sem equivalente direto no
@@ -94,6 +94,29 @@ const StyledLink = styled.a`
 
     &::after {
       background-color: red;
+    }
+  `}
+
+  ${(props) =>
+    !props.$isCurrentPage &&
+    `
+    @media screen and (min-width: ${breakpoint.l}) and (hover: hover) {
+      transition: color 0.3s ease;
+
+      &::after {
+        background-color: #ff0000;
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.3s ease;
+      }
+
+      &:hover {
+        color: #ff0000;
+
+        &::after {
+          transform: scaleX(1);
+        }
+      }
     }
   `}
 `;

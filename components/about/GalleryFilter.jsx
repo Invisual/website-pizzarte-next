@@ -4,6 +4,7 @@ import { useQueryState } from "nuqs";
 import styled from "styled-components";
 import Title from "../layout/Title";
 import ImageGallery from "./ImageGallery";
+import { breakpoint } from "../style/style";
 
 // Fusão de about/desktop/galleryFilter.js (a versão mobile nunca existiu à
 // parte — a página /galeria só tinha a árvore desktop no Gatsby). Duas
@@ -59,21 +60,38 @@ const GalleryStyled = styled.div`
   .desactive,
   .active {
     position: relative;
+    transition: color 0.3s ease, font-weight 0.3s ease;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -1.5rem;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: #ff0000;
+      z-index: 1;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.3s ease;
+    }
   }
 
   .active {
     font-weight: 600;
 
     &::after {
-      content: "";
-      position: absolute;
-      bottom: -1.5rem;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 24px;
-      height: 2px;
-      background-color: #ff0000;
-      z-index: 1;
+      transform: scaleX(1);
+    }
+  }
+
+  @media screen and (min-width: ${breakpoint.l}) and (hover: hover) {
+    .desactive:hover {
+      color: #ff0000;
+
+      &::after {
+        transform: scaleX(1);
+      }
     }
   }
 `;
