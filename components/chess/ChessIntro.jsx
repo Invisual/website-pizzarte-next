@@ -18,20 +18,18 @@ export default function ChessIntro({ data }) {
         </div>
 
         <div className="container">
-          <Reveal>
-            <div className="text-section">
-              <Title text={data?.title} />
-              <p dangerouslySetInnerHTML={{ __html: data?.text }} />
-            </div>
-            <div className="chess-right-position">
-              <div className="chess-image">
-                <Image src="Homepage/chess-image.webp" alt="" extraClass="fill-image" />
-                <div className="triangle-right desktop-only">
-                  <Triangle color="white" width="234px" />
-                </div>
-                <div className="triangle-right mobile-only">
-                  <Triangle color="white" width="110px" />
-                </div>
+          <Reveal className="text-section">
+            <Title text={data?.title} />
+            <p dangerouslySetInnerHTML={{ __html: data?.text }} />
+          </Reveal>
+          <Reveal className="chess-right-position">
+            <div className="chess-image">
+              <Image src="Homepage/chess-image.webp" alt="" extraClass="fill-image" />
+              <div className="triangle-right desktop-only">
+                <Triangle color="white" width="234px" />
+              </div>
+              <div className="triangle-right mobile-only">
+                <Triangle color="white" width="110px" />
               </div>
             </div>
           </Reveal>
@@ -54,16 +52,13 @@ const ChessIntroStyled = styled.div`
   .container {
     display: flex;
     justify-content: space-between;
-    height: 100vh;
+    padding-bottom: 100px;
 
     .text-section {
       width: 474px;
     }
 
     .chess-right-position {
-      position: absolute;
-      right: 0;
-
       .chess-image {
         width: 700px;
         position: relative;

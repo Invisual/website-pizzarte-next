@@ -249,6 +249,11 @@ const HeaderStyled = styled.header`
       padding-bottom: 30%;
       font-weight: 600;
       text-transform: uppercase;
+      transition: color 0.2s ease-in-out;
+
+      &:hover {
+        color: ${color.red};
+      }
     }
 
     .active-nav {
@@ -268,6 +273,12 @@ const HeaderStyled = styled.header`
         text-decoration: none;
         padding: 10px 20px;
         text-transform: uppercase;
+        transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+
+        &:hover {
+          color: ${color.red};
+          background-color: #f5f5f5;
+        }
       }
 
       .active-sub {

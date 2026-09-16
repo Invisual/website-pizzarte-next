@@ -8,7 +8,7 @@ import Title from "../layout/Title";
 import Reveal from "../layout/Reveal";
 import ClientOnly from "../layout/ClientOnly";
 import Stars from "./Stars";
-import { media } from "../style/style";
+import { color, media } from "../style/style";
 import { prefersReducedMotion } from "../../utils/prefersReducedMotion";
 import { useGsapEffect } from "../../hooks/useGsapEffect";
 
@@ -59,7 +59,15 @@ export default function PizzarteInfo({ data }) {
           <Image src="Homepage/red-background.png" alt="" />
         </div>
         <ClientOnly>
-          <Swiper spaceBetween={50} slidesPerView={1} autoplay={{ delay: 3000 }} loop navigation modules={[Navigation]} className="inside-slide">
+          <Swiper
+            spaceBetween={50}
+            slidesPerView={1}
+            autoplay={{ delay: 3000 }}
+            loop
+            navigation={{ nextEl: ".swiper-button-next-desktop", prevEl: ".swiper-button-prev-desktop" }}
+            modules={[Navigation]}
+            className="inside-slide"
+          >
             {slides.map((feedback) => (
               <SwiperSlide key={feedback.index}>
                 <div className="feedback-person">
@@ -71,12 +79,23 @@ export default function PizzarteInfo({ data }) {
             ))}
           </Swiper>
         </ClientOnly>
+        <div className="swiper-navigation">
+          <div className="swiper-button-prev swiper-button-prev-desktop"></div>
+          <div className="swiper-button-next swiper-button-next-desktop"></div>
+        </div>
       </div>
 
       <div className="feedback feedback-mobile">
         <Image src="Homepage/red-top.png" extraClass="red-top" alt="" />
         <ClientOnly>
-          <Swiper spaceBetween={50} slidesPerView={1} autoplay={{ delay: 3000 }} loop navigation modules={[Navigation]}>
+          <Swiper
+            spaceBetween={50}
+            slidesPerView={1}
+            autoplay={{ delay: 3000 }}
+            loop
+            navigation={{ nextEl: ".swiper-button-next-mobile", prevEl: ".swiper-button-prev-mobile" }}
+            modules={[Navigation]}
+          >
             {slides.map((feedback) => (
               <SwiperSlide key={feedback.index}>
                 <div className="feedback-person">
@@ -88,6 +107,10 @@ export default function PizzarteInfo({ data }) {
             ))}
           </Swiper>
         </ClientOnly>
+        <div className="swiper-navigation">
+          <div className="swiper-button-prev swiper-button-prev-mobile"></div>
+          <div className="swiper-button-next swiper-button-next-mobile"></div>
+        </div>
         <Image src="Homepage/red-bottom.png" extraClass="red-bottom" alt="" />
       </div>
 
@@ -131,14 +154,11 @@ const PizzarteInfoStyled = styled.div`
       height: auto;
     }
 
-    .swiper {
-      width: 50%;
-    }
-
     .inside-slide {
       position: absolute;
       top: 50%;
       left: 50%;
+      width: 50%;
       transform: translate(-50%, -50%);
     }
 
@@ -163,21 +183,44 @@ const PizzarteInfoStyled = styled.div`
       }
     }
 
-    .swiper-button-next,
-    .swiper-button-prev {
-      color: #fff;
-      width: 30px;
-      height: 30px;
-      border-radius: 50%;
+    .swiper-navigation {
       display: flex;
+      justify-content: space-between;
       align-items: center;
-      justify-content: center;
-      border: 1px solid;
-    }
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 57%;
+      transform: translate(-50%, -50%);
+      z-index: 5;
+      pointer-events: none;
 
-    .swiper-button-next:hover,
-    .swiper-button-prev:hover {
-      background-color: rgba(255, 255, 255, 0.8);
+      .swiper-button-prev-desktop,
+      .swiper-button-next-desktop {
+        color: #fff;
+        background: transparent;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid #fff;
+        position: relative !important;
+        pointer-events: auto;
+      }
+
+      .swiper-button-next-desktop .swiper-navigation-icon,
+      .swiper-button-prev-desktop .swiper-navigation-icon {
+        width: 14px;
+        height: 14px;
+      }
+
+      .swiper-button-next-desktop:hover,
+      .swiper-button-prev-desktop:hover {
+        background-color: #fff;
+        color: ${color.red};
+      }
     }
   }
 
@@ -218,6 +261,7 @@ const PizzarteInfoStyled = styled.div`
     .feedback-desktop { display: none; }
     .feedback-mobile {
       display: block;
+      position: relative;
 
       .swiper {
         position: relative;
@@ -267,16 +311,48 @@ const PizzarteInfoStyled = styled.div`
         `}
       }
 
-      .swiper-button-next,
-      .swiper-button-prev {
-        color: #fff;
-        width: 30px;
-        height: 30px;
-        border-radius: 50%;
+      .swiper-navigation {
         display: flex;
+        justify-content: space-between;
         align-items: center;
-        justify-content: center;
-        border: 1px solid;
+        position: absolute;
+        top: calc(50% - 10vh);
+        left: 10%;
+        right: 10%;
+        transform: translateY(-50%);
+        z-index: 5;
+        pointer-events: none;
+
+        ${media.m`
+          top: calc(50% - 18vh);
+        `}
+
+        .swiper-button-prev-mobile,
+        .swiper-button-next-mobile {
+          color: #fff;
+          background: ${color.red};
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border: 1px solid ${color.red};
+          position: relative !important;
+          pointer-events: auto;
+        }
+
+        .swiper-button-next-mobile .swiper-navigation-icon,
+        .swiper-button-prev-mobile .swiper-navigation-icon {
+          width: 14px;
+          height: 14px;
+        }
+
+        .swiper-button-next-mobile:hover,
+        .swiper-button-prev-mobile:hover {
+          background-color: #fff;
+          color: ${color.red};
+        }
       }
     }
 

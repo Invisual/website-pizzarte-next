@@ -75,29 +75,50 @@ const LanguageStyled = styled.div`
     cursor: pointer;
     display: flex;
     align-items: center;
+    gap: 4px;
+    font-size: 12px;
+    font-weight: 600;
     color: ${color.red};
+    transition: opacity 0.2s ease-in-out;
+  }
+
+  &:hover .dropbtn,
+  &:focus-within .dropbtn {
+    opacity: 0.7;
   }
 
   .dropdown-content {
     display: none;
     position: absolute;
-    top: 12px;
-    transform: translate(-17%, 0);
+    top: 100%;
+    left: 0;
+    min-width: 100%;
+    width: max-content;
     background: #fff;
     padding-bottom: 15px;
     color: ${color.red};
+    font-size: 12px;
+    text-align: center;
   }
 
   .dropdown-content a {
     display: block;
     margin: 0;
-    padding: 13px;
-    height: 0;
+    padding: 8px 13px;
+    white-space: nowrap;
+    text-align: center;
+    transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+
+    &:hover {
+      color: #fff;
+      background-color: ${color.red};
+    }
   }
 
   &:hover .dropdown-content,
   &:focus-within .dropdown-content {
     display: flex;
     flex-direction: column;
+    align-items: stretch;
   }
 `;

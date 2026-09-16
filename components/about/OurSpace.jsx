@@ -48,15 +48,11 @@ export default function OurSpace() {
       <div className="container-red">
         <div className="container-default">
           <div className="local-div">
-            <Reveal delay={400}>
-              <div className="imagem-3">
-                <Image src="Homepage/imagem_3.webp" alt="" extraClass="img-3" />
-              </div>
+            <Reveal delay={400} className="imagem-3">
+              <Image src="Homepage/imagem_3.webp" alt="" extraClass="img-3" />
             </Reveal>
-            <Reveal delay={500}>
-              <div className="imagem-4">
-                <Image src="Homepage/imagem_4.webp" alt="" extraClass="img-4" />
-              </div>
+            <Reveal delay={500} className="imagem-4">
+              <Image src="Homepage/imagem_4.webp" alt="" extraClass="img-4" />
             </Reveal>
           </div>
         </div>
