@@ -166,14 +166,16 @@ const FoodSliderStyled = styled.div`
           `}
         }
 
-        .swiper-button-next:after,
-        .swiper-button-prev:after {
-          font-size: 14px;
+        .swiper-button-next .swiper-navigation-icon,
+        .swiper-button-prev .swiper-navigation-icon {
+          width: 14px;
+          height: 14px;
         }
 
         .swiper-button-next:hover,
         .swiper-button-prev:hover {
-          background-color: rgba(255, 255, 255, 0.8);
+          background-color: ${color.red};
+          color: #fff;
         }
       }
     }
@@ -184,6 +186,7 @@ const FoodSliderStyled = styled.div`
 
       .swiper {
         width: 80vw !important;
+        margin-left: 10vw !important;
         margin-right: inherit !important;
       }
 

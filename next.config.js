@@ -20,6 +20,7 @@ const securityHeaders = [
 const LEGACY_MENU_SLUG_REDIRECTS = require("./lib/legacyMenuRedirects.js");
 
 const nextConfig = {
+  allowedDevOrigins: ["192.168.2.29"],
   experimental: {
     globalNotFound: true,
   },

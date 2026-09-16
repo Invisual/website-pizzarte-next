@@ -1,4 +1,7 @@
 import '../globals.css'
+import 'swiper/css'
+import 'swiper/css/navigation'
+import 'swiper/css/pagination'
 
 import Script from "next/script";
 import { GoogleTagManager } from "@next/third-parties/google";
