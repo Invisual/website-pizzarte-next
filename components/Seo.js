@@ -29,9 +29,13 @@ function buildUrls({ locale, pathname, alternatePaths }) {
   };
 }
 
+// `image` vem de messages/*.json como caminho relativo ao antigo
+// src/images/ do Gatsby (ex: "seo/pizzarte.png"), agora servido em
+// /images/ (ver public/images/ + lib/imageManifest.json).
 function buildOgImage(image) {
   if (!image) return null;
-  return image.startsWith("http") ? image : `${BASE_URL}${image.startsWith("/") ? "" : "/"}${image}`;
+  if (image.startsWith("http")) return image;
+  return `${BASE_URL}/images/${image.replace(/^\//, "")}`;
 }
 
 function buildMetadata({ locale, title, description, image, type, urls }) {
