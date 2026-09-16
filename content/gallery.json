@@ -1,0 +1,128 @@
+{
+  "bar": [
+    {
+      "src": "galeria/bar/bar-01.webp",
+      "alt": "Bar da Pizzarte, foto 1"
+    },
+    {
+      "src": "galeria/bar/bar-02.webp",
+      "alt": "Bar da Pizzarte, foto 2"
+    },
+    {
+      "src": "galeria/bar/bar-03.webp",
+      "alt": "Bar da Pizzarte, foto 3"
+    },
+    {
+      "src": "galeria/bar/bar-04.webp",
+      "alt": "Bar da Pizzarte, foto 4"
+    },
+    {
+      "src": "galeria/bar/bar-05.webp",
+      "alt": "Bar da Pizzarte, foto 5"
+    },
+    {
+      "src": "galeria/bar/bar-06.webp",
+      "alt": "Bar da Pizzarte, foto 6"
+    },
+    {
+      "src": "galeria/bar/bar-07.webp",
+      "alt": "Bar da Pizzarte, foto 7"
+    },
+    {
+      "src": "galeria/bar/bar-08.webp",
+      "alt": "Bar da Pizzarte, foto 8"
+    },
+    {
+      "src": "galeria/bar/bar-09.webp",
+      "alt": "Bar da Pizzarte, foto 9"
+    },
+    {
+      "src": "galeria/bar/bar-10.webp",
+      "alt": "Bar da Pizzarte, foto 10"
+    }
+  ],
+  "space": [
+    {
+      "src": "galeria/space/space-01.webp",
+      "alt": "Espaço do restaurante Pizzarte, foto 1"
+    },
+    {
+      "src": "galeria/space/space-02.webp",
+      "alt": "Espaço do restaurante Pizzarte, foto 2"
+    },
+    {
+      "src": "galeria/space/space-03.webp",
+      "alt": "Espaço do restaurante Pizzarte, foto 3"
+    },
+    {
+      "src": "galeria/space/space-04.webp",
+      "alt": "Espaço do restaurante Pizzarte, foto 4"
+    },
+    {
+      "src": "galeria/space/space-05.webp",
+      "alt": "Espaço do restaurante Pizzarte, foto 5"
+    },
+    {
+      "src": "galeria/space/space-06.webp",
+      "alt": "Espaço do restaurante Pizzarte, foto 6"
+    },
+    {
+      "src": "galeria/space/space-07.webp",
+      "alt": "Espaço do restaurante Pizzarte, foto 7"
+    },
+    {
+      "src": "galeria/space/space-08.webp",
+      "alt": "Espaço do restaurante Pizzarte, foto 8"
+    },
+    {
+      "src": "galeria/space/space-09.webp",
+      "alt": "Espaço do restaurante Pizzarte, foto 9"
+    },
+    {
+      "src": "galeria/space/space-10.webp",
+      "alt": "Espaço do restaurante Pizzarte, foto 10"
+    }
+  ],
+  "events": [
+    {
+      "src": "galeria/events/events-01.webp",
+      "alt": "Evento no Pizzarte, foto 1"
+    },
+    {
+      "src": "galeria/events/events-02.webp",
+      "alt": "Evento no Pizzarte, foto 2"
+    },
+    {
+      "src": "galeria/events/events-03.webp",
+      "alt": "Evento no Pizzarte, foto 3"
+    },
+    {
+      "src": "galeria/events/events-04.webp",
+      "alt": "Evento no Pizzarte, foto 4"
+    },
+    {
+      "src": "galeria/events/events-05.webp",
+      "alt": "Evento no Pizzarte, foto 5"
+    },
+    {
+      "src": "galeria/events/events-06.webp",
+      "alt": "Evento no Pizzarte, foto 6"
+    },
+    {
+      "src": "galeria/events/events-07.webp",
+      "alt": "Evento no Pizzarte, foto 7"
+    },
+    {
+      "src": "galeria/events/events-08.webp",
+      "alt": "Evento no Pizzarte, foto 8"
+    },
+    {
+      "src": "galeria/events/events-09.webp",
+      "alt": "Evento no Pizzarte, foto 9"
+    },
+    {
+      "src": "galeria/events/events-10.webp",
+      "alt": "Evento no Pizzarte, foto 10"
+    }
+  ]
+}
