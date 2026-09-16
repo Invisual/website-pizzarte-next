@@ -1,0 +1,33 @@
+{
+  "projetos": {
+    "seo": {
+      "title": "Projects - Ponto Urbano",
+      "description": "Discover our quality real estate developments in Aveiro, Coimbra, Espinho and São João da Madeira.",
+      "image": "/images/homepage_pu.png"
+    },
+    "all": [
+      {
+        "id": 0,
+        "slug": "neon-en",
+        "seo": {
+          "title": "Neon - EN",
+          "description": "Neon is located in the heart of Aveiro. The building has been rigorously constructed to high standards of quality and architectural rigour.",
+          "image": "",
+          "imageAlt": ""
+        },
+        "subpages": [
+          {
+            "id": 0,
+            "slug": "neon-subpage-en",
+            "seo": {
+              "title": "NEON Subpage EN",
+              "description": "Neon is located in the heart of Aveiro. The building has been rigorously constructed to high standards of quality and architectural rigour.",
+              "image": "",
+              "imageAlt": ""
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

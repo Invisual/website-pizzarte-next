@@ -1,0 +1,36 @@
+# ─── CORE — Obrigatório antes de qualquer build de produção ──────────────────
+# URL base do site (sem barra final). Usada em canonical, OG tags, sitemap e JSON-LD.
+NEXT_PUBLIC_SITE_URL=https://example.pt
+# Nome do site. Aparece nos títulos de página, OG tags e schemas Organization/WebSite.
+NEXT_PUBLIC_SITE_NAME=Nome do Site
+
+# ─── CONTACTO — Enriquece Organization e LocalBusiness (JSON-LD) ─────────────
+# Cada variável é opcional; o schema omite o campo se estiver vazio.
+NEXT_PUBLIC_PHONE=+351 000 000 000
+NEXT_PUBLIC_EMAIL=info@example.pt
+NEXT_PUBLIC_ADDRESS=Rua Exemplo, 123
+NEXT_PUBLIC_CITY=Lisboa
+NEXT_PUBLIC_POSTAL_CODE=1000-001
+
+# ─── GEO — Coordenadas para GeoCoordinates no schema LocalBusiness ───────────
+# Ativa o campo `geo` no JSON-LD — melhora integração com Google Maps e SEO local.
+# Como obter: maps.google.com → clique direito no local → copiar coordenadas.
+NEXT_PUBLIC_GEO_LAT=38.7169
+NEXT_PUBLIC_GEO_LNG=-9.1399
+
+# ─── REDES SOCIAIS — Array `sameAs` no schema Organization ───────────────────
+# Apenas preencher os perfis que existem; valores vazios são ignorados automaticamente.
+NEXT_PUBLIC_SOCIAL_LINKEDIN=https://www.linkedin.com/company/exemplo
+NEXT_PUBLIC_SOCIAL_INSTAGRAM=https://www.instagram.com/exemplo
+NEXT_PUBLIC_SOCIAL_FACEBOOK=https://www.facebook.com/exemplo
+
+# ─── EMAIL (SMTP) — Formulário de contacto ───────────────────────────────────
+SMTP_HOST=smtp.mailprovider.com
+SMTP_USER=user@example.pt
+SMTP_PASS=password
+
+# ─── NEWSLETTER (Mailchimp) ───────────────────────────────────────────────────
+# API key no formato: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-us1 (datacenter no final)
+# List ID: Mailchimp → Audience → Settings → Audience name and defaults
+MAILCHIMP_API_KEY=
+MAILCHIMP_LIST_ID=

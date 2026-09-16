@@ -1,0 +1,112 @@
+{
+    "homepage": {
+        "seo": {
+            "title": "Property developers - Ponto Urbano",
+            "description": "Property developers based in Aveiro. We are committed to quality, rigour and excellent locations. ",
+            "image": "/images/homepage_pu.png",
+            "imageAlt": "Property developers - Ponto Urbano"
+        },
+        "top": {
+            "video": "/homepage/intro.mp4",
+            "videoMobile": "/homepage/intro-mobile.mp4",
+            "title": "Quality Projects,<br/>Buildings for life",
+            "pt2020": "/pt2020.png",
+            "pt2020Alt": "PT 2020"
+        },
+        "about": {
+            "title": "Building with responsibility",
+            "subtitle": "At Ponto Urbano, we build sustainable houses and work committed to the precision and quality of our projects. ",
+            "button": {
+                "text": "About us",
+                "link": "/about"
+            }
+        },
+        "highlights": [
+            {
+                "src": "/homepage/destaques/destaque_1.webp",
+                "alt": "Destaque 1",
+                "logo": "/homepage/destaques/destaque_1_logo.png",
+                "logoAlt": "Logo Destaque 1",
+                "location": "Aveiro",
+                "button": {
+                    "text": "View project",
+                    "link": "projetos/legato-nobrega"
+                }
+            },
+            {
+                "src": "/homepage/destaques/destaque_2.webp",
+                "alt": "Destaque 2",
+                "logo": "/homepage/destaques/destaque_2_logo.png",
+                "logoAlt": "Logo Destaque 2",
+                "location": "Coimbra",
+                "button": {
+                    "text": "View project",
+                    "link": "projetos/voluta"
+                }
+            },
+            {
+                "src": "/homepage/destaques/destaque_3.webp",
+                "alt": "Destaque 3",
+                "logo": "/homepage/destaques/destaque_3_logo.png",
+                "logoAlt": "Logo Destaque 3",
+                "location": "Espinho",
+                "button": {
+                    "text": "View project",
+                    "link": "projetos/terrae"
+                }
+            },
+            {
+                "src": "/homepage/destaques/destaque_4.webp",
+                "alt": "Destaque 4",
+                "logo": "/homepage/destaques/destaque_4_logo.png",
+                "logoAlt": "Logo Destaque 4",
+                "location": "São João da Madeira",
+                "button": {
+                    "text": "View project",
+                    "link": "projetos/pateo1896"
+                }
+            },
+            {
+                "src": "/homepage/destaques/destaque_5.webp",
+                "alt": "Destaque 5",
+                "logo": "/homepage/destaques/destaque_5_logo.png",
+                "logoAlt": "Logo Destaque 5",
+                "location": "Aveiro",
+                "button": {
+                   "text": "View project",
+                    "link": "https://ethula.pontourbano.pt",
+                    "external": true
+                }
+            }
+        ],
+        "news": {
+            "title": "Latest news",
+            "subtitle": "Follow our news and keep up to date with the latest developments",
+            "path": "news",
+            "button": {
+                "text": "Read more"
+            }
+        }
+    },
+    "noticias": {
+        "seo": {
+            "title": "News - Ponto Urbano",
+            "description": "Follow our news and keep up to date with the latest developments from Ponto Urbano.",
+            "image": "/images/homepage_pu.png"
+        }
+    },
+    "sobre": {
+        "seo": {
+            "title": "About Us - Ponto Urbano",
+            "description": "Learn about Ponto Urbano, property developers based in Aveiro, committed to quality and rigour.",
+            "image": "/images/homepage_pu.png"
+        }
+    },
+    "contacto": {
+        "seo": {
+            "title": "Contact - Ponto Urbano",
+            "description": "Get in touch with Ponto Urbano. We are available to answer all your questions.",
+            "image": "/images/homepage_pu.png"
+        }
+    }
+}

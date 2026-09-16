@@ -1,0 +1,366 @@
+{
+  "wiki_version": "1.0.0",
+  "generated": "2026-06-05T00:00:00.000Z",
+  "repo_name": "next-template-started",
+  "total_sections": 7,
+  "total_pages": 12,
+  "sections": [
+    {
+      "id": "a1b2c3d4-0001-4000-8000-000000000001",
+      "title": "Overview",
+      "output_dir": "Overview",
+      "pages": [
+        {
+          "id": "a1b2c3d4-0002-4000-8000-000000000002",
+          "title": "Introduction & Purpose",
+          "path": "Overview/Introduction & Purpose.md",
+          "tags": ["overview", "next.js", "multilingual", "template", "marketing"]
+        },
+        {
+          "id": "a1b2c3d4-0003-4000-8000-000000000003",
+          "title": "Tech Stack & Quick Start",
+          "path": "Overview/Tech Stack & Quick Start.md",
+          "tags": ["tech-stack", "dependências", "configuração", "next.js", "arranque"]
+        }
+      ]
+    },
+    {
+      "id": "a1b2c3d4-0004-4000-8000-000000000004",
+      "title": "Architecture",
+      "output_dir": "Architecture",
+      "pages": [
+        {
+          "id": "a1b2c3d4-0005-4000-8000-000000000005",
+          "title": "App Router Structure",
+          "path": "Architecture/App Router Structure.md",
+          "tags": ["architecture", "next-js", "app-router", "i18n", "layout"]
+        },
+        {
+          "id": "a1b2c3d4-0006-4000-8000-000000000006",
+          "title": "Data Flow & Routing",
+          "path": "Architecture/Data Flow & Routing.md",
+          "tags": ["routing", "middleware", "i18n", "next-intl", "data-flow"]
+        }
+      ]
+    },
+    {
+      "id": "a1b2c3d4-0007-4000-8000-000000000007",
+      "title": "I18n",
+      "output_dir": "I18n",
+      "pages": [
+        {
+          "id": "a1b2c3d4-0008-4000-8000-000000000008",
+          "title": "Locale Routing",
+          "path": "I18n/Locale Routing.md",
+          "tags": ["i18n", "routing", "next-intl", "localisation", "navigation"]
+        },
+        {
+          "id": "a1b2c3d4-0009-4000-8000-000000000009",
+          "title": "Translations & Messages",
+          "path": "I18n/Translations & Messages.md",
+          "tags": ["i18n", "translations", "messages", "next-intl", "content"]
+        }
+      ]
+    },
+    {
+      "id": "a1b2c3d4-0010-4000-8000-000000000010",
+      "title": "Frontend",
+      "output_dir": "Frontend",
+      "pages": [
+        {
+          "id": "a1b2c3d4-0011-4000-8000-000000000011",
+          "title": "Components Overview",
+          "path": "Frontend/Components Overview.md",
+          "tags": ["components", "menu", "seo", "internacionalização", "noticias"]
+        },
+        {
+          "id": "a1b2c3d4-0012-4000-8000-000000000012",
+          "title": "Styling & Animation",
+          "path": "Frontend/Styling & Animation.md",
+          "tags": ["styling", "tailwind", "bootstrap", "framer-motion", "gsap", "animação"]
+        }
+      ]
+    },
+    {
+      "id": "a1b2c3d4-0013-4000-8000-000000000013",
+      "title": "Content",
+      "output_dir": "Content",
+      "pages": [
+        {
+          "id": "a1b2c3d4-0014-4000-8000-000000000014",
+          "title": "MDX Blog Posts",
+          "path": "Content/MDX Blog Posts.md",
+          "tags": ["content", "mdx", "blog", "i18n", "routing"]
+        },
+        {
+          "id": "a1b2c3d4-0015-4000-8000-000000000015",
+          "title": "Services & Dynamic Pages",
+          "path": "Content/Services & Dynamic Pages.md",
+          "tags": ["services", "routing", "i18n", "dynamic-pages", "next-intl"]
+        }
+      ]
+    },
+    {
+      "id": "a1b2c3d4-0016-4000-8000-000000000016",
+      "title": "API",
+      "output_dir": "API",
+      "pages": [
+        {
+          "id": "a1b2c3d4-0017-4000-8000-000000000017",
+          "title": "Contact & Newsletter API",
+          "path": "API/Contact & Newsletter API.md",
+          "tags": ["api", "email", "nodemailer", "mailchimp", "notifications"]
+        }
+      ]
+    },
+    {
+      "id": "a1b2c3d4-0018-4000-8000-000000000018",
+      "title": "FAQ",
+      "output_dir": "FAQ",
+      "pages": [
+        {
+          "id": "a1b2c3d4-0019-4000-8000-000000000019",
+          "title": "Common Issues & Solutions",
+          "path": "FAQ/Common Issues & Solutions.md",
+          "tags": ["troubleshooting", "faq", "configuracao", "i18n", "styling"]
+        }
+      ]
+    }
+  ],
+  "knowledge_relations": [
+    {
+      "id": 1,
+      "source_id": "a1b2c3d4-0002-4000-8000-000000000002",
+      "target_id": "a1b2c3d4-0003-4000-8000-000000000003",
+      "source_type": "WIKI_PAGE",
+      "target_type": "WIKI_PAGE",
+      "relationship_type": "RELATED",
+      "description": "Introduction & Purpose → Tech Stack & Quick Start"
+    },
+    {
+      "id": 2,
+      "source_id": "a1b2c3d4-0002-4000-8000-000000000002",
+      "target_id": "a1b2c3d4-0008-4000-8000-000000000008",
+      "source_type": "WIKI_PAGE",
+      "target_type": "WIKI_PAGE",
+      "relationship_type": "RELATED",
+      "description": "Introduction & Purpose → Locale Routing"
+    },
+    {
+      "id": 3,
+      "source_id": "a1b2c3d4-0002-4000-8000-000000000002",
+      "target_id": "a1b2c3d4-0005-4000-8000-000000000005",
+      "source_type": "WIKI_PAGE",
+      "target_type": "WIKI_PAGE",
+      "relationship_type": "RELATED",
+      "description": "Introduction & Purpose → App Router Structure"
+    },
+    {
+      "id": 4,
+      "source_id": "a1b2c3d4-0002-4000-8000-000000000002",
+      "target_id": "a1b2c3d4-0014-4000-8000-000000000014",
+      "source_type": "WIKI_PAGE",
+      "target_type": "WIKI_PAGE",
+      "relationship_type": "RELATED",
+      "description": "Introduction & Purpose → MDX Blog Posts"
+    },
+    {
+      "id": 5,
+      "source_id": "a1b2c3d4-0003-4000-8000-000000000003",
+      "target_id": "a1b2c3d4-0002-4000-8000-000000000002",
+      "source_type": "WIKI_PAGE",
+      "target_type": "WIKI_PAGE",
+      "relationship_type": "RELATED",
+      "description": "Tech Stack & Quick Start → Introduction & Purpose"
+    },
+    {
+      "id": 6,
+      "source_id": "a1b2c3d4-0003-4000-8000-000000000003",
+      "target_id": "a1b2c3d4-0008-4000-8000-000000000008",
+      "source_type": "WIKI_PAGE",
+      "target_type": "WIKI_PAGE",
+      "relationship_type": "RELATED",
+      "description": "Tech Stack & Quick Start → Locale Routing"
+    },
+    {
+      "id": 7,
+      "source_id": "a1b2c3d4-0003-4000-8000-000000000003",
+      "target_id": "a1b2c3d4-0014-4000-8000-000000000014",
+      "source_type": "WIKI_PAGE",
+      "target_type": "WIKI_PAGE",
+      "relationship_type": "RELATED",
+      "description": "Tech Stack & Quick Start → MDX Blog Posts"
+    },
+    {
+      "id": 8,
+      "source_id": "a1b2c3d4-0003-4000-8000-000000000003",
+      "target_id": "a1b2c3d4-0005-4000-8000-000000000005",
+      "source_type": "WIKI_PAGE",
+      "target_type": "WIKI_PAGE",
+      "relationship_type": "RELATED",
+      "description": "Tech Stack & Quick Start → App Router Structure"
+    },
+    {
+      "id": 9,
+      "source_id": "a1b2c3d4-0005-4000-8000-000000000005",
+      "target_id": "a1b2c3d4-0006-4000-8000-000000000006",
+      "source_type": "WIKI_PAGE",
+      "target_type": "WIKI_PAGE",
+      "relationship_type": "PARENT_CHILD",
+      "description": "App Router Structure → Data Flow & Routing"
+    },
+    {
+      "id": 10,
+      "source_id": "a1b2c3d4-0006-4000-8000-000000000006",
+      "target_id": "a1b2c3d4-0005-4000-8000-000000000005",
+      "source_type": "WIKI_PAGE",
+      "target_type": "WIKI_PAGE",
+      "relationship_type": "PARENT_CHILD",
+      "description": "Data Flow & Routing → App Router Structure"
+    },
+    {
+      "id": 11,
+      "source_id": "a1b2c3d4-0008-4000-8000-000000000008",
+      "target_id": "a1b2c3d4-0009-4000-8000-000000000009",
+      "source_type": "WIKI_PAGE",
+      "target_type": "WIKI_PAGE",
+      "relationship_type": "PARENT_CHILD",
+      "description": "Locale Routing → Translations & Messages"
+    },
+    {
+      "id": 12,
+      "source_id": "a1b2c3d4-0008-4000-8000-000000000008",
+      "target_id": "a1b2c3d4-0005-4000-8000-000000000005",
+      "source_type": "WIKI_PAGE",
+      "target_type": "WIKI_PAGE",
+      "relationship_type": "RELATED",
+      "description": "Locale Routing → App Router Structure"
+    },
+    {
+      "id": 13,
+      "source_id": "a1b2c3d4-0009-4000-8000-000000000009",
+      "target_id": "a1b2c3d4-0008-4000-8000-000000000008",
+      "source_type": "WIKI_PAGE",
+      "target_type": "WIKI_PAGE",
+      "relationship_type": "RELATED",
+      "description": "Translations & Messages → Locale Routing"
+    },
+    {
+      "id": 14,
+      "source_id": "a1b2c3d4-0009-4000-8000-000000000009",
+      "target_id": "a1b2c3d4-0005-4000-8000-000000000005",
+      "source_type": "WIKI_PAGE",
+      "target_type": "WIKI_PAGE",
+      "relationship_type": "RELATED",
+      "description": "Translations & Messages → App Router Structure"
+    },
+    {
+      "id": 15,
+      "source_id": "a1b2c3d4-0011-4000-8000-000000000011",
+      "target_id": "a1b2c3d4-0012-4000-8000-000000000012",
+      "source_type": "WIKI_PAGE",
+      "target_type": "WIKI_PAGE",
+      "relationship_type": "PARENT_CHILD",
+      "description": "Components Overview → Styling & Animation"
+    },
+    {
+      "id": 16,
+      "source_id": "a1b2c3d4-0011-4000-8000-000000000011",
+      "target_id": "a1b2c3d4-0005-4000-8000-000000000005",
+      "source_type": "WIKI_PAGE",
+      "target_type": "WIKI_PAGE",
+      "relationship_type": "RELATED",
+      "description": "Components Overview → App Router Structure"
+    },
+    {
+      "id": 17,
+      "source_id": "a1b2c3d4-0012-4000-8000-000000000012",
+      "target_id": "a1b2c3d4-0011-4000-8000-000000000011",
+      "source_type": "WIKI_PAGE",
+      "target_type": "WIKI_PAGE",
+      "relationship_type": "RELATED",
+      "description": "Styling & Animation → Components Overview"
+    },
+    {
+      "id": 18,
+      "source_id": "a1b2c3d4-0012-4000-8000-000000000012",
+      "target_id": "a1b2c3d4-0005-4000-8000-000000000005",
+      "source_type": "WIKI_PAGE",
+      "target_type": "WIKI_PAGE",
+      "relationship_type": "RELATED",
+      "description": "Styling & Animation → App Router Structure"
+    },
+    {
+      "id": 19,
+      "source_id": "a1b2c3d4-0014-4000-8000-000000000014",
+      "target_id": "a1b2c3d4-0015-4000-8000-000000000015",
+      "source_type": "WIKI_PAGE",
+      "target_type": "WIKI_PAGE",
+      "relationship_type": "PARENT_CHILD",
+      "description": "MDX Blog Posts → Services & Dynamic Pages"
+    },
+    {
+      "id": 20,
+      "source_id": "a1b2c3d4-0014-4000-8000-000000000014",
+      "target_id": "a1b2c3d4-0005-4000-8000-000000000005",
+      "source_type": "WIKI_PAGE",
+      "target_type": "WIKI_PAGE",
+      "relationship_type": "RELATED",
+      "description": "MDX Blog Posts → App Router Structure"
+    },
+    {
+      "id": 21,
+      "source_id": "a1b2c3d4-0015-4000-8000-000000000015",
+      "target_id": "a1b2c3d4-0014-4000-8000-000000000014",
+      "source_type": "WIKI_PAGE",
+      "target_type": "WIKI_PAGE",
+      "relationship_type": "RELATED",
+      "description": "Services & Dynamic Pages → MDX Blog Posts"
+    },
+    {
+      "id": 22,
+      "source_id": "a1b2c3d4-0015-4000-8000-000000000015",
+      "target_id": "a1b2c3d4-0005-4000-8000-000000000005",
+      "source_type": "WIKI_PAGE",
+      "target_type": "WIKI_PAGE",
+      "relationship_type": "RELATED",
+      "description": "Services & Dynamic Pages → App Router Structure"
+    },
+    {
+      "id": 23,
+      "source_id": "a1b2c3d4-0017-4000-8000-000000000017",
+      "target_id": "a1b2c3d4-0005-4000-8000-000000000005",
+      "source_type": "WIKI_PAGE",
+      "target_type": "WIKI_PAGE",
+      "relationship_type": "RELATED",
+      "description": "Contact & Newsletter API → App Router Structure"
+    },
+    {
+      "id": 24,
+      "source_id": "a1b2c3d4-0017-4000-8000-000000000017",
+      "target_id": "a1b2c3d4-0011-4000-8000-000000000011",
+      "source_type": "WIKI_PAGE",
+      "target_type": "WIKI_PAGE",
+      "relationship_type": "RELATED",
+      "description": "Contact & Newsletter API → Components Overview"
+    },
+    {
+      "id": 25,
+      "source_id": "a1b2c3d4-0019-4000-8000-000000000019",
+      "target_id": "a1b2c3d4-0005-4000-8000-000000000005",
+      "source_type": "WIKI_PAGE",
+      "target_type": "WIKI_PAGE",
+      "relationship_type": "RELATED",
+      "description": "Common Issues & Solutions → App Router Structure"
+    },
+    {
+      "id": 26,
+      "source_id": "a1b2c3d4-0019-4000-8000-000000000019",
+      "target_id": "a1b2c3d4-0008-4000-8000-000000000008",
+      "source_type": "WIKI_PAGE",
+      "target_type": "WIKI_PAGE",
+      "relationship_type": "RELATED",
+      "description": "Common Issues & Solutions → Locale Routing"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "global": {
+    "seo": {
+      "title": "Ponto Urbano - Promotores imobiliários ",
+      "description": "Promotores imobiliários com sede em Aveiro. Apostamos na qualidade, no rigor e em localizações de excelência.",
+      "image": "/images/homepage_pu.png",
+      "imageAlt": "Ponto Urbano - Promotores imobiliários"
+    },
+    "menu": {
+      "options": [
+        {
+          "text": "Início",
+          "link": "/"
+        },
+        {
+          "text": "Servicos",
+          "link": "/servicos"
+        },
+        {
+          "text": "Notícias",
+          "link": "/noticias"
+        }
+      ]
+    },
+
+    "notFound": {
+      "image": "/404.png",
+      "alt": "Not found - Ponto Urbano",
+      "text": "UPS! PROJETO NÃO ENCONTRADO",
+      "button": {
+        "text": "Ver projetos",
+        "link": "/projetos/venda"
+      }
+    }
+  }
+}

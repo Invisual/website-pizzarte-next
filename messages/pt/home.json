@@ -1,0 +1,112 @@
+{
+    "homepage": {
+        "seo": {
+            "title": "Promotores imobiliários - Ponto Urbano",
+            "description": "Promotores imobiliários com sede em Aveiro. Apostamos na qualidade, no rigor e em localizações de excelência.",
+            "image": "/images/homepage_pu.png",
+            "imageAlt": "Promotores imobiliários - Ponto Urbano"
+        },
+        "top": {
+            "video": "/homepage/intro.mp4",
+            "videoMobile": "/homepage/intro-mobile.mp4",
+            "title": "Rigor no projeto,<br/>qualidade na obra",
+            "pt2020": "/pt2020.png",
+            "pt2020Alt": "PT 2020"
+        },
+        "about": {
+            "title": "Construímos com responsabilidade",
+            "subtitle": "Na Ponto Urbano construímos de forma sustentável e trabalhamos comprometidos com o rigor e a qualidade dos nossos projetos.",
+            "button": {
+                "text": "Sobre Nós",
+                "link": "/sobre-nos"
+            }
+        },
+        "highlights": [
+            {
+                "src": "/homepage/destaques/destaque_1.webp",
+                "alt": "Destaque 1",
+                "logo": "/homepage/destaques/destaque_1_logo.png",
+                "logoAlt": "Logo Destaque 1",
+                "location": "Aveiro",
+                "button": {
+                    "text": "Ver Projeto",
+                    "link": "projetos/legato-nobrega"
+                }
+            },
+            {
+                "src": "/homepage/destaques/destaque_2.webp",
+                "alt": "Destaque 2",
+                "logo": "/homepage/destaques/destaque_2_logo.png",
+                "logoAlt": "Logo Destaque 2",
+                "location": "Coimbra",
+                "button": {
+                    "text": "Ver Projeto",
+                    "link": "projetos/voluta"
+                }
+            },
+            {
+                "src": "/homepage/destaques/destaque_3.webp",
+                "alt": "Destaque 3",
+                "logo": "/homepage/destaques/destaque_3_logo.png",
+                "logoAlt": "Logo Destaque 3",
+                "location": "Espinho",
+                "button": {
+                    "text": "Ver Projeto",
+                    "link": "projetos/terrae"
+                }
+            },
+            {
+                "src": "/homepage/destaques/destaque_4.webp",
+                "alt": "Destaque 4",
+                "logo": "/homepage/destaques/destaque_4_logo.png",
+                "logoAlt": "Logo Destaque 4",
+                "location": "São João da Madeira",
+                "button": {
+                    "text": "Ver Projeto",
+                    "link": "projetos/pateo1896"
+                }
+            },
+            {
+                "src": "/homepage/destaques/destaque_5.webp",
+                "alt": "Destaque 5",
+                "logo": "/homepage/destaques/destaque_5_logo.png",
+                "logoAlt": "Logo Destaque 5",
+                "location": "Aveiro",
+                "button": {
+                     "text": "Ver Projeto",
+                    "link": "https://ethula.pontourbano.pt",
+                    "external": true
+                }
+            }
+        ],
+        "news":{
+            "title": "ÚLTIMAS NOTÍCIAS",
+            "subtitle": "Acompanhe as nossas notícias e fique a par das novidades.",
+            "path": "noticias",
+            "button":{
+                "text": "Ler notícia"
+            }
+        }
+    },
+    "noticias": {
+        "seo": {
+            "title": "Notícias - Ponto Urbano",
+            "description": "Acompanhe as nossas notícias e fique a par das novidades da Ponto Urbano.",
+            "image": "/images/homepage_pu.png"
+        }
+    },
+    "sobre": {
+        "seo": {
+            "title": "Sobre Nós - Ponto Urbano",
+            "description": "Conheça a Ponto Urbano, promotores imobiliários com sede em Aveiro, comprometidos com a qualidade e o rigor.",
+            "image": "/images/homepage_pu.png"
+        }
+    },
+    "contacto": {
+        "seo": {
+            "title": "Contacto - Ponto Urbano",
+            "description": "Entre em contacto com a Ponto Urbano. Estamos disponíveis para responder a todas as suas questões.",
+            "image": "/images/homepage_pu.png"
+        }
+    }
+}

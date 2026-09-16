@@ -1,0 +1,33 @@
+{
+  "projetos": {
+    "seo": {
+      "title": "Projetos - Ponto Urbano",
+      "description": "Conheça os nossos projetos imobiliários de qualidade em Aveiro, Coimbra, Espinho e São João da Madeira.",
+      "image": "/images/homepage_pu.png"
+    },
+    "all": [
+      {
+        "id": 0,
+        "slug": "neon-pt",
+        "seo": {
+          "title": "Neon - PT",
+          "description": "O Neon está localizado no coração de Aveiro. O edifício foi construído com rigor, seguindo elevados padrões de qualidade e rigor arquitetónico.",
+          "image": "",
+          "imageAlt": ""
+        },
+        "subpages": [
+          {
+            "id": 0,
+            "slug": "neon-subpage-pt",
+            "seo": {
+              "title": "NEON Subpage PT",
+              "description": "O Neon está localizado no coração de Aveiro. O edifício foi construído com rigor, seguindo elevados padrões de qualidade e rigor arquitetónico.",
+              "image": "",
+              "imageAlt": ""
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

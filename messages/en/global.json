@@ -1,0 +1,35 @@
+{
+  "global": {
+    "seo": {
+      "title": "Ponto Urbano - Property developers",
+      "description": "Property developers based in Aveiro. We are committed to quality, rigour and excellent locations. ",
+      "image": "/images/homepage_pu.png",
+      "imageAlt": "Ponto Urbano - Property developers"
+    },
+    "menu": {
+      "options": [
+        {
+          "text": "Home",
+          "link": "/"
+        },
+        {
+          "text": "services",
+          "link": "/services"
+        },
+        {
+          "text": "News",
+          "link": "/news"
+        }
+      ]
+    },
+    "notFound": {
+      "image": "/404.png",
+      "alt": "Not found - Ponto Urbano",
+      "text": "UPS! Project not found",
+      "button": {
+        "text": "View projects",
+        "link": "/projects/for-sale"
+      }
+    }
+  }
+}
