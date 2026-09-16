@@ -1,4 +1,34 @@
-/* Reset básico */
+/* Tokens + reset globais, portados de src/components/style/layout.css (Gatsby).
+   Fontes (Montserrat, BritishRegular, ChunkyRosieDemo) já não entram por
+   @font-face aqui — são carregadas via next/font em app/fonts.js e expostas
+   como variáveis CSS (--font-montserrat, --font-british, --font-chunky-rosie)
+   no <html> em app/[locale]/layout.jsx. */
+
+:root {
+  --border-radius: 4px;
+  --color-text: #333;
+  --color-red: #ff0000;
+  --color-code-bg: #fff4db;
+  --color-code: #8a6534;
+  --font-sans: var(--font-montserrat), sans-serif;
+  --font-lg: 18px;
+  --font-md: 16px;
+  --font-sm: 14px;
+  --font-sx: 12px;
+  --line-height-loose: 1.75;
+  --line-height-normal: 1.5;
+  --line-height-dense: 1.1;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 16px;
+  --space-4: 24px;
+  --space-5: 32px;
+  --space-6: 64px;
+  --size-content: 54rem;
+  --size-gutter: var(--space-5);
+  --size-gap: var(--space-6);
+}
+
 *,
 *::before,
 *::after {
@@ -7,19 +37,126 @@
   padding: 0;
 }
 
+.menu-page {
+  background: linear-gradient(#e5e1da, #ffffff);
+}
+
+.space {
+  padding: 150px 0;
+}
+
+.grid-default {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.container-default {
+  max-width: 1550px;
+  margin: 0 auto;
+}
+
+@media only screen and (max-width: 1550px) {
+  .container-default {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (max-width: 1199px) {
+  .container-default {
+    margin: 0 35px;
+  }
+
+  .grid-default {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 html {
   -webkit-text-size-adjust: 100%;
   box-sizing: border-box;
-  font: sans-serif;
+  font-size: var(--font-md);
+  line-height: var(--line-height-normal);
   overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
+@media only screen and (max-width: 1550px) {
+  html {
+    font-size: var(--font-sm);
+  }
 }
 
 body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  font-family: sans-serif;
+  font-family: var(--font-sans) !important;
   font-weight: normal;
   margin: 0;
   word-wrap: break-word;
-  background-color: #EBE9E3;
+  background: #f4f4f4;
+  scroll-behavior: smooth;
+}
+
+a {
+  background-color: transparent;
+  color: var(--color-red);
+  text-decoration: none;
+  font-family: var(--font-sans);
+}
+
+a:active,
+a:hover {
+  outline-width: 0;
+  text-decoration: none;
+}
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
+  line-height: var(--line-height-dense);
+  letter-spacing: -0.01em;
+}
+
+img {
+  border-style: none;
+  max-width: 100%;
+}
+
+ul,
+ol {
+  list-style-position: outside;
+  list-style-image: none;
+}
+
+p {
+  font-size: var(--font-md);
+  font-weight: 300;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  html,
+  body {
+    scroll-behavior: auto !important;
+  }
 }
