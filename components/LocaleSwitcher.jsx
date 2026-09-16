@@ -1,6 +1,7 @@
 "use client";
 
 import styled from "styled-components";
+import { useRouter as useNextRouter } from "next/navigation";
 import { usePathname, useRouter, getPathname } from "@/i18n/navigation";
 import { routing } from "@/i18n/routing";
 import { color } from "./style/style";
@@ -16,6 +17,7 @@ import { color } from "./style/style";
 // MENU_CATEGORY_SLUGS em i18n/routing.jsx) — passado pela própria página.
 export default function LocaleSwitcher({ locale, alternatePaths }) {
   const router = useRouter();
+  const nextRouter = useNextRouter();
   const pathname = usePathname();
 
   function hrefFor(nextLocale) {
@@ -23,10 +25,19 @@ export default function LocaleSwitcher({ locale, alternatePaths }) {
     return getPathname({ href: pathname, locale: nextLocale });
   }
 
+  // `alternatePaths` já vem com o locale/slug traduzido resolvido (ver
+  // menu/[slug]/page.jsx) — navegar com o router do next-intl outra vez
+  // duplicava o prefixo de locale (ex: /en/en/menu). Para esse caso usa-se
+  // o router "cru" do Next; para as rotas estáticas (pathnames config)
+  // passa-se o `pathname` interno (sem tradução) e deixa o next-intl traduzir.
   function goTo(e, nextLocale) {
     e.preventDefault();
     if (nextLocale === locale) return;
-    router.replace(hrefFor(nextLocale), { locale: nextLocale });
+    if (alternatePaths?.[nextLocale]) {
+      nextRouter.replace(alternatePaths[nextLocale]);
+    } else {
+      router.replace(pathname, { locale: nextLocale });
+    }
   }
 
   return (
