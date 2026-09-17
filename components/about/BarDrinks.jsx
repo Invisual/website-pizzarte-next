@@ -57,7 +57,7 @@ export default function BarDrinks({ data }) {
     <BarDrinksStyled>
       <div className="container-default">
         <Reveal>
-          <div className="grid-default space">
+          <div className="grid-default">
             <div className="text-container">
               <Title text={data.drinks.title} />
               <p dangerouslySetInnerHTML={{ __html: data.drinks.text }} />

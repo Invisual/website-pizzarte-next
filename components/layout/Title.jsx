@@ -54,14 +54,11 @@ const SimpleText = styled.h1`
 
 export default function Title({ text, simple }) {
   if (simple) {
-    return (
-      <>
-        <a id="menu" style={{ color: "transparent" }}>
-          <h1 style={{ paddingTop: "80px" }}></h1>
-        </a>
-        <SimpleText>{simple}</SimpleText>
-      </>
-    );
+    // Sem spacer de âncora: o gap acima desta secção já vem do
+    // main > * + * (app/globals.css) — um <h1 style={{paddingTop}}> extra
+    // aqui somava-se a essa margem e duplicava o espaço antes do título
+    // da categoria (ex: /menu/entradas).
+    return <SimpleText>{simple}</SimpleText>;
   }
 
   return (

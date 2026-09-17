@@ -8,11 +8,13 @@ import PageChrome from "./PageChrome";
 // isso fica num único wrapper client, reduzindo repetição sem mudar o
 // comportamento (cada Server Component de página continua a decidir os
 // dados, isto só monta a árvore comum).
-export default function PageShell({ children, homeData, home, menuBg }) {
+export default function PageShell({ children, homeData, home, menuBg, hero }) {
+  const mainClass = [menuBg && "menu-page", hero && "has-hero"].filter(Boolean).join(" ");
+
   return (
     <PageChrome home={home} dataLoader={homeData?.loader} dataPopup={homeData?.popupOrderNow}>
       <Header data={homeData} />
-      <main className={menuBg ? "menu-page" : undefined}>{children}</main>
+      <main className={mainClass || undefined}>{children}</main>
       <Footer data={homeData} />
     </PageChrome>
   );

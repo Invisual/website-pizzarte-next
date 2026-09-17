@@ -24,7 +24,7 @@ export default async function HomePage({ params }) {
   const homeData = messages.home;
 
   return (
-    <PageShell homeData={homeData} home>
+    <PageShell homeData={homeData} home hero>
       <HeroBanner desktopSrc="Homepage/banner/_MG_7941.webp" mobileSrc="Homepage/banner/banner-mobile.webp" alt="Pizzarte" />
       <PizzaEffect data={homeData} />
       <AboutIntro data={homeData.aboutIntro} home />

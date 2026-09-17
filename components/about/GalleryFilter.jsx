@@ -19,7 +19,7 @@ export default function GalleryFilter({ galleries, filters }) {
 
   return (
     <GalleryStyled>
-      <div className="container-default space">
+      <div className="container-default">
         <Title text="Galeria" />
         <div className="filter-buttons">
           {filters?.map((f) => (
@@ -42,10 +42,6 @@ export default function GalleryFilter({ galleries, filters }) {
 }
 
 const GalleryStyled = styled.div`
-  .container-default {
-    padding: 150px 0 68px;
-  }
-
   .filter-buttons {
     display: flex;
     gap: 1rem;

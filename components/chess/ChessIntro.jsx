@@ -52,7 +52,6 @@ const ChessIntroStyled = styled.div`
   .container {
     display: flex;
     justify-content: space-between;
-    padding-bottom: 100px;
 
     .text-section {
       width: 474px;

@@ -41,21 +41,11 @@ export default function MenuSection({ data }) {
 }
 
 const MenuSectionStyled = styled.div`
-  padding-top: 255px;
-
   .menu-section {
     display: flex;
     flex-direction: column;
-    padding: 130px 0;
+    padding: 0;
   }
-
-  ${media.l`
-    padding-top: 150px;
-
-    .menu-section {
-      padding: 0;
-    }
-  `}
 `;
 
 const ImageContainer = styled.div`

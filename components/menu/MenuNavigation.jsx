@@ -48,10 +48,6 @@ export default function MenuNavigation({ data, dataTitle }) {
 }
 
 const MenuStyled = styled.div`
-  .container-default {
-    padding: 253px 0 0 0;
-  }
-
   .menu {
     display: flex;
     gap: 1rem;
@@ -70,10 +66,6 @@ const MenuStyled = styled.div`
   }
 
   ${media.l`
-    .container-default {
-      padding: 150px 0 0 0;
-    }
-
     .menu {
       display: none;
     }

@@ -33,7 +33,7 @@ export default function ContactInfo({ data }) {
   if (!info) return null;
 
   return (
-    <ContactoInfoStyled className="space">
+    <ContactoInfoStyled>
       <div className="container-default">
         <Title text={SECTION_TITLE[locale] || SECTION_TITLE.pt} />
         <div className="contactContainer grid-default">

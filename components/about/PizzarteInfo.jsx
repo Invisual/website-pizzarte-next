@@ -229,7 +229,6 @@ const PizzarteInfoStyled = styled.div`
   .container {
     display: flex;
     justify-content: space-between;
-    padding-top: 164px;
 
     .textContainer {
       width: 474px;
@@ -342,7 +341,6 @@ const PizzarteInfoStyled = styled.div`
 
     .container {
       flex-direction: column;
-      padding-top: 164px;
 
       .textContainer {
         width: auto;

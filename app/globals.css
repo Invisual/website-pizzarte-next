@@ -27,6 +27,9 @@
   --size-content: 54rem;
   --size-gutter: var(--space-5);
   --size-gap: var(--space-6);
+  --space-header: 140px;
+  --space-footer: 100px;
+  --space-section: 150px;
 }
 
 *,
@@ -41,8 +44,34 @@
   background: linear-gradient(#e5e1da, #ffffff);
 }
 
+/* Margem uniforme de header/secções/footer em todas as páginas — ver
+   CLAUDE.md / plano "Espaçamento vertical uniforme". O header é
+   position:fixed e não reserva espaço no fluxo, por isso <main> paga o
+   offset diretamente em vez de cada secção compensar à mão. */
+main {
+  padding-top: var(--space-header);
+  padding-bottom: var(--space-footer);
+}
+
+/* Homepage: HeroBanner é full-bleed e passa por baixo do header fixo. */
+main.has-hero {
+  padding-top: 0;
+}
+
+/* :not(script) ignora os blocos JSON-LD injetados dentro de <main>
+   (/menu, /menu/[slug], /contactos) e :not(style) ignora os <style
+   data-styled> que o StyledRegistry injeta a meio do <main> durante o
+   streaming SSR (lib/StyledRegistry.jsx, useServerInsertedHTML) — ambos
+   são display:none mas continuam a contar como sibling para o `+`. Sem o
+   :not(style), um desses blocos a aparecer entre o script e a 1ª secção
+   (caso real em /contactos) fazia esta regra emparelhar style→secção e
+   somar uma margem extra por cima do padding-top do <main>. */
+main > *:not(script):not(style) + *:not(script):not(style) {
+  margin-top: var(--space-section);
+}
+
 .space {
-  padding: 150px 0;
+  padding: var(--space-section) 0;
 }
 
 .grid-default {
@@ -162,8 +191,10 @@ p {
     max-width: 100%;
   }
 
-  .space {
-    padding: 80px 0;
+  :root {
+    --space-header: 70px;
+    --space-footer: 40px;
+    --space-section: 80px;
   }
 }
 

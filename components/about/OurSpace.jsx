@@ -44,7 +44,7 @@ export default function OurSpace() {
   }, []);
 
   return (
-    <OurSpaceStyled className="space">
+    <OurSpaceStyled>
       <div className="container-red">
         <div className="container-default">
           <div className="local-div">
