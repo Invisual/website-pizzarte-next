@@ -7,7 +7,7 @@ import { useLocale } from "next-intl";
 import { Image } from "../layout/Image";
 import Button from "../layout/Button";
 import ClientOnly from "../layout/ClientOnly";
-import { color, media, breakpoint } from "../style/style";
+import { color, media, breakpoint, hover } from "../style/style";
 import { prefersReducedMotion } from "../../utils/prefersReducedMotion";
 import { translateNavLink } from "../../i18n/navLinks";
 import { useGsapEffect } from "../../hooks/useGsapEffect";
@@ -188,11 +188,13 @@ const FoodSliderStyled = styled.div`
           height: 14px;
         }
 
-        .swiper-button-next:hover,
-        .swiper-button-prev:hover {
-          background-color: ${color.red};
-          color: #fff;
-        }
+        ${hover`
+          .swiper-button-next:hover,
+          .swiper-button-prev:hover {
+            background-color: ${color.red};
+            color: #fff;
+          }
+        `}
       }
     }
 

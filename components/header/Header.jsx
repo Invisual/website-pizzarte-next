@@ -9,7 +9,7 @@ import Button from "../layout/Button";
 import LocaleSwitcher from "../LocaleSwitcher";
 import { usePopup } from "../../utils/PopupContext";
 import { translateNavLink } from "../../i18n/navLinks";
-import { color, media } from "../style/style";
+import { color, media, hover } from "../style/style";
 
 // Fusão de src/components/header/desktop/header.js e
 // src/components/header/mobile/headerMobile.js (Gatsby) num único
@@ -237,7 +237,6 @@ const HeaderStyled = styled.header`
   .nav-container {
     position: relative;
 
-    &:hover,
     &:focus-within {
       .submenu {
         display: block;
@@ -245,15 +244,26 @@ const HeaderStyled = styled.header`
       }
     }
 
+    ${hover`
+      &:hover {
+        .submenu {
+          display: block;
+          width: max-content;
+        }
+      }
+    `}
+
     .nav {
       padding-bottom: 30%;
       font-weight: 600;
       text-transform: uppercase;
       transition: color 0.2s ease-in-out;
 
-      &:hover {
-        color: ${color.red};
-      }
+      ${hover`
+        &:hover {
+          color: ${color.red};
+        }
+      `}
     }
 
     .active-nav {
@@ -275,10 +285,12 @@ const HeaderStyled = styled.header`
         text-transform: uppercase;
         transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
 
-        &:hover {
-          color: ${color.red};
-          background-color: #f5f5f5;
-        }
+        ${hover`
+          &:hover {
+            color: ${color.red};
+            background-color: #f5f5f5;
+          }
+        `}
       }
 
       .active-sub {

@@ -112,10 +112,16 @@ a {
   font-family: var(--font-sans);
 }
 
-a:active,
-a:hover {
+a:active {
   outline-width: 0;
   text-decoration: none;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  a:hover {
+    outline-width: 0;
+    text-decoration: none;
+  }
 }
 
 b,

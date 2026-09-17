@@ -8,7 +8,7 @@ import Title from "../layout/Title";
 import Reveal from "../layout/Reveal";
 import ClientOnly from "../layout/ClientOnly";
 import Stars from "./Stars";
-import { color, media } from "../style/style";
+import { color, media, hover } from "../style/style";
 import { prefersReducedMotion } from "../../utils/prefersReducedMotion";
 import { useGsapEffect } from "../../hooks/useGsapEffect";
 
@@ -216,11 +216,13 @@ const PizzarteInfoStyled = styled.div`
         height: 14px;
       }
 
-      .swiper-button-next-desktop:hover,
-      .swiper-button-prev-desktop:hover {
-        background-color: #fff;
-        color: ${color.red};
-      }
+      ${hover`
+        .swiper-button-next-desktop:hover,
+        .swiper-button-prev-desktop:hover {
+          background-color: #fff;
+          color: ${color.red};
+        }
+      `}
     }
   }
 
@@ -328,11 +330,13 @@ const PizzarteInfoStyled = styled.div`
           height: 14px;
         }
 
-        .swiper-button-next-mobile:hover,
-        .swiper-button-prev-mobile:hover {
-          background-color: #fff;
-          color: ${color.red};
-        }
+        ${hover`
+          .swiper-button-next-mobile:hover,
+          .swiper-button-prev-mobile:hover {
+            background-color: #fff;
+            color: ${color.red};
+          }
+        `}
       }
     }
 

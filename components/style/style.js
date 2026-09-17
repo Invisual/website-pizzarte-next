@@ -47,3 +47,11 @@ export const media = {
 export const color = {
   red: "#FF0000",
 };
+
+// Dispositivos touch não têm rato — :hover fica "preso" após um tap. Este
+// helper garante que efeitos de hover só disparam em ecrãs com rato real.
+export const hover = (...args) => css`
+  @media (hover: hover) and (pointer: fine) {
+    ${css(...args)}
+  }
+`;

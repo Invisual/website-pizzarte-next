@@ -2,7 +2,7 @@
 
 import styled from "styled-components";
 import { useTranslations } from "next-intl";
-import { color } from "../style/style";
+import { color, hover } from "../style/style";
 import { usePopup } from "../../utils/PopupContext";
 
 // Portado de src/components/layout/floatingOrder.js (Gatsby) — lá dentro
@@ -49,14 +49,16 @@ const IconContainer = styled.div`
   gap: 10px;
   width: auto;
 
-  &:hover {
-    background: ${color.red};
-    color: #fff;
-  }
+  ${hover`
+    &:hover {
+      background: ${color.red};
+      color: #fff;
+    }
 
-  &:hover img {
-    content: url(${(props) => props.hoverIcon});
-  }
+    &:hover img {
+      content: url(${(props) => props.hoverIcon});
+    }
+  `}
 `;
 
 const Icon = styled.img`

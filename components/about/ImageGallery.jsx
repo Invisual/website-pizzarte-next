@@ -4,7 +4,7 @@ import { useState, useEffect, useCallback } from "react";
 import styled from "styled-components";
 import Button from "../layout/Button";
 import { Image } from "../layout/Image";
-import { color, media } from "../style/style";
+import { color, media, hover } from "../style/style";
 
 // Portado de about/desktop/imageGallery.js. Mudanças:
 // - react-masonry-component saiu (dependência a menos) — grelha masonry
@@ -118,9 +118,11 @@ const ImageGalleryStyled = styled.div`
     transition: transform 0.3s;
   }
 
-  .image-wrapper:hover {
-    transform: scale(1.05);
-  }
+  ${hover`
+    .image-wrapper:hover {
+      transform: scale(1.05);
+    }
+  `}
 
   .gallery-thumb {
     width: 100%;
@@ -174,10 +176,12 @@ const FullscreenImage = styled.div`
     border: 1px solid #fff;
     cursor: pointer;
 
-    &:hover {
-      background: ${color.red};
-      border: 1px solid ${color.red};
-    }
+    ${hover`
+      &:hover {
+        background: ${color.red};
+        border: 1px solid ${color.red};
+      }
+    `}
   }
 
   .button-glr {
@@ -196,10 +200,12 @@ const FullscreenImage = styled.div`
       border: 1px solid #fff;
       cursor: pointer;
 
-      &:hover {
-        background: ${color.red};
-        border: 1px solid ${color.red};
-      }
+      ${hover`
+        &:hover {
+          background: ${color.red};
+          border: 1px solid ${color.red};
+        }
+      `}
     }
   }
 `;

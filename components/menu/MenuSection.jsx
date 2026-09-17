@@ -6,7 +6,7 @@ import Title from "../layout/Title";
 import { Image } from "../layout/Image";
 import Reveal from "../layout/Reveal";
 import { translateNavLink } from "../../i18n/navLinks";
-import { media } from "../style/style";
+import { media, hover } from "../style/style";
 
 // Fusão de menu/desktop/menuSection.js + menu/mobile/menuSectionMobile.js
 // (a landing /menu, grelha de categorias). O link para cada categoria
@@ -62,12 +62,14 @@ const ImageContainer = styled.div`
   position: relative;
   margin-bottom: 10px;
 
-  &:hover h3 {
-    opacity: 0;
-  }
-  &:hover .overlay {
-    opacity: 0;
-  }
+  ${hover`
+    &:hover h3 {
+      opacity: 0;
+    }
+    &:hover .overlay {
+      opacity: 0;
+    }
+  `}
 
   .section-image {
     width: 100%;

@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import styled from "styled-components";
-import { color, media } from "../style/style";
+import { color, media, hover } from "../style/style";
 import { HandlePhone } from "../../utils/handlePhone";
 
 const FOCUSABLE_SELECTOR = 'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])';
@@ -284,18 +284,20 @@ const ActionButton = styled.a`
     font-size: 14px;
   }
 
-  &:hover {
-    background-color: ${color.red};
-    color: white;
+  ${hover`
+    &:hover {
+      background-color: ${color.red};
+      color: white;
 
-    ${IconDefault} {
-      display: none;
-    }
+      ${IconDefault} {
+        display: none;
+      }
 
-    ${IconHover} {
-      display: flex;
+      ${IconHover} {
+        display: flex;
+      }
     }
-  }
+  `}
 `;
 
 const ButtonGroup = styled.div`

@@ -2,8 +2,10 @@
 
 import { useState } from "react";
 import styled from "styled-components";
-import { color } from "../style/style";
+import { color, hover } from "../style/style";
 import { Image } from "./Image";
+
+const supportsHover = () => typeof window !== "undefined" && window.matchMedia("(hover: hover)").matches;
 
 export default function Button({ button, to, normal, imageSrc, hoverImageSrc, border, onClick }) {
   const [isHovered, setIsHovered] = useState(false);
@@ -11,8 +13,8 @@ export default function Button({ button, to, normal, imageSrc, hoverImageSrc, bo
   if (to) {
     return (
       <ButtonStyled
-        onMouseEnter={() => setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(false)}
+        onMouseEnter={() => supportsHover() && setIsHovered(true)}
+        onMouseLeave={() => supportsHover() && setIsHovered(false)}
         $border={border}
         onClick={onClick}
       >
@@ -43,14 +45,16 @@ const ButtonStyled = styled.button`
   transition: background-color 1s;
   cursor: pointer;
 
-  &:hover {
-    background: ${(props) => (props.$border ? `#fff` : `${color.red}`)};
-    color: #fff;
+  ${hover`
+    &:hover {
+      background: ${(props) => (props.$border ? `#fff` : `${color.red}`)};
+      color: #fff;
 
-    a {
-      color: ${(props) => (props.$border ? `#000` : `#fff`)};
+      a {
+        color: ${(props) => (props.$border ? `#000` : `#fff`)};
+      }
     }
-  }
+  `}
 
   .link {
     font-size: 14px;

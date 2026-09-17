@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { useRouter as useNextRouter } from "next/navigation";
 import { usePathname, useRouter, getPathname } from "@/i18n/navigation";
 import { routing } from "@/i18n/routing";
-import { color } from "./style/style";
+import { color, hover } from "./style/style";
 
 // Portado de src/components/layout/languageSelector.js (Gatsby) — mesmo
 // dropdown ao hover/focus (botão "PT ▾" + lista), mesma UX. `href` real e
@@ -82,10 +82,15 @@ const LanguageStyled = styled.div`
     transition: opacity 0.2s ease-in-out;
   }
 
-  &:hover .dropbtn,
   &:focus-within .dropbtn {
     opacity: 0.7;
   }
+
+  ${hover`
+    &:hover .dropbtn {
+      opacity: 0.7;
+    }
+  `}
 
   .dropdown-content {
     display: none;
@@ -109,16 +114,25 @@ const LanguageStyled = styled.div`
     text-align: center;
     transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
 
-    &:hover {
-      color: #fff;
-      background-color: ${color.red};
-    }
+    ${hover`
+      &:hover {
+        color: #fff;
+        background-color: ${color.red};
+      }
+    `}
   }
 
-  &:hover .dropdown-content,
   &:focus-within .dropdown-content {
     display: flex;
     flex-direction: column;
     align-items: stretch;
   }
+
+  ${hover`
+    &:hover .dropdown-content {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+    }
+  `}
 `;
