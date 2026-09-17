@@ -206,7 +206,7 @@ const LivroReclamacoesSection = styled.div`
   margin-top: 2vh;
 
   .livro_image {
-    width: 7vw;
+    width: 11vw;
     height: auto;
   }
 
@@ -214,7 +214,7 @@ const LivroReclamacoesSection = styled.div`
     margin-top: 2.5rem;
 
     .livro_image {
-      width: 35vw;
+      width: 25vw;
     }
   `}
 `;
@@ -234,7 +234,7 @@ const CoFinancedImages = styled.div`
   margin-top: 0.5rem;
 
   img {
-    width: 160px;
+    width: 220px;
     height: auto;
   }
 
@@ -243,6 +243,10 @@ const CoFinancedImages = styled.div`
   }
 
   ${media.l`
+    img {
+      width: 90px;
+    }
+
     .cert-desktop {
       display: none;
     }
@@ -255,9 +259,11 @@ const CoFinancedImages = styled.div`
 
 const Copyright = styled.div`
   background-color: ${color.red};
-  padding: 20px;
+  height: 74px;
+  padding: 0 45px 0 32px;
   text-align: center;
-  font-size: 14px;
+  font-size: 16px;
+  font-weight: 300;
   color: #fff;
   display: flex;
   justify-content: space-between;
@@ -268,6 +274,10 @@ const Copyright = styled.div`
   width: 100%;
   z-index: 10;
 
+  p {
+    line-height: 25px;
+  }
+
   a {
     color: #fff;
     text-decoration: none;
@@ -275,15 +285,19 @@ const Copyright = styled.div`
 
   .social {
     display: flex;
-    gap: 1vw;
+    align-items: center;
+    gap: 28px;
 
     img {
-      margin: 0 5%;
+      width: 27px;
+      height: 27px;
     }
   }
 
   ${media.l`
     position: static;
+    height: auto;
+    padding: 20px;
     flex-direction: column;
     gap: 12px;
     margin-top: 2.5rem;
