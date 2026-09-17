@@ -80,7 +80,7 @@ const ImageContainer = styled.div`
   grid-column: 7 / 11;
 
   ${media.l`
-    padding-top: 60px;
+    padding-bottom: 60px;
   `}
 
   .fill-image {

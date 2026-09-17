@@ -66,7 +66,7 @@ export default function FoodSlider({ data }) {
             </Swiper>
           </ClientOnly>
         </div>
-        <div style={{ display: "flex", justifyContent: "center", width: "100%", paddingTop: "70px" }}>
+        <div className="slider-cta">
           <Button button={data.foodSlider.btn.text} to={translateNavLink("/menu", locale)} />
         </div>
       </div>
@@ -81,6 +81,22 @@ const FoodSliderStyled = styled.div`
   flex-direction: column;
   justify-content: center;
   z-index: 2;
+
+  ${media.l`
+    height: auto;
+    padding: 80px 0;
+  `}
+
+  .slider-cta {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding-top: 70px;
+
+    ${media.l`
+      padding-top: 40px;
+    `}
+  }
 
   .background-radius {
     position: absolute;

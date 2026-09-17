@@ -173,15 +173,25 @@ const FooterStyled = styled.footer`
 
   ${media.l`
     height: auto;
-    padding: 40px 0 100px 0;
+    padding: 40px 0 0 0;
 
     .ContentContainer .flex {
       gap: 30px;
       flex-direction: column;
     }
 
+    .ContentContainer .footer-section .info {
+      flex-wrap: wrap;
+    }
+
+    .ContentContainer .footer-section .info .note {
+      position: static;
+      flex-basis: 100%;
+      margin-top: 4px;
+    }
+
     .woman-footer {
-      width: 55vw;
+      display: none;
     }
   `}
 `;
@@ -276,6 +286,7 @@ const Copyright = styled.div`
     position: static;
     flex-direction: column;
     gap: 12px;
+    margin-top: 2.5rem;
 
     .social {
       justify-content: center;

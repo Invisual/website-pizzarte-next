@@ -30,7 +30,7 @@ const FixedContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  z-index: 2;
+  z-index: 10000;
 `;
 
 const IconContainer = styled.div`

@@ -85,33 +85,33 @@ export default function PizzarteInfo({ data }) {
         </div>
       </div>
 
-      <div className="feedback feedback-mobile">
-        <Image src="Homepage/red-top.png" extraClass="red-top" alt="" />
-        <ClientOnly>
-          <Swiper
-            spaceBetween={50}
-            slidesPerView={1}
-            autoplay={{ delay: 3000 }}
-            loop
-            navigation={{ nextEl: ".swiper-button-next-mobile", prevEl: ".swiper-button-prev-mobile" }}
-            modules={[Navigation]}
-          >
-            {slides.map((feedback) => (
-              <SwiperSlide key={feedback.index}>
-                <div className="feedback-person">
-                  <h1>{feedback.quote}</h1>
-                  <p className="author">{feedback.author}</p>
-                  <Stars count={feedback.rating} />
-                </div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
-        </ClientOnly>
-        <div className="swiper-navigation">
-          <div className="swiper-button-prev swiper-button-prev-mobile"></div>
-          <div className="swiper-button-next swiper-button-next-mobile"></div>
+      <div className="feedback feedback-mobile space">
+        <div className="feedback-mobile-red">
+          <ClientOnly>
+            <Swiper
+              spaceBetween={50}
+              slidesPerView={1}
+              autoplay={{ delay: 3000 }}
+              loop
+              navigation={{ nextEl: ".swiper-button-next-mobile", prevEl: ".swiper-button-prev-mobile" }}
+              modules={[Navigation]}
+            >
+              {slides.map((feedback) => (
+                <SwiperSlide key={feedback.index}>
+                  <div className="feedback-person">
+                    <h1>{feedback.quote}</h1>
+                    <p className="author">{feedback.author}</p>
+                    <Stars count={feedback.rating} />
+                  </div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </ClientOnly>
+          <div className="swiper-navigation">
+            <div className="swiper-button-prev swiper-button-prev-mobile"></div>
+            <div className="swiper-button-next swiper-button-next-mobile"></div>
+          </div>
         </div>
-        <Image src="Homepage/red-bottom.png" extraClass="red-bottom" alt="" />
       </div>
 
       <div className="woman-falling woman">
@@ -255,21 +255,25 @@ const PizzarteInfoStyled = styled.div`
   }
 
   ${media.l`
-    .woman-falling { width: 283px; }
-    .man-falling { width: 250px; z-index: auto; }
+    .woman-falling { display: none; }
+    .man-falling {
+      position: static;
+      width: 250px;
+      margin: 0 auto;
+      z-index: auto;
+    }
 
     .feedback-desktop { display: none; }
     .feedback-mobile {
       display: block;
       position: relative;
+      margin-top: 8rem;
 
-      .swiper {
+      .feedback-mobile-red {
         position: relative;
-        top: -10vh;
-
-        ${media.m`
-          top: -18vh;
-        `}
+        background: ${color.red};
+        border-radius: 3rem;
+        padding: 3rem 0;
       }
 
       .feedback-person {
@@ -291,41 +295,17 @@ const PizzarteInfoStyled = styled.div`
         }
       }
 
-      .red-top {
-        transform: translate(0, 0);
-        width: 76rem;
-        height: auto;
-
-        ${media.m`
-          transform: translate(-100vw, 0vh);
-        `}
-      }
-
-      .red-bottom {
-        width: 76rem;
-        height: auto;
-        transform: translate(0, -25vh);
-
-        ${media.m`
-          transform: translate(-100vw, -40vh);
-        `}
-      }
-
       .swiper-navigation {
         display: flex;
         justify-content: space-between;
         align-items: center;
         position: absolute;
-        top: calc(50% - 10vh);
+        top: 50%;
         left: 10%;
         right: 10%;
         transform: translateY(-50%);
         z-index: 5;
         pointer-events: none;
-
-        ${media.m`
-          top: calc(50% - 18vh);
-        `}
 
         .swiper-button-prev-mobile,
         .swiper-button-next-mobile {

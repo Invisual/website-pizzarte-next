@@ -2,7 +2,7 @@
 
 import styled from "styled-components";
 import { Image } from "../layout/Image";
-import { color, breakpoint } from "../style/style";
+import { color, media, breakpoint } from "../style/style";
 import { prefersReducedMotion } from "../../utils/prefersReducedMotion";
 import { useGsapEffect } from "../../hooks/useGsapEffect";
 
@@ -13,40 +13,60 @@ export default function Waiting({ home, NoAnimation, data }) {
   useGsapEffect((gsap) => {
     if (prefersReducedMotion()) return;
 
-    const isMobile = window.matchMedia(`(max-width: ${breakpoint.l})`).matches;
+    // gsap.matchMedia (em vez de window.matchMedia lido uma única vez no
+    // mount) recalcula tudo se o ecrã mudar de breakpoint (ex: rotação do
+    // telemóvel) e reverte sozinho os tweens do ramo anterior.
+    const mm = gsap.matchMedia();
 
-    gsap.utils.toArray(".waiting-first, .waiting-first1").forEach((box) => {
-      gsap.set(box, { translateX: 0 });
-      gsap.to(box, { scrollTrigger: { trigger: box, scrub: true }, translateX: isMobile ? -100 : -500 });
-    });
+    mm.add(
+      { isMobile: `(max-width: ${breakpoint.l})` },
+      (ctx) => {
+        const { isMobile } = ctx.conditions;
 
-    gsap.utils.toArray(".waiting-second, .waiting-second1").forEach((box) => {
-      gsap.set(box, { translateX: 0 });
-      gsap.to(box, { scrollTrigger: { trigger: box, scrub: true }, translateX: isMobile ? 100 : 500 });
-    });
-
-    const pizzaMoves = isMobile
-      ? [
-          { translateX: 20, translateY: 20, rotate: 50, width: 200 },
-          { translateX: 100, translateY: 200, rotate: 50, width: 150 },
-          { translateX: 150, translateY: 350, rotate: 50, width: 140 },
-        ]
-      : [
-          { translateX: 80, translateY: 80, rotate: 0, width: undefined },
-          { translateX: 280, translateY: 250, rotate: 20, width: 200 },
-          { translateX: 450, translateY: 400, rotate: 30, width: 180 },
-        ];
-
-    [".pizza-1", ".pizza-2", ".pizza-3"].forEach((selector, i) => {
-      gsap.utils.toArray(selector).forEach((box) => {
-        gsap.set(box, { translateX: 0, opacity: 0, rotate: 0 });
-        gsap.to(box, {
-          scrollTrigger: { trigger: box, scrub: true },
-          opacity: 1,
-          ...pizzaMoves[i],
+        gsap.utils.toArray(".waiting-first, .waiting-first1").forEach((box) => {
+          gsap.set(box, { translateX: 0 });
+          gsap.to(box, { scrollTrigger: { trigger: box, scrub: true }, translateX: isMobile ? -100 : -500 });
         });
-      });
-    });
+
+        gsap.utils.toArray(".waiting-second, .waiting-second1").forEach((box) => {
+          gsap.set(box, { translateX: 0 });
+          gsap.to(box, { scrollTrigger: { trigger: box, scrub: true }, translateX: isMobile ? 100 : 500 });
+        });
+
+        // Em mobile os offsets/larguras são calculados a partir da largura
+        // real do palco (.pizza-show), não em px fixos — os valores fixos
+        // (150px de translateX, fatias até 200px de largura) empurravam as
+        // fatias para fora do ecrã em telemóveis estreitos (bug reportado).
+        // Em desktop os valores mantêm-se exatamente como estavam.
+        const stage = document.querySelector(".pizza-show");
+        const stageW = stage ? stage.clientWidth : window.innerWidth;
+        const slice = Math.min(stageW * 0.34, 180);
+        const step = (stageW - slice) / 2;
+
+        const pizzaMoves = isMobile
+          ? [
+              { translateX: 0, translateY: 0, rotate: 20, width: slice },
+              { translateX: step, translateY: 110, rotate: 35, width: slice * 0.85 },
+              { translateX: step * 2, translateY: 220, rotate: 50, width: slice * 0.75 },
+            ]
+          : [
+              { translateX: 80, translateY: 80, rotate: 0, width: undefined },
+              { translateX: 280, translateY: 250, rotate: 20, width: 200 },
+              { translateX: 450, translateY: 400, rotate: 30, width: 180 },
+            ];
+
+        [".pizza-1", ".pizza-2", ".pizza-3"].forEach((selector, i) => {
+          gsap.utils.toArray(selector).forEach((box) => {
+            gsap.set(box, { translateX: 0, opacity: 0, rotate: 0 });
+            gsap.to(box, {
+              scrollTrigger: { trigger: box, scrub: true },
+              opacity: 1,
+              ...pizzaMoves[i],
+            });
+          });
+        });
+      }
+    );
   }, []);
 
   return (
@@ -152,4 +172,17 @@ const WaitingStyled = styled.div`
       font-weight: 200;
     }
   }
+
+  ${media.l`
+    .pizza-show {
+      height: 360px;
+      overflow: hidden;
+
+      .pizza-1,
+      .pizza-2,
+      .pizza-3 {
+        max-width: 45vw;
+      }
+    }
+  `}
 `;
