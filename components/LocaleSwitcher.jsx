@@ -109,7 +109,6 @@ const LanguageStyled = styled.div`
     align-items: center;
     gap: 6px;
     font-size: 12px;
-    font-weight: 600;
     color: ${color.red};
     transition: opacity 0.2s ease-in-out;
 
@@ -150,7 +149,6 @@ const LanguageStyled = styled.div`
     min-width: 64px;
     width: max-content;
     background: #fff;
-    border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: var(--border-radius);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     overflow: hidden;
@@ -164,12 +162,7 @@ const LanguageStyled = styled.div`
     transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
   }
 
-  .dropdown-content a + a {
-    border-top: 1px solid rgba(0, 0, 0, 0.08);
-  }
-
   .dropdown-content a.active {
-    font-weight: 600;
     background-color: rgba(255, 0, 0, 0.06);
   }
 
