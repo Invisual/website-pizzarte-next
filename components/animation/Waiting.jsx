@@ -18,8 +18,11 @@ export default function Waiting({ home, NoAnimation, data }) {
     // telemóvel) e reverte sozinho os tweens do ramo anterior.
     const mm = gsap.matchMedia();
 
+    // mm.add só corre o callback quando pelo menos uma condição do objeto é
+    // verdadeira — com só "isMobile" definida, o callback nunca disparava em
+    // desktop (>1024px), matando a animação nesse breakpoint (bug reportado).
     mm.add(
-      { isMobile: `(max-width: ${breakpoint.l})` },
+      { isMobile: `(max-width: ${breakpoint.l})`, isDesktop: `(min-width: ${breakpoint.l})` },
       (ctx) => {
         const { isMobile } = ctx.conditions;
 
