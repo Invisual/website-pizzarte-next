@@ -261,7 +261,7 @@ const PizzarteInfoStyled = styled.div`
     .man-falling {
       position: static;
       width: 250px;
-      margin: 0 auto;
+      margin: -100px auto 0;
       z-index: auto;
     }
 
@@ -303,8 +303,8 @@ const PizzarteInfoStyled = styled.div`
         align-items: center;
         position: absolute;
         top: 50%;
-        left: 10%;
-        right: 10%;
+        left: 2%;
+        right: 2%;
         transform: translateY(-50%);
         z-index: 5;
         pointer-events: none;
@@ -312,14 +312,14 @@ const PizzarteInfoStyled = styled.div`
         .swiper-button-prev-mobile,
         .swiper-button-next-mobile {
           color: #fff;
-          background: ${color.red};
+          background: transparent;
           width: 30px;
           height: 30px;
           border-radius: 50%;
           display: flex;
           align-items: center;
           justify-content: center;
-          border: 1px solid ${color.red};
+          border: 1px solid #fff;
           position: relative !important;
           pointer-events: auto;
         }

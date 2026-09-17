@@ -4,6 +4,7 @@ import styled from "styled-components";
 import { usePathname } from "next/navigation";
 import { useLocale } from "next-intl";
 import Title from "../layout/Title";
+import MobileFilterDropdown from "../layout/MobileFilterDropdown";
 import { translateNavLink } from "../../i18n/navLinks";
 import { media, breakpoint } from "../style/style";
 
@@ -16,21 +17,31 @@ export default function MenuNavigation({ data, dataTitle }) {
   const locale = useLocale();
   const pathname = usePathname();
 
+  const items = data.map((item) => {
+    const href = translateNavLink("/menu" + item.slug, locale);
+    const isCurrentPage = pathname === href || pathname === href + "/";
+    return { ...item, href, isCurrentPage };
+  });
+  const activeItem = items.find((item) => item.isCurrentPage);
+
   return (
     <MenuStyled>
       <div className="container-default">
         <Title text={dataTitle} />
         <nav className="menu">
-          {data.map((item) => {
-            const href = translateNavLink("/menu" + item.slug, locale);
-            const isCurrentPage = pathname === href || pathname === href + "/";
-            return (
-              <StyledLink key={item.slug} href={href} $isCurrentPage={isCurrentPage}>
-                {item.title}
-              </StyledLink>
-            );
-          })}
+          {items.map((item) => (
+            <StyledLink key={item.slug} href={item.href} $isCurrentPage={item.isCurrentPage}>
+              {item.title}
+            </StyledLink>
+          ))}
         </nav>
+        <MobileFilterDropdown activeLabel={activeItem?.title}>
+          {items.map((item) => (
+            <a key={item.slug} href={item.href} className={item.isCurrentPage ? "active" : undefined}>
+              {item.title}
+            </a>
+          ))}
+        </MobileFilterDropdown>
       </div>
     </MenuStyled>
   );
@@ -64,9 +75,7 @@ const MenuStyled = styled.div`
     }
 
     .menu {
-      display: grid;
-      grid-template-columns: repeat(1, 1fr);
-      width: max-content;
+      display: none;
     }
   `}
 `;

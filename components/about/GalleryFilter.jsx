@@ -4,7 +4,8 @@ import { useQueryState } from "nuqs";
 import styled from "styled-components";
 import Title from "../layout/Title";
 import ImageGallery from "./ImageGallery";
-import { breakpoint } from "../style/style";
+import MobileFilterDropdown from "../layout/MobileFilterDropdown";
+import { breakpoint, media } from "../style/style";
 
 // Fusão de about/desktop/galleryFilter.js (a versão mobile nunca existiu à
 // parte — a página /galeria só tinha a árvore desktop no Gatsby). Duas
@@ -14,6 +15,7 @@ import { breakpoint } from "../style/style";
 //   em vez de useState local.
 export default function GalleryFilter({ galleries, filters }) {
   const [filter, setFilter] = useQueryState("filtro", { defaultValue: "all" });
+  const activeFilter = filters?.find((f) => f.slug === filter);
 
   return (
     <GalleryStyled>
@@ -26,6 +28,13 @@ export default function GalleryFilter({ galleries, filters }) {
             </div>
           ))}
         </div>
+        <MobileFilterDropdown activeLabel={activeFilter?.displayName}>
+          {filters?.map((f) => (
+            <div key={f.slug} className={filter === f.slug ? "active" : undefined} onClick={() => setFilter(f.slug)}>
+              {f.displayName}
+            </div>
+          ))}
+        </MobileFilterDropdown>
         <ImageGallery filter={filter} galleries={galleries} />
       </div>
     </GalleryStyled>
@@ -34,7 +43,7 @@ export default function GalleryFilter({ galleries, filters }) {
 
 const GalleryStyled = styled.div`
   .container-default {
-    padding: 253px 0 68px;
+    padding: 150px 0 68px;
   }
 
   .filter-buttons {
@@ -55,33 +64,33 @@ const GalleryStyled = styled.div`
       bottom: 0;
       left: 0;
     }
-  }
 
-  .desactive,
-  .active {
-    position: relative;
-    transition: color 0.3s ease, font-weight 0.3s ease;
+    .desactive,
+    .active {
+      position: relative;
+      transition: color 0.3s ease, font-weight 0.3s ease;
 
-    &::after {
-      content: "";
-      position: absolute;
-      bottom: -1.5rem;
-      left: 0;
-      width: 100%;
-      height: 2px;
-      background-color: #ff0000;
-      z-index: 1;
-      transform: scaleX(0);
-      transform-origin: left;
-      transition: transform 0.3s ease;
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -1.5rem;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: #ff0000;
+        z-index: 1;
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.3s ease;
+      }
     }
-  }
 
-  .active {
-    font-weight: 600;
+    .active {
+      font-weight: 600;
 
-    &::after {
-      transform: scaleX(1);
+      &::after {
+        transform: scaleX(1);
+      }
     }
   }
 
@@ -94,4 +103,10 @@ const GalleryStyled = styled.div`
       }
     }
   }
+
+  ${media.l`
+    .filter-buttons {
+      display: none;
+    }
+  `}
 `;
