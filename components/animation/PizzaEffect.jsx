@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useRef } from "react";
 import styled from "styled-components";
 import { Image } from "../layout/Image";
 import { color, media, breakpoint } from "../style/style";
@@ -13,31 +13,63 @@ import { useGsapEffect } from "../../hooks/useGsapEffect";
 // ficheiro nunca existiu (só existe pizza_top.webp), a imagem partia
 // silenciosamente em todos os telemóveis (GetURL devolvia null).
 export default function PizzaEffect({ data }) {
-  const [isInView, setIsInView] = useState(false);
   const pizzaRef = useRef(null);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      if (!pizzaRef.current) return;
-      const rect = pizzaRef.current.getBoundingClientRect();
-      setIsInView(rect.top >= 0 && rect.bottom <= window.innerHeight);
-    };
-    window.addEventListener("scroll", handleScroll);
-    handleScroll();
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
   useGsapEffect((gsap) => {
-    if (prefersReducedMotion()) return;
+    if (!pizzaRef.current) return;
 
-    const isMobile = window.matchMedia(`(max-width: ${breakpoint.l})`).matches;
-    const from = isMobile ? -800 : 0;
-    const to = isMobile ? 100 : 600;
+    // gsap.matchMedia (em vez de window.matchMedia lido uma única vez no
+    // mount) recalcula tudo se o ecrã mudar de breakpoint (ex: rotação do
+    // telemóvel) e reverte sozinho os tweens do ramo anterior — mesmo padrão
+    // usado em Waiting.jsx. isDesktop tem de estar definida também: mm.add só
+    // corre o callback quando pelo menos uma condição é verdadeira.
+    const mm = gsap.matchMedia();
 
-    gsap.utils.toArray(".phrase-title").forEach((box) => {
-      gsap.set(box, { translateX: from });
-      gsap.to(box, { scrollTrigger: { trigger: box, scrub: true }, translateX: to });
-    });
+    mm.add(
+      { isMobile: `(max-width: ${breakpoint.l})`, isDesktop: `(min-width: ${breakpoint.l})` },
+      (ctx) => {
+        const { isMobile } = ctx.conditions;
+        const phraseFrom = isMobile ? -800 : 0;
+        const phraseTo = isMobile ? 100 : 600;
+        const pizzaTopTo = isMobile ? "-36vh" : "-45vh";
+        const pizzaBottomTo = isMobile ? "30vh" : "45vh";
+
+        // Um único range de scroll (altura do container + viewport) partilhado
+        // por todos os tweens — em vez de misturar um scrub instantâneo no
+        // texto com um snap binário CSS nas metades da pizza, tudo acompanha
+        // a mesma posição de scroll, suavizado por "scrub: 1".
+        const scrollCfg = { trigger: pizzaRef.current, start: "top bottom", end: "bottom top", scrub: 1 };
+        // textBehind só começa a aparecer depois do meio do range de scroll —
+        // pedido do user para o texto surgir mais tarde, não junto com a
+        // pizza a abrir.
+        const textScrollCfg = { ...scrollCfg, start: "center bottom" };
+
+        if (prefersReducedMotion()) {
+          gsap.set(".phrase-title", { translateX: phraseTo });
+          gsap.set(".pizzaTop", { translateY: pizzaTopTo });
+          gsap.set(".pizzaBottom", { translateY: pizzaBottomTo });
+          gsap.set(".textBehind", { opacity: 1 });
+          return;
+        }
+
+        gsap.utils.toArray(".phrase-title").forEach((box) => {
+          gsap.set(box, { translateX: phraseFrom });
+          gsap.to(box, { scrollTrigger: { ...scrollCfg }, translateX: phraseTo });
+        });
+
+        gsap.utils.toArray(".pizzaTop").forEach((box) => {
+          gsap.to(box, { scrollTrigger: { ...scrollCfg }, translateY: pizzaTopTo });
+        });
+
+        gsap.utils.toArray(".pizzaBottom").forEach((box) => {
+          gsap.to(box, { scrollTrigger: { ...scrollCfg }, translateY: pizzaBottomTo });
+        });
+
+        gsap.utils.toArray(".textBehind").forEach((box) => {
+          gsap.to(box, { scrollTrigger: { ...textScrollCfg }, opacity: 1 });
+        });
+      }
+    );
   }, []);
 
   return (
@@ -47,22 +79,22 @@ export default function PizzaEffect({ data }) {
           <h1 className="phrase-title">{data.pizzaEffect.titleTop}</h1>
         </div>
       </TopPhrase>
-      <PizzaStyled ref={pizzaRef} className={isInView ? "open" : "not-open"}>
+      <PizzaStyled ref={pizzaRef}>
         <div className="forma-left">
           <Triangle width="100%" />
         </div>
         <div style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" }}>
-          <div className={`pizzaTop ${isInView ? "open" : ""}`}>
+          <div className="pizzaTop">
             <Image src="Homepage/pizza_top.webp" alt="" extraClass="pizza-half" />
           </div>
-          <div className={`pizzaBottom ${isInView ? "open" : ""}`}>
+          <div className="pizzaBottom">
             <Image src="Homepage/pizza_bottom.webp" alt="" extraClass="pizza-half" />
           </div>
         </div>
         <div className="forma-right">
           <Triangle color="white" width="134px" />
         </div>
-        {isInView && <div className="textBehind" dangerouslySetInnerHTML={{ __html: data.pizzaEffect.text }} />}
+        <div className="textBehind" dangerouslySetInnerHTML={{ __html: data.pizzaEffect.text }} />
       </PizzaStyled>
     </>
   );
@@ -130,7 +162,6 @@ const PizzaStyled = styled.div`
   .pizzaTop,
   .pizzaBottom {
     position: absolute;
-    transition: transform 1s ease;
   }
 
   .pizza-half {
@@ -168,26 +199,9 @@ const PizzaStyled = styled.div`
     `}
   }
 
-  .open.pizzaTop {
-    transform: translateY(-45vh);
-
-    ${media.l`
-      transform: translateY(-36vh);
-    `}
-  }
-
-  .open.pizzaBottom {
-    transform: translateY(45vh);
-
-    ${media.l`
-      transform: translateY(30vh);
-    `}
-  }
-
   .textBehind {
     position: absolute;
-    opacity: 1;
-    transition: opacity 1s ease-in-out;
+    opacity: 0;
     text-align: center;
     font-size: 50px;
     color: ${color.red};
@@ -218,9 +232,5 @@ const PizzaStyled = styled.div`
         font-size: 5rem;
       `}
     }
-  }
-
-  &.not-open .textBehind {
-    opacity: 0;
   }
 `;
