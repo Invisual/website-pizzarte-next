@@ -1,9 +1,19 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import styled from "styled-components";
 import { useTranslations } from "next-intl";
 import { color, hover } from "../style/style";
 import { usePopup } from "../../utils/PopupContext";
+
+// Opacidade ligada à fração do footer realmente visível no ecrã (via
+// IntersectionObserver), não a uma distância de scroll em px — assim é
+// imune à altura da página/footer (que varia muito: contactos é uma
+// página curta, a home é longa). Fica 100% opaco até o footer começar a
+// entrar no ecrã, e só fica totalmente invisível quando HIDE_AT_RATIO da
+// altura do footer já estiver visível.
+const HIDE_AT_RATIO = 0.5;
+const THRESHOLDS = Array.from({ length: 51 }, (_, i) => i / 50);
 
 // Portado de src/components/layout/floatingOrder.js (Gatsby) — lá dentro
 // estava (por engano) exportado como `FloatingIcons`, nome do componente
@@ -12,9 +22,26 @@ import { usePopup } from "../../utils/PopupContext";
 export default function FloatingOrder() {
   const { handleOpenPopup } = usePopup();
   const t = useTranslations("home");
+  const [opacity, setOpacity] = useState(1);
+
+  useEffect(() => {
+    const footer = document.querySelector("footer");
+    if (!footer) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        const visibleRatio = entry.isIntersecting ? entry.intersectionRatio : 0;
+        setOpacity(Math.min(1, Math.max(0, 1 - visibleRatio / HIDE_AT_RATIO)));
+      },
+      { threshold: THRESHOLDS }
+    );
+
+    observer.observe(footer);
+    return () => observer.disconnect();
+  }, []);
 
   return (
-    <FixedContainer onClick={handleOpenPopup}>
+    <FixedContainer $opacity={opacity} onClick={handleOpenPopup}>
       <IconContainer hoverIcon="/images/Homepage/shopping-cart-icon-white.svg">
         <Text>{t("callButton.text")}</Text>
         <Icon src="/images/Homepage/shopping-cart-icon.svg" alt="Encomendar" />
@@ -31,6 +58,9 @@ const FixedContainer = styled.div`
   flex-direction: column;
   align-items: flex-end;
   z-index: 10000;
+  opacity: ${(props) => props.$opacity};
+  pointer-events: ${(props) => (props.$opacity === 0 ? "none" : "auto")};
+  transition: opacity 0.15s linear;
 `;
 
 const IconContainer = styled.div`
