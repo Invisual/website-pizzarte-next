@@ -85,10 +85,20 @@ export default function PizzaEffect({ data }) {
         </div>
         <div style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" }}>
           <div className="pizzaTop">
-            <Image src="Homepage/pizza_top.webp" alt="" extraClass="pizza-half" />
+            <Image
+              src="Homepage/pizza_top.webp"
+              alt=""
+              extraClass="pizza-half"
+              sizes="(max-width: 1024px) 100vw, 45vw"
+            />
           </div>
           <div className="pizzaBottom">
-            <Image src="Homepage/pizza_bottom.webp" alt="" extraClass="pizza-half" />
+            <Image
+              src="Homepage/pizza_bottom.webp"
+              alt=""
+              extraClass="pizza-half"
+              sizes="(max-width: 1024px) 100vw, 45vw"
+            />
           </div>
         </div>
         <div className="forma-right">

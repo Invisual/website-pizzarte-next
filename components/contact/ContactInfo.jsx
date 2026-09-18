@@ -37,7 +37,12 @@ export default function ContactInfo({ data }) {
       <div className="container-default">
         <Title text={SECTION_TITLE[locale] || SECTION_TITLE.pt} />
         <div className="contactContainer grid-default">
-          <Image src="Homepage/_MG_7916.webp" alt="" extraClass="restaurant-photo" />
+          <Image
+            src="Homepage/_MG_7916.webp"
+            alt=""
+            extraClass="restaurant-photo"
+            sizes="(max-width: 1024px) 100vw, 50vw"
+          />
           <div className="info-column">
             <SubTitle>{info.title}</SubTitle>
             <div className="contact-info">
@@ -53,10 +58,10 @@ export default function ContactInfo({ data }) {
                 <div className="flexRow">
                   <Image src="Homepage/call.svg" alt="" extraClass="call-icon" />
                   <div className="info-number">
-                    <h4>{info.reservationTitle}</h4>
                     <div>
                       <Button to={info.phoneLink} button={info.phone} />
                     </div>
+                    <h4>{info.reservationTitle}</h4>
                     {info.infoPhone?.map((item, key) => (
                       <small key={key} className="phone-note">
                         {item}
@@ -94,6 +99,10 @@ export default function ContactInfo({ data }) {
 }
 
 const ContactoInfoStyled = styled.div`
+  ${media.l`
+    margin-top: 20px;
+  `}
+
   .restaurant-photo {
     grid-column: 1 / 7;
     width: 100%;
@@ -125,15 +134,24 @@ const ContactoInfoStyled = styled.div`
           gap: 16px;
           margin-bottom: 1.5rem;
 
+          &:has(.call-icon) {
+            align-items: flex-start;
+          }
+
           .call-icon {
             min-width: 20px;
             width: 20px;
             height: auto;
+            margin-top: 8px;
           }
 
           .info-number {
             display: flex;
             flex-direction: column;
+
+            h4 {
+              margin-top: 0.75rem;
+            }
           }
 
           .phone-note {

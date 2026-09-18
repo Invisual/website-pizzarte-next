@@ -28,7 +28,7 @@ export default function Dishes({ data }) {
       <div className="container-default">
         <Title simple={data.menu.title} />
       </div>
-      <Image src={data.menu.image} alt={data.menu.title} extraClass="banner" />
+      <Image src={data.menu.image} alt={data.menu.title} extraClass="banner" sizes="100vw" priority />
       <div className="container-default">
         {data.menu.meals.map((group, index) => (
           <div key={index} className={index % 2 === 0 ? "dish-group" : "dish-group-reverse"}>
@@ -47,7 +47,12 @@ export default function Dishes({ data }) {
             {group.image && (
               <Reveal>
                 <div className="image-side">
-                  <Image src={group.image} alt={`${data.menu.title} — pratos em destaque`} extraClass="group-image" />
+                  <Image
+                    src={group.image}
+                    alt={`${data.menu.title} — pratos em destaque`}
+                    extraClass="group-image"
+                    sizes="(max-width: 1024px) 100vw, 45vw"
+                  />
                 </div>
               </Reveal>
             )}

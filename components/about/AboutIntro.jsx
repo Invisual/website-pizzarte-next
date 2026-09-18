@@ -29,7 +29,12 @@ export default function AboutIntro({ data, home }) {
               <Button to={data?.link ? translateNavLink(data.link, locale) : undefined} button={data?.button} />
             </div>
             <ImageContainer>
-              <Image src={data?.image} alt="" extraClass="fill-image" />
+              <Image
+                src={data?.image}
+                alt=""
+                extraClass="fill-image"
+                sizes="(max-width: 1024px) 100vw, 33vw"
+              />
               {home && <DecorativeCircle />}
             </ImageContainer>
           </div>

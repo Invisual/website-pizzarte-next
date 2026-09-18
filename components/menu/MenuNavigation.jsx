@@ -66,6 +66,8 @@ const MenuStyled = styled.div`
   }
 
   ${media.l`
+    margin-top: 20px;
+
     .menu {
       display: none;
     }

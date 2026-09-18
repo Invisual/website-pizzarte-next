@@ -72,6 +72,7 @@ export default function ImageGallery({ filter, galleries }) {
               src={shuffledImages[fullscreenImageIndex].src}
               alt={shuffledImages[fullscreenImageIndex].alt}
               extraClass="fullscreen-image"
+              sizes="800px"
               priority
             />
           </div>

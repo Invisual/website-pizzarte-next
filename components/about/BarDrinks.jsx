@@ -89,7 +89,12 @@ export default function BarDrinks({ data }) {
                 >
                   {data.drinks.drinksImage.map((drinksItem, l) => (
                     <SwiperSlide key={l}>
-                      <Image src={drinksItem.img} alt="" extraClass="drink-image" />
+                      <Image
+                        src={drinksItem.img}
+                        alt=""
+                        extraClass="drink-image"
+                        sizes="(max-width: 700px) 60vw, (max-width: 1024px) 45vw, 13vw"
+                      />
                     </SwiperSlide>
                   ))}
                 </Swiper>

@@ -26,7 +26,7 @@ export default function MenuSection({ data }) {
               <Reveal key={index}>
                 <a href={translateNavLink("/menu" + item.slug, locale)}>
                   <ImageContainer>
-                    <Image src={item.imageSection} alt={item.title} extraClass="section-image" />
+                    <Image src={item.imageSection} alt={item.title} extraClass="section-image" sizes="100vw" />
                     <Overlay className="overlay">
                       <Text>{item.title}</Text>
                     </Overlay>
@@ -46,6 +46,10 @@ const MenuSectionStyled = styled.div`
     flex-direction: column;
     padding: 0;
   }
+
+  ${media.l`
+    margin-top: 20px;
+  `}
 `;
 
 const ImageContainer = styled.div`
