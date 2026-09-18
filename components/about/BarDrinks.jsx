@@ -222,12 +222,22 @@ const BarDrinksStyled = styled.div`
 
     ${media.l`
       .swiper-pagination {
-        bottom: 0 !important;
+        bottom: 20px !important;
         top: unset !important;
         display: flex;
         gap: 10px;
         width: 100%;
         justify-content: center;
+      }
+
+      /* Em mobile a paginação fica sobre a background-red-bar (vermelha) —
+         bolinhas rosa/vermelho ficavam invisíveis nesse fundo. */
+      .swiper-pagination-bullet {
+        background: rgba(255, 255, 255, 0.3);
+      }
+
+      .swiper-pagination-bullet-active {
+        background: rgba(255, 255, 255, 0.7);
       }
     `}
 

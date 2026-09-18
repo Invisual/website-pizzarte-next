@@ -29,8 +29,7 @@ export default function PizzaEffect({ data }) {
       { isMobile: `(max-width: ${breakpoint.l})`, isDesktop: `(min-width: ${breakpoint.l})` },
       (ctx) => {
         const { isMobile } = ctx.conditions;
-        const phraseFrom = isMobile ? -800 : 0;
-        const phraseTo = isMobile ? 100 : 600;
+        const phraseTo = isMobile ? 0 : 600;
         const pizzaTopTo = isMobile ? "-36vh" : "-45vh";
         const pizzaBottomTo = isMobile ? "30vh" : "45vh";
 
@@ -52,10 +51,18 @@ export default function PizzaEffect({ data }) {
           return;
         }
 
-        gsap.utils.toArray(".phrase-title").forEach((box) => {
-          gsap.set(box, { translateX: phraseFrom });
-          gsap.to(box, { scrollTrigger: { ...scrollCfg }, translateX: phraseTo });
-        });
+        // Em mobile o título fica acima do container da pizza (trigger do
+        // scroll), pelo texto já ter passado grande parte do ecrã quando o
+        // trigger dispara — resultado era o texto aparecer tarde demais ou
+        // nem se notar. Em mobile mostra-se logo, sem animação de scroll.
+        if (isMobile) {
+          gsap.set(".phrase-title", { translateX: phraseTo });
+        } else {
+          gsap.utils.toArray(".phrase-title").forEach((box) => {
+            gsap.set(box, { translateX: 0 });
+            gsap.to(box, { scrollTrigger: { ...scrollCfg }, translateX: phraseTo });
+          });
+        }
 
         gsap.utils.toArray(".pizzaTop").forEach((box) => {
           gsap.to(box, { scrollTrigger: { ...scrollCfg }, translateY: pizzaTopTo });
