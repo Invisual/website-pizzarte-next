@@ -1,13 +1,8 @@
 import styled from "styled-components";
-import { useLocale } from "next-intl";
 import Title from "../layout/Title";
 import { Image } from "../layout/Image";
 import Button from "../layout/Button";
 import { media } from "../style/style";
-
-// "contacto" era um literal fixo no original (Title text="contacto"),
-// nunca traduzido — pequeno gap de i18n corrigido aqui.
-const SECTION_TITLE = { pt: "contacto", en: "contact", fr: "contact", es: "contacto" };
 
 const SOCIAL_LINKS = [
   { src: "logos/facebook-outline.svg", alt: "facebook", link: "https://www.facebook.com/pizzarte/?locale=pt_PT" },
@@ -28,14 +23,13 @@ const SOCIAL_LINKS = [
 // antes do endereço). Em mobile o wrapper vira `display:contents` para
 // o `order:-1` do SubTitle conseguir saltar por cima da imagem.
 export default function ContactInfo({ data }) {
-  const locale = useLocale();
   const info = data?.contactInfo;
   if (!info) return null;
 
   return (
     <ContactoInfoStyled>
       <div className="container-default">
-        <Title text={SECTION_TITLE[locale] || SECTION_TITLE.pt} />
+        <Title text={info.pageTitle} question={info.question} level="h1" />
         <div className="contactContainer grid-default">
           <Image
             src="Homepage/_MG_7916.webp"
@@ -61,7 +55,7 @@ export default function ContactInfo({ data }) {
                     <div>
                       <Button to={info.phoneLink} button={info.phone} />
                     </div>
-                    <h4>{info.reservationTitle}</h4>
+                    <h3>{info.reservationTitle}</h3>
                     {info.infoPhone?.map((item, key) => (
                       <small key={key} className="phone-note">
                         {item}
@@ -149,7 +143,7 @@ const ContactoInfoStyled = styled.div`
             display: flex;
             flex-direction: column;
 
-            h4 {
+            h3 {
               margin-top: 0.75rem;
             }
           }
@@ -206,7 +200,7 @@ const ContactoInfoStyled = styled.div`
   }
 `;
 
-const SubTitle = styled.h3`
+const SubTitle = styled.h2`
   font-size: 28px;
   font-weight: 600;
   color: #666666;

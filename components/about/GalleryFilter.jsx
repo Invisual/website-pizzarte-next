@@ -2,7 +2,6 @@
 
 import { useQueryState } from "nuqs";
 import styled from "styled-components";
-import Title from "../layout/Title";
 import ImageGallery from "./ImageGallery";
 import MobileFilterDropdown from "../layout/MobileFilterDropdown";
 import { breakpoint, media } from "../style/style";
@@ -13,6 +12,13 @@ import { breakpoint, media } from "../style/style";
 // - filtra de imediato, sem o LoaderPage artificial de 3s a cada clique;
 // - `filtro` vive na URL via nuqs (?filtro=bar) — partilhável e indexável,
 //   em vez de useState local.
+//
+// O <h1> da página NÃO vive aqui — vive em galeria/page.jsx, fora do
+// Suspense. Este componente usa useQueryState (nuqs → useSearchParams),
+// que força o Suspense boundary a renderizar `fallback={null}` no HTML
+// estático (PPR): qualquer heading dentro de GalleryFilter só apareceria
+// depois de hidratar no cliente, invisível a qualquer crawler que não
+// execute JavaScript.
 export default function GalleryFilter({ galleries, filters }) {
   const [filter, setFilter] = useQueryState("filtro", { defaultValue: "all" });
   const activeFilter = filters?.find((f) => f.slug === filter);
@@ -20,7 +26,6 @@ export default function GalleryFilter({ galleries, filters }) {
   return (
     <GalleryStyled>
       <div className="container-default">
-        <Title text="Galeria" />
         <div className="filter-buttons">
           {filters?.map((f) => (
             <div key={f.slug} className={filter === f.slug ? "active" : "desactive"} onClick={() => setFilter(f.slug)}>
@@ -42,6 +47,13 @@ export default function GalleryFilter({ galleries, filters }) {
 }
 
 const GalleryStyled = styled.div`
+  /* Título e filtros são filhos diretos de <main> (h1 fica fora do Suspense
+     de propósito — ver comentário em GalleryFilter). Isso apanha o gap de
+     main > * + * (--space-section, 150px) do CSS global. Em /menu o título
+     e os tabs vivem no mesmo bloco (MenuNavigation), sem esse gap — anula-se
+     aqui para os dois ficarem com a mesma margem no desktop. */
+  margin-top: 0;
+
   .filter-buttons {
     display: flex;
     gap: 1rem;

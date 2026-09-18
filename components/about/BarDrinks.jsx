@@ -59,7 +59,7 @@ export default function BarDrinks({ data }) {
         <Reveal>
           <div className="grid-default">
             <div className="text-container">
-              <Title text={data.drinks.title} />
+              <Title text={data.drinks.title} question={data.drinks.question} level="h2" />
               <p dangerouslySetInnerHTML={{ __html: data.drinks.text }} />
               <Button to={translateNavLink("/menu/bebidas", locale)} button={data.drinks.button} />
             </div>
@@ -71,9 +71,9 @@ export default function BarDrinks({ data }) {
                 {/* Efeito puramente decorativo (letra a letra, anime.js) — mesmo
                     texto em todos os idiomas no original, não é conteúdo real. */}
                 {Array.from({ length: 5 }).map((_, i) => (
-                  <h1 className="ml2" key={i}>
+                  <span className="ml2" key={i} aria-hidden="true">
                     BAAAAAAAAAAAR
-                  </h1>
+                  </span>
                 ))}
               </div>
               <ClientOnly>
@@ -146,8 +146,10 @@ const BarDrinksStyled = styled.div`
       `}
     `}
 
-    h1 {
+    .ml2 {
+      display: block;
       margin: 0;
+      line-height: var(--line-height-dense);
 
       ${media.l`
         font-size: 11vw;

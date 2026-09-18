@@ -41,7 +41,7 @@ export default function PizzarteInfo({ data }) {
         <Reveal>
           <div className="container">
             <div className="textContainer">
-              <Title text={data?.title} />
+              <Title text={data?.title} question={data?.question} level="h1" />
               <p dangerouslySetInnerHTML={{ __html: data?.text }} />
             </div>
             <div className="ImageContainer">
@@ -75,8 +75,10 @@ export default function PizzarteInfo({ data }) {
             {slides.map((feedback) => (
               <SwiperSlide key={feedback.index}>
                 <div className="feedback-person">
-                  <h1>{feedback.quote}</h1>
-                  <p>{feedback.author}</p>
+                  <blockquote>
+                    <p>{feedback.quote}</p>
+                  </blockquote>
+                  <cite>{feedback.author}</cite>
                   <Stars count={feedback.rating} />
                 </div>
               </SwiperSlide>
@@ -103,8 +105,10 @@ export default function PizzarteInfo({ data }) {
               {slides.map((feedback) => (
                 <SwiperSlide key={feedback.index}>
                   <div className="feedback-person">
-                    <h1>{feedback.quote}</h1>
-                    <p className="author">{feedback.author}</p>
+                    <blockquote>
+                      <p>{feedback.quote}</p>
+                    </blockquote>
+                    <cite className="author">{feedback.author}</cite>
                     <Stars count={feedback.rating} />
                   </div>
                 </SwiperSlide>
@@ -170,17 +174,23 @@ const PizzarteInfoStyled = styled.div`
       text-align: center;
       color: #fff;
 
-      h1 {
-        width: 539px;
-        margin: 0 auto;
-        font-family: var(--font-british);
-        text-transform: uppercase;
-        font-weight: 200;
-        font-size: 42px;
-        line-height: 52px;
+      blockquote {
+        margin: 0;
+
+        p {
+          width: 539px;
+          margin: 0 auto;
+          font-family: var(--font-british);
+          text-transform: uppercase;
+          font-weight: 200;
+          font-size: 42px;
+          line-height: 52px;
+        }
       }
 
-      p {
+      cite {
+        display: block;
+        font-style: normal;
         font-size: 21px;
         text-transform: uppercase;
         font-weight: 600;
@@ -288,13 +298,19 @@ const PizzarteInfoStyled = styled.div`
         color: #fff;
         margin: 0 13%;
 
-        h1 {
-          font-family: var(--font-chunky-rosie);
-          font-weight: 200;
-          font-size: 20px;
+        blockquote {
+          margin: 0;
+
+          p {
+            font-family: var(--font-chunky-rosie);
+            font-weight: 200;
+            font-size: 20px;
+          }
         }
 
         .author {
+          display: block;
+          font-style: normal;
           font-size: 21px;
           text-transform: uppercase;
           font-weight: 600;

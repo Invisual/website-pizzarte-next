@@ -1,8 +1,8 @@
 {
     "home": {
         "seo": {
-            "title": "Home | Restaurant Pizzarte",
-            "description": "La Pizzarte investit dans le sourire de ses clients en proposant une grande variété de pizzas, salades, pâtes et délicieux desserts à Aveiro.",
+            "title": "Pizzarte | Pizzeria et Bar à Aveiro depuis 1989",
+            "description": "Pizzas, pâtes, crêpes et cocktails d'auteur au cœur d'Aveiro. Découvre le menu, les horaires et l'histoire de la Pizzarte, pizzeria de quartier depuis 1989.",
             "image": "seo/pizzarte.png",
             "imageAlt": "pizzarte"
         },
@@ -101,10 +101,6 @@
                 ]
             }
         },
-        "loader": {
-            "firstText": "De quoi vous mettre l'eau à la bouche, non?",
-            "secondText": "Presque prêt..."
-        },
         "footer": {
             "info": [
                 {
@@ -191,8 +187,9 @@
             "text": "<h1 class='first-text'>la combinaison <div class='middle-text'>parfaite entre</div> saveur et art</h1>"
         },
         "aboutIntro": {
+            "question": "Qui est la Pizzarte et qu'est-ce qui la rend différente à Aveiro ?",
             "title": "À propos de nous",
-            "text": "Au numéro 27 de la Rua Eng. Von Haff se trouve un lieu qui unit l'art de la bonne cuisine à la tradition et aux valeurs de la ville d'Aveiro. La Pizzarte, une pizzeria vieille de trois décennies, est un symbole de l'identité de la région. Un lieu fréquenté par plusieurs générations, qui considèrent la Pizzarte comme la meilleure pizzeria de la ville.<br/><br/>Du lundi au dimanche, la Pizzarte investit dans le sourire de ses clients en proposant une grande variété de pizzas, salades, pâtes et délicieux desserts, avec un service de qualité porté par une équipe jeune et enthousiaste.",
+            "text": "La Pizzarte est une pizzeria à Aveiro avec plus de trois décennies d'histoire, au numéro 27 de la Rua Eng. Von Haff. Tu y trouveras des pizzas, pâtes, salades et desserts faits dans la tradition et les valeurs de la ville, dans un lieu qui a vu passer plusieurs générations de clients.<br/><br/>C'est un symbole de l'identité d'Aveiro — on y revient, et certains disent qu'on y trouve les meilleures pizzas de la ville. Du lundi au dimanche, tu trouveras une grande variété de pizzas, salades, pâtes et desserts, servis par une équipe jeune et enthousiaste.",
             "button": "En savoir plus",
             "link": "/pizzarte",
             "image": "Pizzarte/about-intro.webp"
@@ -260,8 +257,9 @@
             }
         ],
         "drinks": {
+            "question": "Comment est le bar de la Pizzarte ?",
             "title": "NOTRE BAR",
-            "text": "Avec une ambiance cosmopolite, irrévérencieuse et confortable, le bar de notre Pizzeria offre le cadre parfait pour terminer la journée. Depuis son ouverture en 1989, il a fini par révolutionner la vie nocturne d'Aveiro.<br/><br/> Pour beaucoup, la soirée commence au bar de la Pizzarte. Nous servons des cocktails et des gins d'auteur très appréciés. Dans cet espace, les murs sont couverts de phrases tirées de livres et de films d'auteurs nationaux et internationaux, apportant ainsi une touche créative et artistique au lieu.",
+            "text": "Le bar de la Pizzarte a ouvert en 1989 et a une ambiance cosmopolite, irrévérencieuse et confortable — l'endroit idéal pour finir la journée avec des cocktails et des gins d'auteur.<br/><br/> Pour beaucoup, la soirée commence ici : ce bar a contribué à révolutionner la vie nocturne d'Aveiro. Les murs sont couverts de citations de livres et de films d'auteurs nationaux et internationaux, apportant une touche créative et artistique à l'espace.",
             "button": "Menu Boissons",
             "drinksImage": [
                 {

@@ -2,34 +2,33 @@
 tags: [index, overview]
 category: index
 wiki_version: 1.0
-generated: 2026-06-05
+generated: 2026-09-18
 ---
 
-# next-template-started Wiki
+# Pizzarte Wiki
 
-**next-template-started** (internal name: *belone*) is a production-ready Next.js 16 marketing and content site starter template. It ships with bilingual routing (Portuguese and English) via `next-intl`, MDX-based blog posts, service pages driven by i18n messages, contact and newsletter API routes, and a rich animation library — so new projects never start from zero.
+Pizzarte é o site institucional do restaurante Pizzarte, em Aveiro, Portugal, em atividade desde 1989 — menu, apresentação do espaço, galeria de fotos e contactos, sem CMS nem base de dados (todo o conteúdo vive em ficheiros JSON de tradução). O site foi migrado de Gatsby 5 para o Next.js 16 App Router em setembro de 2026, mantendo 4 idiomas (pt/en/fr/es), `styled-components` e uma galeria de imagens congelada localmente (já sem dependência de WordPress em runtime). A arquitetura investe fortemente em SEO/GEO/AIO: pré-renderização estática de todas as combinações de idioma × rota, schema.org completo (`Restaurant`, `Menu`, `Organization`, `BreadcrumbList`, `FAQPage`) e um `llms.txt` dinâmico pensado para motores generativos de IA.
 
 ## Navigation
 
 | Section | Pages |
 |---|---|
-| [[Overview/Introduction & Purpose\|Overview]] | [[Overview/Introduction & Purpose\|Introduction & Purpose]], [[Overview/Tech Stack & Quick Start\|Tech Stack & Quick Start]] |
-| [[Architecture/App Router Structure\|Architecture]] | [[Architecture/App Router Structure\|App Router Structure]], [[Architecture/Data Flow & Routing\|Data Flow & Routing]] |
-| [[I18n/Locale Routing\|I18n]] | [[I18n/Locale Routing\|Locale Routing]], [[I18n/Translations & Messages\|Translations & Messages]] |
-| [[Frontend/Components Overview\|Frontend]] | [[Frontend/Components Overview\|Components Overview]], [[Frontend/Styling & Animation\|Styling & Animation]] |
-| [[Content/MDX Blog Posts\|Content]] | [[Content/MDX Blog Posts\|MDX Blog Posts]], [[Content/Services & Dynamic Pages\|Services & Dynamic Pages]] |
-| [[API/Contact & Newsletter API\|API]] | [[API/Contact & Newsletter API\|Contact & Newsletter API]] |
-| [[State Management/nuqs URL State\|State Management]] | [[State Management/nuqs URL State\|nuqs URL State]] |
-| [[FAQ/Common Issues & Solutions\|FAQ]] | [[FAQ/Common Issues & Solutions\|Common Issues & Solutions]] |
-| [[Caching/use cache Directive\|Caching]] | [[Caching/use cache Directive\|use cache Directive]] |
-| [[SEO, GEO & AIO/Overview\|SEO, GEO & AIO]] | [[SEO, GEO & AIO/Overview\|Overview]], [[SEO, GEO & AIO/Structured Data & JSON-LD\|Structured Data & JSON-LD]], [[SEO, GEO & AIO/Sitemap, Robots & llms.txt\|Sitemap, Robots & llms.txt]], [[SEO, GEO & AIO/Performance & Technical SEO\|Performance & Technical SEO]], [[SEO, GEO & AIO/AIO On-Page\|AIO On-Page]] |
+| [[Overview/Introduction & Tech Stack\|Overview]] | [[Overview/Introduction & Tech Stack\|Introduction & Tech Stack]], [[Overview/Quick Start & Project Layout\|Quick Start & Project Layout]] |
+| [[Architecture/App Router & Layout Composition\|Architecture]] | [[Architecture/App Router & Layout Composition\|App Router & Layout Composition]], [[Architecture/Rendering Strategy & Data Flow\|Rendering Strategy & Data Flow]], [[Architecture/Caching with 'use cache'\|Caching with 'use cache']] |
+| [[I18n/Locale Routing & Middleware\|I18n]] | [[I18n/Locale Routing & Middleware\|Locale Routing & Middleware]], [[I18n/Translated Nav Links & Menu Slugs\|Translated Nav Links & Menu Slugs]] |
+| [[Frontend/Component Domains Overview\|Frontend]] | [[Frontend/Component Domains Overview\|Component Domains Overview]], [[Frontend/Styled-Components & Responsive System\|Styled-Components & Responsive System]], [[Frontend/Animation Hooks & Client-Only Boundaries\|Animation Hooks & Client-Only Boundaries]] |
+| [[SEO/Metadata & JSON-LD Builders\|SEO]] | [[SEO/Metadata & JSON-LD Builders\|Metadata & JSON-LD Builders]], [[SEO/Sitemap, Robots & llms.txt\|Sitemap, Robots & llms.txt]], [[SEO/Static Site Generation Strategy\|Static Site Generation Strategy]] |
+| [[Content/Content Model (Messages & Gallery JSON)\|Content]] | [[Content/Content Model (Messages & Gallery JSON)\|Content Model (Messages & Gallery JSON)]], [[Content/Image Manifest & Media Handling\|Image Manifest & Media Handling]] |
+| [[FAQ/Common Issues & Gotchas\|FAQ]] | [[FAQ/Common Issues & Gotchas\|Common Issues & Gotchas]], [[FAQ/Migration Notes (Gatsby to Next)\|Migration Notes (Gatsby to Next)]] |
 
 ## Start Here
 
 New to this codebase? Read these first:
-1. [[Overview/Introduction & Purpose]] — what the project does, its multilingual routing model, and the two-layer layout system
-2. [[Architecture/App Router Structure]] — the Next.js App Router file tree, locale layout, and page hierarchy
-3. [[I18n/Locale Routing]] — how `next-intl` handles locale detection, URL prefixes, and translated pathnames
+1. [[Overview/Introduction & Tech Stack]] — what the project does, the tech stack, and how it's structured
+2. [[Architecture/App Router & Layout Composition]] — the technical architecture (App Router, layouts, SSR/SSG)
+3. [[Content/Content Model (Messages & Gallery JSON)]] — the data model (there is no database or CMS; all content lives in JSON message files)
+
+For the "why" behind the current code, see [[FAQ/Migration Notes (Gatsby to Next)]] and [[FAQ/Common Issues & Gotchas]].
 
 ---
-*Generated by repowiki · 10 sections · 19 pages*
+*Generated by repowiki · 7 sections · 17 pages*

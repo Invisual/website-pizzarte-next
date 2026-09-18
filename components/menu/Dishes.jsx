@@ -26,7 +26,7 @@ export default function Dishes({ data }) {
   return (
     <DishesContainer id={sectionId}>
       <div className="container-default">
-        <Title simple={data.menu.title} />
+        <Title simple={data.menu.title} level="h1" />
       </div>
       <Image src={data.menu.image} alt={data.menu.title} extraClass="banner" sizes="100vw" priority />
       <div className="container-default">

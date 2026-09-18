@@ -76,7 +76,7 @@ export default function PizzaEffect({ data }) {
     <>
       <TopPhrase>
         <div className="container-default">
-          <h1 className="phrase-title">{data.pizzaEffect.titleTop}</h1>
+          <h2 className="phrase-title">{data.pizzaEffect.titleTop}</h2>
         </div>
       </TopPhrase>
       <PizzaStyled ref={pizzaRef}>
@@ -124,7 +124,10 @@ const TopPhrase = styled.div`
     font-weight: 200;
     -webkit-text-stroke: 1px ${color.red};
     color: transparent;
-    margin-top: 3rem;
+    margin: 3rem 0 0;
+    padding: 0;
+    line-height: var(--line-height-dense);
+    letter-spacing: -0.01em;
 
     ${media.l`
       font-size: 10vw;

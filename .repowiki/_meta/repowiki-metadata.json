@@ -1,366 +1,252 @@
 {
   "wiki_version": "1.0.0",
-  "generated": "2026-06-05T00:00:00.000Z",
-  "repo_name": "next-template-started",
+  "generated": "2026-09-18T00:00:00Z",
+  "repo_name": "pizzarte",
   "total_sections": 7,
-  "total_pages": 12,
+  "total_pages": 17,
   "sections": [
     {
-      "id": "a1b2c3d4-0001-4000-8000-000000000001",
+      "id": "efa6229e-0195-4b86-88f8-46df948fddfb",
       "title": "Overview",
       "output_dir": "Overview",
       "pages": [
         {
-          "id": "a1b2c3d4-0002-4000-8000-000000000002",
-          "title": "Introduction & Purpose",
-          "path": "Overview/Introduction & Purpose.md",
-          "tags": ["overview", "next.js", "multilingual", "template", "marketing"]
+          "id": "f9b2c87a-bd1b-418a-86a2-fd211e129112",
+          "title": "Introduction & Tech Stack",
+          "path": "Overview/Introduction & Tech Stack.md",
+          "tags": ["overview", "nextjs", "tech-stack", "i18n", "migracao"]
         },
         {
-          "id": "a1b2c3d4-0003-4000-8000-000000000003",
-          "title": "Tech Stack & Quick Start",
-          "path": "Overview/Tech Stack & Quick Start.md",
-          "tags": ["tech-stack", "dependências", "configuração", "next.js", "arranque"]
+          "id": "face1040-3d05-45ae-8049-68e76264082e",
+          "title": "Quick Start & Project Layout",
+          "path": "Overview/Quick Start & Project Layout.md",
+          "tags": ["overview", "quick-start", "project-layout", "scripts", "ambiente"]
         }
       ]
     },
     {
-      "id": "a1b2c3d4-0004-4000-8000-000000000004",
+      "id": "04848b27-9f2d-4a22-a690-f11f7edeeab1",
       "title": "Architecture",
       "output_dir": "Architecture",
       "pages": [
         {
-          "id": "a1b2c3d4-0005-4000-8000-000000000005",
-          "title": "App Router Structure",
-          "path": "Architecture/App Router Structure.md",
-          "tags": ["architecture", "next-js", "app-router", "i18n", "layout"]
+          "id": "747e7b0e-5880-4847-964b-b96e43891858",
+          "title": "App Router & Layout Composition",
+          "path": "Architecture/App Router & Layout Composition.md",
+          "tags": ["nextjs", "app-router", "layouts", "ssr", "composicao"]
         },
         {
-          "id": "a1b2c3d4-0006-4000-8000-000000000006",
-          "title": "Data Flow & Routing",
-          "path": "Architecture/Data Flow & Routing.md",
-          "tags": ["routing", "middleware", "i18n", "next-intl", "data-flow"]
+          "id": "1a4f7922-0134-4264-a6d3-913e260cd3c2",
+          "title": "Rendering Strategy & Data Flow",
+          "path": "Architecture/Rendering Strategy & Data Flow.md",
+          "tags": ["nextjs", "generatestaticparams", "ssg", "data-flow", "seo"]
+        },
+        {
+          "id": "ee9a00b3-4344-456a-9721-4f78a0025432",
+          "title": "Caching with 'use cache'",
+          "path": "Architecture/Caching with 'use cache'.md",
+          "tags": ["nextjs", "caching", "use-cache", "cache-components", "performance"]
         }
       ]
     },
     {
-      "id": "a1b2c3d4-0007-4000-8000-000000000007",
+      "id": "5662e7de-0126-415b-8961-3dd11c724f51",
       "title": "I18n",
       "output_dir": "I18n",
       "pages": [
         {
-          "id": "a1b2c3d4-0008-4000-8000-000000000008",
-          "title": "Locale Routing",
-          "path": "I18n/Locale Routing.md",
-          "tags": ["i18n", "routing", "next-intl", "localisation", "navigation"]
+          "id": "705e18bd-a074-4849-9dde-d63eda0093b3",
+          "title": "Locale Routing & Middleware",
+          "path": "I18n/Locale Routing & Middleware.md",
+          "tags": ["i18n", "routing", "middleware", "next-intl", "proxy"]
         },
         {
-          "id": "a1b2c3d4-0009-4000-8000-000000000009",
-          "title": "Translations & Messages",
-          "path": "I18n/Translations & Messages.md",
-          "tags": ["i18n", "translations", "messages", "next-intl", "content"]
+          "id": "442ed9a3-6255-4d51-8928-18187ec3511d",
+          "title": "Translated Nav Links & Menu Slugs",
+          "path": "I18n/Translated Nav Links & Menu Slugs.md",
+          "tags": ["i18n", "navigation", "menu-slugs", "locale-switcher"]
         }
       ]
     },
     {
-      "id": "a1b2c3d4-0010-4000-8000-000000000010",
+      "id": "3135b1b4-6014-466a-8e19-476ba00eaf4e",
       "title": "Frontend",
       "output_dir": "Frontend",
       "pages": [
         {
-          "id": "a1b2c3d4-0011-4000-8000-000000000011",
-          "title": "Components Overview",
-          "path": "Frontend/Components Overview.md",
-          "tags": ["components", "menu", "seo", "internacionalização", "noticias"]
+          "id": "f883ce3b-fec1-4717-99b5-54a8dfe96ab9",
+          "title": "Component Domains Overview",
+          "path": "Frontend/Component Domains Overview.md",
+          "tags": ["frontend", "components", "gatsby-migration", "arquitetura"]
         },
         {
-          "id": "a1b2c3d4-0012-4000-8000-000000000012",
-          "title": "Styling & Animation",
-          "path": "Frontend/Styling & Animation.md",
-          "tags": ["styling", "tailwind", "bootstrap", "framer-motion", "gsap", "animação"]
+          "id": "11faef7f-1098-4a0d-b599-223b6adc2101",
+          "title": "Styled-Components & Responsive System",
+          "path": "Frontend/Styled-Components & Responsive System.md",
+          "tags": ["frontend", "styled-components", "css", "responsive", "breakpoints"]
+        },
+        {
+          "id": "4220b221-882c-4cbb-8988-e3079ac7bfaa",
+          "title": "Animation Hooks & Client-Only Boundaries",
+          "path": "Frontend/Animation Hooks & Client-Only Boundaries.md",
+          "tags": ["frontend", "animation", "gsap", "ssr", "prerender"]
         }
       ]
     },
     {
-      "id": "a1b2c3d4-0013-4000-8000-000000000013",
+      "id": "378d1a27-c8f9-4937-b37f-6b07eefa3018",
+      "title": "SEO",
+      "output_dir": "SEO",
+      "pages": [
+        {
+          "id": "7407a94f-400c-4d90-9328-0e4558bd0f41",
+          "title": "Metadata & JSON-LD Builders",
+          "path": "SEO/Metadata & JSON-LD Builders.md",
+          "tags": ["seo", "jsonld", "schema-org", "metadata", "geo"]
+        },
+        {
+          "id": "7b8557ab-48fa-4079-ab83-1d7ccac092ca",
+          "title": "Sitemap, Robots & llms.txt",
+          "path": "SEO/Sitemap, Robots & llms.txt.md",
+          "tags": ["seo", "sitemap", "robots", "llms-txt", "geo", "aio"]
+        },
+        {
+          "id": "62b67dd1-9071-4b7d-919e-00dafd33c351",
+          "title": "Static Site Generation Strategy",
+          "path": "SEO/Static Site Generation Strategy.md",
+          "tags": ["seo", "ssg", "generatestaticparams", "ppr", "nextjs", "i18n"]
+        }
+      ]
+    },
+    {
+      "id": "aba8bac6-bb09-4883-af26-304cdb3cd0ff",
       "title": "Content",
       "output_dir": "Content",
       "pages": [
         {
-          "id": "a1b2c3d4-0014-4000-8000-000000000014",
-          "title": "MDX Blog Posts",
-          "path": "Content/MDX Blog Posts.md",
-          "tags": ["content", "mdx", "blog", "i18n", "routing"]
+          "id": "ed6d5da3-64c3-4ec8-bdc2-491c41b6f082",
+          "title": "Content Model (Messages & Gallery JSON)",
+          "path": "Content/Content Model (Messages & Gallery JSON).md",
+          "tags": ["content", "i18n", "json", "cms-free", "gallery"]
         },
         {
-          "id": "a1b2c3d4-0015-4000-8000-000000000015",
-          "title": "Services & Dynamic Pages",
-          "path": "Content/Services & Dynamic Pages.md",
-          "tags": ["services", "routing", "i18n", "dynamic-pages", "next-intl"]
+          "id": "2bbc4b0b-7b9d-486d-8e87-421dd3940da8",
+          "title": "Image Manifest & Media Handling",
+          "path": "Content/Image Manifest & Media Handling.md",
+          "tags": ["images", "build-pipeline", "next-image", "media", "performance"]
         }
       ]
     },
     {
-      "id": "a1b2c3d4-0016-4000-8000-000000000016",
-      "title": "API",
-      "output_dir": "API",
-      "pages": [
-        {
-          "id": "a1b2c3d4-0017-4000-8000-000000000017",
-          "title": "Contact & Newsletter API",
-          "path": "API/Contact & Newsletter API.md",
-          "tags": ["api", "email", "nodemailer", "mailchimp", "notifications"]
-        }
-      ]
-    },
-    {
-      "id": "a1b2c3d4-0018-4000-8000-000000000018",
+      "id": "b42a8ed5-bdc8-4bd2-a2fe-ca45bd04bd26",
       "title": "FAQ",
       "output_dir": "FAQ",
       "pages": [
         {
-          "id": "a1b2c3d4-0019-4000-8000-000000000019",
-          "title": "Common Issues & Solutions",
-          "path": "FAQ/Common Issues & Solutions.md",
-          "tags": ["troubleshooting", "faq", "configuracao", "i18n", "styling"]
+          "id": "e65df080-d741-4625-827e-9fa5a3a5a104",
+          "title": "Common Issues & Gotchas",
+          "path": "FAQ/Common Issues & Gotchas.md",
+          "tags": ["faq", "troubleshooting", "ppr", "i18n", "gotchas"]
+        },
+        {
+          "id": "6b82f322-310e-49da-a64e-a0ab90819be6",
+          "title": "Migration Notes (Gatsby to Next)",
+          "path": "FAQ/Migration Notes (Gatsby to Next).md",
+          "tags": ["faq", "migration", "gatsby", "nextjs", "history"]
         }
       ]
     }
   ],
   "knowledge_relations": [
-    {
-      "id": 1,
-      "source_id": "a1b2c3d4-0002-4000-8000-000000000002",
-      "target_id": "a1b2c3d4-0003-4000-8000-000000000003",
-      "source_type": "WIKI_PAGE",
-      "target_type": "WIKI_PAGE",
-      "relationship_type": "RELATED",
-      "description": "Introduction & Purpose → Tech Stack & Quick Start"
-    },
-    {
-      "id": 2,
-      "source_id": "a1b2c3d4-0002-4000-8000-000000000002",
-      "target_id": "a1b2c3d4-0008-4000-8000-000000000008",
-      "source_type": "WIKI_PAGE",
-      "target_type": "WIKI_PAGE",
-      "relationship_type": "RELATED",
-      "description": "Introduction & Purpose → Locale Routing"
-    },
-    {
-      "id": 3,
-      "source_id": "a1b2c3d4-0002-4000-8000-000000000002",
-      "target_id": "a1b2c3d4-0005-4000-8000-000000000005",
-      "source_type": "WIKI_PAGE",
-      "target_type": "WIKI_PAGE",
-      "relationship_type": "RELATED",
-      "description": "Introduction & Purpose → App Router Structure"
-    },
-    {
-      "id": 4,
-      "source_id": "a1b2c3d4-0002-4000-8000-000000000002",
-      "target_id": "a1b2c3d4-0014-4000-8000-000000000014",
-      "source_type": "WIKI_PAGE",
-      "target_type": "WIKI_PAGE",
-      "relationship_type": "RELATED",
-      "description": "Introduction & Purpose → MDX Blog Posts"
-    },
-    {
-      "id": 5,
-      "source_id": "a1b2c3d4-0003-4000-8000-000000000003",
-      "target_id": "a1b2c3d4-0002-4000-8000-000000000002",
-      "source_type": "WIKI_PAGE",
-      "target_type": "WIKI_PAGE",
-      "relationship_type": "RELATED",
-      "description": "Tech Stack & Quick Start → Introduction & Purpose"
-    },
-    {
-      "id": 6,
-      "source_id": "a1b2c3d4-0003-4000-8000-000000000003",
-      "target_id": "a1b2c3d4-0008-4000-8000-000000000008",
-      "source_type": "WIKI_PAGE",
-      "target_type": "WIKI_PAGE",
-      "relationship_type": "RELATED",
-      "description": "Tech Stack & Quick Start → Locale Routing"
-    },
-    {
-      "id": 7,
-      "source_id": "a1b2c3d4-0003-4000-8000-000000000003",
-      "target_id": "a1b2c3d4-0014-4000-8000-000000000014",
-      "source_type": "WIKI_PAGE",
-      "target_type": "WIKI_PAGE",
-      "relationship_type": "RELATED",
-      "description": "Tech Stack & Quick Start → MDX Blog Posts"
-    },
-    {
-      "id": 8,
-      "source_id": "a1b2c3d4-0003-4000-8000-000000000003",
-      "target_id": "a1b2c3d4-0005-4000-8000-000000000005",
-      "source_type": "WIKI_PAGE",
-      "target_type": "WIKI_PAGE",
-      "relationship_type": "RELATED",
-      "description": "Tech Stack & Quick Start → App Router Structure"
-    },
-    {
-      "id": 9,
-      "source_id": "a1b2c3d4-0005-4000-8000-000000000005",
-      "target_id": "a1b2c3d4-0006-4000-8000-000000000006",
-      "source_type": "WIKI_PAGE",
-      "target_type": "WIKI_PAGE",
-      "relationship_type": "PARENT_CHILD",
-      "description": "App Router Structure → Data Flow & Routing"
-    },
-    {
-      "id": 10,
-      "source_id": "a1b2c3d4-0006-4000-8000-000000000006",
-      "target_id": "a1b2c3d4-0005-4000-8000-000000000005",
-      "source_type": "WIKI_PAGE",
-      "target_type": "WIKI_PAGE",
-      "relationship_type": "PARENT_CHILD",
-      "description": "Data Flow & Routing → App Router Structure"
-    },
-    {
-      "id": 11,
-      "source_id": "a1b2c3d4-0008-4000-8000-000000000008",
-      "target_id": "a1b2c3d4-0009-4000-8000-000000000009",
-      "source_type": "WIKI_PAGE",
-      "target_type": "WIKI_PAGE",
-      "relationship_type": "PARENT_CHILD",
-      "description": "Locale Routing → Translations & Messages"
-    },
-    {
-      "id": 12,
-      "source_id": "a1b2c3d4-0008-4000-8000-000000000008",
-      "target_id": "a1b2c3d4-0005-4000-8000-000000000005",
-      "source_type": "WIKI_PAGE",
-      "target_type": "WIKI_PAGE",
-      "relationship_type": "RELATED",
-      "description": "Locale Routing → App Router Structure"
-    },
-    {
-      "id": 13,
-      "source_id": "a1b2c3d4-0009-4000-8000-000000000009",
-      "target_id": "a1b2c3d4-0008-4000-8000-000000000008",
-      "source_type": "WIKI_PAGE",
-      "target_type": "WIKI_PAGE",
-      "relationship_type": "RELATED",
-      "description": "Translations & Messages → Locale Routing"
-    },
-    {
-      "id": 14,
-      "source_id": "a1b2c3d4-0009-4000-8000-000000000009",
-      "target_id": "a1b2c3d4-0005-4000-8000-000000000005",
-      "source_type": "WIKI_PAGE",
-      "target_type": "WIKI_PAGE",
-      "relationship_type": "RELATED",
-      "description": "Translations & Messages → App Router Structure"
-    },
-    {
-      "id": 15,
-      "source_id": "a1b2c3d4-0011-4000-8000-000000000011",
-      "target_id": "a1b2c3d4-0012-4000-8000-000000000012",
-      "source_type": "WIKI_PAGE",
-      "target_type": "WIKI_PAGE",
-      "relationship_type": "PARENT_CHILD",
-      "description": "Components Overview → Styling & Animation"
-    },
-    {
-      "id": 16,
-      "source_id": "a1b2c3d4-0011-4000-8000-000000000011",
-      "target_id": "a1b2c3d4-0005-4000-8000-000000000005",
-      "source_type": "WIKI_PAGE",
-      "target_type": "WIKI_PAGE",
-      "relationship_type": "RELATED",
-      "description": "Components Overview → App Router Structure"
-    },
-    {
-      "id": 17,
-      "source_id": "a1b2c3d4-0012-4000-8000-000000000012",
-      "target_id": "a1b2c3d4-0011-4000-8000-000000000011",
-      "source_type": "WIKI_PAGE",
-      "target_type": "WIKI_PAGE",
-      "relationship_type": "RELATED",
-      "description": "Styling & Animation → Components Overview"
-    },
-    {
-      "id": 18,
-      "source_id": "a1b2c3d4-0012-4000-8000-000000000012",
-      "target_id": "a1b2c3d4-0005-4000-8000-000000000005",
-      "source_type": "WIKI_PAGE",
-      "target_type": "WIKI_PAGE",
-      "relationship_type": "RELATED",
-      "description": "Styling & Animation → App Router Structure"
-    },
-    {
-      "id": 19,
-      "source_id": "a1b2c3d4-0014-4000-8000-000000000014",
-      "target_id": "a1b2c3d4-0015-4000-8000-000000000015",
-      "source_type": "WIKI_PAGE",
-      "target_type": "WIKI_PAGE",
-      "relationship_type": "PARENT_CHILD",
-      "description": "MDX Blog Posts → Services & Dynamic Pages"
-    },
-    {
-      "id": 20,
-      "source_id": "a1b2c3d4-0014-4000-8000-000000000014",
-      "target_id": "a1b2c3d4-0005-4000-8000-000000000005",
-      "source_type": "WIKI_PAGE",
-      "target_type": "WIKI_PAGE",
-      "relationship_type": "RELATED",
-      "description": "MDX Blog Posts → App Router Structure"
-    },
-    {
-      "id": 21,
-      "source_id": "a1b2c3d4-0015-4000-8000-000000000015",
-      "target_id": "a1b2c3d4-0014-4000-8000-000000000014",
-      "source_type": "WIKI_PAGE",
-      "target_type": "WIKI_PAGE",
-      "relationship_type": "RELATED",
-      "description": "Services & Dynamic Pages → MDX Blog Posts"
-    },
-    {
-      "id": 22,
-      "source_id": "a1b2c3d4-0015-4000-8000-000000000015",
-      "target_id": "a1b2c3d4-0005-4000-8000-000000000005",
-      "source_type": "WIKI_PAGE",
-      "target_type": "WIKI_PAGE",
-      "relationship_type": "RELATED",
-      "description": "Services & Dynamic Pages → App Router Structure"
-    },
-    {
-      "id": 23,
-      "source_id": "a1b2c3d4-0017-4000-8000-000000000017",
-      "target_id": "a1b2c3d4-0005-4000-8000-000000000005",
-      "source_type": "WIKI_PAGE",
-      "target_type": "WIKI_PAGE",
-      "relationship_type": "RELATED",
-      "description": "Contact & Newsletter API → App Router Structure"
-    },
-    {
-      "id": 24,
-      "source_id": "a1b2c3d4-0017-4000-8000-000000000017",
-      "target_id": "a1b2c3d4-0011-4000-8000-000000000011",
-      "source_type": "WIKI_PAGE",
-      "target_type": "WIKI_PAGE",
-      "relationship_type": "RELATED",
-      "description": "Contact & Newsletter API → Components Overview"
-    },
-    {
-      "id": 25,
-      "source_id": "a1b2c3d4-0019-4000-8000-000000000019",
-      "target_id": "a1b2c3d4-0005-4000-8000-000000000005",
-      "source_type": "WIKI_PAGE",
-      "target_type": "WIKI_PAGE",
-      "relationship_type": "RELATED",
-      "description": "Common Issues & Solutions → App Router Structure"
-    },
-    {
-      "id": 26,
-      "source_id": "a1b2c3d4-0019-4000-8000-000000000019",
-      "target_id": "a1b2c3d4-0008-4000-8000-000000000008",
-      "source_type": "WIKI_PAGE",
-      "target_type": "WIKI_PAGE",
-      "relationship_type": "RELATED",
-      "description": "Common Issues & Solutions → Locale Routing"
-    }
+    { "id": 1, "source_id": "f9b2c87a-bd1b-418a-86a2-fd211e129112", "target_id": "face1040-3d05-45ae-8049-68e76264082e", "source_type": "WIKI_PAGE", "target_type": "WIKI_PAGE", "relationship_type": "PARENT_CHILD", "description": "Introduction & Tech Stack → Quick Start & Project Layout" },
+    { "id": 2, "source_id": "f9b2c87a-bd1b-418a-86a2-fd211e129112", "target_id": "747e7b0e-5880-4847-964b-b96e43891858", "source_type": "WIKI_PAGE", "target_type": "WIKI_PAGE", "relationship_type": "PARENT_CHILD", "description": "Introduction & Tech Stack → App Router & Layout Composition" },
+    { "id": 3, "source_id": "f9b2c87a-bd1b-418a-86a2-fd211e129112", "target_id": "705e18bd-a074-4849-9dde-d63eda0093b3", "source_type": "WIKI_PAGE", "target_type": "WIKI_PAGE", "relationship_type": "PARENT_CHILD", "description": "Introduction & Tech Stack → Locale Routing & Middleware" },
+    { "id": 4, "source_id": "f9b2c87a-bd1b-418a-86a2-fd211e129112", "target_id": "f883ce3b-fec1-4717-99b5-54a8dfe96ab9", "source_type": "WIKI_PAGE", "target_type": "WIKI_PAGE", "relationship_type": "PARENT_CHILD", "description": "Introduction & Tech Stack → Component Domains Overview" },
+    { "id": 5, "source_id": "f9b2c87a-bd1b-418a-86a2-fd211e129112", "target_id": "ee9a00b3-4344-456a-9721-4f78a0025432", "source_type": "WIKI_PAGE", "target_type": "WIKI_PAGE", "relationship_type": "PARENT_CHILD", "description": "Introduction & Tech Stack → Caching with 'use cache'" },
+
+    { "id": 6, "source_id": "face1040-3d05-45ae-8049-68e76264082e", "target_id": "f9b2c87a-bd1b-418a-86a2-fd211e129112", "source_type": "WIKI_PAGE", "target_type": "WIKI_PAGE", "relationship_type": "PARENT_CHILD", "description": "Quick Start & Project Layout → Introduction & Tech Stack" },
+    { "id": 7, "source_id": "face1040-3d05-45ae-8049-68e76264082e", "target_id": "747e7b0e-5880-4847-964b-b96e43891858", "source_type": "WIKI_PAGE", "target_type": "WIKI_PAGE", "relationship_type": "PARENT_CHILD", "description": "Quick Start & Project Layout → App Router & Layout Composition" },
+    { "id": 8, "source_id": "face1040-3d05-45ae-8049-68e76264082e", "target_id": "705e18bd-a074-4849-9dde-d63eda0093b3", "source_type": "WIKI_PAGE", "target_type": "WIKI_PAGE", "relationship_type": "PARENT_CHILD", "description": "Quick Start & Project Layout → Locale Routing & Middleware" },
+    { "id": 9, "source_id": "face1040-3d05-45ae-8049-68e76264082e", "target_id": "f883ce3b-fec1-4717-99b5-54a8dfe96ab9", "source_type": "WIKI_PAGE", "target_type": "WIKI_PAGE", "relationship_type": "PARENT_CHILD", "description": "Quick Start & Project Layout → Component Domains Overview" },
+    { "id": 10, "source_id": "face1040-3d05-45ae-8049-68e76264082e", "target_id": "7b8557ab-48fa-4079-ab83-1d7ccac092ca", "source_type": "WIKI_PAGE", "target_type": "WIKI_PAGE", "relationship_type": "PARENT_CHILD", "description": "Quick Start & Project Layout → Sitemap, Robots & llms.txt" },
+
+    { "id": 11, "source_id": "442ed9a3-6255-4d51-8928-18187ec3511d", "target_id": "705e18bd-a074-4849-9dde-d63eda0093b3", "source_type": "WIKI_PAGE", "target_type": "WIKI_PAGE", "relationship_type": "PARENT_CHILD", "description": "Translated Nav Links & Menu Slugs → Locale Routing & Middleware" },
+    { "id": 12, "source_id": "442ed9a3-6255-4d51-8928-18187ec3511d", "target_id": "f883ce3b-fec1-4717-99b5-54a8dfe96ab9", "source_type": "WIKI_PAGE", "target_type": "WIKI_PAGE", "relationship_type": "PARENT_CHILD", "description": "Translated Nav Links & Menu Slugs → Component Domains Overview" },
+    { "id": 13, "source_id": "442ed9a3-6255-4d51-8928-18187ec3511d", "target_id": "747e7b0e-5880-4847-964b-b96e43891858", "source_type": "WIKI_PAGE", "target_type": "WIKI_PAGE", "relationship_type": "PARENT_CHILD", "description": "Translated Nav Links & Menu Slugs → App Router & Layout Composition" },
+
+    { "id": 14, "source_id": "705e18bd-a074-4849-9dde-d63eda0093b3", "target_id": "442ed9a3-6255-4d51-8928-18187ec3511d", "source_type": "WIKI_PAGE", "target_type": "WIKI_PAGE", "relationship_type": "PARENT_CHILD", "description": "Locale Routing & Middleware → Translated Nav Links & Menu Slugs" },
+    { "id": 15, "source_id": "705e18bd-a074-4849-9dde-d63eda0093b3", "target_id": "747e7b0e-5880-4847-964b-b96e43891858", "source_type": "WIKI_PAGE", "target_type": "WIKI_PAGE", "relationship_type": "PARENT_CHILD", "description": "Locale Routing & Middleware → App Router & Layout Composition" },
+    { "id": 16, "source_id": "705e18bd-a074-4849-9dde-d63eda0093b3", "target_id": "62b67dd1-9071-4b7d-919e-00dafd33c351", "source_type": "WIKI_PAGE", "target_type": "WIKI_PAGE", "relationship_type": "PARENT_CHILD", "description": "Locale Routing & Middleware → Static Site Generation Strategy" },
+    { "id": 17, "source_id": "705e18bd-a074-4849-9dde-d63eda0093b3", "target_id": "7b8557ab-48fa-4079-ab83-1d7ccac092ca", "source_type": "WIKI_PAGE", "target_type": "WIKI_PAGE", "relationship_type": "PARENT_CHILD", "description": "Locale Routing & Middleware → Sitemap, Robots & llms.txt" },
+
+    { "id": 18, "source_id": "6b82f322-310e-49da-a64e-a0ab90819be6", "target_id": "e65df080-d741-4625-827e-9fa5a3a5a104", "source_type": "WIKI_PAGE", "target_type": "WIKI_PAGE", "relationship_type": "PARENT_CHILD", "description": "Migration Notes (Gatsby to Next) → Common Issues & Gotchas" },
+    { "id": 19, "source_id": "6b82f322-310e-49da-a64e-a0ab90819be6", "target_id": "747e7b0e-5880-4847-964b-b96e43891858", "source_type": "WIKI_PAGE", "target_type": "WIKI_PAGE", "relationship_type": "PARENT_CHILD", "description": "Migration Notes (Gatsby to Next) → App Router & Layout Composition" },
+    { "id": 20, "source_id": "6b82f322-310e-49da-a64e-a0ab90819be6", "target_id": "705e18bd-a074-4849-9dde-d63eda0093b3", "source_type": "WIKI_PAGE", "target_type": "WIKI_PAGE", "relationship_type": "PARENT_CHILD", "description": "Migration Notes (Gatsby to Next) → Locale Routing & Middleware" },
+    { "id": 21, "source_id": "6b82f322-310e-49da-a64e-a0ab90819be6", "target_id": "f883ce3b-fec1-4717-99b5-54a8dfe96ab9", "source_type": "WIKI_PAGE", "target_type": "WIKI_PAGE", "relationship_type": "PARENT_CHILD", "description": "Migration Notes (Gatsby to Next) → Component Domains Overview" },
+    { "id": 22, "source_id": "6b82f322-310e-49da-a64e-a0ab90819be6", "target_id": "f9b2c87a-bd1b-418a-86a2-fd211e129112", "source_type": "WIKI_PAGE", "target_type": "WIKI_PAGE", "relationship_type": "PARENT_CHILD", "description": "Migration Notes (Gatsby to Next) → Introduction & Tech Stack" },
+
+    { "id": 23, "source_id": "e65df080-d741-4625-827e-9fa5a3a5a104", "target_id": "6b82f322-310e-49da-a64e-a0ab90819be6", "source_type": "WIKI_PAGE", "target_type": "WIKI_PAGE", "relationship_type": "PARENT_CHILD", "description": "Common Issues & Gotchas → Migration Notes (Gatsby to Next)" },
+    { "id": 24, "source_id": "e65df080-d741-4625-827e-9fa5a3a5a104", "target_id": "705e18bd-a074-4849-9dde-d63eda0093b3", "source_type": "WIKI_PAGE", "target_type": "WIKI_PAGE", "relationship_type": "PARENT_CHILD", "description": "Common Issues & Gotchas → Locale Routing & Middleware" },
+    { "id": 25, "source_id": "e65df080-d741-4625-827e-9fa5a3a5a104", "target_id": "4220b221-882c-4cbb-8988-e3079ac7bfaa", "source_type": "WIKI_PAGE", "target_type": "WIKI_PAGE", "relationship_type": "PARENT_CHILD", "description": "Common Issues & Gotchas → Animation Hooks & Client-Only Boundaries" },
+    { "id": 26, "source_id": "e65df080-d741-4625-827e-9fa5a3a5a104", "target_id": "747e7b0e-5880-4847-964b-b96e43891858", "source_type": "WIKI_PAGE", "target_type": "WIKI_PAGE", "relationship_type": "PARENT_CHILD", "description": "Common Issues & Gotchas → App Router & Layout Composition" },
+    { "id": 27, "source_id": "e65df080-d741-4625-827e-9fa5a3a5a104", "target_id": "f9b2c87a-bd1b-418a-86a2-fd211e129112", "source_type": "WIKI_PAGE", "target_type": "WIKI_PAGE", "relationship_type": "PARENT_CHILD", "description": "Common Issues & Gotchas → Introduction & Tech Stack" },
+
+    { "id": 28, "source_id": "11faef7f-1098-4a0d-b599-223b6adc2101", "target_id": "f883ce3b-fec1-4717-99b5-54a8dfe96ab9", "source_type": "WIKI_PAGE", "target_type": "WIKI_PAGE", "relationship_type": "PARENT_CHILD", "description": "Styled-Components & Responsive System → Component Domains Overview" },
+    { "id": 29, "source_id": "11faef7f-1098-4a0d-b599-223b6adc2101", "target_id": "4220b221-882c-4cbb-8988-e3079ac7bfaa", "source_type": "WIKI_PAGE", "target_type": "WIKI_PAGE", "relationship_type": "PARENT_CHILD", "description": "Styled-Components & Responsive System → Animation Hooks & Client-Only Boundaries" },
+    { "id": 30, "source_id": "11faef7f-1098-4a0d-b599-223b6adc2101", "target_id": "747e7b0e-5880-4847-964b-b96e43891858", "source_type": "WIKI_PAGE", "target_type": "WIKI_PAGE", "relationship_type": "PARENT_CHILD", "description": "Styled-Components & Responsive System → App Router & Layout Composition" },
+
+    { "id": 31, "source_id": "4220b221-882c-4cbb-8988-e3079ac7bfaa", "target_id": "f883ce3b-fec1-4717-99b5-54a8dfe96ab9", "source_type": "WIKI_PAGE", "target_type": "WIKI_PAGE", "relationship_type": "PARENT_CHILD", "description": "Animation Hooks & Client-Only Boundaries → Component Domains Overview" },
+    { "id": 32, "source_id": "4220b221-882c-4cbb-8988-e3079ac7bfaa", "target_id": "11faef7f-1098-4a0d-b599-223b6adc2101", "source_type": "WIKI_PAGE", "target_type": "WIKI_PAGE", "relationship_type": "PARENT_CHILD", "description": "Animation Hooks & Client-Only Boundaries → Styled-Components & Responsive System" },
+    { "id": 33, "source_id": "4220b221-882c-4cbb-8988-e3079ac7bfaa", "target_id": "747e7b0e-5880-4847-964b-b96e43891858", "source_type": "WIKI_PAGE", "target_type": "WIKI_PAGE", "relationship_type": "PARENT_CHILD", "description": "Animation Hooks & Client-Only Boundaries → App Router & Layout Composition" },
+    { "id": 34, "source_id": "4220b221-882c-4cbb-8988-e3079ac7bfaa", "target_id": "ee9a00b3-4344-456a-9721-4f78a0025432", "source_type": "WIKI_PAGE", "target_type": "WIKI_PAGE", "relationship_type": "PARENT_CHILD", "description": "Animation Hooks & Client-Only Boundaries → Caching with 'use cache'" },
+
+    { "id": 35, "source_id": "1a4f7922-0134-4264-a6d3-913e260cd3c2", "target_id": "747e7b0e-5880-4847-964b-b96e43891858", "source_type": "WIKI_PAGE", "target_type": "WIKI_PAGE", "relationship_type": "PARENT_CHILD", "description": "Rendering Strategy & Data Flow → App Router & Layout Composition" },
+    { "id": 36, "source_id": "1a4f7922-0134-4264-a6d3-913e260cd3c2", "target_id": "ee9a00b3-4344-456a-9721-4f78a0025432", "source_type": "WIKI_PAGE", "target_type": "WIKI_PAGE", "relationship_type": "PARENT_CHILD", "description": "Rendering Strategy & Data Flow → Caching with 'use cache'" },
+    { "id": 37, "source_id": "1a4f7922-0134-4264-a6d3-913e260cd3c2", "target_id": "705e18bd-a074-4849-9dde-d63eda0093b3", "source_type": "WIKI_PAGE", "target_type": "WIKI_PAGE", "relationship_type": "PARENT_CHILD", "description": "Rendering Strategy & Data Flow → Locale Routing & Middleware" },
+    { "id": 38, "source_id": "1a4f7922-0134-4264-a6d3-913e260cd3c2", "target_id": "7407a94f-400c-4d90-9328-0e4558bd0f41", "source_type": "WIKI_PAGE", "target_type": "WIKI_PAGE", "relationship_type": "PARENT_CHILD", "description": "Rendering Strategy & Data Flow → Metadata & JSON-LD Builders" },
+    { "id": 39, "source_id": "1a4f7922-0134-4264-a6d3-913e260cd3c2", "target_id": "7b8557ab-48fa-4079-ab83-1d7ccac092ca", "source_type": "WIKI_PAGE", "target_type": "WIKI_PAGE", "relationship_type": "PARENT_CHILD", "description": "Rendering Strategy & Data Flow → Sitemap, Robots & llms.txt" },
+
+    { "id": 40, "source_id": "747e7b0e-5880-4847-964b-b96e43891858", "target_id": "1a4f7922-0134-4264-a6d3-913e260cd3c2", "source_type": "WIKI_PAGE", "target_type": "WIKI_PAGE", "relationship_type": "PARENT_CHILD", "description": "App Router & Layout Composition → Rendering Strategy & Data Flow" },
+    { "id": 41, "source_id": "747e7b0e-5880-4847-964b-b96e43891858", "target_id": "ee9a00b3-4344-456a-9721-4f78a0025432", "source_type": "WIKI_PAGE", "target_type": "WIKI_PAGE", "relationship_type": "PARENT_CHILD", "description": "App Router & Layout Composition → Caching with 'use cache'" },
+    { "id": 42, "source_id": "747e7b0e-5880-4847-964b-b96e43891858", "target_id": "705e18bd-a074-4849-9dde-d63eda0093b3", "source_type": "WIKI_PAGE", "target_type": "WIKI_PAGE", "relationship_type": "PARENT_CHILD", "description": "App Router & Layout Composition → Locale Routing & Middleware" },
+    { "id": 43, "source_id": "747e7b0e-5880-4847-964b-b96e43891858", "target_id": "f883ce3b-fec1-4717-99b5-54a8dfe96ab9", "source_type": "WIKI_PAGE", "target_type": "WIKI_PAGE", "relationship_type": "PARENT_CHILD", "description": "App Router & Layout Composition → Component Domains Overview" },
+    { "id": 44, "source_id": "747e7b0e-5880-4847-964b-b96e43891858", "target_id": "7407a94f-400c-4d90-9328-0e4558bd0f41", "source_type": "WIKI_PAGE", "target_type": "WIKI_PAGE", "relationship_type": "PARENT_CHILD", "description": "App Router & Layout Composition → Metadata & JSON-LD Builders" },
+
+    { "id": 45, "source_id": "2bbc4b0b-7b9d-486d-8e87-421dd3940da8", "target_id": "ed6d5da3-64c3-4ec8-bdc2-491c41b6f082", "source_type": "WIKI_PAGE", "target_type": "WIKI_PAGE", "relationship_type": "PARENT_CHILD", "description": "Image Manifest & Media Handling → Content Model (Messages & Gallery JSON)" },
+    { "id": 46, "source_id": "2bbc4b0b-7b9d-486d-8e87-421dd3940da8", "target_id": "f883ce3b-fec1-4717-99b5-54a8dfe96ab9", "source_type": "WIKI_PAGE", "target_type": "WIKI_PAGE", "relationship_type": "PARENT_CHILD", "description": "Image Manifest & Media Handling → Component Domains Overview" },
+    { "id": 47, "source_id": "2bbc4b0b-7b9d-486d-8e87-421dd3940da8", "target_id": "747e7b0e-5880-4847-964b-b96e43891858", "source_type": "WIKI_PAGE", "target_type": "WIKI_PAGE", "relationship_type": "PARENT_CHILD", "description": "Image Manifest & Media Handling → App Router & Layout Composition" },
+    { "id": 48, "source_id": "2bbc4b0b-7b9d-486d-8e87-421dd3940da8", "target_id": "62b67dd1-9071-4b7d-919e-00dafd33c351", "source_type": "WIKI_PAGE", "target_type": "WIKI_PAGE", "relationship_type": "PARENT_CHILD", "description": "Image Manifest & Media Handling → Static Site Generation Strategy" },
+
+    { "id": 49, "source_id": "f883ce3b-fec1-4717-99b5-54a8dfe96ab9", "target_id": "11faef7f-1098-4a0d-b599-223b6adc2101", "source_type": "WIKI_PAGE", "target_type": "WIKI_PAGE", "relationship_type": "PARENT_CHILD", "description": "Component Domains Overview → Styled-Components & Responsive System" },
+    { "id": 50, "source_id": "f883ce3b-fec1-4717-99b5-54a8dfe96ab9", "target_id": "4220b221-882c-4cbb-8988-e3079ac7bfaa", "source_type": "WIKI_PAGE", "target_type": "WIKI_PAGE", "relationship_type": "PARENT_CHILD", "description": "Component Domains Overview → Animation Hooks & Client-Only Boundaries" },
+    { "id": 51, "source_id": "f883ce3b-fec1-4717-99b5-54a8dfe96ab9", "target_id": "747e7b0e-5880-4847-964b-b96e43891858", "source_type": "WIKI_PAGE", "target_type": "WIKI_PAGE", "relationship_type": "PARENT_CHILD", "description": "Component Domains Overview → App Router & Layout Composition" },
+    { "id": 52, "source_id": "f883ce3b-fec1-4717-99b5-54a8dfe96ab9", "target_id": "705e18bd-a074-4849-9dde-d63eda0093b3", "source_type": "WIKI_PAGE", "target_type": "WIKI_PAGE", "relationship_type": "PARENT_CHILD", "description": "Component Domains Overview → Locale Routing & Middleware" },
+    { "id": 53, "source_id": "f883ce3b-fec1-4717-99b5-54a8dfe96ab9", "target_id": "7407a94f-400c-4d90-9328-0e4558bd0f41", "source_type": "WIKI_PAGE", "target_type": "WIKI_PAGE", "relationship_type": "PARENT_CHILD", "description": "Component Domains Overview → Metadata & JSON-LD Builders" },
+
+    { "id": 54, "source_id": "ee9a00b3-4344-456a-9721-4f78a0025432", "target_id": "747e7b0e-5880-4847-964b-b96e43891858", "source_type": "WIKI_PAGE", "target_type": "WIKI_PAGE", "relationship_type": "PARENT_CHILD", "description": "Caching with 'use cache' → App Router & Layout Composition" },
+    { "id": 55, "source_id": "ee9a00b3-4344-456a-9721-4f78a0025432", "target_id": "1a4f7922-0134-4264-a6d3-913e260cd3c2", "source_type": "WIKI_PAGE", "target_type": "WIKI_PAGE", "relationship_type": "PARENT_CHILD", "description": "Caching with 'use cache' → Rendering Strategy & Data Flow" },
+    { "id": 56, "source_id": "ee9a00b3-4344-456a-9721-4f78a0025432", "target_id": "442ed9a3-6255-4d51-8928-18187ec3511d", "source_type": "WIKI_PAGE", "target_type": "WIKI_PAGE", "relationship_type": "PARENT_CHILD", "description": "Caching with 'use cache' → Translated Nav Links & Menu Slugs" },
+    { "id": 57, "source_id": "ee9a00b3-4344-456a-9721-4f78a0025432", "target_id": "f9b2c87a-bd1b-418a-86a2-fd211e129112", "source_type": "WIKI_PAGE", "target_type": "WIKI_PAGE", "relationship_type": "PARENT_CHILD", "description": "Caching with 'use cache' → Introduction & Tech Stack" },
+
+    { "id": 58, "source_id": "ed6d5da3-64c3-4ec8-bdc2-491c41b6f082", "target_id": "2bbc4b0b-7b9d-486d-8e87-421dd3940da8", "source_type": "WIKI_PAGE", "target_type": "WIKI_PAGE", "relationship_type": "PARENT_CHILD", "description": "Content Model (Messages & Gallery JSON) → Image Manifest & Media Handling" },
+    { "id": 59, "source_id": "ed6d5da3-64c3-4ec8-bdc2-491c41b6f082", "target_id": "442ed9a3-6255-4d51-8928-18187ec3511d", "source_type": "WIKI_PAGE", "target_type": "WIKI_PAGE", "relationship_type": "PARENT_CHILD", "description": "Content Model (Messages & Gallery JSON) → Translated Nav Links & Menu Slugs" },
+    { "id": 60, "source_id": "ed6d5da3-64c3-4ec8-bdc2-491c41b6f082", "target_id": "705e18bd-a074-4849-9dde-d63eda0093b3", "source_type": "WIKI_PAGE", "target_type": "WIKI_PAGE", "relationship_type": "PARENT_CHILD", "description": "Content Model (Messages & Gallery JSON) → Locale Routing & Middleware" },
+    { "id": 61, "source_id": "ed6d5da3-64c3-4ec8-bdc2-491c41b6f082", "target_id": "747e7b0e-5880-4847-964b-b96e43891858", "source_type": "WIKI_PAGE", "target_type": "WIKI_PAGE", "relationship_type": "PARENT_CHILD", "description": "Content Model (Messages & Gallery JSON) → App Router & Layout Composition" },
+    { "id": 62, "source_id": "ed6d5da3-64c3-4ec8-bdc2-491c41b6f082", "target_id": "7407a94f-400c-4d90-9328-0e4558bd0f41", "source_type": "WIKI_PAGE", "target_type": "WIKI_PAGE", "relationship_type": "PARENT_CHILD", "description": "Content Model (Messages & Gallery JSON) → Metadata & JSON-LD Builders" },
+
+    { "id": 63, "source_id": "62b67dd1-9071-4b7d-919e-00dafd33c351", "target_id": "7407a94f-400c-4d90-9328-0e4558bd0f41", "source_type": "WIKI_PAGE", "target_type": "WIKI_PAGE", "relationship_type": "PARENT_CHILD", "description": "Static Site Generation Strategy → Metadata & JSON-LD Builders" },
+    { "id": 64, "source_id": "62b67dd1-9071-4b7d-919e-00dafd33c351", "target_id": "7b8557ab-48fa-4079-ab83-1d7ccac092ca", "source_type": "WIKI_PAGE", "target_type": "WIKI_PAGE", "relationship_type": "PARENT_CHILD", "description": "Static Site Generation Strategy → Sitemap, Robots & llms.txt" },
+    { "id": 65, "source_id": "62b67dd1-9071-4b7d-919e-00dafd33c351", "target_id": "705e18bd-a074-4849-9dde-d63eda0093b3", "source_type": "WIKI_PAGE", "target_type": "WIKI_PAGE", "relationship_type": "PARENT_CHILD", "description": "Static Site Generation Strategy → Locale Routing & Middleware" },
+    { "id": 66, "source_id": "62b67dd1-9071-4b7d-919e-00dafd33c351", "target_id": "747e7b0e-5880-4847-964b-b96e43891858", "source_type": "WIKI_PAGE", "target_type": "WIKI_PAGE", "relationship_type": "PARENT_CHILD", "description": "Static Site Generation Strategy → App Router & Layout Composition" },
+    { "id": 67, "source_id": "62b67dd1-9071-4b7d-919e-00dafd33c351", "target_id": "ee9a00b3-4344-456a-9721-4f78a0025432", "source_type": "WIKI_PAGE", "target_type": "WIKI_PAGE", "relationship_type": "PARENT_CHILD", "description": "Static Site Generation Strategy → Caching with 'use cache'" },
+
+    { "id": 68, "source_id": "7b8557ab-48fa-4079-ab83-1d7ccac092ca", "target_id": "7407a94f-400c-4d90-9328-0e4558bd0f41", "source_type": "WIKI_PAGE", "target_type": "WIKI_PAGE", "relationship_type": "PARENT_CHILD", "description": "Sitemap, Robots & llms.txt → Metadata & JSON-LD Builders" },
+    { "id": 69, "source_id": "7b8557ab-48fa-4079-ab83-1d7ccac092ca", "target_id": "62b67dd1-9071-4b7d-919e-00dafd33c351", "source_type": "WIKI_PAGE", "target_type": "WIKI_PAGE", "relationship_type": "PARENT_CHILD", "description": "Sitemap, Robots & llms.txt → Static Site Generation Strategy" },
+    { "id": 70, "source_id": "7b8557ab-48fa-4079-ab83-1d7ccac092ca", "target_id": "705e18bd-a074-4849-9dde-d63eda0093b3", "source_type": "WIKI_PAGE", "target_type": "WIKI_PAGE", "relationship_type": "PARENT_CHILD", "description": "Sitemap, Robots & llms.txt → Locale Routing & Middleware" },
+
+    { "id": 71, "source_id": "7407a94f-400c-4d90-9328-0e4558bd0f41", "target_id": "7b8557ab-48fa-4079-ab83-1d7ccac092ca", "source_type": "WIKI_PAGE", "target_type": "WIKI_PAGE", "relationship_type": "PARENT_CHILD", "description": "Metadata & JSON-LD Builders → Sitemap, Robots & llms.txt" },
+    { "id": 72, "source_id": "7407a94f-400c-4d90-9328-0e4558bd0f41", "target_id": "62b67dd1-9071-4b7d-919e-00dafd33c351", "source_type": "WIKI_PAGE", "target_type": "WIKI_PAGE", "relationship_type": "PARENT_CHILD", "description": "Metadata & JSON-LD Builders → Static Site Generation Strategy" },
+    { "id": 73, "source_id": "7407a94f-400c-4d90-9328-0e4558bd0f41", "target_id": "705e18bd-a074-4849-9dde-d63eda0093b3", "source_type": "WIKI_PAGE", "target_type": "WIKI_PAGE", "relationship_type": "PARENT_CHILD", "description": "Metadata & JSON-LD Builders → Locale Routing & Middleware" },
+    { "id": 74, "source_id": "7407a94f-400c-4d90-9328-0e4558bd0f41", "target_id": "747e7b0e-5880-4847-964b-b96e43891858", "source_type": "WIKI_PAGE", "target_type": "WIKI_PAGE", "relationship_type": "PARENT_CHILD", "description": "Metadata & JSON-LD Builders → App Router & Layout Composition" }
   ]
 }

@@ -2,6 +2,7 @@ import { Suspense } from "react";
 import { getMessages, setRequestLocale } from "next-intl/server";
 import { SeoFromData } from "../../../components/Seo";
 import PageShell from "../../../components/layout/PageShell";
+import Title from "../../../components/layout/Title";
 import GalleryFilter from "../../../components/about/GalleryFilter";
 import galleryData from "../../../content/gallery.json";
 
@@ -24,11 +25,17 @@ export default async function GaleriaPage({ params }) {
   const messages = await getMessages();
 
   const galleries = { ...galleryData, all: Object.values(galleryData).flat() };
+  const content = messages.pizzarte.gallery;
 
   return (
     <PageShell homeData={messages.home}>
-      {/* useQueryState (nuqs) lê useSearchParams — precisa de Suspense para
-          poder prerenderizar estaticamente (Next 16/PPR). */}
+      {/* O h1 fica aqui, fora do Suspense — GalleryFilter usa useQueryState
+          (nuqs → useSearchParams), que força o Suspense abaixo a renderizar
+          fallback={null} no HTML estático (PPR). Um heading dentro dele só
+          apareceria depois de hidratar no cliente. */}
+      <div className="container-default">
+        <Title text={content?.title} question={content?.question} level="h1" />
+      </div>
       <Suspense fallback={null}>
         <GalleryFilter galleries={galleries} filters={messages.pizzarte.filters} />
       </Suspense>

@@ -1,12 +1,14 @@
 {
     "contact": {
         "seo": {
-            "title": "Contacts | Pizzarte Restaurant",
-            "description": "Contacts of our restaurants: +351 234 427 103 | +351 239 810 443. We are in Aveiro. Book your table now or order to enjoy at home!",
+            "title": "Contacts | Address, Hours & Reservations at Pizzarte",
+            "description": "Pizzarte is at Rua Engº Von Haff, 27, in Aveiro. Check the hours, how to book a table for groups of 10+, and how to order takeaway.",
             "image": "seo/pizzarte.png",
             "imageAlt": "pizzarte"
         },
         "contactInfo": {
+            "pageTitle": "Contacts",
+            "question": "Where is Pizzarte located, and how do you book a table?",
             "title": "Aveiro",
             "address": "R. Engº Von Haff, 27",
             "postalCode": "3800-177 Aveiro",
@@ -22,55 +24,42 @@
             "phoneLink": "tel:+351234427103",
             "emailLink": "mailto:pizzarte@pizzarte.com"
         },
-        "form": {
-            "bookTable": "Book a table!",
-            "note": "NOTE: Only reservations for groups of 10 or more people are accepted.",
-            "fields": {
-                "name": {
-                    "placeholder": "Name",
-                    "type": "text",
-                    "id": "name"
+        "faq": {
+            "question": "Frequently asked questions about Pizzarte",
+            "items": [
+                {
+                    "question": "What are Pizzarte's opening hours?",
+                    "answer": "Pizzarte is open Sunday to Thursday from 12pm to 1am, and Friday and Saturday from 12pm to 1:30am. You don't need to book for small groups, reservations only apply to groups of 10 or more."
                 },
-                "tel": {
-                    "placeholder": "Telephone",
-                    "type": "number",
-                    "id": "tel"
+                {
+                    "question": "How do you make a reservation at Pizzarte?",
+                    "answer": "Call +351 234 427 103. Reservations only apply to groups of 10 or more; for smaller groups, just walk in."
                 },
-                "people": {
-                    "placeholder": "Number of people",
-                    "type": "number",
-                    "id": "people"
+                {
+                    "question": "What is Pizzarte's address?",
+                    "answer": "Pizzarte is at Rua Engº Von Haff, nº 27, 3800-177 Aveiro. You'll find directions and the map further down this page."
                 },
-                "email": {
-                    "placeholder": "Email",
-                    "type": "email",
-                    "id": "email"
+                {
+                    "question": "How do you order takeaway from Pizzarte?",
+                    "answer": "You can call directly, order through the Pizzarte Takeaway app (available for iOS and Android), or order online at shop.pizzarte.pt."
                 },
-                "message": {
-                    "placeholder": "Message",
-                    "type": "textarea",
-                    "id": "message"
+                {
+                    "question": "What can you eat at Pizzarte?",
+                    "answer": "The menu covers starters, salads, pastas, savoury crêpes and wraps, pizzas, panne di pizza, desserts and drinks, Italian cooking made in Aveiro since 1989."
+                },
+                {
+                    "question": "How many people fit at Pizzarte, and what events does it host?",
+                    "answer": "The space covers 800m² and seats 200 people. It has hosted mini concerts, theatre performances, show cooking, children's plays and chess tournaments, without stopping the restaurant's normal activity."
+                },
+                {
+                    "question": "Since when has there been chess at Pizzarte?",
+                    "answer": "Chess has been part of Pizzarte since 1988, with a board created by artist Pedro Andrade that's still there today. The restaurant hosts regular tournaments."
+                },
+                {
+                    "question": "What's Pizzarte's bar like?",
+                    "answer": "The bar opened in 1989 and serves signature cocktails and gins in a cosmopolitan, irreverent setting. The walls carry quotes from books and films by national and international authors."
                 }
-            },
-            "submitButton": {
-                "text": "Send"
-            },
-            "successDialog": {
-                "title": "Thanks for contacting ✓",
-                "content": [
-                    "We received your email. Please note that the reservation is only confirmed after our response/contact.",
-                    "For faster confirmation, please contact 234 427 103"
-                ],
-                "closeButton": "Close"
-            },
-            "errorDialog": {
-                "title": "Something went wrong X",
-                "content": [
-                    "Something went wrong X",
-                    "Review your form!"
-                ],
-                "closeButton": "Close"
-            }
+            ]
         }
     }
 }

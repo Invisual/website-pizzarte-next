@@ -19,7 +19,7 @@ export default function ChessIntro({ data }) {
 
         <div className="container">
           <Reveal className="text-section">
-            <Title text={data?.title} />
+            <Title text={data?.title} question={data?.question} level="h2" />
             <p dangerouslySetInnerHTML={{ __html: data?.text }} />
           </Reveal>
           <Reveal className="chess-right-position">

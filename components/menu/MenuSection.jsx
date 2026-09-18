@@ -19,7 +19,7 @@ export default function MenuSection({ data }) {
   return (
     <MenuSectionStyled>
       <div className="container-default">
-        <Title text={data.pageTitle} />
+        <Title text={data.pageTitle} question={data.question} level="h1" />
         <div className="menu-section">
           {Array.isArray(data.menus) &&
             data.menus.map((item, index) => (
@@ -89,7 +89,7 @@ const Overlay = styled.div`
   transition: opacity 0.3s ease-in-out;
 `;
 
-const Text = styled.h3`
+const Text = styled.h2`
   color: white;
   font-size: 24px;
   transition: opacity 0.3s ease-in-out;

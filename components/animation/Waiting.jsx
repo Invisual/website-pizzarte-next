@@ -102,19 +102,19 @@ export default function Waiting({ home, NoAnimation, data }) {
       {NoAnimation ? (
         <div className="container">
           <div className="left1">
-            <h1 className="waiting-first1">{data.title}</h1>
+            <p className="waiting-first1" aria-hidden="true">{data.title}</p>
           </div>
           <div className="right1">
-            <h1 className="waiting-second1">{data.title}</h1>
+            <p className="waiting-second1">{data.title}</p>
           </div>
         </div>
       ) : (
         <div className="container">
           <div className="left">
-            <h1 className="waiting-first">{data.title}</h1>
+            <p className="waiting-first" aria-hidden="true">{data.title}</p>
           </div>
           <div className="right">
-            <h1 className="waiting-second">{data.title}</h1>
+            <p className="waiting-second">{data.title}</p>
           </div>
         </div>
       )}
@@ -166,6 +166,10 @@ const WaitingStyled = styled.div`
       width: 100%;
       justify-content: flex-end;
       font-weight: 200;
+      margin: 0;
+      font-size: inherit;
+      line-height: var(--line-height-dense);
+      letter-spacing: -0.01em;
     }
 
     .waiting-second,
@@ -176,6 +180,10 @@ const WaitingStyled = styled.div`
       -webkit-text-stroke: 1px ${color.red};
       color: transparent;
       font-weight: 200;
+      margin: 0;
+      font-size: inherit;
+      line-height: var(--line-height-dense);
+      letter-spacing: -0.01em;
     }
   }
 

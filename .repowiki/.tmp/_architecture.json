@@ -1,0 +1,137 @@
+{
+  "repo_name": "website-pizzarte-next",
+  "sections": [
+    {
+      "id": "overview",
+      "title": "Project Overview",
+      "output_dir": "Overview",
+      "pages": ["Introduction & Tech Stack", "Quick Start & Project Layout"],
+      "key_files": [
+        "package.json",
+        "CLAUDE.md",
+        "README.md",
+        "AGENTS.md",
+        "next.config.js",
+        "server.js",
+        "env-example"
+      ],
+      "context": "Introduces Pizzarte (Aveiro restaurant site) as a Next.js 16 App Router marketing site with no backend/CMS, its Gatsby-to-Next migration history, tech stack, and how to run/build it locally."
+    },
+    {
+      "id": "architecture",
+      "title": "Architecture & Design",
+      "output_dir": "Architecture",
+      "pages": [
+        "App Router & Layout Composition",
+        "Rendering Strategy & Data Flow",
+        "Caching with 'use cache'"
+      ],
+      "key_files": [
+        "app/layout.jsx",
+        "app/[locale]/layout.jsx",
+        "app/[locale]/page.jsx",
+        "app/[locale]/menu/page.jsx",
+        "app/[locale]/menu/[slug]/page.jsx",
+        "lib/cache.jsx",
+        "lib/StyledRegistry.jsx",
+        "components/layout/PageShell.jsx",
+        "components/layout/PageChrome.jsx",
+        "next.config.js"
+      ],
+      "context": "Explains the root layout to locale-scoped layout to page to PageShell/PageChrome composition chain, how generateStaticParams pre-renders every locale x menu-category combination, and how the Next 16 'use cache' directive (lib/cache.jsx, cacheComponents in next.config.js) caches message/content loading."
+    },
+    {
+      "id": "i18n",
+      "title": "Internationalization & Routing",
+      "output_dir": "I18n",
+      "pages": ["Locale Routing & Middleware", "Translated Nav Links & Menu Slugs"],
+      "key_files": [
+        "i18n/routing.jsx",
+        "i18n/navigation.jsx",
+        "i18n/navLinks.js",
+        "i18n/request.jsx",
+        "proxy.ts",
+        "lib/legacyMenuRedirects.js",
+        "components/LocaleSwitcher.jsx"
+      ],
+      "context": "Covers the 4-locale (pt default/en/fr/es) routing table and MENU_CATEGORY_SLUGS in i18n/routing.jsx, the proxy.ts middleware that resolves locales, the locale-aware Link/useRouter wrappers, and how legacy Gatsby URLs are redirected — the site's most structurally load-bearing pattern."
+    },
+    {
+      "id": "frontend",
+      "title": "Frontend Architecture",
+      "output_dir": "Frontend",
+      "pages": [
+        "Component Domains Overview",
+        "Styled-Components & Responsive System",
+        "Animation Hooks & Client-Only Boundaries"
+      ],
+      "key_files": [
+        "components/style/style.js",
+        "components/header/Header.jsx",
+        "components/footer/Footer.jsx",
+        "components/menu/Dishes.jsx",
+        "components/menu/MenuSection.jsx",
+        "components/about/PizzarteInfo.jsx",
+        "components/about/BarDrinks.jsx",
+        "hooks/useGsapEffect.jsx",
+        "hooks/useAnimeEffect.jsx",
+        "hooks/useBreakpoint.jsx",
+        "components/layout/ClientOnly.jsx",
+        "utils/PopupContext.js",
+        "utils/prefersReducedMotion.js"
+      ],
+      "context": "Documents the 32 components organized by original Gatsby domain (about/header/footer/menu/chess/contact/animation/popup/layout) that each fuse desktop+mobile into one responsive component via styled-components, plus the deliberate pattern of deferring gsap/anime/Swiper imports into effects or ClientOnly to avoid breaking Next 16 static prerendering."
+    },
+    {
+      "id": "seo-structured-data",
+      "title": "SEO, Structured Data & Static Generation",
+      "output_dir": "SEO",
+      "pages": [
+        "Metadata & JSON-LD Builders",
+        "Sitemap, Robots & llms.txt",
+        "Static Site Generation Strategy"
+      ],
+      "key_files": [
+        "lib/jsonld.js",
+        "components/Seo.js",
+        "app/sitemap.js",
+        "app/robots.js",
+        "app/llms.txt/route.js",
+        "app/[locale]/layout.jsx",
+        "app/[locale]/menu/[slug]/page.jsx",
+        "docs/00 - Home.md"
+      ],
+      "context": "Covers the schema.org JSON-LD builders (Restaurant, Organization, WebSite, Menu, BreadcrumbList, FAQPage) in lib/jsonld.js, the Seo.js metadata component, the sitemap/robots/llms.txt route handlers, and how generateStaticParams pre-builds every locale x page combination — a deliberately heavy focus area given the agency's own SEO/GEO/AIO methodology docs."
+    },
+    {
+      "id": "content-media",
+      "title": "Content & Media Pipeline",
+      "output_dir": "Content",
+      "pages": ["Content Model (Messages & Gallery JSON)", "Image Manifest & Media Handling"],
+      "key_files": [
+        "messages/pt/home.json",
+        "messages/pt/menu.json",
+        "content/gallery.json",
+        "lib/imageManifest.json",
+        "components/layout/Image.jsx",
+        "components/about/ImageGallery.jsx",
+        "components/about/GalleryFilter.jsx"
+      ],
+      "context": "Explains the CMS-free content model — all copy lives in messages/{locale}/*.json and the gallery in content/gallery.json (one-time WordPress extraction) — and the build-time image manifest pipeline that indexes public/images into lib/imageManifest.json for the Image.jsx component."
+    },
+    {
+      "id": "faq",
+      "title": "Troubleshooting & FAQ",
+      "output_dir": "FAQ",
+      "pages": ["Common Issues & Gotchas", "Migration Notes (Gatsby to Next)"],
+      "key_files": [
+        "CLAUDE.md",
+        "hooks/useGsapEffect.jsx",
+        "hooks/useAnimeEffect.jsx",
+        "components/layout/ClientOnly.jsx",
+        "lib/legacyMenuRedirects.js"
+      ],
+      "context": "Captures known gotchas specific to this codebase (Date.now()-reading libraries breaking PPR/static prerender, stale .repowiki content, i18n link rules, menu slug changes) and a summary of the phased Gatsby 5 to Next.js 16 migration for future contributors."
+    }
+  ]
+}

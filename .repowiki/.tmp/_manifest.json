@@ -1,0 +1,227 @@
+{
+  "repo_name": "website-pizzarte-next",
+  "repo_root": "C:\\Users\\Dev\\Documents\\GitHub\\website-pizzarte-next",
+  "language_primary": "javascript",
+  "languages": ["javascript", "jsx", "typescript"],
+  "framework": "nextjs",
+  "stack": [
+    "Next.js 16 (App Router)",
+    "React 19",
+    "next-intl 4.8 (i18n)",
+    "styled-components 6 (compiler.styledComponents in next.config.js)",
+    "nuqs (URL state adapter for App Router)",
+    "swiper 12",
+    "gsap 3",
+    "animejs 3",
+    "sharp (devDependency, image processing for build-time manifest)",
+    "prop-types",
+    "next/font (Google Montserrat + local BritishRegular/ChunkyRosie fonts)",
+    "@next/third-parties/google (GoogleTagManager)",
+    "ESLint 9 / eslint-config-next 16.2.1",
+    "TypeScript 5 (tsconfig.json, next-env.d.ts, proxy.ts — project is otherwise JS/JSX)",
+    "custom Node http server (server.js) alongside standard next dev/start"
+  ],
+  "detected_patterns": [
+    "i18n (4 locales pt/en/fr/es via next-intl, routing.jsx pathnames + MENU_CATEGORY_SLUGS, middleware in proxy.ts)",
+    "caching (Next.js 16 'use cache' directive + cacheLife/cacheTag in lib/cache.jsx, cacheComponents:true in next.config.js)",
+    "structured-data/schema.org (lib/jsonld.js builds Restaurant, Organization, WebSite, Menu, BreadcrumbList, FAQPage JSON-LD)",
+    "static-site-generation (generateStaticParams in app/[locale]/layout.jsx and app/[locale]/menu/[slug]/page.jsx for locale x category cartesian product)",
+    "seo/aio (app/sitemap.js, app/robots.js, app/llms.txt/route.js, components/Seo.js, security headers in next.config.js)",
+    "file-based content (no CMS — all copy in messages/{locale}/*.json, gallery in content/gallery.json, no database/ORM found)",
+    "image-pipeline (public/images/ indexed by a build-image-manifest script referenced in package.json predev/prebuild into lib/imageManifest.json — script file itself was NOT found under scripts/, see note in key_files)"
+  ],
+  "complexity": "medium",
+  "files_by_type": {
+    "models": [],
+    "views": [
+      "app/layout.jsx",
+      "app/[locale]/layout.jsx",
+      "app/[locale]/page.jsx",
+      "app/[locale]/menu/page.jsx",
+      "app/[locale]/menu/[slug]/page.jsx",
+      "app/[locale]/pizzarte/page.jsx",
+      "app/[locale]/galeria/page.jsx",
+      "app/[locale]/contactos/page.jsx",
+      "app/[locale]/not-found.jsx",
+      "app/global-not-found.jsx"
+    ],
+    "urls": [
+      "i18n/routing.jsx",
+      "i18n/navigation.jsx",
+      "i18n/navLinks.js",
+      "proxy.ts",
+      "app/sitemap.js",
+      "app/robots.js",
+      "app/llms.txt/route.js",
+      "lib/legacyMenuRedirects.js"
+    ],
+    "serializers": [],
+    "forms": [],
+    "tasks": [],
+    "consumers": [],
+    "settings": [
+      "next.config.js",
+      "i18n/request.jsx",
+      "i18n/routing.jsx",
+      "eslint.config.mjs",
+      "tsconfig.json",
+      "env-example",
+      ".env.local"
+    ],
+    "tests": [],
+    "docker": [],
+    "templates": [],
+    "components": [
+      "components/Seo.js",
+      "components/LocaleSwitcher.jsx",
+      "components/about/Stars.jsx",
+      "components/about/AboutIntro.jsx",
+      "components/about/BarDrinks.jsx",
+      "components/about/FoodSlider.jsx",
+      "components/about/GalleryFilter.jsx",
+      "components/about/ImageGallery.jsx",
+      "components/about/OurSpace.jsx",
+      "components/about/PizzarteInfo.jsx",
+      "components/animation/PizzaEffect.jsx",
+      "components/animation/Waiting.jsx",
+      "components/chess/ChessIntro.jsx",
+      "components/contact/ContactInfo.jsx",
+      "components/footer/Footer.jsx",
+      "components/header/Header.jsx",
+      "components/menu/Dishes.jsx",
+      "components/menu/MenuNavigation.jsx",
+      "components/menu/MenuSection.jsx",
+      "components/popup/PopupOrderNow.jsx",
+      "components/layout/ClientOnly.jsx",
+      "components/layout/Image.jsx",
+      "components/layout/LoaderPage.jsx",
+      "components/layout/Reveal.jsx",
+      "components/layout/Triangle.jsx",
+      "components/layout/Button.jsx",
+      "components/layout/MobileFilterDropdown.jsx",
+      "components/layout/FloatingOrder.jsx",
+      "components/layout/Title.jsx",
+      "components/layout/HeroBanner.jsx",
+      "components/layout/NotFoundContent.jsx",
+      "components/layout/PageChrome.jsx",
+      "components/layout/PageShell.jsx",
+      "components/style/style.js"
+    ],
+    "schemas": [
+      "lib/jsonld.js"
+    ]
+  },
+  "key_files": [
+    "package.json",
+    "next.config.js",
+    "CLAUDE.md",
+    "AGENTS.md",
+    "README.md",
+    "proxy.ts",
+    "server.js",
+    "app/layout.jsx",
+    "app/[locale]/layout.jsx",
+    "app/[locale]/page.jsx",
+    "app/fonts.js",
+    "app/global-not-found.jsx",
+    "app/[locale]/not-found.jsx",
+    "i18n/routing.jsx",
+    "i18n/navigation.jsx",
+    "i18n/navLinks.js",
+    "i18n/request.jsx",
+    "lib/jsonld.js",
+    "lib/cache.jsx",
+    "lib/StyledRegistry.jsx",
+    "lib/legacyMenuRedirects.js",
+    "lib/imageManifest.json",
+    "components/Seo.js",
+    "components/style/style.js",
+    "content/gallery.json",
+    "env-example",
+    "hooks/useGsapEffect.jsx",
+    "hooks/useAnimeEffect.jsx",
+    "hooks/useBreakpoint.jsx",
+    "utils/PopupContext.js",
+    "utils/consentGtag.js",
+    "utils/handlePhone.js",
+    "utils/prefersReducedMotion.js",
+    "docs/00 - Home.md"
+  ],
+  "directory_summary": [
+    {
+      "path": "app",
+      "purpose": "Next.js App Router tree: root layout, the [locale]-scoped route group (/, /menu, /menu/[slug], /pizzarte, /galeria, /contactos), global 404, and route handlers/metadata files (sitemap.js, robots.js, llms.txt/route.js, fonts.js).",
+      "file_count": 14
+    },
+    {
+      "path": "app/[locale]",
+      "purpose": "Locale-scoped page tree for the 4 supported locales (pt default, en, fr, es), each page a Server Component that builds SEO metadata + JSON-LD and delegates rendering to PageShell.",
+      "file_count": 9
+    },
+    {
+      "path": "components",
+      "purpose": "All UI split by domain (about/, header/, footer/, menu/, chess/, contact/, animation/, popup/, layout/) plus Seo.js and the shared styled-components style module; each merges the old Gatsby desktop+mobile variants into one responsive component.",
+      "file_count": 32
+    },
+    {
+      "path": "i18n",
+      "purpose": "next-intl configuration: locale/pathname routing table + menu category slug translations (routing.jsx), locale-aware Link/useRouter/getPathname wrappers (navigation.jsx), canonical nav link translation (navLinks.js), and per-request message loading (request.jsx).",
+      "file_count": 4
+    },
+    {
+      "path": "lib",
+      "purpose": "Cross-cutting utilities: schema.org JSON-LD builders (jsonld.js), cached message loading via Next.js 'use cache' (cache.jsx), styled-components SSR registry (StyledRegistry.jsx), legacy Gatsby URL redirect table (legacyMenuRedirects.js), and the generated image manifest (imageManifest.json).",
+      "file_count": 5
+    },
+    {
+      "path": "hooks",
+      "purpose": "Custom React hooks that defer loading animation libraries (gsap, anime.js) and read a responsive breakpoint, deliberately importing gsap/anime inside the effect body (never at top-level import) to avoid breaking static prerendering.",
+      "file_count": 3
+    },
+    {
+      "path": "utils",
+      "purpose": "Small standalone helpers: popup React Context (PopupContext.js), consent-gated GA tag helper (consentGtag.js), phone link handling (handlePhone.js), and a prefers-reduced-motion check (prefersReducedMotion.js).",
+      "file_count": 4
+    },
+    {
+      "path": "messages",
+      "purpose": "All site copy for 4 locales (pt/en/fr/es), one JSON file per page-ish namespace (home, menu, pizzarte, contact) — the sole content source, no CMS.",
+      "file_count": 16
+    },
+    {
+      "path": "content",
+      "purpose": "Static gallery.json extracted once from WordPress (scripts/fetch-gallery.mjs, referenced in CLAUDE.md but not found on disk) — no WordPress runtime dependency remains.",
+      "file_count": 1
+    },
+    {
+      "path": "public/images",
+      "purpose": "All site imagery (Homepage/, Menu/, galeria/, plus an _originals/ subtree of pre-optimization source images), indexed by a build-time manifest script into lib/imageManifest.json.",
+      "file_count": 173
+    },
+    {
+      "path": "public/pdf",
+      "purpose": "Legal/consumer documents served as static PDFs (privacy policy, terms & conditions, consumer info, project fact sheet), each duplicated for PT and EN.",
+      "file_count": 7
+    },
+    {
+      "path": "public/video",
+      "purpose": "Homepage hero video and its poster image.",
+      "file_count": 2
+    },
+    {
+      "path": "assets/fonts",
+      "purpose": "Local font files (BritishRegular, ChunkyRosieDemo) loaded via next/font/local in app/fonts.js.",
+      "file_count": 2
+    },
+    {
+      "path": "docs",
+      "purpose": "Portuguese-language SEO/GEO/AIO methodology knowledge base for the agency (fundamentals, SEO, AIO, GEO, structured data, search types, role-based guides, conclusions) — general methodology, not project-specific implementation docs.",
+      "file_count": 22
+    },
+    {
+      "path": ".repowiki",
+      "purpose": "Pre-existing wiki output, explicitly flagged as STALE in CLAUDE.md (generated for a prior real-estate client with /noticias and /servicos routes that no longer exist) — all its markdown pages are currently deleted per git status and it must be regenerated, not trusted.",
+      "file_count": 0
+    }
+  ]
+}

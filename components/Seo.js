@@ -38,7 +38,7 @@ function buildOgImage(image) {
   return `${BASE_URL}/images/${image.replace(/^\//, "")}`;
 }
 
-function buildMetadata({ locale, title, description, image, type, urls }) {
+function buildMetadata({ locale, title, description, image, imageAlt, type, urls }) {
   const ogImage = buildOgImage(image);
   const { canonical, xDefault, ...languages } = urls;
 
@@ -59,7 +59,7 @@ function buildMetadata({ locale, title, description, image, type, urls }) {
       locale: OG_LOCALE[locale] || "pt_PT",
       type,
       ...(ogImage && {
-        images: [{ url: ogImage, width: 1200, height: 630, alt: title }],
+        images: [{ url: ogImage, width: 1200, height: 630, alt: imageAlt || title }],
       }),
     },
 
@@ -87,12 +87,18 @@ export async function Seo({ locale, namespace, pathname, alternatePaths, type = 
     if (val) image = val;
   } catch {}
 
-  return buildMetadata({ locale, title: t("title"), description: t("description"), image, type, urls });
+  let imageAlt = null;
+  try {
+    const val = t("imageAlt");
+    if (val) imageAlt = val;
+  } catch {}
+
+  return buildMetadata({ locale, title: t("title"), description: t("description"), image, imageAlt, type, urls });
 }
 
 // Metadata a partir de dados já resolvidos (ex: categoria de menu escolhida
 // em runtime, cujo título não é uma chave de tradução fixa).
-export function SeoFromData({ locale, title, description, pathname, alternatePaths, image = null, type = "website" }) {
+export function SeoFromData({ locale, title, description, pathname, alternatePaths, image = null, imageAlt = null, type = "website" }) {
   const urls = buildUrls({ locale, pathname, alternatePaths });
-  return buildMetadata({ locale, title, description, image, type, urls });
+  return buildMetadata({ locale, title, description, image, imageAlt, type, urls });
 }

@@ -1,26 +1,27 @@
 {
     "pizzarte": {
         "seo": {
-            "title": "Pizzarte | Restaurant Pizzarte",
-            "description": "Au numéro 27 de la Rua Eng. Von Haffe se trouve une pizzeria que tout le monde connaît. Elle fait depuis longtemps partie de l'identité d'Aveiro et est, pour beaucoup, l'un des meilleurs restaurants",
+            "title": "La Pizzarte | Histoire, Espace et Échecs à Aveiro",
+            "description": "Une pizzeria à Aveiro depuis plus de trois décennies, avec 800m² d'espace, des tournois d'échecs depuis 1988 et un bar qui a marqué les nuits de la ville.",
             "image": "seo/pizzarte.png",
             "imageAlt": "pizzarte"
         },
         "seoGallery": {
-            "title": "Galerie | Restaurant Pizzarte",
-            "description": "Découvrez toute la galerie de l'espace, de la nourriture, des cocktails et des boissons, ainsi que des événements auxquels le restaurant Pizzarte a été associé.",
+            "title": "Galerie | Photos de l'Espace, du Bar et des Événements",
+            "description": "Découvre l'espace, la nourriture, les cocktails et les événements de la Pizzarte à Aveiro — concerts, théâtre et tournois d'échecs dans un lieu chargé d'histoire.",
             "image": "seo/pizzarte.png",
             "imageAlt": "pizzarte"
         },
         "seoMenu": {
-            "title": "Menu | Restaurant Pizzarte",
-            "description": "Découvrez toutes nos saveurs. Le Restaurant Pizzarte propose un vaste choix de pizzas, salades, pâtes, crêpes et bien plus encore.",
+            "title": "Menu | Pizzas, Pâtes et Crêpes de la Pizzarte",
+            "description": "Entrées, salades, pâtes, crêpes, pizzas, panne di pizza, desserts et boissons — la carte complète de la Pizzarte, pizzeria italienne à Aveiro depuis 1989.",
             "image": "seo/pizzarte.png",
             "imageAlt": "pizzarte"
         },
         "info": {
+            "question": "Qu'est-ce que la Pizzarte ?",
             "title": "LA PIZZARTE",
-            "text": "Au numéro 27 de la Rua Eng. Von Haff se trouve un lieu qui unit l'art de la bonne cuisine à la tradition et aux valeurs de la ville d'Aveiro. La Pizzarte, une pizzeria vieille de trois décennies, est un symbole de l'identité de la région.<br/><br/> Un lieu fréquenté par plusieurs générations, qui considèrent la Pizzarte comme la meilleure pizzeria de la ville.<br/><br/> Du lundi au dimanche, la Pizzarte investit dans le sourire de ses clients en proposant une grande variété de pizzas, salades, pâtes et délicieux desserts, avec un service de qualité porté par une équipe jeune et enthousiaste.",
+            "text": "La Pizzarte est une pizzeria à Aveiro, au numéro 27 de la Rua Eng. Von Haff, avec trois décennies d'histoire qui unissent l'art de la bonne cuisine à la tradition et aux valeurs de la ville.<br/><br/> C'est un lieu fréquenté par plusieurs générations — pour beaucoup, on y trouve les meilleures pizzas de la ville — et un symbole de l'identité d'Aveiro.<br/><br/> Du lundi au dimanche, tu trouveras une grande variété de pizzas, salades, pâtes et desserts, servis par une équipe jeune et enthousiaste.",
             "feedback": [
                 {
                     "quote": "“Un lieu qui marque l'histoire de la cuisine italienne à Aveiro, service jeune et efficace, pizzas et crêpes fantastiques ainsi que les pâtes, un endroit que je fréquente depuis plus de 20 ans.”",
@@ -45,16 +46,22 @@
             ]
         },
         "ourSpace": {
+            "question": "Quel espace a la Pizzarte et quels événements y sont organisés ?",
             "title": "Notre espace",
-            "text": "S'étendant sur 800m2, la Pizzarte peut accueillir 200 personnes assises et affiche généralement complet. Le week-end, il est fréquent de devoir attendre une table.<br/><br/> La capacité et la polyvalence de cet espace permettent d'organiser divers événements sans compromettre l'activité de la Pizzeria. Dans ce cadre, mini-concerts, performances théâtrales, show cookings, pièces de théâtre pour enfants, tournois d'échecs et bien d'autres activités ludiques ont déjà eu lieu.<br/><br/> La Pizzarte est un lieu incontournable pour tous ceux qui visitent Aveiro et qui aiment la pizza.",
+            "text": "La Pizzarte s'étend sur 800m² et peut accueillir 200 personnes assises — et affiche généralement complet. Le week-end, il est fréquent d'attendre une table.<br/><br/> L'espace est assez grand et polyvalent pour accueillir des événements sans interrompre l'activité normale du restaurant : il a déjà accueilli des mini-concerts, des pièces de théâtre, des show cookings, du théâtre pour enfants et des tournois d'échecs, entre autres activités.<br/><br/> Si tu visites Aveiro et que tu aimes la pizza, la Pizzarte est un passage obligé.",
             "button": "Réserver une table",
             "link": "/fr/contact",
             "image": "Homepage/imagem_2.webp"
         },
         "chessIntro": {
+            "question": "Pourquoi y a-t-il des échecs à la Pizzarte ?",
             "title": "TOURNOIS D'ÉCHECS",
-            "text": "Les échecs sont présents à la Pizzarte depuis 1988, avec le célèbre échiquier créé par l'artiste Pedro Andrade, toujours visible aujourd'hui.<br/><br/> Outre l'échiquier, plusieurs tournois se déroulent régulièrement dans le restaurant.",
+            "text": "Les échecs font partie de la Pizzarte depuis 1988, avec le célèbre échiquier créé par l'artiste Pedro Andrade — toujours là aujourd'hui.<br/><br/> Au-delà de l'échiquier, le restaurant accueille des tournois réguliers.",
             "button": "Réserver une table"
+        },
+        "gallery": {
+            "question": "À quoi ressemble l'intérieur de la Pizzarte ?",
+            "title": "Galerie"
         },
         "filters": [
             {

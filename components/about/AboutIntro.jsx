@@ -22,7 +22,7 @@ export default function AboutIntro({ data, home }) {
         <div className="container-default">
           <div className="container grid-default">
             <div className="textContainer">
-              <Title text={data?.title} />
+              <Title text={data?.title} question={data?.question} level="h2" />
               <div className="text">
                 <p dangerouslySetInnerHTML={{ __html: data?.text }} />
               </div>
@@ -45,6 +45,15 @@ export default function AboutIntro({ data, home }) {
 }
 
 const AboutIntroStyled = styled.div`
+  /* PizzaEffect (irmão anterior em <main>) define margin própria (500px/
+     300px/100px, PizzaStyled) para dar espaço à animação de scroll — essa
+     margin é maior que --space-section e ganha o colapso de margens entre
+     irmãos, por isso a regra global main > * + * nunca se manifesta aqui.
+     padding-top (não colapsa) garante que esta secção tem sempre, pelo
+     menos, --space-section de espaço próprio, somado ao buffer da
+     animação em vez de ser engolido por ele. */
+  padding-top: var(--space-section);
+
   .container {
     color: #1a1a1b;
     padding: 2rem;

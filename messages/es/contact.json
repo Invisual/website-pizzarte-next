@@ -1,12 +1,14 @@
 {
     "contact": {
         "seo": {
-            "title": "Contacto | Restaurante Pizzarte",
-            "description": "Contactos de nuestros restaurantes: +351 234 427 103 | +351 239 810 443. Estamos en Aveiro. ¡Reserva ya tu mesa o pide para comer en tu casa!",
+            "title": "Contacto | Dirección, Horario y Reservas",
+            "description": "La Pizzarte está en la Rua Engº Von Haff, 27, en Aveiro. Consulta el horario, cómo reservar para grupos de 10+ y cómo pedir comida para llevar.",
             "image": "seo/local.jpg",
             "imageAlt": "pizzarte"
         },
         "contactInfo": {
+            "pageTitle": "Contacto",
+            "question": "¿Dónde está la Pizzarte y cómo reservar mesa?",
             "title": "Aveiro",
             "address": "R. Engº Von Haff, 27",
             "postalCode": "3800-177 Aveiro",
@@ -22,55 +24,42 @@
             "phoneLink": "tel:+351234427103",
             "emailLink": "mailto:pizzarte@pizzarte.com"
         },
-        "form": {
-            "bookTable": "¡Reserva tu mesa!",
-            "note": "NOTA: solo se aceptan reservas de grupos de 10 personas o más.",
-            "fields": {
-                "name": {
-                    "placeholder": "Nombre",
-                    "type": "text",
-                    "id": "name"
+        "faq": {
+            "question": "Preguntas frecuentes sobre la Pizzarte",
+            "items": [
+                {
+                    "question": "¿Cuál es el horario de Pizzarte?",
+                    "answer": "La Pizzarte abre de domingo a jueves de 12h a 1h, y viernes y sábado de 12h a 1h30. No necesitas reservar para grupos pequeños, la reserva solo aplica a grupos de 10 personas o más."
                 },
-                "tel": {
-                    "placeholder": "Teléfono",
-                    "type": "number",
-                    "id": "tel"
+                {
+                    "question": "¿Cómo hago una reserva en la Pizzarte?",
+                    "answer": "Llama al +351 234 427 103. La reserva solo aplica a grupos de 10 personas o más; para grupos pequeños puedes venir directamente."
                 },
-                "people": {
-                    "placeholder": "Nº Personas",
-                    "type": "number",
-                    "id": "people"
+                {
+                    "question": "¿Cuál es la dirección de Pizzarte?",
+                    "answer": "La Pizzarte está en la Rua Engº Von Haff, nº 27, 3800-177 Aveiro. Más abajo en esta página tienes el mapa y cómo llegar."
                 },
-                "email": {
-                    "placeholder": "Email",
-                    "type": "email",
-                    "id": "email"
+                {
+                    "question": "¿Cómo pides comida para llevar en la Pizzarte?",
+                    "answer": "Puedes llamar directamente, pedir a través de la app Pizzarte Takeaway (disponible para iOS y Android) o pedir online en shop.pizzarte.pt."
                 },
-                "message": {
-                    "placeholder": "Mensaje",
-                    "type": "textarea",
-                    "id": "message"
+                {
+                    "question": "¿Qué puedes comer en la Pizzarte?",
+                    "answer": "La carta incluye entradas, ensaladas, pastas, crepes salados y wraps, pizzas, panne di pizza, postres y bebidas, cocina italiana hecha en Aveiro desde 1989."
+                },
+                {
+                    "question": "¿Cuántas personas caben en la Pizzarte y qué eventos organiza?",
+                    "answer": "El espacio tiene 800m² y capacidad para 200 personas sentadas. Ya ha acogido miniconciertos, obras de teatro, show cookings, teatro infantil y torneos de ajedrez, sin frenar la actividad normal del restaurante."
+                },
+                {
+                    "question": "¿Desde cuándo hay ajedrez en la Pizzarte?",
+                    "answer": "El ajedrez está presente en la Pizzarte desde 1988, con un tablero creado por el artista Pedro Andrade que se mantiene hasta hoy. El restaurante acoge torneos regulares."
+                },
+                {
+                    "question": "¿Cómo es el bar de la Pizzarte?",
+                    "answer": "El bar abrió en 1989 y sirve cócteles y ginebras de autor en un ambiente cosmopolita e irreverente. Las paredes tienen frases de libros y películas de autores nacionales e internacionales."
                 }
-            },
-            "submitButton": {
-                "text": "Enviar"
-            },
-            "successDialog": {
-                "title": "Gracias por contactarnos ✓",
-                "content": [
-                    "Hemos recibido tu email. Ten en cuenta que la reserva solo queda confirmada tras nuestra respuesta/contacto.",
-                    "Para una confirmación más rápida, contacta con el 234 427 103"
-                ],
-                "closeButton": "Cerrar"
-            },
-            "errorDialog": {
-                "title": "Algo salió mal X",
-                "content": [
-                    "Algo salió mal X",
-                    "¡Revisa tu formulario!"
-                ],
-                "closeButton": "Cerrar"
-            }
+            ]
         }
     }
 }

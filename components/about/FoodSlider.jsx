@@ -37,7 +37,7 @@ export default function FoodSlider({ data }) {
       <div className="background-radius">menu</div>
       <div className="container">
         <div className="top">
-          <h1 style={{ textTransform: "uppercase" }}>{data.foodSlider.title}</h1>
+          <h2 style={{ textTransform: "uppercase" }}>{data.foodSlider.title}</h2>
           <p style={{ textTransform: "uppercase" }}>{data.foodSlider.subtitle}</p>
           <div className="swiper-navigation">
             <div className="swiper-button-prev"></div>
@@ -124,12 +124,14 @@ const FoodSliderStyled = styled.div`
         padding-bottom: 40px;
       `}
 
-      h1 {
+      h2 {
         color: ${color.red};
         font-family: var(--font-british);
         font-weight: 200;
         font-size: 60px;
         margin: 0;
+        line-height: var(--line-height-dense);
+        letter-spacing: -0.01em;
 
         ${media.l`
           font-size: 40px;

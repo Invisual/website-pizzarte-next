@@ -21,7 +21,7 @@ Site do restaurante Pizzarte (Aveiro, desde 1989). Migrado de Gatsby 5 para Next
 
 ## 🛠️ Regras de Desenvolvimento
 
-1. **`.repowiki/` está desatualizado** — foi gerado para o cliente anterior (imobiliário, rotas `/noticias` e `/servicos` que já não existem). Não seguir como fonte de verdade até ser regenerado; usar este ficheiro e o código real.
+1. **`.repowiki/`** — regenerado em 2026-09-18 (7 secções, 17 páginas, `.repowiki/index.md` como entrada). Pode ser usado como fonte de contexto adicional, mas este ficheiro e o código real continuam a ser a fonte de verdade em caso de divergência. Regenerar com `/repowiki --update` depois de mudanças estruturais relevantes.
 2. **i18n Strict:** usar sempre `@/i18n/navigation` (Link, useRouter, getPathname) ou `i18n/navLinks.js` (`translateNavLink`) para qualquer link interno — nunca `next/link` com caminho fixo.
 3. **Imagens:** todo o conteúdo visual novo vai para `public/images/`, referenciado via `components/layout/Image.jsx` (`src` relativo, `alt` obrigatório). Correr `node scripts/build-image-manifest.mjs` depois de adicionar imagens (ou `npm run dev`/`build`, que já o fazem).
 4. **Categorias de menu:** slugs traduzidos vivem em `i18n/routing.jsx` (`MENU_CATEGORY_SLUGS`) — mudar uma categoria implica atualizar lá, em `messages/*/menu.json` e, se o slug canónico mudar, em `lib/legacyMenuRedirects.js`.

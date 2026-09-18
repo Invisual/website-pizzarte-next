@@ -68,9 +68,9 @@ export default function OurSpace() {
         </div>
         <div className="background-red">
           {Array.from({ length: numHeadings }).map((_, index) => (
-            <h1 key={index} className="ourspace-ml2">
+            <span key={index} className="ourspace-ml2" aria-hidden="true">
               brutaaaaaaaaaaaaaaaaallllll
-            </h1>
+            </span>
           ))}
         </div>
       </div>
@@ -80,16 +80,19 @@ export default function OurSpace() {
 
 const OurSpaceStyled = styled.div`
   .ourspace-ml2 {
+    display: block;
     color: #e31515;
     text-transform: uppercase;
     font-size: 10vw;
     font-family: var(--font-british);
     font-weight: 200;
     margin: 0;
+    line-height: var(--line-height-dense);
   }
 
   .container-red {
     position: relative;
+    overflow: hidden;
 
     .local-div {
       display: grid;
