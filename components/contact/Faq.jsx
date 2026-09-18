@@ -69,11 +69,11 @@ const FaqStyled = styled.div`
     color: ${color.red};
     text-transform: uppercase;
     font-weight: 200;
-    font-size: 36px;
+    font-size: 60px;
     margin: 0 0 32px;
 
     ${media.l`
-      font-size: 28px;
+      font-size: 38px;
     `}
   }
 

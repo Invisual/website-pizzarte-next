@@ -38,18 +38,26 @@ export default function BarDrinks({ data }) {
   useAnimeEffect((anime) => {
     if (prefersReducedMotion()) return;
 
+    // Timeline única partilhada por todas as linhas: cada uma resolvia o
+    // próprio delay em loop independente, ficando invisível `index*1000`ms
+    // a cada ciclo antes de revelar — parecia texto partido/com espaços em
+    // branco em vez de um cascade estável.
     const textWrappers = document.querySelectorAll(".ml2");
+    const timeline = anime.timeline({ loop: true });
     textWrappers.forEach((textWrapper, index) => {
       textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
-      anime.timeline({ loop: true }).add({
-        targets: textWrapper.querySelectorAll(".letter"),
-        scale: [4, 1],
-        opacity: [0, 1],
-        translateZ: 0,
-        easing: "easeOutExpo",
-        duration: 950,
-        delay: (el, i) => 100 * i + index * 1000,
-      });
+      timeline.add(
+        {
+          targets: textWrapper.querySelectorAll(".letter"),
+          scale: [4, 1],
+          opacity: [0, 1],
+          translateZ: 0,
+          easing: "easeOutExpo",
+          duration: 950,
+          delay: (el, i) => 100 * i,
+        },
+        index * 1000
+      );
     });
   }, []);
 
@@ -60,7 +68,7 @@ export default function BarDrinks({ data }) {
           <div className="grid-default">
             <div className="text-container">
               <Title text={data.drinks.title} question={data.drinks.question} level="h2" />
-              <p dangerouslySetInnerHTML={{ __html: data.drinks.text }} />
+              <p className="description" dangerouslySetInnerHTML={{ __html: data.drinks.text }} />
               <Button to={translateNavLink("/menu/bebidas", locale)} button={data.drinks.button} />
             </div>
             <div className="bar-stage">
@@ -111,15 +119,22 @@ const BarDrinksStyled = styled.div`
   .bar-stage {
     grid-column: 9 / 13;
     position: relative;
+    /* Reserva o espaço do <Swiper> (só existe no DOM depois do mount via
+       ClientOnly) — mesmos valores de altura do bloco \`.swiper\` abaixo.
+       Sem isto o carrossel salta de 0 para 50/60vh após a hidratação, CLS
+       grande em mobile. */
+    min-height: 50vh;
 
     ${media.xxl`
       grid-column: 8 / 13;
+      min-height: 60vh;
     `}
 
     ${media.l`
       grid-column: unset;
       margin-top: 80px;
       overflow: hidden;
+      min-height: 60vh;
     `}
   }
 
@@ -135,10 +150,12 @@ const BarDrinksStyled = styled.div`
     padding: 9px 23px 0 23px;
     top: 0;
     left: 0;
+    /* Ocupa a largura do stage (mesma largura das imagens da bebida) em
+       vez de encolher para caber só no texto decorativo. */
+    width: 100%;
 
     ${media.l`
       font-size: 27px;
-      width: 100%;
       height: 60%;
 
       ${media.m`
@@ -227,7 +244,7 @@ const BarDrinksStyled = styled.div`
   .text-container {
     grid-column: 1 / 5;
 
-    p {
+    .description {
       margin: 0;
       padding-bottom: 60px;
     }

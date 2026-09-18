@@ -204,6 +204,16 @@ const FoodSliderStyled = styled.div`
       overflow: hidden;
       position: relative;
 
+      /* Reserva o espaço do <Swiper> (só existe no DOM depois do mount via
+         ClientOnly) — estimado a partir do rácio real da imagem do slide
+         (Menu/pao_alho_queijo.webp, 281×352) à largura do slide em mobile
+         (227px) + texto. Sem isto a secção salta de altura ~0 para a
+         altura do carrossel após a hidratação, CLS grande em mobile.
+         Ajustar se o valor não bater certo com o layout real. */
+      ${media.l`
+        min-height: 340px;
+      `}
+
       .swiper {
         width: 80vw !important;
         margin-left: 10vw !important;

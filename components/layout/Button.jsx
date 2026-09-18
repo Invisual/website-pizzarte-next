@@ -16,12 +16,28 @@ export default function Button({ button, to, normal, imageSrc, hoverImageSrc, bo
         onMouseEnter={() => supportsHover() && setIsHovered(true)}
         onMouseLeave={() => supportsHover() && setIsHovered(false)}
         $border={border}
-        onClick={onClick}
       >
-        <a className="link" href={to}>
+        <a className="link" href={to} onClick={onClick}>
           {button}
           <Image src={isHovered ? hoverImageSrc : imageSrc} alt="" />
         </a>
+      </ButtonStyled>
+    );
+  }
+
+  if (imageSrc || hoverImageSrc) {
+    return (
+      <ButtonStyled
+        type="button"
+        onMouseEnter={() => supportsHover() && setIsHovered(true)}
+        onMouseLeave={() => supportsHover() && setIsHovered(false)}
+        $border={border}
+        onClick={onClick}
+      >
+        <span className="link">
+          {button}
+          <Image src={isHovered ? hoverImageSrc : imageSrc} alt="" />
+        </span>
       </ButtonStyled>
     );
   }

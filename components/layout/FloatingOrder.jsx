@@ -42,7 +42,7 @@ export default function FloatingOrder() {
 
   return (
     <FixedContainer $opacity={opacity} onClick={handleOpenPopup}>
-      <IconContainer hoverIcon="/images/Homepage/shopping-cart-icon-white.svg">
+      <IconContainer $hoverIcon="/images/Homepage/shopping-cart-icon-white.svg">
         <Text>{t("callButton.text")}</Text>
         <Icon src="/images/Homepage/shopping-cart-icon.svg" alt="Encomendar" />
       </IconContainer>
@@ -86,7 +86,7 @@ const IconContainer = styled.div`
     }
 
     &:hover img {
-      content: url(${(props) => props.hoverIcon});
+      content: url(${(props) => props.$hoverIcon});
     }
   `}
 `;

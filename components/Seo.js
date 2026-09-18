@@ -13,14 +13,17 @@ const OG_LOCALE = { pt: "pt_PT", en: "en_US", fr: "fr_FR", es: "es_ES" };
 // - `alternatePaths`: para rotas dinâmicas (`/menu/[slug]`) cujo slug
 //   traduzido não é um padrão estático mas depende dos dados (ver
 //   i18n/routing.jsx MENU_CATEGORY_SLUGS). Formato: { pt: "/menu/entradas",
-//   en: "/menu/starters", ... } — caminho já traduzido, sem prefixo de locale.
+//   en: "/en/menu/starters", ... } — caminho já traduzido, COM prefixo de
+//   locale (quem constrói alternatePaths, ex: menu/[slug]/page.jsx, já
+//   aplica o prefixo — ver nota no buildUrls abaixo).
 function buildUrls({ locale, pathname, alternatePaths }) {
   const urls = {};
   for (const loc of routing.locales) {
-    const path = alternatePaths
-      ? alternatePaths[loc]
-      : getPathname({ href: pathname, locale: loc });
-    urls[loc] = loc === routing.defaultLocale ? `${BASE_URL}${path}` : `${BASE_URL}/${loc}${path}`;
+    // `getPathname` já devolve o path com o prefixo de locale aplicado
+    // (routing.localePrefix = "as-needed" → prefixo só nos locales
+    // não-default) — voltar a prefixar aqui duplicava-o (ex: /en/en).
+    const path = alternatePaths ? alternatePaths[loc] : getPathname({ href: pathname, locale: loc });
+    urls[loc] = `${BASE_URL}${path}`;
   }
   return {
     ...urls,

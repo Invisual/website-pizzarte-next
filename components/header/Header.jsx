@@ -116,14 +116,10 @@ export default function Header({ data }) {
             ))}
           </nav>
           <Button
-            to="#"
             imageSrc="Homepage/shopping-cart-icon.svg"
             hoverImageSrc="Homepage/shopping-cart-icon-white.svg"
             button={data.callButton?.text}
-            onClick={(e) => {
-              e.preventDefault();
-              handleOpenPopup();
-            }}
+            onClick={handleOpenPopup}
           />
           <LocaleSwitcher locale={locale} />
         </div>
@@ -165,12 +161,10 @@ export default function Header({ data }) {
 
           <div className="btn-social">
             <Button
-              to="#"
               imageSrc="Homepage/shopping-cart-icon-white.svg"
               hoverImageSrc="Homepage/shopping-cart-icon.svg"
               button={data.callButton?.text}
-              onClick={(e) => {
-                e.preventDefault();
+              onClick={() => {
                 handleOpenPopup();
                 setOpen(false);
               }}
