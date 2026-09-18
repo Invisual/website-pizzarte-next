@@ -149,7 +149,7 @@ const WaitingStyled = styled.div`
   .container {
     position: relative;
     font-family: var(--font-british);
-    font-size: clamp(16px, 3vw, 76px);
+    font-size: clamp(32px, 8vw, 76px);
     display: flex;
     flex-direction: column;
     justify-content: center;
