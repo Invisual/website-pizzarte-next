@@ -1,6 +1,7 @@
 import { Suspense } from "react";
 import { getMessages, setRequestLocale } from "next-intl/server";
 import { SeoFromData } from "../../../components/Seo";
+import { buildImageGallerySchema } from "../../../lib/jsonld";
 import PageShell from "../../../components/layout/PageShell";
 import Title from "../../../components/layout/Title";
 import GalleryFilter from "../../../components/about/GalleryFilter";
@@ -26,9 +27,14 @@ export default async function GaleriaPage({ params }) {
 
   const galleries = { ...galleryData, all: Object.values(galleryData).flat() };
   const content = messages.pizzarte.gallery;
+  const seo = messages.pizzarte.seoGallery;
+  const gallerySchema = buildImageGallerySchema(galleries.all, { locale, name: seo.title, description: seo.description });
 
   return (
     <PageShell homeData={messages.home}>
+      {/* schema.org/ImageGallery com as 30 fotos — sinal estruturado extra
+          para GEO/AIO, além do global Restaurant/WebSite do layout. */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(gallerySchema) }} />
       {/* O h1 fica aqui, fora do Suspense — GalleryFilter usa useQueryState
           (nuqs → useSearchParams), que força o Suspense abaixo a renderizar
           fallback={null} no HTML estático (PPR). Um heading dentro dele só

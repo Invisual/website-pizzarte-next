@@ -14,7 +14,6 @@ function languagesFor(pathnameKey) {
 function makeEntry(pathnameKey, { priority, changeFrequency }) {
   return {
     url: urlFor(pathnameKey, routing.defaultLocale),
-    lastModified: new Date(),
     changeFrequency,
     priority,
     alternates: { languages: languagesFor(pathnameKey) },
@@ -47,7 +46,6 @@ export default function sitemap() {
 
     return {
       url: languages[routing.defaultLocale],
-      lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.7,
       alternates: { languages },
