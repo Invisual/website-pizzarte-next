@@ -20,7 +20,7 @@ const THRESHOLDS = Array.from({ length: 51 }, (_, i) => i / 50);
 // morto ao lado (floatingIcons.js, nunca renderizado). Renomeado aqui para
 // o que realmente é: o botão fixo "Encomenda já".
 export default function FloatingOrder() {
-  const { handleOpenPopup } = usePopup();
+  const { handleOpenPopup, isMobileMenuOpen } = usePopup();
   const t = useTranslations("home");
   const [opacity, setOpacity] = useState(1);
 
@@ -39,6 +39,8 @@ export default function FloatingOrder() {
     observer.observe(footer);
     return () => observer.disconnect();
   }, []);
+
+  if (isMobileMenuOpen) return null;
 
   return (
     <FixedContainer $opacity={opacity} onClick={handleOpenPopup}>

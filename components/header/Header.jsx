@@ -27,7 +27,7 @@ export default function Header({ data }) {
   const locale = useLocale();
   const pathname = usePathname();
 
-  const { handleOpenPopup } = usePopup();
+  const { handleOpenPopup, setIsMobileMenuOpen } = usePopup();
 
   const [open, setOpen] = useState(false);
   const [isSticky, setIsSticky] = useState(false);
@@ -35,10 +35,11 @@ export default function Header({ data }) {
 
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "";
+    setIsMobileMenuOpen(open);
     return () => {
       document.body.style.overflow = "";
     };
-  }, [open]);
+  }, [open, setIsMobileMenuOpen]);
 
   useEffect(() => {
     if (!open) {

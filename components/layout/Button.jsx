@@ -50,7 +50,7 @@ export default function Button({ button, to, normal, imageSrc, hoverImageSrc, bo
 }
 
 const ButtonStyled = styled.button`
-  color: ${color.red};
+  color: ${(props) => (props.$border ? "#fff" : color.red)};
   border-radius: 34px;
   border: ${(props) => (props.$border ? `1px solid #fff` : `1px solid ${color.red}`)};
   padding: 7px 20px;

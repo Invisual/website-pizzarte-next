@@ -15,6 +15,7 @@ import PopupOrderNow from "../popup/PopupOrderNow";
 //   com a restauração de scroll do browser ao navegar "para trás".
 export default function PageChrome({ children, dataPopup }) {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
     <PopupContext.Provider
@@ -22,6 +23,8 @@ export default function PageChrome({ children, dataPopup }) {
         isPopupOpen,
         handleOpenPopup: () => setIsPopupOpen(true),
         handleClosePopup: () => setIsPopupOpen(false),
+        isMobileMenuOpen,
+        setIsMobileMenuOpen,
       }}
     >
       {children}
