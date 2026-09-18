@@ -260,6 +260,8 @@ const PizzarteInfoStyled = styled.div`
   }
 
   ${media.l`
+    margin-top: 20px;
+
     .woman-falling { display: none; }
     .man-falling {
       position: static;

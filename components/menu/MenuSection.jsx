@@ -46,6 +46,10 @@ const MenuSectionStyled = styled.div`
     flex-direction: column;
     padding: 0;
   }
+
+  ${media.l`
+    margin-top: 20px;
+  `}
 `;
 
 const ImageContainer = styled.div`

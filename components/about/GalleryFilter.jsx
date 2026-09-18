@@ -101,6 +101,8 @@ const GalleryStyled = styled.div`
   }
 
   ${media.l`
+    margin-top: 20px;
+
     .filter-buttons {
       display: none;
     }
