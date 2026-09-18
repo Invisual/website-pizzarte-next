@@ -76,20 +76,23 @@ export default function Waiting({ home, NoAnimation, data }) {
     <WaitingStyled>
       {home && (
         <>
-          <video controls poster="/video/poster.webp">
+          {/* preload="none": vídeo de 7MB que a maioria dos visitantes
+              nunca reproduz — sem isto o browser ia buscar metadata (ou
+              mais) logo ao carregar a página. */}
+          <video controls poster="/video/poster.webp" preload="none" playsInline>
             <source src="/video/pizza-pizzarte.mp4" type="video/mp4" />
           </video>
 
           <div className="container-default">
             <div className="pizza-show">
               <div className="pizza-1">
-                <Image src="Homepage/pizza.png" alt="" extraClass="pizza-icon" />
+                <Image src="Homepage/pizza.webp" alt="" extraClass="pizza-icon" sizes="200px" />
               </div>
               <div className="pizza-2">
-                <Image src="Homepage/pizza.png" alt="" extraClass="pizza-icon" />
+                <Image src="Homepage/pizza.webp" alt="" extraClass="pizza-icon" sizes="200px" />
               </div>
               <div className="pizza-3">
-                <Image src="Homepage/pizza.png" alt="" extraClass="pizza-icon" />
+                <Image src="Homepage/pizza.webp" alt="" extraClass="pizza-icon" sizes="200px" />
               </div>
             </div>
           </div>

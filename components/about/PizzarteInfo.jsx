@@ -45,9 +45,13 @@ export default function PizzarteInfo({ data }) {
               <p dangerouslySetInnerHTML={{ __html: data?.text }} />
             </div>
             <div className="ImageContainer">
-              <Image src="Homepage/imagem_1.webp" alt="Pizzarte" />
+              <Image
+                src="Homepage/imagem_1.webp"
+                alt="Pizzarte"
+                sizes="(max-width: 768px) 250px, (max-width: 1024px) 400px, 392px"
+              />
               <div className="man-dancing">
-                <Image src="Homepage/homem_1.webp" alt="" />
+                <Image src="Homepage/homem_1.webp" alt="" sizes="(max-width: 1024px) 205px, 323px" />
               </div>
             </div>
           </div>
@@ -56,7 +60,7 @@ export default function PizzarteInfo({ data }) {
 
       <div className="feedback feedback-desktop space">
         <div className="red-background">
-          <Image src="Homepage/red-background.png" alt="" />
+          <Image src="Homepage/red-background.webp" alt="" sizes="100vw" />
         </div>
         <ClientOnly>
           <Swiper
@@ -115,10 +119,10 @@ export default function PizzarteInfo({ data }) {
       </div>
 
       <div className="woman-falling woman">
-        <Image src="Homepage/senhora.webp" alt="" />
+        <Image src="Homepage/senhora.webp" alt="" sizes="473px" />
       </div>
       <div className="man-falling man">
-        <Image src="Homepage/homem_2.webp" alt="" />
+        <Image src="Homepage/homem_2.webp" alt="" sizes="(max-width: 1024px) 250px, 404px" />
       </div>
     </PizzarteInfoStyled>
   );

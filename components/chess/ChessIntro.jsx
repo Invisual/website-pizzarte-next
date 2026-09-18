@@ -24,7 +24,12 @@ export default function ChessIntro({ data }) {
           </Reveal>
           <Reveal className="chess-right-position">
             <div className="chess-image">
-              <Image src="Homepage/chess-image.webp" alt="" extraClass="fill-image" />
+              <Image
+                src="Homepage/chess-image.webp"
+                alt=""
+                extraClass="fill-image"
+                sizes="(max-width: 1024px) 100vw, 900px"
+              />
               <div className="triangle-right desktop-only">
                 <Triangle color="white" width="234px" />
               </div>

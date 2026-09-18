@@ -37,7 +37,12 @@ export default function ContactInfo({ data }) {
       <div className="container-default">
         <Title text={SECTION_TITLE[locale] || SECTION_TITLE.pt} />
         <div className="contactContainer grid-default">
-          <Image src="Homepage/_MG_7916.webp" alt="" extraClass="restaurant-photo" />
+          <Image
+            src="Homepage/_MG_7916.webp"
+            alt=""
+            extraClass="restaurant-photo"
+            sizes="(max-width: 1024px) 100vw, 50vw"
+          />
           <div className="info-column">
             <SubTitle>{info.title}</SubTitle>
             <div className="contact-info">

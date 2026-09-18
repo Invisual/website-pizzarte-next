@@ -57,8 +57,8 @@ export default function PopupOrderNow({ isOpen, onClose, data }) {
   if (!isOpen) return null;
 
   const storeImages = {
-    "google-play": "/images/Homepage/popup/google.png",
-    "app-store": "/images/Homepage/popup/apple.png",
+    "google-play": "/images/Homepage/popup/google.webp",
+    "app-store": "/images/Homepage/popup/apple.webp",
   };
 
   const trackClick = (eventName) => {

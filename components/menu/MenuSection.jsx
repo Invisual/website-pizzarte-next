@@ -26,7 +26,7 @@ export default function MenuSection({ data }) {
               <Reveal key={index}>
                 <a href={translateNavLink("/menu" + item.slug, locale)}>
                   <ImageContainer>
-                    <Image src={item.imageSection} alt={item.title} extraClass="section-image" />
+                    <Image src={item.imageSection} alt={item.title} extraClass="section-image" sizes="100vw" />
                     <Overlay className="overlay">
                       <Text>{item.title}</Text>
                     </Overlay>

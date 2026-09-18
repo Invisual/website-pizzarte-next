@@ -90,12 +90,12 @@
                 "stores": [
                     {
                         "id": "google-play",
-                        "image": "Homepage/popup/google.png",
+                        "image": "Homepage/popup/google.webp",
                         "link": "https://play.google.com/store/apps/details?id=com.inova.pizzartetakeaway&hl=pt_PT"
                     },
                     {
                         "id": "app-store",
-                        "image": "Homepage/popup/apple.png",
+                        "image": "Homepage/popup/apple.webp",
                         "link": "https://apps.apple.com/pt/app/pizzarte-takeaway/id1635585800"
                     }
                 ]
@@ -157,7 +157,7 @@
                 }
             ],
             "livroReclamacoes": {
-                "icon": "logos/livro-reclamacoes.png",
+                "icon": "logos/livro-reclamacoes.webp",
                 "link": "https://www.livroreclamacoes.pt/inicio/"
             },
             "coFinanced": {

@@ -13,6 +13,11 @@ const OUT_FILE = path.join(process.cwd(), "lib", "imageManifest.json");
 
 const RASTER_EXT = new Set([".webp", ".png", ".jpg", ".jpeg", ".avif"]);
 
+// Abaixo disto (maior lado, px) a imagem é pequena o suficiente para não
+// precisar de blur placeholder (ícones, logos, decorativos) — poupa peso
+// no JSON, que é importado inteiro em componentes client (BarDrinks, etc).
+const BLUR_MIN_DIMENSION = 600;
+
 async function walk(dir) {
   const entries = await readdir(dir, { withFileTypes: true });
   const files = [];
@@ -48,17 +53,15 @@ async function main() {
       const metadata = await img.metadata();
       if (!metadata.width || !metadata.height) continue;
 
-      // Placeholder de blur: miniatura 10px de largura, base64 inline.
-      const blurBuffer = await img
-        .resize(10)
-        .webp({ quality: 40 })
-        .toBuffer();
+      manifest[relativePath] = { w: metadata.width, h: metadata.height };
 
-      manifest[relativePath] = {
-        w: metadata.width,
-        h: metadata.height,
-        blurDataURL: `data:image/webp;base64,${blurBuffer.toString("base64")}`,
-      };
+      // Placeholder de blur: só para imagens grandes o suficiente para
+      // justificar o custo (ícones/logos pequenos não precisam).
+      if (Math.max(metadata.width, metadata.height) >= BLUR_MIN_DIMENSION) {
+        const blurBuffer = await img.resize(8).webp({ quality: 35 }).toBuffer();
+        manifest[relativePath].blurDataURL = `data:image/webp;base64,${blurBuffer.toString("base64")}`;
+      }
+
       processed++;
     } catch (err) {
       console.warn(`[build-image-manifest] falhou em ${relativePath}: ${err.message}`);

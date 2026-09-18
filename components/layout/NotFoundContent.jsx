@@ -28,11 +28,11 @@ export default function NotFoundContent({ locale = "pt" }) {
         gridTemplateRows: "repeat(4, 1fr)",
       }}
     >
-      <Image src="404-error/1.png" alt="" style={{ gridColumn: "10 / 12", gridRow: "1 / 2", width: "80%", height: "auto" }} />
-      <Image src="404-error/2.png" alt="" style={{ gridColumn: "2 / 4", gridRow: "1 / 2", width: "80%", height: "auto" }} />
-      <Image src="404-error/3.png" alt="" style={{ gridColumn: "4 / 6", gridRow: "2 / 2", width: "80%", height: "auto" }} />
-      <Image src="404-error/4.png" alt="" style={{ gridColumn: "8 / 10", gridRow: "4 / 4", width: "80%", height: "auto" }} />
-      <Image src="404-error/5.png" alt="" style={{ gridColumn: "2 / 5", gridRow: "3 / 5", width: "80%", height: "auto" }} />
+      <Image src="404-error/1.webp" alt="" sizes="17vw" style={{ gridColumn: "10 / 12", gridRow: "1 / 2", width: "80%", height: "auto" }} />
+      <Image src="404-error/2.webp" alt="" sizes="17vw" style={{ gridColumn: "2 / 4", gridRow: "1 / 2", width: "80%", height: "auto" }} />
+      <Image src="404-error/3.webp" alt="" sizes="17vw" style={{ gridColumn: "4 / 6", gridRow: "2 / 2", width: "80%", height: "auto" }} />
+      <Image src="404-error/4.webp" alt="" sizes="17vw" style={{ gridColumn: "8 / 10", gridRow: "4 / 4", width: "80%", height: "auto" }} />
+      <Image src="404-error/5.webp" alt="" sizes="25vw" style={{ gridColumn: "2 / 5", gridRow: "3 / 5", width: "80%", height: "auto" }} />
 
       <div
         style={{

@@ -63,7 +63,12 @@ export default function Footer({ data }) {
 
         <LivroReclamacoesSection>
           <a href={footer.livroReclamacoes.link} target="_blank" rel="noreferrer">
-            <Image extraClass="livro_image" src={footer.livroReclamacoes.icon} alt="Livro de reclamações" />
+            <Image
+              extraClass="livro_image"
+              src={footer.livroReclamacoes.icon}
+              alt="Livro de reclamações"
+              sizes="(max-width: 1024px) 25vw, 11vw"
+            />
           </a>
         </LivroReclamacoesSection>
 
@@ -79,7 +84,7 @@ export default function Footer({ data }) {
       </div>
 
       <div className="woman-footer">
-        <Image src="Homepage/woman-footer.webp" alt="" />
+        <Image src="Homepage/woman-footer.webp" alt="" sizes="(max-width: 1024px) 0px, 35vw" />
       </div>
 
       <Copyright>

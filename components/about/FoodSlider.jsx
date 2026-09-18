@@ -57,7 +57,7 @@ export default function FoodSlider({ data }) {
                 <SwiperSlide key={index}>
                   <div className="swiper-slide">
                     <a href={translateNavLink("/menu/" + menuItem.slug, locale)}>
-                      <Image src={menuItem.img} alt="" extraClass="dish-thumb" />
+                      <Image src={menuItem.img} alt="" extraClass="dish-thumb" sizes="280px" />
                       <span>{menuItem.description}</span>
                     </a>
                   </div>

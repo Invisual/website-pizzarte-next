@@ -30,6 +30,10 @@ const nextConfig = {
   },
   images: {
     formats: ["image/avif", "image/webp"],
+    // Cortar 2048/3840 do default poupa transformações que raramente
+    // seriam pedidas — o maior breakpoint real do site é ~2560px.
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2560],
+    minimumCacheTTL: 2592000,
   },
   async headers() {
     return [
