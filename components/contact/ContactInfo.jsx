@@ -152,7 +152,7 @@ const ContactoInfoStyled = styled.div`
             margin-top: 0.5vh;
           }
 
-          a {
+          a:not(.link) {
             color: #000;
           }
         }
