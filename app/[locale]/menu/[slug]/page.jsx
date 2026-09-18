@@ -9,6 +9,16 @@ import { routing, MENU_CATEGORY_SLUGS, resolveCanonicalMenuSlug } from "../../..
 
 const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://example.pt";
 
+// Sufixo de marca do <title> — category.title vem de messages/*/menu.json e
+// é usado também como heading visível da página (MenuNavigation, Dishes),
+// por isso o sufixo é montado aqui em vez de ir para o JSON.
+const SITE_TITLE_SUFFIX = {
+  pt: "Restaurante Pizzarte",
+  en: "Pizzarte Restaurant",
+  fr: "Restaurant Pizzarte",
+  es: "Restaurante Pizzarte",
+};
+
 const BREADCRUMB_LABELS = {
   pt: { home: "Início", menu: "Menu" },
   en: { home: "Home", menu: "Menu" },
@@ -51,7 +61,7 @@ export async function generateMetadata({ params }) {
 
   return SeoFromData({
     locale,
-    title: category.title,
+    title: `${category.title} | ${SITE_TITLE_SUFFIX[locale] || SITE_TITLE_SUFFIX.pt}`,
     description: category.description,
     image: category.image,
     alternatePaths,
