@@ -23,6 +23,10 @@ const nextConfig = {
   allowedDevOrigins: ["192.168.2.29"],
   experimental: {
     globalNotFound: true,
+    // O CSS total do site é minúsculo (styled-components já injeta o seu
+    // inline; o resto são ~7KB) — inlinar poupa dois pedidos render-blocking
+    // (~900ms de FCP/LCP em mobile 4G no Lighthouse).
+    inlineCss: true,
   },
   cacheComponents: true,
   compiler: {
@@ -41,6 +45,15 @@ const nextConfig = {
         source: "/:path*",
         headers: securityHeaders,
       },
+      // Ficheiros de public/ saem por defeito com "max-age=0" (revalidam a
+      // cada visita) — Lighthouse: "Use durações totais de cache eficientes".
+      // Não têm hash no nome, por isso 30 dias (igual a minimumCacheTTL) em
+      // vez de "immutable": se uma imagem for substituída com o mesmo nome,
+      // propaga-se em no máximo um mês (ou renomeia-se o ficheiro).
+      ...["images", "video", "icons", "pdf"].map((dir) => ({
+        source: `/${dir}/:path*`,
+        headers: [{ key: "Cache-Control", value: "public, max-age=2592000, stale-while-revalidate=86400" }],
+      })),
     ];
   },
   async redirects() {

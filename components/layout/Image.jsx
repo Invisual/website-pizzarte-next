@@ -29,13 +29,17 @@ export function Image({ src, alt, extraClass, priority = false, sizes, ...rest }
   if (!src) return null;
 
   const publicSrc = GetURL(src);
+  const meta = imageManifest[src];
 
   if (src.toLowerCase().endsWith(".svg")) {
+    // width/height (do <svg> raiz, via manifesto) só servem para reservar a
+    // proporção antes de o ficheiro carregar — app/globals.css anula-os com
+    // especificidade 0 ("img[src$=.svg] { width/height: auto }"), por isso
+    // o tamanho visual continua a ser decidido só pelo CSS de cada
+    // componente, como antes.
     // eslint-disable-next-line @next/next/no-img-element
-    return <img src={publicSrc} alt={alt} className={extraClass} {...rest} />;
+    return <img src={publicSrc} alt={alt} className={extraClass} width={meta?.w} height={meta?.h} {...rest} />;
   }
-
-  const meta = imageManifest[src];
 
   if (!meta) {
     // Imagem fora do manifesto (adicionada depois do último `prebuild`) —

@@ -46,7 +46,7 @@ export default function FloatingOrder() {
     <FixedContainer $opacity={opacity} onClick={handleOpenPopup}>
       <IconContainer $hoverIcon="/images/Homepage/shopping-cart-icon-white.svg">
         <Text>{t("callButton.text")}</Text>
-        <Icon src="/images/Homepage/shopping-cart-icon.svg" alt="Encomendar" />
+        <Icon src="/images/Homepage/shopping-cart-icon.svg" alt="Encomendar" width={12} height={15} />
       </IconContainer>
     </FixedContainer>
   );

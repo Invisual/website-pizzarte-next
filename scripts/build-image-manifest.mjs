@@ -4,7 +4,7 @@
 // aqui o lookup é feito em build time, uma vez, não a cada render.
 // Corre em "prebuild" (package.json) e pode ser corrido manualmente com
 // `node scripts/build-image-manifest.mjs`.
-import { readdir, stat, writeFile } from "node:fs/promises";
+import { readdir, readFile, stat, writeFile } from "node:fs/promises";
 import path from "node:path";
 import sharp from "sharp";
 
@@ -17,6 +17,27 @@ const RASTER_EXT = new Set([".webp", ".png", ".jpg", ".jpeg", ".avif"]);
 // precisar de blur placeholder (ícones, logos, decorativos) — poupa peso
 // no JSON, que é importado inteiro em componentes client (BarDrinks, etc).
 const BLUR_MIN_DIMENSION = 600;
+
+// Dimensões intrínsecas de um SVG (atributos width/height do <svg> raiz, ou
+// viewBox como alternativa). Servem só para o <img> ter width/height no HTML
+// (reserva de espaço / Lighthouse "unsized-images") — ver components/layout/Image.jsx.
+function svgSize(text) {
+  const tag = text.match(/<svg\b[^>]*>/i)?.[0];
+  if (!tag) return null;
+  const num = (name) => {
+    const m = tag.match(new RegExp(`\\s${name}="([\\d.]+)(?:px)?"`, "i"));
+    return m ? parseFloat(m[1]) : null;
+  };
+  let w = num("width");
+  let h = num("height");
+  if (!w || !h) {
+    const vb = tag.match(/viewBox="[\d.\-]+[\s,]+[\d.\-]+[\s,]+([\d.]+)[\s,]+([\d.]+)"/i);
+    if (!vb) return null;
+    w = parseFloat(vb[1]);
+    h = parseFloat(vb[2]);
+  }
+  return w > 0 && h > 0 ? { w, h } : null;
+}
 
 async function walk(dir) {
   const entries = await readdir(dir, { withFileTypes: true });
@@ -42,7 +63,13 @@ async function main() {
     const ext = path.extname(file).toLowerCase();
 
     if (ext === ".svg") {
-      // SVGs não passam por sharp — o componente Image usa <img> direto.
+      // SVGs não passam por sharp — o componente Image usa <img> direto, só
+      // com as dimensões intrínsecas.
+      const size = svgSize(await readFile(file, "utf-8"));
+      if (size) {
+        manifest[relativePath] = size;
+        processed++;
+      }
       continue;
     }
 

@@ -40,6 +40,16 @@
   padding: 0;
 }
 
+/* <img> de SVG levam width/height no HTML (components/layout/Image.jsx) só
+   para o browser reservar a proporção antes de carregar. :where() dá
+   especificidade 0, por isso estes "auto" só anulam os atributos — qualquer
+   width/height definido pelo CSS de um componente continua a mandar, e o
+   que só define um dos eixos calcula o outro pela proporção, como antes. */
+:where(img[src$=".svg"]) {
+  width: auto;
+  height: auto;
+}
+
 .menu-page {
   background: linear-gradient(#e5e1da, #ffffff);
 }

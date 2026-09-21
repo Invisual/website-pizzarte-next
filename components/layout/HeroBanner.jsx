@@ -29,8 +29,12 @@ export default function HeroBanner({ desktopSrc, mobileSrc, alt }) {
 
   return (
     <picture>
-      <source media={`(max-width: ${breakpoint.l})`} srcSet={mobileSrcSet} />
-      <source srcSet={desktopSrcSet} />
+      {/* width/height no <source>: o <img> traz as dimensões do desktop, por
+          isso sem isto o browser reserva a proporção 16:9 e, ao escolher a
+          imagem mobile (430x584), o banner cresce e empurra a página toda
+          (CLS ~0.2 medido em Lighthouse mobile). */}
+      <source media={`(max-width: ${breakpoint.l})`} srcSet={mobileSrcSet} width={mobile.w} height={mobile.h} />
+      <source srcSet={desktopSrcSet} width={desktop.w} height={desktop.h} />
       <img {...desktopImgProps} alt={alt} style={{ width: "100%", height: "auto", display: "block" }} />
     </picture>
   );

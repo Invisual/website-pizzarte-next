@@ -57,6 +57,7 @@ const DropdownStyled = styled.div`
     justify-content: space-between;
     gap: 8px;
     background: #fff;
+    color: #000;
     border: 1px solid rgba(0, 0, 0, 0.15);
     border-radius: var(--border-radius);
     padding: 12px 16px;
@@ -64,6 +65,8 @@ const DropdownStyled = styled.div`
     font-weight: 600;
     text-transform: capitalize;
     cursor: pointer;
+    -webkit-appearance: none;
+    appearance: none;
 
     .chevron {
       font-size: 10px;

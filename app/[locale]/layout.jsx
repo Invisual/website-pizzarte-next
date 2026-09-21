@@ -4,7 +4,6 @@ import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 
 import Script from "next/script";
-import { GoogleTagManager } from "@next/third-parties/google";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { routing } from '../../i18n/routing';
 import { notFound } from "next/navigation";
@@ -57,10 +56,20 @@ export default async function RootLayout({ children, params }) {
             gtag('consent', 'default', {'ad_storage': 'denied', 'analytics_storage': 'denied'});
             gtag('set', 'ads_data_redaction', true);`}
         </Script>
-        <GoogleTagManager gtmId={GTM_ID} />
+        {/* GTM e gtag.js (~500KB entre ambos + tags do GTM: Meta Pixel, Ads)
+            passam a lazyOnload — arrancam quando o browser está idle depois
+            do evento load, em vez de competirem com a hidratação (eram a
+            maior parte das "tarefas longas" e do TBT no Lighthouse). O
+            dataLayer e o Consent Mode acima já existem, por isso nenhum
+            evento se perde; só chegam ~1-3s mais tarde. O snippet é o
+            oficial do GTM (o <GoogleTagManager> de @next/third-parties
+            só suporta afterInteractive). */}
+        <Script id="gtm" strategy="lazyOnload">
+          {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','${GTM_ID}');`}
+        </Script>
         <Script
           src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
-          strategy="afterInteractive"
+          strategy="lazyOnload"
         />
         <Script id="ga4-config" strategy="afterInteractive">
           {`window.dataLayer = window.dataLayer || [];
