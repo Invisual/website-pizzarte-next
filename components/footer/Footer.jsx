@@ -36,26 +36,39 @@ export default function Footer({ data }) {
               <div className="footer-section" key={i}>
                 <Title className="title-with-underline">{footerItem.title}</Title>
 
-                {footerItem.items.map((description, j) => (
-                  <div className="info" key={j}>
-                    <Image src={description.icon} extraClass="icon" alt="" />
-                    <a
-                      onClick={
-                        description.text.includes("+351")
-                          ? () => HandlePhone(`tel:${description.text.replace(/\s/g, "")}`)
-                          : undefined
-                      }
-                      href={description.link}
-                    >
-                      {description.text}
-                    </a>
-                    {description.note && (
-                      <div className="note">
-                        <small>{description.note}</small>
-                      </div>
-                    )}
-                  </div>
-                ))}
+                {footerItem.items.map((description, j) => {
+                  const isPhone = description.text.includes("+351");
+                  const phoneHref = isPhone ? `tel:${description.text.replace(/\s/g, "")}` : null;
+                  const href = description.link || phoneHref;
+
+                  return (
+                    <div className="info" key={j}>
+                      <Image src={description.icon} extraClass="icon" alt="" />
+                      {href ? (
+                        <a
+                          href={href}
+                          onClick={
+                            isPhone
+                              ? (e) => {
+                                  e.preventDefault();
+                                  HandlePhone(phoneHref);
+                                }
+                              : undefined
+                          }
+                        >
+                          {description.text}
+                        </a>
+                      ) : (
+                        <span>{description.text}</span>
+                      )}
+                      {description.note && (
+                        <div className="note">
+                          <small>{description.note}</small>
+                        </div>
+                      )}
+                    </div>
+                  );
+                })}
               </div>
             ))}
           </div>
@@ -133,8 +146,12 @@ const FooterStyled = styled.footer`
         gap: 7px;
         margin-bottom: 15px;
 
-        a {
+        a,
+        span {
           color: #666666;
+        }
+
+        a {
           cursor: pointer;
         }
 
