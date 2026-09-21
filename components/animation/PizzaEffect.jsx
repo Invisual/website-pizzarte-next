@@ -37,11 +37,24 @@ export default function PizzaEffect({ data }) {
         // por todos os tweens — em vez de misturar um scrub instantâneo no
         // texto com um snap binário CSS nas metades da pizza, tudo acompanha
         // a mesma posição de scroll, suavizado por "scrub: 1".
-        const scrollCfg = { trigger: pizzaRef.current, start: "top bottom", end: "bottom top", scrub: 1 };
+        //
+        // Em mobile o range acaba quando o centro do container chega ao centro
+        // do ecrã ("center center"), não quando o fundo sai por cima
+        // ("bottom top"): as metades abertas ocupam ~90vh, por isso, no fim do
+        // range antigo o container já estava fora do ecrã e a pizza só ficava
+        // 100% aberta quando já não se via.
+        const scrollCfg = {
+          trigger: pizzaRef.current,
+          start: "top bottom",
+          end: isMobile ? "center center" : "bottom top",
+          scrub: 1,
+        };
         // textBehind só começa a aparecer depois do meio do range de scroll —
         // pedido do user para o texto surgir mais tarde, não junto com a
-        // pizza a abrir.
-        const textScrollCfg = { ...scrollCfg, start: "center bottom" };
+        // pizza a abrir. Em mobile termina logo a seguir à pizza abrir.
+        const textScrollCfg = isMobile
+          ? { ...scrollCfg, start: "center 80%", end: "center 40%" }
+          : { ...scrollCfg, start: "center bottom" };
 
         if (prefersReducedMotion()) {
           gsap.set(".phrase-title", { translateX: phraseTo });
