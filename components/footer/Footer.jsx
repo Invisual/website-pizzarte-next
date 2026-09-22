@@ -145,6 +145,7 @@ const FooterStyled = styled.footer`
         display: flex;
         gap: 7px;
         margin-bottom: 15px;
+        margin-top: 10px;
 
         a,
         span {

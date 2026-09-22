@@ -175,13 +175,6 @@ const FoodSliderStyled = styled.div`
           border: 1px solid ${color.red};
           margin: 0 5px;
           position: relative !important;
-
-          ${media.l`
-            color: #fff;
-            background: ${color.red};
-            width: 30px;
-            height: 30px;
-          `}
         }
 
         .swiper-button-next .swiper-navigation-icon,
