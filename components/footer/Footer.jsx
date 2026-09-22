@@ -229,6 +229,7 @@ const LivroReclamacoesSection = styled.div`
 
   .livro_image {
     width: 11vw;
+    max-width: 160px;
     height: auto;
   }
 

@@ -119,7 +119,12 @@ const DishesContainer = styled.div`
     `}
 
     .dish {
+      padding-top: 10px;
       border-bottom: 1px solid #666;
+
+      &:first-child {
+        padding-top: 0;
+      }
 
       .name {
         text-transform: uppercase;

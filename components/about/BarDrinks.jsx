@@ -1,6 +1,5 @@
 "use client";
 
-import { useState, useEffect } from "react";
 import styled from "styled-components";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Mousewheel } from "swiper/modules";
@@ -10,7 +9,7 @@ import { Image } from "../layout/Image";
 import Button from "../layout/Button";
 import Reveal from "../layout/Reveal";
 import ClientOnly from "../layout/ClientOnly";
-import { color, media, breakpoint } from "../style/style";
+import { color, media } from "../style/style";
 import { prefersReducedMotion } from "../../utils/prefersReducedMotion";
 import { translateNavLink } from "../../i18n/navLinks";
 import { useAnimeEffect } from "../../hooks/useAnimeEffect";
@@ -20,20 +19,6 @@ import { useAnimeEffect } from "../../hooks/useAnimeEffect";
 // morto; ficou de fora.)
 export default function BarDrinks({ data }) {
   const locale = useLocale();
-
-  // Correção de responsivo: em mobile o carrossel vertical roubava o swipe
-  // vertical do dedo, que devia fazer scroll da página. <1024px passa a
-  // horizontal (o Swiper não troca de `direction` sozinho — precisa de
-  // remontar, daí o `key` no <Swiper> abaixo).
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const mq = window.matchMedia(`(max-width: ${breakpoint.l})`);
-    const update = () => setIsMobile(mq.matches);
-    update();
-    mq.addEventListener("change", update);
-    return () => mq.removeEventListener("change", update);
-  }, []);
 
   useAnimeEffect((anime) => {
     if (prefersReducedMotion()) return;
@@ -86,9 +71,8 @@ export default function BarDrinks({ data }) {
               </div>
               <ClientOnly>
                 <Swiper
-                  key={isMobile ? "h" : "v"}
                   modules={[Pagination, Mousewheel]}
-                  direction={isMobile ? "horizontal" : "vertical"}
+                  direction="horizontal"
                   loop={true}
                   pagination={{ clickable: true }}
                   grabCursor={false}
@@ -144,54 +128,72 @@ const BarDrinksStyled = styled.div`
     text-transform: uppercase;
     position: absolute;
     border-radius: 40px 40px 0 0;
-    font-size: 40px;
     font-family: var(--font-british);
     font-weight: 600;
     padding: 9px 23px 0 23px;
     top: 0;
-    left: 0;
-    /* Ocupa a largura do stage (mesma largura das imagens da bebida) em
-       vez de encolher para caber só no texto decorativo. */
-    width: 100%;
+    right: 0;
+    /* Largura fixa (não a do stage todo) para o cartão vermelho ficar mais
+       estreito que a coluna, com o mesmo aspeto em qualquer breakpoint
+       (mobile e desktop já usam o mesmo layout). As 5 linhas usam flex
+       space-between para preencherem a altura toda. */
+    width: 84%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    overflow: hidden;
+    container-type: inline-size;
 
     ${media.l`
-      font-size: 27px;
+      /* right:4% em vez de 0 centra a caixa de 92% dentro do .bar-stage
+         (que em mobile ocupa a largura toda da página, já não é a coluna
+         estreita do grid desktop) — right:0 encostava tudo à direita.
+         Um único valor de height para todo o mobile (sem override extra em
+         media.m) — dois blocos de media diferentes a definir height da
+         mesma regra competiam entre si e o de max-width menor (media.m,
+         "auto") ganhava sempre em telemóveis reais, anulando este valor. */
+      width: 100%;
       height: 60%;
-
-      ${media.m`
-        height: auto;
-      `}
+      right: 0;
     `}
 
     .ml2 {
-      display: block;
+      display: flex;
+      /* Cada letra é um flex item próprio (spans injetados pelo
+         useAnimeEffect); space-between encosta a primeira à esquerda e a
+         última à direita, esticando o texto à largura toda do cartão
+         independentemente do nº de carateres ou do font-size — mais robusto
+         que afinar um valor de cqw à mão. */
+      justify-content: space-between;
       margin: 0;
-      line-height: var(--line-height-dense);
-
-      ${media.l`
-        font-size: 11vw;
-        text-align: center;
-
-        ${media.m`
-          font-size: 13vw;
-        `}
-      `}
+      line-height: 1;
+      font-size: 9.5cqw;
     }
   }
 
   .swiper {
-    height: 50vh;
-    position: relative;
-    width: -webkit-fill-available;
+    /* height:100% (não vh fixo) — .bar-stage é esticado pela grid à altura
+       real de .text-container (que varia com o texto/idioma); um valor vh
+       fixo descolava a paginação (bottom:20px do fundo do próprio .swiper)
+       do botão "Menu Bebidas" (bottom:20px do fundo do .text-container)
+       sempre que essa altura real passava do min-height. */
+    height: 100%;
+    /* position:absolute + top/right iguais ao background-red-bar (em vez de
+       margin-left:auto em fluxo normal) para as duas caixas ocuparem
+       exatamente a mesma área horizontal — só assim o conteúdo (copo,
+       bolinhas) fica mesmo centrado dentro do cartão. */
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 84%;
+    padding-bottom: 40px;
     display: flex;
 
-    ${media.xxl`
-      height: 60vh;
-    `}
-
     ${media.l`
-      height: 60vh;
-      padding-bottom: 40px;
+      width: 100%;
+      right: 0;
     `}
 
     .swiper-wrapper {
@@ -203,43 +205,28 @@ const BarDrinksStyled = styled.div`
       display: flex;
       justify-content: center;
       align-items: center;
-
-      ${media.l`
-        min-height: 320px;
-      `}
+      min-height: 320px;
     }
 
     .swiper-pagination-bullet {
       width: 18px;
       height: 18px;
       border-radius: unset;
-      background: #ffb4b4;
+      background: rgba(255, 0, 0, 0.5);
     }
 
     .swiper-pagination-bullet-active {
       background: ${color.red};
     }
 
-    ${media.l`
-      .swiper-pagination {
-        bottom: 20px !important;
-        top: unset !important;
-        display: flex;
-        gap: 10px;
-        width: 100%;
-        justify-content: center;
-      }
-
-      /* Em mobile a paginação fica sobre a background-red-bar (vermelha) —
-         bolinhas rosa/vermelho ficavam invisíveis nesse fundo. */
-      .swiper-pagination-bullet {
-        background: rgba(255, 255, 255, 0.3);
-      }
-
-      .swiper-pagination-bullet-active {
-        background: rgba(255, 255, 255, 0.7);
-      }
-    `}
+    .swiper-pagination {
+      bottom: 20px !important;
+      top: unset !important;
+      display: flex;
+      gap: 10px;
+      width: 100%;
+      justify-content: center;
+    }
 
     .drink-image {
       width: 40%;
@@ -253,17 +240,34 @@ const BarDrinksStyled = styled.div`
 
   .text-container {
     grid-column: 1 / 5;
+    /* .text-container é esticado pela grid à mesma altura de .bar-stage
+       (linha partilhada). Flex column + margin-top:auto no botão empurra-o
+       para o fundo dessa caixa, à mesma altura das bolinhas de paginação
+       (bottom:20px dentro de .swiper). */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 
     .description {
       margin: 0;
       padding-bottom: 60px;
     }
 
+    button {
+      margin-top: auto;
+      margin-bottom: 20px;
+    }
+
     ${media.l`
       grid-column: unset;
 
+      .description {
+        padding-bottom: 0;
+      }
+
       button {
         margin-top: 60px;
+        margin-bottom: 0;
       }
     `}
   }

@@ -46,6 +46,15 @@ export default function OurSpace() {
   return (
     <OurSpaceStyled>
       <div className="container-red">
+        <div className="background-red-mask">
+          <div className="background-red">
+            {Array.from({ length: numHeadings }).map((_, index) => (
+              <span key={index} className="ourspace-ml2" aria-hidden="true">
+                brutaaaaaaaaaaaaaaaaallllll
+              </span>
+            ))}
+          </div>
+        </div>
         <div className="container-default">
           <div className="local-div">
             <Reveal delay={400} className="imagem-3">
@@ -66,13 +75,6 @@ export default function OurSpace() {
             </Reveal>
           </div>
         </div>
-        <div className="background-red">
-          {Array.from({ length: numHeadings }).map((_, index) => (
-            <span key={index} className="ourspace-ml2" aria-hidden="true">
-              brutaaaaaaaaaaaaaaaaallllll
-            </span>
-          ))}
-        </div>
       </div>
     </OurSpaceStyled>
   );
@@ -92,7 +94,15 @@ const OurSpaceStyled = styled.div`
 
   .container-red {
     position: relative;
-    overflow: hidden;
+
+    .background-red-mask {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
 
     .local-div {
       display: grid;
@@ -105,12 +115,15 @@ const OurSpaceStyled = styled.div`
         grid-column: 9 / 13;
         grid-row: 1 / 1;
         position: relative;
+        top: 3vh;
       }
 
       .imagem-4 {
         grid-column: 3 / 8;
         grid-row: 2 / 2;
         position: relative;
+        top: 6vh;
+        z-index: 100;
       }
 
       .img-3,
@@ -125,18 +138,17 @@ const OurSpaceStyled = styled.div`
 
         .imagem-3 {
           grid-column: 3 / 6;
+          top: 0;
         }
 
         .imagem-4 {
           grid-column: 1 / 5;
+          top: 6vh;
         }
       `}
     }
 
     .background-red {
-      position: absolute;
-      top: 0;
-      left: 0;
       width: 100%;
       background: ${color.red};
       transform: rotateX(45deg);
