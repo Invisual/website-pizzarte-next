@@ -21,7 +21,7 @@
         "info": {
             "question": "O que é a Pizzarte?",
             "title": "A PIZZARTE",
-            "text": "A Pizzarte é uma pizzaria em Aveiro, na Rua Eng. Von Haff nº27, com três décadas de história a unir a arte da boa culinária à tradição e aos valores da cidade.<br/><br/> É um espaço frequentado por várias gerações — para muitos, tem as melhores pizzas da cidade — e um símbolo da identidade de Aveiro.<br/><br/> De segunda a domingo encontras uma grande variedade de pizzas, saladas, massas e sobremesas, com um serviço de qualidade alicerçado numa equipa jovem e entusiasta.",
+            "text": "Na Rua Eng. Von Haff nº27 está localizado um espaço que une a arte da boa culinária, com a tradição e valores da cidade de Aveiro. A Pizzarte, uma pizzaria com três décadas de existência, é um símbolo da identidade da região.<br/><br/> Um espaço frequentado por várias gerações, que vêem na Pizzarte as melhores pizzas da cidade.<br/><br/> De segunda a domingo a Pizzarte investe no sorriso dos seus clientes através da oferta de uma grande variedade de pizzas, saladas, massas e deliciosas sobremesas, com um serviço de qualidade alicerçado numa equipa jovem e entusiasta.",
             "feedback": [
                 {
                     "quote": "“Local que é um marco na comida italiana em Aveiro, serviço eficiente e jovem, pizas e crepes fantásticos bem como as massas, local de ida há mais de 20 anos.”",
@@ -48,7 +48,7 @@
         "ourSpace": {
             "question": "Que espaço tem a Pizzarte e que eventos recebe?",
             "title": "O nosso espaço",
-            "text": "A Pizzarte tem 800m² e capacidade para 200 pessoas sentadas — e costuma estar sempre com casa cheia. Ao fim de semana é normal esperar por mesa.<br/><br/> O espaço é grande e versátil o suficiente para receber eventos sem parar a atividade normal do restaurante: já teve mini concertos, peças de teatro, show cookings, teatro infantil e torneios de xadrez, entre outras atividades.<br/><br/> Se visitas Aveiro e gostas de pizza, a Pizzarte é passagem obrigatória.",
+            "text": "Composto por 800m2 de área a Pizzarte tem capacidade para sentar 200 pessoas e por norma está sempre com casa cheia.<br/><br/> A capacidade e versatilidade do espaço deste restaurante permite a realização de diversos eventos, sem comprometer a atividade da Pizzaria. Nesse sentido já se realizaram mini concertos, performances de teatro, show cookings, peças de teatro infantil, torneios de xadrez, entre muitas outras atividades lúdicas.<br/><br/> A Pizzarte é um espaço de visita obrigatória para quem visita Aveiro e é amante de pizzas.",
             "button": "Reservar mesa",
             "link": "/contactos",
             "image": "Homepage/imagem_2.webp"
@@ -56,7 +56,7 @@
         "chessIntro": {
             "question": "Porque há xadrez na Pizzarte?",
             "title": "TORNEIOS DE XADREZ",
-            "text": "O xadrez faz parte da Pizzarte desde 1988, com o famoso tabuleiro criado pelo artista plástico Pedro Andrade — ainda hoje no restaurante.<br/><br/> Para além do tabuleiro, há torneios regulares no espaço.",
+            "text": "O Xadrez está presente na Pizzarte desde 1988, com o famoso tabuleiro criado pelo artista plástico Pedro Andrade, que se mantém até hoje.<br/><br/> Para além do tabuleiro, acontecem diversos torneios no restaurante regularmente.",
             "button": "Reservar mesa"
         },
         "gallery": {

@@ -161,6 +161,7 @@ const DishesContainer = styled.div`
 
       .ingredients {
         text-transform: uppercase;
+        padding-bottom: 10px;
 
         ${media.l`
           font-size: 3vw;

@@ -11,7 +11,7 @@ import { NuqsAdapter } from "nuqs/adapters/next";
 import { getCachedMessages } from "../../lib/cache";
 import { buildOrganizationSchema, buildRestaurantSchema, buildWebSiteSchema } from "../../lib/jsonld";
 import StyledRegistry from "../../lib/StyledRegistry";
-import { montserrat, britishRegular, chunkyRosie } from "../fonts";
+import { montserrat } from "../fonts";
 
 // Mesmos dois sistemas de analytics do site Gatsby (GTM + gtag.js GA4
 // direto — redundantes entre si, mas mantidos tal como estavam em produção
@@ -38,10 +38,13 @@ export default async function RootLayout({ children, params }) {
   const messages = await getCachedMessages(locale);
 
   return (
-    <html
-      lang={locale}
-      className={`${montserrat.variable} ${britishRegular.variable} ${chunkyRosie.variable}`}
-    >
+    <html lang={locale} className={montserrat.variable}>
+      <head>
+        {/* @font-face estáticos em app/globals.css — preload à mão porque
+            não passam por next/font/local (ver comentário em app/fonts.js). */}
+        <link rel="preload" href="/fonts/BritishRegular.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
+        <link rel="preload" href="/fonts/ChunkyRosieDemo.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
+      </head>
       <body>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(buildOrganizationSchema()) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(buildRestaurantSchema()) }} />

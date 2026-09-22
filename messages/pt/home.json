@@ -189,7 +189,7 @@
         "aboutIntro": {
             "question": "Quem é a Pizzarte e o que a torna diferente em Aveiro?",
             "title": "Sobre nós",
-            "text": "A Pizzarte é uma pizzaria em Aveiro com mais de três décadas de história, na Rua Eng. Von Haff nº27. Aqui encontras pizzas, massas, saladas e sobremesas feitas com a tradição e os valores da cidade, num espaço que já atravessou várias gerações de clientes.<br/><br/>É um símbolo da identidade de Aveiro — quem cá vem costuma voltar, e há quem diga que são as melhores pizzas da cidade. De segunda a domingo encontras uma grande variedade de pizzas, saladas, massas e sobremesas, com um serviço de qualidade alicerçado numa equipa jovem e entusiasta.",
+            "text": "Na Rua Eng. Von Haff nº27 está localizado um espaço que une a arte da boa culinária, com a tradição e valores da cidade de Aveiro. A Pizzarte, uma pizzaria com três décadas de existência, é um símbolo da identidade da região. Um espaço frequentado por várias gerações, que vêem na Pizzarte as melhores pizzas da cidade.<br/><br/>De segunda a domingo a Pizzarte investe no sorriso dos seus clientes através da oferta de uma grande variedade de pizzas, saladas, massas e deliciosas sobremesas, com um serviço de qualidade alicerçado numa equipa jovem e entusiasta.",
             "button": "Saber mais",
             "link": "/pizzarte",
             "image": "Pizzarte/about-intro.webp"
@@ -259,7 +259,7 @@
         "drinks": {
             "question": "Como é o bar da Pizzarte?",
             "title": "O NOSSO BAR",
-            "text": "O bar da Pizzarte abriu em 1989 e tem um ambiente cosmopolita, irreverente e confortável — o sítio certo para acabar o dia com cocktails e gins de autor.<br/><br/>Para muitos aveirenses, a noite começa aqui: foi este bar que ajudou a revolucionar o circuito noturno da cidade. As paredes estão cobertas com frases de livros e filmes de autores nacionais e internacionais, dando um toque criativo e artístico ao espaço.",
+            "text": "Com um ambiente cosmopolita, irreverente e confortável, o bar da nossa Pizzaria oferece o envolvimento perfeito para acabar o dia. Com a sua abertura em 1989 acabou por revolucionar o circuito noturno aveirense.<br/><br/> Para muitos, a noite dá inicio no bar da Pizzarte. Servimos cocktails e Gins de autor bastante apreciados. Neste espaço as paredes estão cobertas com frases de livros e filmes de autores nacionais e internacionais que dão, desta forma, um toque criativo e artístico ao espaço.",
             "button": "Menu Bebidas",
             "drinksImage": [
                 {

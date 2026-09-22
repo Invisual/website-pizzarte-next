@@ -6,7 +6,7 @@
 // Ver app/[locale]/not-found.jsx para o caso "dentro de um locale válido,
 // mas a página não existe" (esse sim sabe o idioma).
 import "./globals.css";
-import { montserrat, britishRegular } from "./fonts";
+import { montserrat } from "./fonts";
 import NotFoundContent from "../components/layout/NotFoundContent";
 
 export const metadata = {
@@ -17,7 +17,10 @@ export const metadata = {
 
 export default function GlobalNotFound() {
   return (
-    <html lang="pt" className={`${montserrat.variable} ${britishRegular.variable}`}>
+    <html lang="pt" className={montserrat.variable}>
+      <head>
+        <link rel="preload" href="/fonts/BritishRegular.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
+      </head>
       <body>
         <NotFoundContent locale="pt" />
       </body>

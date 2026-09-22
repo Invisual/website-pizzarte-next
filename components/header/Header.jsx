@@ -2,8 +2,8 @@
 
 import { useState, useEffect } from "react";
 import styled, { css } from "styled-components";
-import { usePathname } from "next/navigation";
 import { useLocale } from "next-intl";
+import { usePathname } from "@/i18n/navigation";
 import { Image } from "../layout/Image";
 import Button from "../layout/Button";
 import LocaleSwitcher from "../LocaleSwitcher";
@@ -71,10 +71,10 @@ export default function Header({ data }) {
   }, []);
 
   function isActive(link) {
-    // translateNavLink já devolve o pathname com o prefixo de locale
-    // aplicado (getPathname trata disso) — não voltar a prefixar aqui.
-    const translated = translateNavLink(link, locale);
-    return pathname === translated || pathname === translated + "/";
+    // usePathname de @/i18n/navigation (next-intl) já devolve o pathname
+    // canónico sem prefixo de locale nem tradução — compara direto com
+    // `link`, que é essa mesma chave canónica (ver messages/*/home.json).
+    return pathname === link || pathname === link + "/";
   }
 
   const homeHref = translateNavLink("/", locale);

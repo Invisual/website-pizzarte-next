@@ -6,7 +6,7 @@
             {
                 "slug": "/entradas",
                 "title": "Entrées",
-                "description": "Découvre nos entrées : pain à l'ail, pain à l'ail à la mozzarella, chorizo grillé et bien plus encore.",
+                "description": "Découvrez nos entrées. Le Restaurant Pizzarte propose du pain à l'ail, du pain à l'ail à la mozzarella, du chorizo grillé et bien plus encore.",
                 "image": "Menu/entradas/entradas-page.webp",
                 "imageSection": "Menu/entradas/entradas-section.webp",
                 "meals": [
@@ -40,7 +40,7 @@
             {
                 "slug": "/saladas",
                 "title": "Salades",
-                "description": "Découvre nos salades : Mélangée, Thon, Pizzarte, Iceberg et bien plus encore.",
+                "description": "Découvrez nos salades. La pizzarte propose un vaste choix de salades. Mélangée, Thon, Pizzarte, Iceberg et bien plus encore.",
                 "image": "Menu/saladas/saladas-page.webp",
                 "imageSection": "Menu/saladas/saladas-section.webp",
                 "meals": [
@@ -99,7 +99,7 @@
             {
                 "slug": "/massas",
                 "title": "Pâtes",
-                "description": "Découvre nos pâtes : Spaghetti al Pomodoro, Spaghetti Nero, Lasagne et bien plus encore.",
+                "description": "Découvrez nos pâtes. La Pizzarte propose un vaste choix de pâtes. Spaghetti al Pommodoro, Spaghetti Nero, Lasagne et bien plus encore.",
                 "image": "Menu/massas/massas-page.webp",
                 "imageSection": "Menu/massas/massas-section.webp",
                 "meals": [
@@ -180,7 +180,7 @@
             {
                 "slug": "/les-crepes-salees",
                 "title": "Les crêpes salées",
-                "description": "Découvre nos Les Crêpes Salées : La Pizzarte Fiambre, Le Fantastique Fiambre, Le Coco Rico, Le Veau et bien plus encore.",
+                "description": "Découvrez nos Les Crêpes Salées. La Pizzarte Fiambre, Le Fantastique Fiambre, Le Coco Rico, Le Veau et bien plus encore.",
                 "image": "Menu/les-crepes-salees/les-crepes-salees-page.webp",
                 "imageSection": "Menu/les-crepes-salees/les-crepes-salees-section.webp",
                 "meals": [
@@ -239,7 +239,7 @@
             {
                 "slug": "/les-crepes-wrap",
                 "title": "Les crêpes wrap",
-                "description": "Découvre nos Les Crêpes Wrap : Poulet, Thon, Jambon cru et Saumon.",
+                "description": "Découvrez nos Les Crêpes Wrap. Poulet, Thon, Jambon cru et Saumon.",
                 "image": "Menu/les-crepes-wrap/les-crepes-wraps-page.webp",
                 "imageSection": "Menu/les-crepes-wrap/les-crepes-wrap-section.webp",
                 "meals": [
@@ -278,7 +278,7 @@
             {
                 "slug": "/pizzas",
                 "title": "Pizzas",
-                "description": "Découvre nos pizzas : Margherita, Capricciosa, Occhio Di Bue, Calzone et bien plus encore.",
+                "description": "Découvrez nos pizzas. La pizzarte propose un vaste choix de pizzas. Margherita, Capricciosa, Occhio Di Bue, Calzone et bien plus encore.",
                 "image": "Menu/pizzas/pizzas-page.webp",
                 "imageSection": "Menu/pizzas/pizzas-section.webp",
                 "meals": [
@@ -387,7 +387,7 @@
             {
                 "slug": "/panne-di-pizza",
                 "title": "Panne di pizza",
-                "description": "Découvre nos Panne di Pizza : Fromage, Jambon, Jambon cru, Salpicão, Piccolo Spécial et bien plus encore.",
+                "description": "Découvrez nos Panne di Pizza. Fromage, Jambon, Jambon cru, Salpicão, Piccolo Spécial, etc.",
                 "image": "Menu/panne-di-pizza/panne-di-pizza-page.webp",
                 "imageSection": "Menu/panne-di-pizza/panne-di-pizza-section.webp",
                 "meals": [
@@ -430,7 +430,7 @@
             {
                 "slug": "/sobremesas",
                 "title": "Desserts",
-                "description": "Découvre nos desserts : Mousse, Profiteroles au Chocolat, Panna Cotta, Fruits de saison et bien plus encore.",
+                "description": "Découvrez nos desserts. Mousse, Profiteroles au Chocolat, Panna Cotta, Fruits de saison et bien plus encore.",
                 "image": "Menu/sobremesas/sobremesas-page.webp",
                 "imageSection": "Menu/sobremesas/sobremesas-section.webp",
                 "meals": [
@@ -566,7 +566,7 @@
             {
                 "slug": "/bebidas",
                 "title": "Boissons",
-                "description": "Découvre nos boissons : vins, bières, sangrias et bien plus encore.",
+                "description": "Découvrez nos boissons. La Pizzarte propose un vaste choix de vins, bières, sangrias et bien plus encore.",
                 "image": "Menu/bebidas/bebidas-page.webp",
                 "imageSection": "Menu/bebidas/bebidas-section.webp",
                 "meals": [

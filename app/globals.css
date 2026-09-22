@@ -1,8 +1,20 @@
 /* Tokens + reset globais, portados de src/components/style/layout.css (Gatsby).
-   Fontes (Montserrat, BritishRegular, ChunkyRosieDemo) já não entram por
-   @font-face aqui — são carregadas via next/font em app/fonts.js e expostas
-   como variáveis CSS (--font-montserrat, --font-british, --font-chunky-rosie)
-   no <html> em app/[locale]/layout.jsx. */
+   Montserrat entra via next/font em app/fonts.js, exposta como
+   --font-montserrat no <html> em app/[locale]/layout.jsx. BritishRegular e
+   ChunkyRosieDemo (títulos decorativos, Title.jsx) são @font-face estáticos
+   aqui em vez de next/font/local — ver comentário em app/fonts.js. */
+
+@font-face {
+  font-family: "BritishRegular";
+  src: url("/fonts/BritishRegular.woff2") format("woff2");
+  font-display: block;
+}
+
+@font-face {
+  font-family: "ChunkyRosieDemo";
+  src: url("/fonts/ChunkyRosieDemo.woff2") format("woff2");
+  font-display: block;
+}
 
 :root {
   --border-radius: 4px;
@@ -11,6 +23,8 @@
   --color-code-bg: #fff4db;
   --color-code: #8a6534;
   --font-sans: var(--font-montserrat), sans-serif;
+  --font-british: "BritishRegular", sans-serif;
+  --font-chunky-rosie: "ChunkyRosieDemo", sans-serif;
   --font-lg: 18px;
   --font-md: 16px;
   --font-sm: 14px;

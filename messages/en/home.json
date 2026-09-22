@@ -189,7 +189,7 @@
         "aboutIntro": {
             "question": "What makes Pizzarte different in Aveiro?",
             "title": "About us",
-            "text": "Pizzarte is a pizzeria in Aveiro with more than three decades of history, at Rua Eng. Von Haff nº27. Here you'll find pizzas, pastas, salads and desserts made with the city's tradition and values, in a place that has seen generations of customers come through its doors.<br/><br/>It's a symbol of Aveiro's identity — people keep coming back, and some say it has the best pizzas in town. From Monday to Sunday, you'll find a wide variety of pizzas, salads, pastas and desserts, served by a young, enthusiastic team.",
+            "text": "At number 27, Rua Eng. Von Haf, there is a place which combines the art of great cuisine with the tradition and values of the city of Aveiro. Pizzarte, a pizzeria that has been in operation for three decades, is a symbol of the region's identity. A place visited by several generations, who see Pizzarte as having the best pizzas in the city.<br/><br/>From Monday to Sunday, Pizzarte invests in its customers' smiles by offering a wide variety of pizzas, salads, pastas and delicious desserts, with quality service provided by a young and enthusiastic team.",
             "button": "Find out more",
             "link": "/pizzarte",
             "image": "Pizzarte/about-intro.webp"
@@ -259,7 +259,7 @@
         "drinks": {
             "question": "What's Pizzarte's bar like?",
             "title": "Our bar",
-            "text": "Pizzarte's bar opened in 1989 and has a cosmopolitan, irreverent, comfortable feel — the right place to end the day with signature cocktails and gins.<br/><br/>For many locals, the night starts here: this bar helped revolutionise Aveiro's nightlife. The walls are covered in quotes from books and films by national and international authors, giving the space a creative, artistic touch.",
+            "text": "With its cosmopolitan, irreverent and comfortable atmosphere, our Pizzeria's bar offers the perfect way to end the day. When it opened in 1989, it revolutionised Aveiro's nightlife scene.<br/><br/>For many, the evening begins at the Pizzarte bar. We serve much-loved cocktails and signature gins. The walls are covered with phrases from books and films by national and international authors, giving the space a creative and artistic touch.",
             "button": "Beverage Menu",
             "drinksImage": [
                 {

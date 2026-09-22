@@ -189,7 +189,7 @@
         "aboutIntro": {
             "question": "¿Quién es la Pizzarte y qué la hace diferente en Aveiro?",
             "title": "Sobre nosotros",
-            "text": "La Pizzarte es una pizzería en Aveiro con más de tres décadas de historia, en la Rua Eng. Von Haff nº27. Aquí encuentras pizzas, pastas, ensaladas y postres hechos con la tradición y los valores de la ciudad, en un espacio que ha visto pasar varias generaciones de clientes.<br/><br/>Es un símbolo de la identidad de Aveiro — la gente vuelve, y algunos dicen que tiene las mejores pizzas de la ciudad. De lunes a domingo encuentras una gran variedad de pizzas, ensaladas, pastas y postres, con un servicio de calidad de un equipo joven y entusiasta.",
+            "text": "En el número 27 de la Rua Eng. Von Haff se encuentra un espacio que une el arte de la buena cocina con la tradición y los valores de la ciudad de Aveiro. La Pizzarte, una pizzería con tres décadas de existencia, es un símbolo de la identidad de la región. Un espacio frecuentado por varias generaciones, que ven en la Pizzarte las mejores pizzas de la ciudad.<br/><br/>De lunes a domingo, la Pizzarte invierte en la sonrisa de sus clientes ofreciendo una gran variedad de pizzas, ensaladas, pastas y deliciosos postres, con un servicio de calidad respaldado por un equipo joven y entusiasta.",
             "button": "Saber más",
             "link": "/pizzarte",
             "image": "Pizzarte/about-intro.webp"
@@ -259,7 +259,7 @@
         "drinks": {
             "question": "¿Cómo es el bar de la Pizzarte?",
             "title": "NUESTRO BAR",
-            "text": "El bar de la Pizzarte abrió en 1989 y tiene un ambiente cosmopolita, irreverente y cómodo — el sitio perfecto para acabar el día con cócteles y ginebras de autor.<br/><br/> Para muchos, la noche empieza aquí: este bar ayudó a revolucionar la vida nocturna de Aveiro. Las paredes están cubiertas de frases de libros y películas de autores nacionales e internacionales, que dan un toque creativo y artístico al espacio.",
+            "text": "Con un ambiente cosmopolita, irreverente y confortable, el bar de nuestra Pizzería ofrece el marco perfecto para terminar el día. Con su apertura en 1989 acabó revolucionando la vida nocturna de Aveiro.<br/><br/> Para muchos, la noche empieza en el bar de la Pizzarte. Servimos cócteles y ginebras de autor muy apreciados. En este espacio las paredes están cubiertas de frases de libros y películas de autores nacionales e internacionales, que aportan así un toque creativo y artístico al lugar.",
             "button": "Menú de Bebidas",
             "drinksImage": [
                 {
