@@ -15,7 +15,18 @@ export function translateNavLink(link, locale) {
   }
 
   // Chaves estáticas registadas em i18n/routing.jsx pathnames.
-  if (["/", "/menu", "/pizzarte", "/galeria", "/contactos"].includes(link)) {
+  if (
+    [
+      "/",
+      "/menu",
+      "/pizzarte",
+      "/galeria",
+      "/contactos",
+      "/termos-e-condicoes",
+      "/politica-de-privacidade",
+      "/informacao-ao-consumidor",
+    ].includes(link)
+  ) {
     return getPathname({ href: link, locale });
   }
 

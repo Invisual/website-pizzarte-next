@@ -1,0 +1,168 @@
+{
+    "legal": {
+        "termos": {
+            "seo": {
+                "title": "Termos e Condições | Pizzarte",
+                "description": "Termos e Condições de utilização do website Pizzarte.",
+                "image": "seo/pizzarte.png",
+                "imageAlt": "Pizzarte"
+            },
+            "title": "Termos e Condições",
+            "sections": [
+                {
+                    "heading": "1. Âmbito",
+                    "paragraphs": [
+                        "Os presentes Termos e Condições aplicam-se ao website pizzarte.com, propriedade da Pizzarte, Industria Hoteleira Lda, sociedade comercial com sede na R. Engo Von Haffe, 27, 3800-177, Aveiro, com capital social de € 7.500 (sete mil e quinhentos euros), registada na Conservatória do Registo Comercial de Aveiro, com o número de matrícula e de pessoa colectiva 501 745 149."
+                    ]
+                },
+                {
+                    "heading": "2. Utilização do Website",
+                    "paragraphs": [
+                        "O acesso e a utilização do Website estão sujeitos aos presentes Termos e Condições, bem como à legislação aplicável.",
+                        "A utilização do Website implica a aceitação dos presentes Termos e Condições.",
+                        "A empresa reserva-se o direito de, a qualquer momento, alterar os presentes Termos e Condições, sem necessidade de aviso prévio."
+                    ]
+                },
+                {
+                    "heading": "3. Conteúdo do Website",
+                    "paragraphs": [
+                        "O conteúdo do Website é da responsabilidade da empresa.",
+                        "A empresa não garante a exatidão, a atualidade ou a completude do conteúdo do Website.",
+                        "A empresa reserva-se o direito de, a qualquer momento, alterar o conteúdo do Website, sem necessidade de aviso prévio."
+                    ]
+                },
+                {
+                    "heading": "4. Direitos de Autor",
+                    "paragraphs": [
+                        "O conteúdo do Website é protegido por direitos de autor.",
+                        "É proibida a reprodução, distribuição, comunicação pública e transformação do conteúdo do Website, sem autorização prévia da empresa."
+                    ]
+                },
+                {
+                    "heading": "5. Links",
+                    "paragraphs": [
+                        "O Website pode conter links para outros websites.",
+                        "A empresa não assume qualquer responsabilidade pelo conteúdo de outros websites."
+                    ]
+                },
+                {
+                    "heading": "6. Responsabilidade",
+                    "paragraphs": [
+                        "A empresa não assume qualquer responsabilidade por danos causados ao utilizador, resultantes do acesso e da utilização do Website."
+                    ]
+                },
+                {
+                    "heading": "7. Lei Aplicável",
+                    "paragraphs": [
+                        "Os presentes Termos e Condições são regidos pela lei portuguesa."
+                    ]
+                },
+                {
+                    "heading": "8. Foro Competente",
+                    "paragraphs": [
+                        "Para dirimir quaisquer litígios resultantes da interpretação ou aplicação dos presentes Termos e Condições, as partes acordam submeter-se à jurisdição dos tribunais da comarca de Aveiro."
+                    ]
+                }
+            ]
+        },
+        "politica": {
+            "seo": {
+                "title": "Política de Privacidade | Pizzarte",
+                "description": "Política de privacidade e proteção de dados do website Pizzarte.",
+                "image": "seo/pizzarte.png",
+                "imageAlt": "Pizzarte"
+            },
+            "title": "Política de Privacidade",
+            "intro": [
+                "Pizzarte, Industria Hoteleira Lda., adiante designada por Pizzarte, é responsável pelo site www.pizzarte.com, adiante designado por site Pizzarte, e compromete-se a garantir a privacidade dos dados pessoais recolhidos e/ou transmitidos online. A segurança e a privacidade dos dados dos utilizadores do site Pizzarte são aspectos que assumem para a empresa uma importância crucial.",
+                "Por favor, leia o texto que se segue, para compreender e tomar conhecimento da forma como as informações que disponibilizar serão tratadas pela Pizzarte.",
+                "A Pizzarte reserva-se ao direito de alterar a política de privacidade, pelo que se aconselha a leitura regular deste documento. Estes textos reproduzem fielmente a política de privacidade seguida pelo site Pizzarte."
+            ],
+            "tocIntro": "No presente documento, poderá encontrar a resposta às seguintes questões:",
+            "tocItems": [
+                "1 Qual é a informação que é recolhida sobre os utilizadores?",
+                "2 Qual é a entidade responsável pela recolha da informação?",
+                "3 O que são cookies e como é que a Pizzarte os utiliza?",
+                "4 Como é que a informação recolhida é utilizada?",
+                "5 Que procedimentos de segurança tem o site Pizzarte, que garantam ao utilizador a protecção dos seus dados contra o acesso, a alteração ou a destruição não autorizada?",
+                "6 De que forma pode o utilizador corrigir ou eliminar as informações que facultou previamente através do website Pizzarte?",
+                "7 Outras questões de que deverá ter conhecimento sobre a política de privacidade da Pizzarte."
+            ],
+            "contactNote": "Se tiver qualquer dúvida sobre alguns dos pontos aqui apresentados, agradecemos que nos comunique por e-mail para privacidade@pizzarte.com ou por correio para Pizzarte, R. Engo Von Haffe, 27, 3800-177 Aveiro.",
+            "sections": [
+                {
+                    "heading": "1. Qual é a informação que é recolhida sobre os utilizadores?",
+                    "paragraphs": [
+                        "Para que se possa tornar um subscritor da nossa newsletter através do nosso website é necessário proceder ao preenchimento do formulário que se encontra disponível online no website http://pizzarte.com/newsletter/.",
+                        "A recolha dos dados pessoais é efectuada no momento do preenchimento do formulário. A informação recolhida é a necessária para assegurar a identidade do utilizador. O fornecimento dos dados solicitados no acto de registo do site da Pizzarte é obrigatório que o utilizador possa usufruir do serviço supramencionado. No acto de registo, a informação que o utilizador disponibiliza tem por objectivo a prestação de um serviço mais adequado às suas características e necessidades e ao envio de informações relacionadas com os serviços prestados pela Pizzarte, tais como: promoções, eventos ou informações gerais. O leitor poderá actualizar as informações por si fornecidas sempre que quiser bastando que para esse efeito envie o pedido para privacidade@pizzarte.com. As operações de fornecimento de dados pessoais estão devidamente protegidas. Toda a informação é encriptada e gerida com as mais avançadas ferramentas de segurança."
+                    ]
+                },
+                {
+                    "heading": "2. Qual é a entidade responsável pela recolha da informação?",
+                    "paragraphs": [
+                        "A Pizzarte é a única responsável pela recolha de dados pessoais efectuada no website Pizzarte. Sempre que o utilizador termine a utilização deste serviço, a Pizzarte não assume qualquer responsabilidade pela informação recolhida fora da respectiva página electrónica."
+                    ]
+                },
+                {
+                    "heading": "3. O que são cookies e como é que a Pizzarte os utiliza?",
+                    "paragraphs": [
+                        "Para poder prestar um serviço mais personalizado e ao agrado dos utilizadores, a Pizzarte utiliza cookies para recolher e guardar informação. Um cookie é um pequeno ficheiro informativo que é enviado do servidor do site Pizzarte para o browser do utilizador e armazenado no respectivo computador. Estes cookies serão apenas utilizados pela Pizzarte e a sua utilização limita-se às seguintes finalidades: – Permitir à Pizzarte saber quem é o utilizador e, dessa forma, prestar um serviço melhor, mais seguro e personalizado;",
+                        "- Estimar os níveis de utilização dos serviços. A cada utilizador corresponde um cookie individual, garantindo desta forma a privacidade e a segurança dos dados. A apresentação dos dados estatísticos é feita de uma forma agregada e não individual, não permitindo a identificação do utilizador. Desta forma, é possível avaliar o desempenho do site Pizzarte numa perspectiva de actualização e melhoria constantes, para que se possa satisfazer os gostos e as necessidades do utilizador."
+                    ]
+                },
+                {
+                    "heading": "4. Como é que a informação recolhida é utilizada?",
+                    "paragraphs": [
+                        "A informação recolhida servirá apenas para os seguintes propósitos: – Elaboração de estatísticas que permitam perceber como a Pizzarte poderá melhorar o nível de serviços que presta e, dessa forma, corresponder mais eficazmente às expectativas dos utilizadores;- Aumentar o nível de personalização dos serviços para que se adequam, na maior medida possível, aos gostos e preferências dos utilizadores.",
+                        "Os dados pessoais fornecidos pelo utilizador serão utilizados exclusivamente para fins ligados à execução do respectivo contrato, bem como, se o utilizador assim o autorizar, para actividades de informação, marketing e telemarketing da Pizzarte. As comunicações de dados serão feitas mediante prévio consentimento dos titulares dos dados. A Pizzarte não procederá à venda, aluguer, partilha ou oferta dos dados fornecidos pelos seus leitores, excepto nas situações previstas na presente política de privacidade."
+                    ]
+                },
+                {
+                    "heading": "5. De que forma pode o utilizador corrigir ou eliminar as informações que facultou previamente nas aplicações da Pizzarte?",
+                    "paragraphs": [
+                        "No âmbito das condições de utilização do site Pizzarte e de todos os seus serviços, o utilizador compromete-se a fornecer e a manter actualizados e verdadeiros todos os seus dados pessoais. Por sua vez, a Pizzarte garante ao utilizador a possibilidade de corrigir e actualizar os seus dados, devendo o utilizador contactar a Pizzarte por e-mail para privacidade@pizzarte.com ou via postal, Pizzarte, R. Engo Von Haffe, 27, 3800-177 Aveiro. Todos os utilizadores poderão, através do website Pizzarte subscrever newsletters. Em todas as newsletters enviadas aos subscritos do website Pizzarte têm a opção de cancelamento da subscrição."
+                    ]
+                },
+                {
+                    "heading": "6. Outras questões de que deverá ter conhecimento sobre a política de privacidade do website Pizzarte:",
+                    "paragraphs": [
+                        "– Alteração de Condições de Utilização do site da Pizzarte",
+                        "Sempre que houver uma alteração das condições de utilização do site Pizzarte, designadamente nas Condições de Serviço ou na Política de Privacidade, a Pizzarte enviará um email aos seus utilizadores.",
+                        "– Autorização para Utilizações Diversas",
+                        "Se a Pizzarte pretender utilizar os dados dos seus utilizadores para finalidades distintas daquelas para as quais recebeu autorização inicial dos utilizadores, solicitará uma nova autorização dos utilizadores para essa utilização específica.",
+                        "Comissão Nacional de Protecção de Dados",
+                        "O titular dos dados poderá apresentar uma reclamação à autoridade de controlo (CNPD). Contudo, caso pretenda proceder a essa reclamação, não hesite em contactar a Pizzarte numa primeira fase, através do e-mail privacidade@pizzarte.com."
+                    ]
+                }
+            ]
+        },
+        "informacaoConsumidor": {
+            "seo": {
+                "title": "Informação ao Consumidor | Pizzarte",
+                "description": "Informação ao consumidor nos termos da Lei nº 144/2015, de 8 de setembro.",
+                "image": "seo/pizzarte.png",
+                "imageAlt": "Pizzarte"
+            },
+            "title": "Informação ao Consumidor",
+            "lawRef": "Lei nº 144/2015 de 8 de setembro",
+            "stores": [
+                {
+                    "name": "LOJA DE AVEIRO",
+                    "quote": "Em caso de litígio o consumidor pode recorrer ao CNIACC – Centro Nacional de Informação e Arbitragem de Conflitos de Consumo, sítio eletrónico na internet: www.arbitragemdeconsumo.org"
+                },
+                {
+                    "name": "LOJA DE COIMBRA",
+                    "quote": "Em caso de litígio o consumidor pode recorrer ao Centro de Arbitragem de Conflitos de Consumo do Distrito de Coimbra, sítio eletrónico na internet: www.centrodearbitragemdecoimbra.com"
+                }
+            ],
+            "paragraph": "De acordo com a Lei nº 144/2015 de 8 de Setembro, informamos que, em caso de litígio de consumo, o foro competente é: CNIACC – Centro Nacional de Informação e Arbitragem de Conflitos de Consumo.",
+            "contactLines": [
+                "Faculdade de Direito da Universidade Nova de Lisboa",
+                "Campus de Campolide",
+                "1099-032 Lisboa",
+                "cniacc@unl.pt",
+                "www.arbitragemdeconsumo.org"
+            ]
+        }
+    }
+}

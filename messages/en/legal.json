@@ -1,0 +1,167 @@
+{
+    "legal": {
+        "termos": {
+            "seo": {
+                "title": "Terms and Conditions | Pizzarte",
+                "description": "Terms and Conditions for using the Pizzarte website.",
+                "image": "seo/pizzarte.png",
+                "imageAlt": "Pizzarte"
+            },
+            "title": "Terms and Conditions",
+            "sections": [
+                {
+                    "heading": "1. Scope",
+                    "paragraphs": [
+                        "These Terms and Conditions apply to the website pizzarte.com, owned by Pizzarte, Industria Hoteleira Lda, a commercial company with its registered office at R. Engo Von Haffe, 27, 3800-177, Aveiro, with share capital of €7,500 (seven thousand five hundred euros), registered at the Aveiro Commercial Registry Office, with the registration and legal person number 501 745 149."
+                    ]
+                },
+                {
+                    "heading": "2. Use of the Website",
+                    "paragraphs": [
+                        "Access to and use of the Website is subject to these Terms and Conditions, as well as the applicable legislation.",
+                        "Use of the Website implies acceptance of these Terms and Conditions.",
+                        "The company reserves the right to change these Terms and Conditions at any time, without prior notice."
+                    ]
+                },
+                {
+                    "heading": "3. Website Content",
+                    "paragraphs": [
+                        "The content of the Website is the responsibility of the company.",
+                        "The company does not guarantee the accuracy, timeliness or completeness of the content of the Website.",
+                        "The company reserves the right to change the content of the Website at any time without prior notice."
+                    ]
+                },
+                {
+                    "heading": "4. Copyright",
+                    "paragraphs": [
+                        "The content of the Website is protected by copyright.",
+                        "Any reproduction, distribution, public communication or transformation of the content of the Website without prior authorization from the company is prohibited."
+                    ]
+                },
+                {
+                    "heading": "5. Links",
+                    "paragraphs": [
+                        "The Website may contain links to other websites.",
+                        "The company assumes no responsibility for the content of other websites."
+                    ]
+                },
+                {
+                    "heading": "6. Liability",
+                    "paragraphs": [
+                        "The company assumes no liability for damages caused to the user as a result of accessing and using the Website."
+                    ]
+                },
+                {
+                    "heading": "7. Applicable Law",
+                    "paragraphs": [
+                        "These Terms and Conditions are governed by Portuguese law."
+                    ]
+                },
+                {
+                    "heading": "8. Competent Jurisdiction",
+                    "paragraphs": [
+                        "To settle any disputes arising from the interpretation or application of these Terms and Conditions, the parties agree to submit to the jurisdiction of the courts of the district of Aveiro."
+                    ]
+                }
+            ]
+        },
+        "politica": {
+            "seo": {
+                "title": "Privacy Policy | Pizzarte",
+                "description": "Pizzarte website privacy policy and data protection information.",
+                "image": "seo/pizzarte.png",
+                "imageAlt": "Pizzarte"
+            },
+            "title": "Privacy Policy",
+            "intro": [
+                "Pizzarte, Industria Hoteleira Lda, hereinafter referred to as Pizzarte, is responsible for the website www.pizzarte.com, hereinafter referred to as the Pizzarte website, and undertakes to guarantee the privacy of personal data collected and/or transmitted online. The security and privacy of users' data on the Pizzarte website is of crucial importance to the company.",
+                "Please read the following text to understand and be aware of how the information you provide will be handled by Pizzarte. Pizzarte reserves the right to change its privacy policy, so it is advisable to read this document regularly. These texts faithfully reproduce the privacy policy followed by the Pizzarte website."
+            ],
+            "tocIntro": "In this document you will find answers to the following questions:",
+            "tocItems": [
+                "1. What information is collected about users?",
+                "2. Who is responsible for collecting the information?",
+                "3. What are cookies and how does Pizzarte use them?",
+                "4. How is the information collected used?",
+                "5. What security procedures does the Pizzarte website have in place to ensure that users' data is protected against unauthorized access, alteration or destruction?",
+                "6. How can you correct or delete the information you have previously provided through the Pizzarte website?",
+                "7. Other questions you should know about Pizzarte's privacy policy."
+            ],
+            "contactNote": "If you have any questions about any of the points presented here, please contact us by e-mail at privacidade@pizzarte.com or by post at Pizzarte, R. Engo Von Haffe, 27, 3800-177 Aveiro.",
+            "sections": [
+                {
+                    "heading": "1. What information is collected about users?",
+                    "paragraphs": [
+                        "In order to become a subscriber to our newsletter via our website, you need to fill in the form available online at http://pizzarte.com/newsletter/.",
+                        "Personal data is collected when you fill in the form. The information collected is necessary to ensure the identity of the user. Providing the data requested when registering on the Pizzarte website is mandatory for the user to be able to use the above-mentioned service. When registering, the purpose of the information you provide is to provide a service that best suits your characteristics and needs and to send you information related to the services provided by Pizzarte, such as promotions, events or general information. You may update the information you have provided whenever you wish by sending a request to privacidade@pizzarte.com. Operations involving the provision of personal data are duly protected. All information is encrypted and managed with the most advanced security tools."
+                    ]
+                },
+                {
+                    "heading": "2. Who is responsible for collecting the information?",
+                    "paragraphs": [
+                        "Pizzarte is solely responsible for the collection of personal data on the Pizzarte website. Whenever the user terminates the use of this service, Pizzarte assumes no responsibility for the information collected outside its website."
+                    ]
+                },
+                {
+                    "heading": "3. What are cookies and how does Pizzarte use them?",
+                    "paragraphs": [
+                        "In order to provide a more personalized service that users like, Pizzarte uses cookies to collect and store information. A cookie is a small information file that is sent from the Pizzarte website server to the user's browser and stored on their computer. These cookies will only be used by Pizzarte and their use is limited to the following purposes: - To allow Pizzarte to know who the user is and thus provide a better, safer and more personalized service;",
+                        "- To estimate the levels of use of the services. Each user is assigned an individual cookie, thus guaranteeing the privacy and security of the data. Statistical data is presented in aggregate form, not individually, and does not allow the user to be identified. In this way, it is possible to evaluate the performance of the Pizzarte site with a view to constant updating and improvement, so that we can satisfy the tastes and needs of the user."
+                    ]
+                },
+                {
+                    "heading": "4. How is the information collected used?",
+                    "paragraphs": [
+                        "The information collected will only be used for the following purposes: - Drawing up statistics that will allow us to see how Pizzarte can improve the level of service it provides and thus meet user expectations more effectively; - Increasing the level of personalization of the services so that they can be used more effectively.",
+                        "The personal data provided by the user will be used exclusively for purposes related to the execution of the respective contract, as well as, if the user so authorizes, for Pizzarte's information, marketing and telemarketing activities. Data communications will be made with the prior consent of the data subjects. Pizzarte will not sell, rent, share or give away the data provided by its readers, except in the situations provided for in this privacy policy."
+                    ]
+                },
+                {
+                    "heading": "5. How can the user correct or delete the information they have previously provided in the Pizzarte applications?",
+                    "paragraphs": [
+                        "Within the scope of the conditions of use of the Pizzarte website and all its services, the user undertakes to provide and keep all their personal data up to date and true. In turn, Pizzarte guarantees the user the possibility of correcting and updating their data, and the user should contact Pizzarte by e-mail to privacidade@pizzarte.com or by post, Pizzarte, R. Engo Von Haffe, 27, 3800-177 Aveiro. All users can subscribe to newsletters via the Pizzarte website. All newsletters sent to subscribers of the Pizzarte website offer the option to unsubscribe."
+                    ]
+                },
+                {
+                    "heading": "6. Other issues you should be aware of regarding the privacy policy of the Pizzarte website:",
+                    "paragraphs": [
+                        "- Changes to the Terms of Use of the Pizzarte website",
+                        "Whenever there is a change in the conditions of use of the Pizzarte website, namely in the Conditions of Service or in the Privacy Policy, Pizzarte will send an email to its users.",
+                        "- Authorization for Various Uses",
+                        "If Pizzarte intends to use its users' data for purposes other than those for which it received initial authorization from users, it will request a new authorization from users for that specific use.",
+                        "National Data Protection Commission",
+                        "The data subject may submit a complaint to the supervisory authority (CNPD). However, if you wish to make such a complaint, please do not hesitate to contact Pizzarte initially by e-mail at privacidade@pizzarte.com."
+                    ]
+                }
+            ]
+        },
+        "informacaoConsumidor": {
+            "seo": {
+                "title": "Consumer Information | Pizzarte",
+                "description": "Consumer information under Portuguese Law no. 144/2015, of September 8th.",
+                "image": "seo/pizzarte.png",
+                "imageAlt": "Pizzarte"
+            },
+            "title": "Consumer Information",
+            "lawRef": "Law no. 144/2015 of September 8th",
+            "stores": [
+                {
+                    "name": "AVEIRO SHOP",
+                    "quote": "In the event of a dispute, consumers can turn to the CNIACC - Centro Nacional de Informação e Arbitragem de Conflitos de Consumo, website: www.arbitragemdeconsumo.org"
+                },
+                {
+                    "name": "COIMBRA STORE",
+                    "quote": "In the event of a dispute, the consumer can turn to the Centro de Arbitragem de Conflitos de Consumo do Distrito de Coimbra, website: www.centrodearbitragemdecoimbra.com"
+                }
+            ],
+            "paragraph": "In accordance with Law no. 144/2015 of September 8, we would like to inform you that, in the event of a consumer dispute, the competent court is: CNIACC - Centro Nacional de Informação e Arbitragem de Conflitos de Consumo.",
+            "contactLines": [
+                "Nova University of Lisbon Faculty of Law",
+                "Campolide Campus",
+                "1099-032 Lisbon",
+                "cniacc@unl.pt",
+                "www.arbitragemdeconsumo.org"
+            ]
+        }
+    }
+}

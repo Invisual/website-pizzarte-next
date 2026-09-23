@@ -1,10 +1,12 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { useLocale } from "next-intl";
 import styled from "styled-components";
 import { Image } from "../layout/Image";
 import { color, media } from "../style/style";
 import { HandlePhone } from "../../utils/handlePhone";
+import { translateNavLink } from "../../i18n/navLinks";
 
 // Ano de referência para o build estático (Next 16/PPR rejeita `new Date()`
 // lido diretamente durante o prerender de um Client Component — "unstable
@@ -21,6 +23,7 @@ const BUILD_YEAR = new Date().getFullYear();
 // os seus próprios links sociais no drawer, mas o rodapé em si ficava
 // morto). Aqui têm sempre <a>, como já acontecia na versão desktop.
 export default function Footer({ data }) {
+  const locale = useLocale();
   const [currentYear, setCurrentYear] = useState(BUILD_YEAR);
   useEffect(() => setCurrentYear(new Date().getFullYear()), []);
 
@@ -39,7 +42,7 @@ export default function Footer({ data }) {
                 {footerItem.items.map((description, j) => {
                   const isPhone = description.text.includes("+351");
                   const phoneHref = isPhone ? `tel:${description.text.replace(/\s/g, "")}` : null;
-                  const href = description.link || phoneHref;
+                  const href = description.link ? translateNavLink(description.link, locale) : phoneHref;
 
                   return (
                     <div className="info" key={j}>

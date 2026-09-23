@@ -20,6 +20,7 @@ export default getRequestConfig(async ({ requestLocale }) => {
             menu: (await import(`../messages/${locale}/menu.json`)).default.menu,
             pizzarte: (await import(`../messages/${locale}/pizzarte.json`)).default.pizzarte,
             contact: (await import(`../messages/${locale}/contact.json`)).default.contact,
+            legal: (await import(`../messages/${locale}/legal.json`)).default.legal,
         }
     };
 });

@@ -109,17 +109,17 @@
                         {
                             "icon": "logos/law.svg",
                             "text": "Law No. 144/2015 of 8th September",
-                            "link": "/pdf/informacao-ao-consumidor-en.pdf"
+                            "link": "/informacao-ao-consumidor"
                         },
                         {
                             "icon": "logos/law.svg",
                             "text": "Terms and Conditions",
-                            "link": "/pdf/termos-e-condicoes-en.pdf"
+                            "link": "/termos-e-condicoes"
                         },
                         {
                             "icon": "logos/law.svg",
                             "text": "Privacy Policy",
-                            "link": "/pdf/politica-de-privacidade-en.pdf"
+                            "link": "/politica-de-privacidade"
                         }
                     ]
                 },
