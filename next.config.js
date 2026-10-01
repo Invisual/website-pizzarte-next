@@ -57,7 +57,15 @@ const nextConfig = {
     ];
   },
   async redirects() {
-    return LEGACY_MENU_SLUG_REDIRECTS;
+    return [
+      ...LEGACY_MENU_SLUG_REDIRECTS,
+      // URLs do Gatsby que ainda estão no índice do Google (respondiam 200
+      // e duplicavam a homepage / o sitemap).
+      { source: "/index.html", destination: "/", statusCode: 301 },
+      { source: "/:locale(en|fr|es)/index.html", destination: "/:locale", statusCode: 301 },
+      { source: "/sitemap-index.xml", destination: "/sitemap.xml", statusCode: 301 },
+      { source: "/sitemap-0.xml", destination: "/sitemap.xml", statusCode: 301 },
+    ];
   },
 };
 

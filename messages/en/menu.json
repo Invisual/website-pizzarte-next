@@ -6,7 +6,7 @@
             {
                 "slug": "/entradas",
                 "title": "Starters",
-                "description": "Discover our entries. The Pizzarte Restaurant has garlic bread, garlic bread with mozzarella, roasted chorizo ​​and much more.",
+                "description": "Discover our starters. Pizzarte has garlic bread, garlic bread with mozzarella, roasted chorizo and much more.",
                 "image": "Menu/entradas/entradas-page.webp",
                 "imageSection": "Menu/entradas/entradas-section.webp",
                 "meals": [
@@ -40,7 +40,7 @@
             {
                 "slug": "/saladas",
                 "title": "Salads",
-                "description": "Discover our salads. The pizzarte has a wide range of salads. Mixed, Tuna, Pizzarte, Iceberg and much more.",
+                "description": "Discover our salads. Pizzarte has a wide range of salads. Mixed, Tuna, Pizzarte, Iceberg and much more.",
                 "image": "Menu/saladas/saladas-page.webp",
                 "imageSection": "Menu/saladas/saladas-section.webp",
                 "meals": [
@@ -99,7 +99,7 @@
             {
                 "slug": "/massas",
                 "title": "Pasta",
-                "description": "Get to know our pasta. Pizzarte has a wide range of pasta. Spaghetti al Pommodoro, Spaghetti Nero, Lasagne and much more.",
+                "description": "Get to know our pasta. Pizzarte has a wide range of pasta. Spaghetti al Pomodoro, Spaghetti Nero, Lasagne and much more.",
                 "image": "Menu/massas/massas-page.webp",
                 "imageSection": "Menu/massas/massas-section.webp",
                 "meals": [
@@ -112,7 +112,7 @@
                                 "price": "€ 10,50"
                             },
                             {
-                                "name": "spaghetti al pommodoro",
+                                "name": "spaghetti al pomodoro",
                                 "ingredients": "TOMATO SAUCE, CHERRY TOMATOES AND BASIL",
                                 "price": "€ 9,80"
                             },
@@ -278,7 +278,7 @@
             {
                 "slug": "/pizzas",
                 "title": "Pizzas",
-                "description": "Discover our pizzas. The pizzarte has a wide range of pizzas. Margherita, Capricciosa, Occhio Di Bue, Calzone and more.",
+                "description": "Discover our pizzas. Pizzarte has a wide range of pizzas. Margherita, Capricciosa, Occhio Di Bue, Calzone and more.",
                 "image": "Menu/pizzas/pizzas-page.webp",
                 "imageSection": "Menu/pizzas/pizzas-section.webp",
                 "meals": [

@@ -11,13 +11,20 @@ function languagesFor(pathnameKey) {
   return Object.fromEntries(routing.locales.map((locale) => [locale, urlFor(pathnameKey, locale)]));
 }
 
-function makeEntry(pathnameKey, { priority, changeFrequency }) {
-  return {
-    url: urlFor(pathnameKey, routing.defaultLocale),
+// Uma <url> por idioma (não só a PT), cada uma com o cluster completo de
+// alternates + x-default — o mesmo que components/Seo.js declara no HTML.
+function entriesFor(languages, { priority, changeFrequency }) {
+  const alternates = { languages: { ...languages, "x-default": languages[routing.defaultLocale] } };
+  return routing.locales.map((locale) => ({
+    url: languages[locale],
     changeFrequency,
     priority,
-    alternates: { languages: languagesFor(pathnameKey) },
-  };
+    alternates,
+  }));
+}
+
+function makeEntry(pathnameKey, options) {
+  return entriesFor(languagesFor(pathnameKey), options);
 }
 
 const STATIC_ROUTES = [
@@ -29,13 +36,13 @@ const STATIC_ROUTES = [
 ];
 
 export default function sitemap() {
-  const staticEntries = STATIC_ROUTES.map(({ pathname, priority, changeFrequency }) => makeEntry(pathname, { priority, changeFrequency }));
+  const staticEntries = STATIC_ROUTES.flatMap(({ pathname, priority, changeFrequency }) => makeEntry(pathname, { priority, changeFrequency }));
 
   // Categorias de menu — cada slug traduzido por locale (ver
   // i18n/routing.jsx MENU_CATEGORY_SLUGS), sem depender do mapa `pathnames`
   // do next-intl (não cobre segmentos dinâmicos data-driven).
   const canonicalSlugs = Object.keys(MENU_CATEGORY_SLUGS.pt);
-  const menuEntries = canonicalSlugs.map((canonicalSlug) => {
+  const menuEntries = canonicalSlugs.flatMap((canonicalSlug) => {
     const languages = Object.fromEntries(
       routing.locales.map((locale) => {
         const translatedSlug = MENU_CATEGORY_SLUGS[locale][canonicalSlug];
@@ -44,12 +51,7 @@ export default function sitemap() {
       })
     );
 
-    return {
-      url: languages[routing.defaultLocale],
-      changeFrequency: "monthly",
-      priority: 0.7,
-      alternates: { languages },
-    };
+    return entriesFor(languages, { priority: 0.7, changeFrequency: "monthly" });
   });
 
   return [...staticEntries, ...menuEntries];

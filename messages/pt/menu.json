@@ -40,7 +40,7 @@
             {
                 "slug": "/saladas",
                 "title": "Saladas",
-                "description": "Conheça as nossas saladas. A pizzarte tem uma vasta oferta de saladas. Mista, Atum, Pizzarte, Iceberg e muito mais.",
+                "description": "Conheça as nossas saladas. A Pizzarte tem uma vasta oferta de saladas. Mista, Atum, Pizzarte, Iceberg e muito mais.",
                 "image": "Menu/saladas/saladas-page.webp",
                 "imageSection": "Menu/saladas/saladas-section.webp",
                 "meals": [
@@ -99,7 +99,7 @@
             {
                 "slug": "/massas",
                 "title": "Massas",
-                "description": "Conheças as nossas massas. A Pizzarte tem uma vasta oferta de masssas. Spaghetti al Pommodoro, Spaghetti Nero, Lasagne e muito mais.",
+                "description": "Conheças as nossas massas. A Pizzarte tem uma vasta oferta de massas. Spaghetti al Pomodoro, Spaghetti Nero, Lasagne e muito mais.",
                 "image": "Menu/massas/massas-page.webp",
                 "imageSection": "Menu/massas/massas-section.webp",
                 "meals": [
@@ -112,7 +112,7 @@
                                 "price": "€ 10,50"
                             },
                             {
-                                "name": "spaghetti al pommodoro",
+                                "name": "spaghetti al pomodoro",
                                 "ingredients": "molho de tomate, tomate cherry e manjericão",
                                 "price": "€ 9,80"
                             },
@@ -278,7 +278,7 @@
             {
                 "slug": "/pizzas",
                 "title": "Pizzas",
-                "description": "Conheças as nossas pizzas. A pizzarte tem uma vasta oferta de pizzas. Margherita, Capricciosa, Occhio Di Bue, Calzone e muito mais.",
+                "description": "Conheças as nossas pizzas. A Pizzarte tem uma vasta oferta de pizzas. Margherita, Capricciosa, Occhio Di Bue, Calzone e muito mais.",
                 "image": "Menu/pizzas/pizzas-page.webp",
                 "imageSection": "Menu/pizzas/pizzas-section.webp",
                 "meals": [

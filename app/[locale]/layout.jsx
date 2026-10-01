@@ -80,6 +80,15 @@ export default async function RootLayout({ children, params }) {
             gtag('js', new Date());
             gtag('config', '${GA_MEASUREMENT_ID}');`}
         </Script>
+        {/* O CookieYes injeta o banner no topo do <body> — era o primeiro
+            texto da página e o Google usava-o como snippet. Não há contentor
+            nosso para o atributo, por isso marca-se data-nosnippet nos
+            contentores do CookieYes assim que aparecem no DOM. */}
+        <Script id="cookieyes-nosnippet" strategy="beforeInteractive">
+          {`(function(){var s='.cky-consent-container,.cky-modal,.cky-overlay,.cky-btn-revisit-wrapper';
+            function mark(){document.querySelectorAll(s).forEach(function(el){if(!el.hasAttribute('data-nosnippet'))el.setAttribute('data-nosnippet','');});}
+            new MutationObserver(mark).observe(document.documentElement,{childList:true,subtree:true});})();`}
+        </Script>
         <Script id="cookieyes" src={COOKIEYES_SRC} strategy="afterInteractive" />
 
         <StyledRegistry>

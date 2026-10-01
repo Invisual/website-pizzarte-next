@@ -99,7 +99,7 @@
             {
                 "slug": "/massas",
                 "title": "Pastas",
-                "description": "Descubre nuestras pastas. La Pizzarte tiene una amplia oferta de pastas. Spaghetti al Pommodoro, Spaghetti Nero, Lasagne y mucho más.",
+                "description": "Descubre nuestras pastas. La Pizzarte tiene una amplia oferta de pastas. Spaghetti al Pomodoro, Spaghetti Nero, Lasagne y mucho más.",
                 "image": "Menu/massas/massas-page.webp",
                 "imageSection": "Menu/massas/massas-section.webp",
                 "meals": [
@@ -112,7 +112,7 @@
                                 "price": "€ 10,50"
                             },
                             {
-                                "name": "spaghetti al pommodoro",
+                                "name": "spaghetti al pomodoro",
                                 "ingredients": "salsa de tomate, tomates cherry y albahaca",
                                 "price": "€ 9,80"
                             },

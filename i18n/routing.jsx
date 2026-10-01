@@ -10,6 +10,14 @@ export const routing = defineRouting({
   locales: ["pt", "en", "fr", "es"],
   defaultLocale: "pt",
   localePrefix: "as-needed",
+  // Sem redirect automático por Accept-Language/cookie: cada URL serve
+  // sempre o mesmo idioma (o PT é também o x-default do hreflang) e todos os
+  // redirects do middleware passam a ser de normalização — ver proxy.ts.
+  localeDetection: false,
+  // O header HTTP `Link` do next-intl não conhece os slugs dinâmicos de
+  // /menu/[slug] (gerava ex: pt → /menu/starters, 404). O hreflang vive só
+  // nas tags <link rel="alternate"> do HTML (components/Seo.js).
+  alternateLinks: false,
   pathnames: {
     "/": "/",
     "/menu": "/menu",
